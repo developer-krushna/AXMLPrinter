@@ -9,7 +9,7 @@ There are several changes made to the code, and multiple bugs have been fixed. T
 - [x] Fixed decoding some UTF-8.
 - [x] Fixed close tag error
 - [x] Fixed indentation/tab error
-- [x] Improved speed in xml dxml decompilation
+- [x] Improved speed in xml decompilation
 
 ## License
 
