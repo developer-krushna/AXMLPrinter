@@ -4,9 +4,12 @@ An Advanced Axml Printer available with proper xml style/format feature
 A tool for printing out Android binary xml files (It can be Android Manifest or other resources XML files) into normal raw axml text. It is inspired by Android4ME axmlprinter library.
 
 ## What's new on it.
-There is several changes made in the codes..
-
-`mvn clean package`
+There are several changes made to the code, and multiple bugs have been fixed. The following changes have been made in this AXMLPrinter library:
+- [x] Added support for translating attribute name(Customized function)
+- [x] Fixed decoding some UTF-8.
+- [x] Fixed close tag error
+- [x] Fixed indentation/tab error
+- [x] Improved speed in xml dxml decompilation
 
 ## License
 
