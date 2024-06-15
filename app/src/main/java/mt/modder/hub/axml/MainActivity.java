@@ -78,7 +78,7 @@ public class MainActivity extends Activity {
 			axmlPrinter.setAttributeIntConversion(true);
 
             // Use the XMLDecompiler to decompile the byte array into an XML string
-            String xmlString = axmlPrinter.decompile(byteArray);
+            String xmlString = axmlPrinter.convertXml(byteArray);
 
             // Output the XML string
             saveAsFile(xmlString, outPath);
