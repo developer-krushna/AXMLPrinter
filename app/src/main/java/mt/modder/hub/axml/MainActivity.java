@@ -69,16 +69,16 @@ public class MainActivity extends Activity {
 		try {
             // Read the binary XML file into a byte array
             FileInputStream fis = new FileInputStream(Input_Path);
-            byte[] byteArray = new byte[fis.available()];
+            /*byte[] byteArray = new byte[fis.available()];
             fis.read(byteArray);
-            fis.close();
+            fis.close();*/
 			
 			// initialize the axmlprinter class
 			AXMLPrinter axmlPrinter = new AXMLPrinter();
 			axmlPrinter.setAttributeIntConversion(true);
 
-            // Use the XMLDecompiler to decompile the byte array into an XML string
-            String xmlString = axmlPrinter.convertXml(byteArray);
+            // Use the XMLDecompiler to decompile to an XML string
+            String xmlString = axmlPrinter.convertXml(fis);
 
             // Output the XML string
             saveAsFile(xmlString, outPath);
