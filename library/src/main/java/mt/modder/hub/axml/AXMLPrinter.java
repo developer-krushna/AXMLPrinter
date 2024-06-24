@@ -105,7 +105,7 @@ public final class AXMLPrinter {
     public  String convertXml(InputStream in) {
         try {
             AXmlResourceParser xmlParser = new AXmlResourceParser();
-            xmlParser.open(new ByteArrayInputStream(byteArray));
+            xmlParser.open(in);
             StringBuilder indentation = new StringBuilder();
             StringBuilder xmlContent = new StringBuilder();
             while (true) {
