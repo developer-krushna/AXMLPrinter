@@ -37,6 +37,7 @@ package mt.modder.hub.axml;
 
 import org.xmlpull.v1.XmlPullParser;
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.Arrays;
 import mt.modder.hub.axmlTools.AXmlResourceParser;
 import java.util.Map;
@@ -100,6 +101,81 @@ public final class AXMLPrinter {
 	public void setAttributeIntConversion(boolean isAttrConvert){
 		isAttrConversion = isAttrConvert;
 	}
+
+    public  String convertXml(InputStream in) {
+        try {
+            AXmlResourceParser xmlParser = new AXmlResourceParser();
+            xmlParser.open(new ByteArrayInputStream(byteArray));
+            StringBuilder indentation = new StringBuilder();
+            StringBuilder xmlContent = new StringBuilder();
+            while (true) {
+                int eventType = xmlParser.next();
+                if (eventType == XmlPullParser.END_DOCUMENT) {
+                    // End of document
+                    String result = xmlContent.toString();
+                    xmlParser.close();
+                    return result;
+                }
+
+                switch (eventType) {
+                    case XmlPullParser.START_DOCUMENT:
+                        // Append XML declaration at the start of the document
+                        xmlContent.append("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n");
+                        break;
+
+                    case XmlPullParser.START_TAG:
+                        // Handle the start of a new XML tag
+                        if (xmlParser.getPrevious().type == XmlPullParser.START_TAG) {
+                            xmlContent.append(">\n");
+                        }
+                        xmlContent.append(String.format("%s<%s%s", indentation, getNamespacePrefix(xmlParser.getPrefix()), xmlParser.getName()));
+                        indentation.append("    ");
+
+                        // Handle namespaces
+                        int depth = xmlParser.getDepth();
+                        int namespaceStart = xmlParser.getNamespaceCount(depth - 1);
+                        int namespaceEnd = xmlParser.getNamespaceCount(depth);
+
+                        for (int i = namespaceStart; i < namespaceEnd; i++) {
+                            String namespaceFormat = (i == namespaceStart) ? "%sxmlns:%s=\"%s\"" : "\n%sxmlns:%s=\"%s\"";
+                            xmlContent.append(String.format(namespaceFormat, (i == namespaceStart) ? " " : indentation, xmlParser.getNamespacePrefix(i), xmlParser.getNamespaceUri(i)));
+                        }
+
+                        // Handle attributes
+                        int attributeCount = xmlParser.getAttributeCount();
+                        if (attributeCount > 0) {
+                            xmlContent.append('\n');
+                        }
+                        for (int i = 0; i < attributeCount; i++) {
+                            String attributeFormat = (i == attributeCount - 1) ? "%s%s%s=\"%s\"" : "%s%s%s=\"%s\"\n";
+                            xmlContent.append(String.format(attributeFormat, indentation, getNamespacePrefix(xmlParser.getAttributePrefix(i)), xmlParser.getAttributeName(i), getAttributeValue(xmlParser, i)));
+                        }
+                        break;
+
+                    case XmlPullParser.END_TAG:
+                        // Handle the end of an XML tag
+                        indentation.setLength(indentation.length() - "    ".length());
+                        if (!isEndOf(xmlParser, xmlParser.getPrevious())) {
+                            xmlContent.append(String.format("%s</%s%s>\n", indentation, getNamespacePrefix(xmlParser.getPrefix()), xmlParser.getName()));
+                        } else {
+                            xmlContent.append("/>\n");
+                        }
+                        break;
+
+                    case XmlPullParser.TEXT:
+                        // Handle text within an XML tag
+                        if (xmlParser.getPrevious().type == XmlPullParser.START_TAG) {
+                            xmlContent.append(">\n");
+                        }
+                        xmlContent.append(String.format("%s%s\n", indentation, xmlParser.getText()));
+                        break;
+                }
+            }
+        } catch (Exception e) {
+            // Handle exceptions and return the stack trace
+            return "----Stack Trace---- :\n" + Arrays.toString(e.getStackTrace());
+        }
+    }
 
     // Main method to print an XML byte array
     public  String convertXml(byte[] byteArray) {
