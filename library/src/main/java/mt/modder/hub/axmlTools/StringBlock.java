@@ -38,15 +38,26 @@ package mt.modder.hub.axmlTools;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.*;
 
 public class StringBlock {
-    private static final int CHUNK_TYPE = 1835009; // Type identifier for the chunk
-    public static final int UTF8_FLAG = 256; // Flag for UTF-8 encoding
+    private static final int CHUNK_TYPE = 0x001C0001; // Type identifier for the chunk
+    public static final int UTF8_FLAG = 0x00000100; // Flag for UTF-8 encoding
     private boolean isUTF8; // Flag to indicate if the strings are UTF-8 encoded
     private int[] stringOffsets; // Offsets for the start of each string
     private int[] strings; // Array containing the actual string data
     private int[] styleOffsets; // Offsets for the start of each style
     private int[] styles; // Array containing the style data
+	
+	private static final Map<String, String> XML_ESCAPE_MAP = new HashMap<>();
+
+    static {
+        XML_ESCAPE_MAP.put("&", "&amp;");
+        XML_ESCAPE_MAP.put("<", "&lt;");
+        XML_ESCAPE_MAP.put(">", "&gt;");
+        XML_ESCAPE_MAP.put("\"", "&quot;");
+        XML_ESCAPE_MAP.put("'", "&apos;");
+    }
 
     private StringBlock() {
     }
@@ -75,9 +86,13 @@ public class StringBlock {
     }
 
     // Retrieves a short value from an int array at a specified offset
-    private static int getShort(int[] array, int offset) {
+	private static final int getShort(int[] array, int offset) {
         int value = array[offset / 4];
-        return (offset % 4) / 2 == 0 ? 65535 & value : value >>> 16;
+        if ((offset % 4) / 2 == 0) {
+            return (value & 0xFFFF);
+        } else {
+            return (value >>> 16);
+        }
     }
 
     // Retrieves the length of a string from the array
@@ -252,6 +267,24 @@ public class StringBlock {
         if (!this.isUTF8) {
             length <<= 1;
         }
-        return new String(getByteArray(strings, lengthFieldSize, length), 0, length, charset);
-	}
+        String originalString = new String(getByteArray(strings, lengthFieldSize, length), 0, length, charset);
+
+        
+        return escapeXmlChars(originalString);
+    }
+	
+	// Escape XML characters
+	private String escapeXmlChars(String input) {
+        StringBuilder escapedString = new StringBuilder();
+        for (char c : input.toCharArray()) {
+            String charAsString = String.valueOf(c);
+            if (XML_ESCAPE_MAP.containsKey(charAsString)) {
+                escapedString.append(XML_ESCAPE_MAP.get(charAsString));
+            } else {
+                escapedString.append(c);
+            }
+        }
+        return escapedString.toString();
+    }
+	
 }
