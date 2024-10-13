@@ -7,6 +7,8 @@ A tool for printing out Android binary XML files (It can be Android Manifest or 
 There are several changes made to the code, and multiple bugs have been fixed. The following changes have been made in this AXMLPrinter library:
 - [x] Added support for translating attribute name(Customized function)
 - [x] Fixed decoding some UTF-8.
+- [x] Extraction of attribute name from id
+- [x] Extraction of flag and enum values according to android resource
 - [x] Fixed close tag error
 - [x] Fixed indentation/tab error
 - [x] Improved speed in xml decompilation
