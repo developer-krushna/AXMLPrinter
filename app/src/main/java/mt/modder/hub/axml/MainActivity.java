@@ -39,7 +39,7 @@ import android.app.*;
 import android.os.*;
 import java.io.FileInputStream;
 import java.io.IOException;
-import mt.modder.hub.axml.AXMLPrinter;
+
 import android.widget.TextView;
 import java.io.File;
 import java.io.FileWriter;
@@ -48,6 +48,12 @@ import java.io.PrintWriter;
 import android.widget.ScrollView;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.LinearLayout;
+import java.util.regex.*;
+import java.io.*;
+import java.nio.*;
+
+
+
 
 public class MainActivity extends Activity {
 	
@@ -63,22 +69,22 @@ public class MainActivity extends Activity {
 		scroll.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
 		scroll.setFillViewport(true);
 		scroll.setPadding(8,8,8,8);
-		
 		TextView text = new TextView(this);
 		text.setText("Processing "+ Input_Path +" ...");
 		try {
             // Read the binary XML file into a byte array
             FileInputStream fis = new FileInputStream(Input_Path);
-            /*byte[] byteArray = new byte[fis.available()];
+            byte[] byteArray = new byte[fis.available()];
             fis.read(byteArray);
-            fis.close();*/
-			
+            fis.close();
+
 			// initialize the axmlprinter class
 			AXMLPrinter axmlPrinter = new AXMLPrinter();
-			axmlPrinter.setAttributeIntConversion(true);
+			axmlPrinter.setEnableID2Name(false);
+			axmlPrinter.setAttributeIntConversion(false);
 
             // Use the XMLDecompiler to decompile to an XML string
-            String xmlString = axmlPrinter.convertXml(fis);
+            String xmlString = axmlPrinter.convertXml(byteArray);
 
             // Output the XML string
             saveAsFile(xmlString, outPath);
@@ -92,6 +98,8 @@ public class MainActivity extends Activity {
 			text.setText(exceptionDetails);
             e.printStackTrace();
         }
+	
+		
 		scroll.addView(text);
         setContentView(scroll);
     }
@@ -102,4 +110,6 @@ public class MainActivity extends Activity {
 		fileWriter.write(data.toString());
 		fileWriter.close();
 	}
+	
+	
 }
