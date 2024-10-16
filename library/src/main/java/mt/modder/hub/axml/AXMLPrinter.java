@@ -73,6 +73,7 @@ public final class AXMLPrinter {
     };
 	
 	private boolean isId2Name = false;
+	private boolean isAttrConversion = false;
 	public static String saveManifestPrefix = null;
 	
 	
@@ -85,8 +86,10 @@ public final class AXMLPrinter {
 	// Set check attribute and convert int to its string value
 	public void setEnableID2Name(boolean isId2name){
 		isId2Name = isId2name;
-		
-		
+	}
+	
+	public void setAttributeIntConversion(boolean isAttrConvert){
+		isAttrConversion = isAttrConvert;
 	}
 
 	// Main method to decompile an XML byte array
@@ -218,12 +221,16 @@ public final class AXMLPrinter {
 				
 			case TypedValue.TYPE_INT_HEX /* 17 */:
 				// Hex integer value or flag values
+				if (isAttrConversion) {
 					String decodedValue = AttributesExtractor.getInstance().decode(attributeName, attributeValueData);
 					if (decodedValue != null && !decodedValue.isEmpty() ) {
 						return decodedValue; // Return the decoded value if found
 					} else {
 						return String.format("0x%08x", attributeValueData);
 					}
+				} else{
+					return String.format("0x%08x", attributeValueData);
+				}
 					
 			case TypedValue.TYPE_INT_BOOLEAN /* 18 */:
 				// Boolean value
@@ -239,10 +246,12 @@ public final class AXMLPrinter {
 				
 			default:
 				// Handle enum or flag values and other cases 
-					String decodedValue2 = AttributesExtractor.getInstance().decode(attributeName, attributeValueData);
-					if (decodedValue2 != null) {
-						return decodedValue2; // Return the decoded value if found
+				if (isAttrConversion) {
+					String decodedValue = AttributesExtractor.getInstance().decode(attributeName, attributeValueData);
+					if (decodedValue != null) {
+						return decodedValue; // Return the decoded value if found
 					}
+				}
 				// For unhandled types or cases
 				return (attributeValueType >= 28 && attributeValueType <= 31) ?
 					String.format("#%08x", attributeValueData) :
