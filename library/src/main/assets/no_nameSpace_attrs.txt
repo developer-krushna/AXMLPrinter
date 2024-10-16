@@ -1,0 +1,9 @@
+package
+platformBuildVersionCode
+platformBuildVersionName
+requiredSplitTypes
+splitTypes
+violationExplanation
+violationType
+coreApp
+style

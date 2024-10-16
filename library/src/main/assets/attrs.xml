@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2006 The Android Open Source Project
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-          http://www.apache.org/licenses/LICENSE-2.0
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<!-- Formatting note: terminate all comments with a period, to avoid breaking
-     the documentation output. To suppress comment lines from the documentation
-     output, insert an eat-comment element after the comment lines.
--->
+ <!-- Last Update 17 Oct 2024 -->
 <resources>
     <declare-styleable name="Theme">
         <eat-comment />
@@ -40,6 +26,7 @@
         <attr name="backgroundDimEnabled" format="boolean" />
         <attr name="windowBlurBehindRadius" format="dimension"/>
         <attr name="windowBlurBehindEnabled" format="boolean" />
+
         <attr name="colorPopupBackground" format="color" />
         <attr name="colorListDivider" format="color" />
         <attr name="opacityListDivider" format="color" />
@@ -150,6 +137,7 @@
             <flag name="stateAlwaysHidden" value="3" />
             <flag name="stateVisible" value="4" />
             <flag name="stateAlwaysVisible" value="5" />
+
             <flag name="adjustUnspecified" value="0x00" />
             <flag name="adjustResize" value="0x10" />
             <flag name="adjustPan" value="0x20" />
@@ -180,11 +168,9 @@
         <attr name="windowTransitionBackgroundFadeDuration" format="integer"/>
        <eat-comment />
        <attr name="floatingToolbarCloseDrawable" format="reference" />
-       <attr name="floatingToolbarForegroundColor" format="reference|color" />
        <attr name="floatingToolbarItemBackgroundBorderlessDrawable" format="reference" />
        <attr name="floatingToolbarItemBackgroundDrawable" format="reference" />
        <attr name="floatingToolbarOpenDrawable" format="reference" />
-       <attr name="floatingToolbarPopupBackgroundDrawable" format="reference" />
        <attr name="floatingToolbarDividerColor" format="reference" />
         <eat-comment />
         <attr name="alertDialogStyle" format="reference" />
@@ -199,6 +185,7 @@
         <attr name="panelColorForeground" format="reference|color" />
         <attr name="panelColorBackground" format="reference|color" />
         <attr name="panelTextAppearance" format="reference" />
+
         <attr name="panelMenuIsCompact" format="boolean" />
         <attr name="panelMenuListWidth" format="dimension" />
         <attr name="panelMenuListTheme" format="reference" />
@@ -314,6 +301,8 @@
         <attr name="actionModeShareDrawable" format="reference" />
         <attr name="actionModeFindDrawable" format="reference" />
         <attr name="actionModeWebSearchDrawable" format="reference" />
+        <attr name="actionModeUndoDrawable" format="reference" />
+        <attr name="actionModeRedoDrawable" format="reference" />
         <attr name="actionModePopupWindowStyle" format="reference" />
         <eat-comment />
         <attr name="preferenceScreenStyle" format="reference" />
@@ -414,6 +403,76 @@
         <attr name="ambientShadowAlpha" format="float" />
         <attr name="spotShadowAlpha" format="float" />
         <attr name="forceDarkAllowed" format="boolean" />
+        <attr name="materialColorOnSecondaryFixedVariant" format="color"/>
+        <attr name="materialColorOnTertiaryFixedVariant" format="color"/>
+        <attr name="materialColorSurfaceContainerLowest" format="color"/>
+        <attr name="materialColorOnPrimaryFixedVariant" format="color"/>
+        <attr name="materialColorOnSecondaryContainer" format="color"/>
+        <attr name="materialColorOnTertiaryContainer" format="color"/>
+        <attr name="materialColorSurfaceContainerLow" format="color"/>
+        <attr name="materialColorOnPrimaryContainer" format="color"/>
+        <attr name="materialColorSecondaryFixedDim" format="color"/>
+        <attr name="materialColorOnErrorContainer" format="color"/>
+        <attr name="materialColorOnSecondaryFixed" format="color"/>
+        <attr name="materialColorOnSurfaceInverse" format="color"/>
+        <attr name="materialColorTertiaryFixedDim" format="color"/>
+        <attr name="materialColorOnTertiaryFixed" format="color"/>
+        <attr name="materialColorPrimaryFixedDim" format="color"/>
+        <attr name="materialColorSecondaryContainer" format="color"/>
+        <attr name="materialColorErrorContainer" format="color"/>
+        <attr name="materialColorOnPrimaryFixed" format="color"/>
+        <attr name="materialColorPrimaryInverse" format="color"/>
+        <attr name="materialColorSecondaryFixed" format="color"/>
+        <attr name="materialColorSurfaceInverse" format="color"/>
+        <attr name="materialColorSurfaceVariant" format="color"/>
+        <attr name="materialColorTertiaryContainer" format="color"/>
+        <attr name="materialColorTertiaryFixed" format="color"/>
+        <attr name="materialColorPrimaryContainer" format="color"/>
+        <attr name="materialColorOnBackground" format="color"/>
+        <attr name="materialColorPrimaryFixed" format="color"/>
+        <attr name="materialColorOnSecondary" format="color"/>
+        <attr name="materialColorOnTertiary" format="color"/>
+        <attr name="materialColorSurfaceDim" format="color"/>
+        <attr name="materialColorSurfaceBright" format="color"/>
+        <attr name="materialColorSecondary" format="color"/>
+        <attr name="materialColorOnError" format="color"/>
+        <attr name="materialColorSurface" format="color"/>
+        <attr name="materialColorSurfaceContainerHigh" format="color"/>
+        <attr name="materialColorTertiary" format="color"/>
+        <attr name="materialColorSurfaceContainerHighest" format="color"/>
+        <attr name="materialColorOnSurfaceVariant" format="color"/>
+        <attr name="materialColorOutline" format="color"/>
+        <attr name="materialColorOutlineVariant" format="color"/>
+        <attr name="materialColorOnPrimary" format="color"/>
+        <attr name="materialColorOnSurface" format="color"/>
+        <attr name="materialColorSurfaceContainer" format="color"/>
+        <attr name="materialColorSurfaceContainer" format="color"/>
+        <attr name="materialColorPrimary" format="color"/>
+        <attr name="materialColorSecondary" format="color"/>
+        <attr name="materialColorTertiary" format="color"/>
+        <attr name="materialColorError" format="color"/>
+        <attr name="customColorWidgetBackground" format="color"/>
+        <attr name="customColorClockHour" format="color"/>
+        <attr name="customColorClockMinute" format="color"/>
+        <attr name="customColorClockSecond" format="color"/>
+        <attr name="customColorThemeApp" format="color"/>
+        <attr name="customColorOnThemeApp" format="color"/>
+        <attr name="customColorThemeAppRing" format="color"/>
+        <attr name="customColorOnThemeAppRing" format="color"/>
+        <attr name="customColorBrandA" format="color"/>
+        <attr name="customColorBrandB" format="color"/>
+        <attr name="customColorBrandC" format="color"/>
+        <attr name="customColorBrandD" format="color"/>
+        <attr name="customColorUnderSurface" format="color"/>
+        <attr name="customColorShadeActive" format="color"/>
+        <attr name="customColorOnShadeActive" format="color"/>
+        <attr name="customColorOnShadeActiveVariant" format="color"/>
+        <attr name="customColorShadeInactive" format="color"/>
+        <attr name="customColorOnShadeInactive" format="color"/>
+        <attr name="customColorOnShadeInactiveVariant" format="color"/>
+        <attr name="customColorShadeDisabled" format="color"/>
+        <attr name="customColorOverviewBackground" format="color"/>
+
     </declare-styleable>
     <eat-comment />
     <attr name="textSize" format="dimension" />
@@ -903,6 +962,7 @@
         <attr name="windowSharedElementReturnTransition"/>
         <attr name="windowSharedElementExitTransition"/>
         <attr name="windowSharedElementReenterTransition"/>
+
         <attr name="windowAllowEnterTransitionOverlap"/>
         <attr name="windowAllowReturnTransitionOverlap"/>
         <attr name="windowSharedElementsUseOverlay"/>
@@ -914,6 +974,7 @@
         <attr name="enforceNavigationBarContrast" format="boolean" />
         <attr name="windowTransitionBackgroundFadeDuration" />
         <attr name="windowElevation" format="dimension" />
+        <attr name="windowNoMoveAnimation" format="boolean" />
         <attr name="windowClipToOutline" format="boolean" />
         <attr name="windowLightStatusBar" format="boolean" />
         <attr name="windowSplashscreenContent" format="reference" />
@@ -933,6 +994,8 @@
             <enum name="default" value="0" />
             <enum name="icon_preferred" value="1" />
         </attr>
+        <attr name="windowIsFrameRatePowerSavingsBalanced" format="boolean"/>
+        <attr name="windowOptOutEdgeToEdgeEnforcement" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="AlertDialog">
         <attr name="fullDark" format="reference|color" />
@@ -1003,6 +1066,7 @@
         <attr name="wallpaperIntraCloseEnterAnimation" format="reference" />
         <attr name="wallpaperIntraCloseExitAnimation" format="reference" />
         <attr name="activityOpenRemoteViewsEnterAnimation" format="reference" />
+
     </declare-styleable>
     <eat-comment />
     <attr name="__removed3" />
@@ -1027,6 +1091,7 @@
         <attr name="focusable" format="boolean|enum">
             <enum name="auto" value="0x00000010" />
         </attr>
+
         <attr name="__removed3" />
         <attr name="__removed4" />
         <attr name="__removed5" />
@@ -1045,6 +1110,7 @@
             <flag name="yesExcludeDescendants" value="0x4" />
             <flag name="noExcludeDescendants" value="0x8" />
         </attr>
+        <attr name="isCredential" format="boolean" />
         <attr name="scrollCaptureHint">
             <flag name="auto" value="0" />
             <flag name="include" value="0x1" />
@@ -1070,6 +1136,7 @@
             <enum name="outsideInset" value="0x03000000" />
         </attr>
         <attr name="isScrollContainer" format="boolean" />
+
          <attr name="fadeScrollbars" format="boolean" />
          <attr name="scrollbarFadeDuration" format="integer" />
         <attr name="scrollbarDefaultDelayBeforeFade" format="integer" />
@@ -1174,6 +1241,11 @@
             <enum name="no" value="2" />
             <enum name="noHideDescendants" value="4" />
         </attr>
+        <attr name="accessibilityDataSensitive" format="integer">
+            <enum name="auto" value="0" />
+            <enum name="yes" value="1" />
+            <enum name="no" value="2" />
+        </attr>
         <attr name="accessibilityLiveRegion" format="integer">
             <enum name="none" value="0" />
             <enum name="polite" value="1" />
@@ -1233,6 +1305,7 @@
             <flag name="start" value="0x10" />
             <flag name="end" value="0x20" />
         </attr>
+
         <attr name="pointerIcon">
             <enum name="none" value="0" />
             <enum name="arrow" value="1000" />
@@ -1256,12 +1329,15 @@
             <enum name="zoom_out" value="1019" />
             <enum name="grab" value="1020" />
             <enum name="grabbing" value="1021" />
+            <enum name="handwriting" value="1022"/>
         </attr>
         <attr name="forceHasOverlappingRendering" format="boolean" />
         <attr name="tooltipText" format="string" localization="suggested" />
         <attr name="keyboardNavigationCluster" format="boolean" />
+
         <attr name="__removed0" format="boolean" />
         <attr name="nextClusterForward" format="reference"/>
+
         <attr name="__removed1" format="reference"/>
         <attr name="focusedByDefault" format="boolean" />
         <attr name="defaultFocusHighlightEnabled" format="boolean" />
@@ -1275,6 +1351,15 @@
         <attr name="clipToOutline" format="boolean" />
         <attr name="preferKeepClear" format="boolean" />
         <attr name="autoHandwritingEnabled" format="boolean" />
+        <attr name="handwritingBoundsOffsetLeft" format="dimension" />
+        <attr name="handwritingBoundsOffsetTop" format="dimension" />
+        <attr name="handwritingBoundsOffsetRight" format="dimension" />
+        <attr name="handwritingBoundsOffsetBottom" format="dimension" />
+        <attr name="contentSensitivity">
+            <enum name="auto" value="0" />
+            <enum name="sensitive" value="0x1" />
+            <enum name="notSensitive" value="0x2" />
+        </attr>
     </declare-styleable>
     <declare-styleable name="ViewTag">
         <attr name="id" />
@@ -1344,9 +1429,11 @@
     </declare-styleable>
     <declare-styleable name="InputMethod">
         <attr name="settingsActivity" format="string" />
+        <attr name="languageSettingsActivity" format="string"/>
         <attr name="isDefault" format="boolean" />
         <attr name="supportsSwitchingToNextInputMethod" format="boolean" />
         <attr name="isVrOnly" format="boolean"/>
+        <attr name="isVirtualDeviceOnly" format="boolean"/>
         <attr name="__removed2" format="boolean" />
         <attr name="supportsInlineSuggestions" format="boolean" />
         <attr name="supportsInlineSuggestionsWithTouchExploration" format="boolean" />
@@ -1354,6 +1441,9 @@
         <attr name="showInInputMethodPicker" format="boolean" />
         <attr name="configChanges" />
         <attr name="supportsStylusHandwriting" format="boolean" />
+        <attr name="supportsConnectionlessStylusHandwriting" format="boolean" />
+        <attr name="stylusHandwritingSettingsActivity" format="string" />
+
     </declare-styleable>
     <declare-styleable name="InputMethod_Subtype">
         <attr name="label" />
@@ -1366,6 +1456,8 @@
         <attr name="subtypeId" format="integer"/>
         <attr name="isAsciiCapable" format="boolean" />
         <attr name="languageTag" format="string" />
+        <attr name="physicalKeyboardHintLanguageTag" format="string" />
+        <attr name="physicalKeyboardHintLayoutType" format="string" />
     </declare-styleable>
     <declare-styleable name="SpellChecker">
         <attr name="label" />
@@ -1474,6 +1566,7 @@
         <attr name="apduServiceBanner" format="reference"/>
         <attr name="settingsActivity"/>
         <attr name="requireDeviceScreenOn" format="boolean"/>
+        <attr name="shouldDefaultToObserveMode" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="OffHostApduService">
         <attr name="description" />
@@ -1482,6 +1575,7 @@
         <attr name="secureElementName" format="string"/>
         <attr name="requireDeviceUnlock"/>
         <attr name="requireDeviceScreenOn"/>
+        <attr name="shouldDefaultToObserveMode"/>
     </declare-styleable>
     <declare-styleable name="AidGroup">
         <attr name="description" />
@@ -1492,6 +1586,14 @@
     </declare-styleable>
     <declare-styleable name="AidPrefixFilter">
         <attr name="name" />
+    </declare-styleable>
+    <declare-styleable name="PollingLoopFilter">
+        <attr name="name" />
+        <attr name="autoTransact" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="PollingLoopPatternFilter">
+        <attr name="name" />
+        <attr name="autoTransact" format="boolean"/>
     </declare-styleable>
     <declare-styleable name="HostNfcFService">
         <attr name="description" />
@@ -1504,11 +1606,14 @@
     </declare-styleable>
     <declare-styleable name="T3tPmmFilter">
         <attr name="name" />
+
     </declare-styleable>
+
     <declare-styleable name="ActionMenuItemView">
         <attr name="minWidth" />
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="AbsListView">
         <attr name="listSelector" format="color|reference" />
         <attr name="drawSelectorOnTop" format="boolean" />
@@ -1621,6 +1726,7 @@
         </attr>
     </declare-styleable>
     <declare-styleable name="EditText">
+        <attr name="enableTextStylingShortcuts" format="boolean" />
     </declare-styleable>
     <declare-styleable name="FastScroll">
         <attr name="thumbDrawable" format="reference" />
@@ -1776,6 +1882,7 @@
         <attr name="maxItems" format="integer" />
         <attr name="moreIcon" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="ProgressBar">
         <attr name="min" format="integer" />
         <attr name="max" format="integer" />
@@ -1836,6 +1943,7 @@
         <attr name="backgroundTint" />
         <attr name="backgroundTintMode" />
     </declare-styleable>
+
     <declare-styleable name="SeekBar">
         <attr name="thumb" format="reference" />
         <attr name="thumbOffset" format="dimension" />
@@ -1861,16 +1969,19 @@
             <enum name="add" value="16" />
         </attr>
     </declare-styleable>
+
     <declare-styleable name="StackView">
         <attr name="resOutColor" format="color" />
         <attr name="clickColor" format="color" />
     </declare-styleable>
+
     <declare-styleable name="RatingBar">
         <attr name="numStars" format="integer" />
         <attr name="rating" format="float" />
         <attr name="stepSize" format="float" />
         <attr name="isIndicator" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="RadioGroup">
         <attr name="checkedButton" format="integer" />
         <attr name="orientation" />
@@ -1881,6 +1992,7 @@
         <attr name="collapseColumns" format="string" />
     </declare-styleable>
     <declare-styleable name="TableRow">
+
     </declare-styleable>
     <declare-styleable name="TableRow_Cell">
         <attr name="layout_column" format="integer" />
@@ -1902,6 +2014,8 @@
         <attr name="fontFamily" />
         <attr name="textLocale" format="string" />
         <attr name="textColorHighlight" />
+        <attr name="searchResultHighlightColor" format="color" />
+        <attr name="focusedSearchResultHighlightColor" format="color" />
         <attr name="textColorHint" />
         <attr name="textColorLink" />
         <attr name="textAllCaps" format="boolean" />
@@ -1934,6 +2048,8 @@
         <attr name="hint" format="string" />
         <attr name="textColor" />
         <attr name="textColorHighlight" />
+        <attr name="searchResultHighlightColor" format="color" />
+        <attr name="focusedSearchResultHighlightColor" format="color" />
         <attr name="textColorHint" />
         <attr name="textAppearance" />
         <attr name="textSize" />
@@ -2030,6 +2146,7 @@
         <attr name="textEditSuggestionItemLayout" />
         <attr name="textEditSuggestionContainerLayout" />
         <attr name="textEditSuggestionHighlightStyle" />
+
         <attr name="textCursorDrawable" />
         <attr name="textIsSelectable" />
         <attr name="textAllCaps" />
@@ -2047,7 +2164,9 @@
             <enum name="none" value="0" />
             <enum name="normal" value="1" />
             <enum name="full" value="2" />
+
             <enum name="normalFast" value="3" />
+
             <enum name="fullFast" value="4" />
         </attr>
         <attr name="lineBreakStyle">
@@ -2071,7 +2190,11 @@
         <attr name="justificationMode">
             <enum name="none" value="0" />
             <enum name="inter_word" value = "1" />
+            <enum name="inter_character" value = "2" />
         </attr>
+        <attr name="useBoundsForWidth" format="boolean" />
+        <attr name="shiftDrawingOffsetForStartOverhang" format="boolean" />
+        <attr name="useLocalePreferredLineHeightForMinimum" format="boolean" />
     </declare-styleable>
     <declare-styleable name="TextViewAppearance">
         <attr name="textAppearance" />
@@ -2161,6 +2284,7 @@
         <attr name="gravity" />
         <attr name="disableChildrenWhenDisabled" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="DatePicker">
         <attr name="firstDayOfWeek" />
         <attr name="minDate" format="string" />
@@ -2188,6 +2312,7 @@
         <attr name="yearListSelectorColor" format="color" />
         <attr name="dialogMode" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="TwoLineListItem">
         <attr name="mode">
             <enum name="oneLine" value="1" />
@@ -2221,6 +2346,7 @@
         <attr name="fadeEnabled" format="boolean" />
         <attr name="orientation" />
     </declare-styleable>
+
     <declare-styleable name="QuickContactBadge">
         <attr name="quickContactWindowSize">
             <enum name="modeSmall" value="1" />
@@ -2229,6 +2355,7 @@
         </attr>
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="AbsoluteLayout_Layout">
         <attr name="layout_x" format="dimension" />
         <attr name="layout_y" format="dimension" />
@@ -2285,6 +2412,7 @@
         <attr name="majorWeightMax" format="float" />
         <attr name="minorWeightMax" format="float" />
     </declare-styleable>
+
     <declare-styleable name="CalendarView">
         <attr name="firstDayOfWeek" format="integer" />
         <attr name="minDate" />
@@ -2307,6 +2435,7 @@
         <attr name="weekSeparatorLineColor" format="color|reference" />
         <attr name="selectedDateVerticalBar" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="NumberPicker">
         <attr name="solidColor" format="color|reference" />
         <attr name="selectionDivider" format="reference" />
@@ -2320,6 +2449,7 @@
         <attr name="virtualButtonPressedDrawable" format="reference"/>
         <attr name="hideWheelUntilFocused" format="boolean"/>
     </declare-styleable>
+
     <declare-styleable name="TimePicker">
         <attr name="legacyLayout" format="reference" />
         <attr name="internalLayout" />
@@ -2400,6 +2530,7 @@
     <declare-styleable name="AnimationScaleListDrawableItem">
         <attr name="drawable" />
     </declare-styleable>
+
     <declare-styleable name="GradientDrawable">
         <attr name="visible" />
         <attr name="dither" />
@@ -2493,6 +2624,7 @@
         <attr name="drawable" />
         <attr name="id" />
     </declare-styleable>
+
     <declare-styleable name="LevelListDrawableItem">
         <attr name="minLevel" format="integer" />
         <attr name="maxLevel" format="integer" />
@@ -2506,6 +2638,7 @@
         <attr name="pivotY" format="float|fraction" />
         <attr name="drawable" />
     </declare-styleable>
+
     <declare-styleable name="AnimatedRotateDrawable">
         <attr name="visible" />
         <attr name="frameDuration" format="integer" />
@@ -2593,6 +2726,7 @@
         <attr name="radius" />
         <attr name="effectColor" />
     </declare-styleable>
+
     <declare-styleable name="ScaleDrawable">
         <attr name="scaleWidth" format="string" />
         <attr name="scaleHeight" format="string" />
@@ -2616,6 +2750,7 @@
         <attr name="drawable" />
         <attr name="useIntrinsicSizeAsMinimum" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="ClipDrawable">
         <attr name="clipOrientation">
             <flag name="horizontal" value="1" />
@@ -2704,6 +2839,7 @@
         <attr name="animation" />
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="Animation">
         <attr name="interpolator" />
         <attr name="fillEnabled" format="boolean" />
@@ -2730,6 +2866,7 @@
         <attr name="showBackdrop" format="boolean" />
         <attr name="backdropColor" format="color" />
     </declare-styleable>
+
     <declare-styleable name="AnimationSet">
         <attr name="shareInterpolator" format="boolean" />
         <attr name="fillBefore" />
@@ -2738,12 +2875,14 @@
         <attr name="startOffset" />
         <attr name="repeatMode" />
     </declare-styleable>
+
     <declare-styleable name="RotateAnimation">
         <attr name="fromDegrees" />
         <attr name="toDegrees" />
         <attr name="pivotX" />
         <attr name="pivotY" />
     </declare-styleable>
+
     <declare-styleable name="ScaleAnimation">
         <attr name="fromXScale" format="float|fraction|dimension" />
         <attr name="toXScale" format="float|fraction|dimension" />
@@ -2752,16 +2891,19 @@
         <attr name="pivotX" />
         <attr name="pivotY" />
     </declare-styleable>
+
     <declare-styleable name="TranslateAnimation">
         <attr name="fromXDelta" format="float|fraction|dimension" />
         <attr name="toXDelta" format="float|fraction|dimension" />
         <attr name="fromYDelta" format="float|fraction|dimension" />
         <attr name="toYDelta" format="float|fraction|dimension" />
     </declare-styleable>
+
     <declare-styleable name="AlphaAnimation">
         <attr name="fromAlpha" format="float" />
         <attr name="toAlpha" format="float" />
     </declare-styleable>
+
     <declare-styleable name="ClipRectAnimation">
         <attr name="fromLeft" format="fraction" />
         <attr name="fromTop" format="fraction" />
@@ -2782,6 +2924,7 @@
         <attr name="toExtendRight" format="float|fraction|dimension" />
         <attr name="toExtendBottom" format="float|fraction|dimension" />
     </declare-styleable>
+
     <declare-styleable name="LayoutAnimation">
         <attr name="delay" format="float|fraction" />
         <attr name="animation" format="reference" />
@@ -2792,6 +2935,7 @@
         </attr>
         <attr name="interpolator" />
     </declare-styleable>
+
     <declare-styleable name="GridLayoutAnimation">
         <attr name="columnDelay" format="float|fraction" />
         <attr name="rowDelay" format="float|fraction" />
@@ -2807,25 +2951,32 @@
             <enum name="row"    value="2" />
         </attr>
     </declare-styleable>
+
     <declare-styleable name="AccelerateInterpolator">
         <attr name="factor" format="float" />
     </declare-styleable>
+
     <declare-styleable name="DecelerateInterpolator">
         <attr name="factor" />
     </declare-styleable>
+
     <declare-styleable name="CycleInterpolator">
         <attr name="cycles" format="float" />
     </declare-styleable>
+
     <declare-styleable name="AnticipateInterpolator">
         <attr name="tension" format="float" />
     </declare-styleable>
+
     <declare-styleable name="OvershootInterpolator">
         <attr name="tension" />
     </declare-styleable>
+
     <declare-styleable name="AnticipateOvershootInterpolator">
         <attr name="tension" />
         <attr name="extraTension" format="float" />
     </declare-styleable>
+
     <declare-styleable name="PathInterpolator">
         <attr name="controlX1" format="float" />
         <attr name="controlY1" format="float" />
@@ -2903,6 +3054,7 @@
         <attr name="patternPathData" format="string" />
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="Animator">
         <attr name="interpolator" />
         <attr name="duration" />
@@ -2919,12 +3071,14 @@
         </attr>
         <attr name="removeBeforeMRelease" format="integer" />
     </declare-styleable>
+
     <declare-styleable name="PropertyValuesHolder">
         <attr name="valueType" />
         <attr name="propertyName" />
         <attr name="valueFrom" />
         <attr name="valueTo" />
     </declare-styleable>
+
     <declare-styleable name="Keyframe">
         <attr name="valueType" />
         <attr name="value" />
@@ -2932,13 +3086,16 @@
         <attr name="interpolator" />
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="PropertyAnimator">
         <attr name="propertyName" format="string"/>
         <attr name="propertyXName" format="string"/>
         <attr name="propertyYName" format="string"/>
         <attr name="pathData"/>
     </declare-styleable>
+
     <eat-comment />
+
     <declare-styleable name="AnimatorSet">
         <attr name="ordering">
             <enum name="together" value="0" />
@@ -3040,12 +3197,14 @@
         <attr name="queryAfterZeroResults" format="boolean" />
         <attr name="searchSettingsDescription" format="string" />
         <attr name="autoUrlDetect" format="boolean" />
+
     </declare-styleable>
     <declare-styleable name="SearchableActionKey">
         <attr name="keycode" />
         <attr name="queryActionMsg"  format="string" />
         <attr name="suggestActionMsg"  format="string" />
         <attr name="suggestActionMsgColumn" format="string" />
+
     </declare-styleable>
     <eat-comment />
     <declare-styleable name="MapView">
@@ -3070,6 +3229,7 @@
         </attr>
         <attr name="visible" />
         <attr name="enabled" />
+
     </declare-styleable>
     <declare-styleable name="MenuItem">
         <attr name="id" />
@@ -3122,6 +3282,7 @@
         <attr name="actionProviderClass" format="string" />
         <attr name="contentDescription" format="string" />
         <attr name="tooltipText" format="string" />
+
     </declare-styleable>
     <declare-styleable name="ActivityChooserView">
         <attr name="initialActivityCount" format="string" />
@@ -3177,6 +3338,7 @@
         <attr name="entries" />
         <attr name="entryValues" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="MultiSelectListPreference">
         <attr name="entries" />
         <attr name="entryValues" />
@@ -3200,11 +3362,13 @@
             <enum name="alarm" value="4" />
         </attr>
     </declare-styleable>
+
     <declare-styleable name="InputMethodService">
         <attr name="imeFullscreenBackground" format="reference|color" />
         <attr name="imeExtractEnterAnimation" format="reference" />
         <attr name="imeExtractExitAnimation" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="VoiceInteractionSession">
     </declare-styleable>
     <declare-styleable name="KeyboardView">
@@ -3322,11 +3486,17 @@
         <attr name="shouldUseDefaultUnfoldTransition" format="boolean" />
         <attr name="settingsSliceUri" format="string"/>
         <attr name="supportsMultipleDisplays" format="boolean" />
+
     </declare-styleable>
     <declare-styleable name="Dream">
         <attr name="settingsActivity" />
         <attr name="previewImage" format="reference" />
         <attr name="showClockAndComplications" format="boolean" />
+        <attr name="dreamCategory" format="integer">
+            <flag name="none" value="0x0" />
+            <flag name="low_light" value="0x1" />
+            <flag name="home_panel" value="0x2" />
+        </attr>
     </declare-styleable>
     <declare-styleable name="TrustAgent">
         <attr name="settingsActivity" />
@@ -3394,6 +3564,7 @@
         <attr name="allContactsName" format="string" />
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="SlidingTab">
         <attr name="orientation" />
     </declare-styleable>
@@ -3410,6 +3581,7 @@
         <attr name="userRestriction" format="string"/>
     </declare-styleable>
     <eat-comment />
+
     <declare-styleable name="LockPatternView">
         <attr name="aspect" format="string" />
         <attr name="pathColor" format="color|reference" />
@@ -3418,6 +3590,8 @@
         <attr name="successColor" format="color|reference"/>
         <attr name="dotColor" format="color|reference"/>
         <attr name="dotActivatedColor" format="color|reference"/>
+        <attr name="keepDotActivated" format="boolean"/>
+        <attr name="enlargeVertexEntryArea" format="boolean"/>
     </declare-styleable>
     <eat-comment />
     <declare-styleable name="QuickAccessWalletService">
@@ -3438,6 +3612,8 @@
         <attr name="supportsLaunchVoiceAssistFromKeyguard" format="boolean" />
         <attr name="supportsLocalInteraction" format="boolean" />
         <attr name="hotwordDetectionService" format="string" />
+        <attr name="visualQueryDetectionService" format="string" />
+
     </declare-styleable>
     <declare-styleable name="GameService">
         <attr name="gameSessionService" format="string" />
@@ -3502,6 +3678,7 @@
         <attr name="elevation" />
         <attr name="popupTheme" />
     </declare-styleable>
+
     <declare-styleable name="ActionMode">
         <attr name="titleTextStyle" />
         <attr name="subtitleTextStyle" />
@@ -3510,6 +3687,7 @@
         <attr name="height" />
         <attr name="closeItemLayout" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="SearchView">
         <attr name="layout" />
         <attr name="iconifiedByDefault" format="boolean" />
@@ -3528,6 +3706,7 @@
         <attr name="queryBackground" format="reference" />
         <attr name="submitBackground" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="Switch">
         <attr name="thumb" />
         <attr name="thumbTint" />
@@ -3551,6 +3730,7 @@
         <attr name="splitTrack" />
         <attr name="showText" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="Pointer">
         <attr name="pointerIconArrow" format="reference" />
         <attr name="pointerIconSpotHover" format="reference" />
@@ -3576,12 +3756,19 @@
         <attr name="pointerIconZoomOut" format="reference"/>
         <attr name="pointerIconGrab" format="reference"/>
         <attr name="pointerIconGrabbing" format="reference"/>
+        <attr name="pointerIconHandwriting" format="reference"/>
     </declare-styleable>
+
     <declare-styleable name="PointerIcon">
         <attr name="bitmap" format="reference" />
         <attr name="hotSpotX" format="dimension" />
         <attr name="hotSpotY" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="PointerIconVectorTheme">
+        <attr name="pointerIconVectorFill" format="color" />
+        <attr name="pointerIconVectorFillInverse" format="color" />
+    </declare-styleable>
+
     <declare-styleable name="Storage">
         <attr name="mountPoint" format="string" />
         <attr name="storageDescription" format="string" />
@@ -3592,6 +3779,7 @@
         <attr name="allowMassStorage" format="boolean" />
         <attr name="maxFileSize" format="integer" />
     </declare-styleable>
+
     <declare-styleable name="SwitchPreference">
         <attr name="summaryOn" />
         <attr name="summaryOff" />
@@ -3599,6 +3787,7 @@
         <attr name="switchTextOff" format="string" />
         <attr name="disableDependentsState" />
     </declare-styleable>
+
     <declare-styleable name="SeekBarPreference">
         <attr name="layout" />
         <attr name="adjustable" format="boolean" />
@@ -3624,16 +3813,29 @@
         <attr name="name" />
         <attr name="label" />
         <attr name="keyboardLayout" format="reference" />
-        <attr name="locale" format="string" />
+        <attr name="keyboardLocale" format="string"/>
+        <attr name="keyboardLayoutType" format="enum">
+            <enum name="qwerty" value="1" />
+            <enum name="qwertz" value="2" />
+            <enum name="azerty" value="3" />
+            <enum name="dvorak" value="4" />
+            <enum name="colemak" value="5" />
+            <enum name="workman" value="6" />
+            <enum name="turkish_q" value="7" />
+            <enum name="turkish_f" value="8" />
+            <enum name="extended" value="9" />
+        </attr>
         <attr name="vendorId" format="integer" />
         <attr name="productId" format="integer" />
     </declare-styleable>
+
     <declare-styleable name="MediaRouteButton">
         <attr name="externalRouteEnabledDrawable" format="reference" />
         <attr name="mediaRouteTypes" format="integer">
             <enum name="liveAudio" value="0x1" />
             <enum name="user" value="0x800000" />
         </attr>
+
         <attr name="minWidth" />
         <attr name="minHeight" />
     </declare-styleable>
@@ -3642,6 +3844,7 @@
         <attr name="scrollIndicatorPaddingLeft" format="dimension" />
         <attr name="scrollIndicatorPaddingRight" format="dimension" />
     </declare-styleable>
+
     <declare-styleable name="KeyguardGlowStripView">
         <attr name="dotSize" format="dimension" />
         <attr name="numDots" format="integer" />
@@ -3663,6 +3866,7 @@
         <attr name="itemLayout" format="reference" />
         <attr name="itemColor" format="color|reference" />
     </declare-styleable>
+
     <declare-styleable name="Toolbar">
         <attr name="titleTextAppearance" format="reference" />
         <attr name="subtitleTextAppearance" format="reference" />
@@ -3696,9 +3900,11 @@
         <attr name="titleTextColor" format="color" />
         <attr name="subtitleTextColor" format="color" />
     </declare-styleable>
+
     <declare-styleable name="Toolbar_LayoutParams">
         <attr name="layout_gravity" />
     </declare-styleable>
+
     <declare-styleable name="ActionBar_LayoutParams">
         <attr name="layout_gravity" />
     </declare-styleable>
@@ -3715,6 +3921,10 @@
     <declare-styleable name="TvInteractiveAppService">
         <attr name="supportedTypes" format="reference" />
     </declare-styleable>
+    <declare-styleable name="TvAdService">
+        <attr name="adServiceTypes" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="RatingSystemDefinition">
         <attr name="name" />
         <attr name="title" />
@@ -3727,6 +3937,7 @@
         <attr name="description" />
         <attr name="contentAgeHint" format="integer" />
     </declare-styleable>
+
     <declare-styleable name="ResolverDrawerLayout">
         <attr name="maxWidth" />
         <attr name="maxCollapsedHeight" format="dimension" />
@@ -3734,12 +3945,15 @@
         <attr name="showAtTop" format="boolean" />
         <attr name="ignoreOffsetTopLimit" format="reference" />
     </declare-styleable>
+
     <declare-styleable name="MessagingLinearLayout">
         <attr name="spacing" />
     </declare-styleable>
+
     <declare-styleable name="DateTimeView">
         <attr name="showRelative" format="boolean" />
     </declare-styleable>
+
     <declare-styleable name="ResolverDrawerLayout_LayoutParams">
         <attr name="layout_alwaysShow" format="boolean" />
         <attr name="layout_ignoreOffset" format="boolean" />
@@ -3754,6 +3968,7 @@
         <attr name="ambientShadowAlpha" />
         <attr name="spotShadowAlpha" />
     </declare-styleable>
+
     <declare-styleable name="RestrictionEntry">
         <attr name="key" />
         <attr name="restrictionType">
@@ -3799,6 +4014,7 @@
         <attr name="enforceStatusBarContrast"/>
         <attr name="enforceNavigationBarContrast"/>
     </declare-styleable>
+
     <declare-styleable name="Shortcut">
         <attr name="shortcutId" format="string" />
         <attr name="enabled" />
@@ -3808,6 +4024,7 @@
         <attr name="shortcutDisabledMessage" format="reference" />
         <attr name="splashScreenTheme" format="reference"/>
     </declare-styleable>
+
     <declare-styleable name="ShortcutCategories">
         <attr name="name" />
     </declare-styleable>
@@ -3854,7 +4071,9 @@
             <enum name="gone" value="2" />
         </attr>
     </declare-styleable>
+
     <attr name="lockPatternStyle" format="reference" />
+
     <declare-styleable name="Magnifier">
         <attr name="magnifierWidth" format="dimension" />
         <attr name="magnifierHeight" format="dimension" />
@@ -3864,10 +4083,15 @@
         <attr name="magnifierHorizontalOffset" format="dimension" />
         <attr name="magnifierColorOverlay" format="color" />
     </declare-styleable>
+
     <attr name="autoSizePresetSizes" />
+
     <attr name="iconfactoryIconSize" format="dimension"/>
     <attr name="iconfactoryBadgeSize" format="dimension"/>
     <attr name="lStar" format="float"/>
+    <declare-styleable name="LocaleConfig">
+        <attr name="defaultLocale" format="string"/>
+    </declare-styleable>
     <declare-styleable name="LocaleConfig_Locale">
         <attr name="name" />
     </declare-styleable>
@@ -3875,4 +4099,12 @@
         <attr name="maxDrawableWidth" format="dimension"/>
         <attr name="maxDrawableHeight" format="dimension"/>
     </declare-styleable>
-</resources>
+    <eat-comment />
+    <declare-styleable name="CredentialProvider">
+        <attr name="settingsSubtitle" format="string" />
+        <attr name="settingsActivity" />
+    </declare-styleable>
+    <declare-styleable name="CredentialProvider_Capabilities" parent="CredentialProvider">
+        <attr name="capability" format="string" />
+    </declare-styleable>
+    </resources>

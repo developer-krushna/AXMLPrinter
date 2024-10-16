@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-/* Copyright 2006, The Android Open Source Project
-**
-** Licensed under the Apache License, Version 2.0 (the "License");
-** you may not use this file except in compliance with the License.
-** You may obtain a copy of the License at
-**
-**     http://www.apache.org/licenses/LICENSE-2.0
-**
-** Unless required by applicable law or agreed to in writing, software
-** distributed under the License is distributed on an "AS IS" BASIS,
-** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-** See the License for the specific language governing permissions and
-** limitations under the License.
-*/
--->
+ <!-- Last Update 17 Oct 2024 -->
 <resources>
     <eat-comment />
     <attr name="theme" format="reference" />
@@ -55,6 +40,7 @@
         <flag name="configurator" value="0x80000" />
         <flag name="incidentReportApprover" value="0x100000" />
         <flag name="appPredictor" value="0x200000" />
+        <flag name="module" value="0x400000" />
         <flag name="companion" value="0x800000" />
         <flag name="retailDemo" value="0x1000000" />
         <flag name="recents" value="0x2000000" />
@@ -90,6 +76,7 @@
     <attr name="exported" format="boolean" />
     <attr name="isGame" format="boolean" />
     <attr name="singleUser" format="boolean" />
+    <attr name="systemUserOnly" format="boolean" />
     <attr name="process" format="string" />
     <attr name="taskAffinity" format="string" />
     <attr name="allowTaskReparenting" format="boolean" />
@@ -166,6 +153,7 @@
         <flag name="density" value="0x1000" />
         <flag name="layoutDirection" value="0x2000" />
         <flag name="colorMode" value="0x4000" />
+        <flag name="grammaticalGender" value="0x8000" />
         <flag name="fontScale" value="0x40000000" />
         <flag name="fontWeightAdjustment" value="0x10000000" />
     </attr>
@@ -260,8 +248,11 @@
     <attr name="compileSdkVersion" format="integer" />
     <attr name="compileSdkVersionCodename" format="string" />
     <attr name="appComponentFactory" format="string" />
+
     <attr name="usesNonSdkApi" format="boolean" />
     <attr name="attributionsAreUserVisible" format="boolean" />
+    <attr name="updatableSystem" format="boolean" />
+    <attr name="emergencyInstaller" format="string" />
     <attr name="foregroundServiceType">
         <flag name="dataSync" value="0x01" />
         <flag name="mediaPlayback" value="0x02" />
@@ -271,6 +262,12 @@
         <flag name="mediaProjection" value="0x20" />
         <flag name="camera" value="0x40" />
         <flag name="microphone" value="0x80" />
+        <flag name="health" value="0x100" />
+        <flag name="remoteMessaging" value="0x200" />
+        <flag name="systemExempted" value="0x400" />
+        <flag name="shortService" value="0x800" />
+        <flag name="mediaProcessing" value="0x2000" />
+        <flag name="specialUse" value="0x40000000" />
     </attr>
     <attr name="gwpAsanMode">
         <enum name="default" value="-1" />
@@ -284,6 +281,9 @@
        <enum name="sync" value="2" />
     </attr>
     <attr name="attributionTags" format="string" />
+
+    <attr name="allowUpdateOwnership" format="boolean" />
+    <attr name="featureFlag" format="string" />
     <declare-styleable name="AndroidManifest">
         <attr name="versionCode" />
         <attr name="versionCodeMajor" />
@@ -316,6 +316,7 @@
         <attr name="taskAffinity" />
         <attr name="allowTaskReparenting" />
         <attr name="hasCode" format="boolean" />
+        <attr name="allowCrossUidActivitySwitchFromBelow" format="boolean" />
         <attr name="persistent" />
         <attr name="persistentWhenFeatureAvailable" />
         <attr name="requiredForAllUsers" />
@@ -363,6 +364,7 @@
             <enum name="productivity" value="7" />
             <enum name="accessibility" value="8" />
         </attr>
+
         <attr name="classLoader" />
         <attr name="appComponentFactory" />
         <attr name="usesNonSdkApi" />
@@ -419,6 +421,7 @@
         <attr name="protectionLevel" />
         <attr name="permissionFlags" />
         <attr name="knownCerts" />
+        <attr name="maxSdkVersion" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestPermissionGroup" parent="AndroidManifest">
         <attr name="name" />
@@ -445,6 +448,7 @@
     </declare-styleable>
     <declare-styleable name="AndroidManifestUsesPermission" parent="AndroidManifest">
         <attr name="name" />
+        <attr name="minSdkVersion" format="integer|string" />
         <attr name="maxSdkVersion" format="integer" />
         <attr name="requiredFeature" format="string" />
         <attr name="requiredNotFeature" format="string" />
@@ -502,6 +506,7 @@
         <attr name="name" />
         <attr name="versionMajor" format="integer" />
         <attr name="certDigest" format="string" />
+        <attr name="optional" format="boolean" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestStaticLibrary" parent="AndroidManifestApplication">
         <attr name="name" />
@@ -556,6 +561,7 @@
         <attr name="gwpAsanMode" />
         <attr name="memtagMode" />
         <attr name="nativeHeapZeroInitialized" />
+        <attr name="useEmbeddedDex" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestDenyPermission"
             parent="AndroidManifestProcesses">
@@ -590,6 +596,7 @@
         <attr name="visibleToInstantApps" />
         <attr name="splitName" />
         <attr name="attributionTags" />
+        <attr name="systemUserOnly" format="boolean" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestGrantUriPermission"  parent="AndroidManifestProvider">
         <attr name="path" format="string" />
@@ -630,6 +637,8 @@
         <attr name="useAppZygote" format="boolean" />
         <attr name="foregroundServiceType" />
         <attr name="attributionTags" />
+        <attr name="allowSharedIsolatedProcess" format="boolean" />
+        <attr name="systemUserOnly" format="boolean" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestApexSystemService"
                        parent="AndroidManifestApplication">
@@ -703,9 +712,11 @@
         <attr name="minAspectRatio" />
         <attr name="lockTaskMode" />
         <attr name="showForAllUsers" />
+
         <attr name="showWhenLocked" />
         <attr name="inheritShowWhenLocked" />
         <attr name="turnScreenOn" />
+
         <attr name="directBootAware" />
         <attr name="alwaysFocusable" format="boolean" />
         <attr name="enableVrMode" />
@@ -724,6 +735,15 @@
         <attr name="canDisplayOnRemoteDevices" format="boolean"/>
         <attr name="allowUntrustedActivityEmbedding" />
         <attr name="knownActivityEmbeddingCerts" />
+        <attr name="requiredDisplayCategory" format="string"/>
+        <attr name="enableOnBackInvokedCallback" format="boolean"/>
+        <attr name="requireContentUriPermissionFromCaller" format="string">
+            <enum name="none" value="0" />
+            <enum name="read" value="1" />
+            <enum name="write" value="2" />
+            <enum name="readOrWrite" value="3" />
+            <enum name="readAndWrite" value="4" />
+        </attr>
     </declare-styleable>
     <declare-styleable name="AndroidManifestActivityAlias" parent="AndroidManifestApplication">
         <attr name="name" />
@@ -779,7 +799,12 @@
     <declare-styleable name="AndroidManifestAction" parent="AndroidManifestIntentFilter">
         <attr name="name" />
     </declare-styleable>
-    <declare-styleable name="AndroidManifestData" parent="AndroidManifestIntentFilter">
+    <declare-styleable name="AndroidManifestUriRelativeFilterGroup"
+        parent="AndroidManifestIntentFilter">
+        <attr name="allow" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="AndroidManifestData"
+        parent="AndroidManifestIntentFilter AndroidManifestUriRelativeFilterGroup">
         <attr name="mimeType" format="string" />
         <attr name="mimeGroup" format="string" />
         <attr name="scheme" format="string" />
@@ -795,6 +820,16 @@
         <attr name="pathPattern" />
         <attr name="pathAdvancedPattern" />
         <attr name="pathSuffix" />
+        <attr name="query" format="string" />
+        <attr name="queryPrefix" format="string" />
+        <attr name="queryPattern" format="string" />
+        <attr name="queryAdvancedPattern" format="string" />
+        <attr name="querySuffix" format="string" />
+        <attr name="fragment" format="string" />
+        <attr name="fragmentPrefix" format="string" />
+        <attr name="fragmentPattern" format="string" />
+        <attr name="fragmentAdvancedPattern" format="string" />
+        <attr name="fragmentSuffix" format="string" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestCategory" parent="AndroidManifestIntentFilter">
         <attr name="name" />
@@ -835,6 +870,7 @@
     <attr name="publicKey" format="string" />
     <declare-styleable name="AndroidManifestPackageVerifier" parent="AndroidManifest">
         <attr name="name" />
+
         <attr name="publicKey" />
     </declare-styleable>
     <declare-styleable name="AndroidManifestResourceOverlay" parent="AndroidManifest">
@@ -884,6 +920,7 @@
     <declare-styleable name="AndroidManifestRestrictUpdate" parent="AndroidManifest">
         <attr name="hash" format="string" />
     </declare-styleable>
+
     <declare-styleable name="AndroidManifestUsesSplit" parent="AndroidManifest">
         <attr name="name" format="string" />
     </declare-styleable>
