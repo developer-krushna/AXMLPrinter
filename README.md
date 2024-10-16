@@ -13,6 +13,9 @@ There are several changes made to the code, and multiple bugs have been fixed. T
 - [x] Fixed indentation/tab error
 - [x] Improved speed in xml decompilation
 - [ ] Id2Name (Reading axml file according to the resource id name)
+
+## Test the library
+
 #### Before
 <img src="https://raw.githubusercontent.com/developer-krushna/AXMLPrinter/main/before.jpg" width="240" alt="Screenshot"/>
 
