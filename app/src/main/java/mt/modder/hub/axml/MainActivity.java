@@ -57,7 +57,7 @@ import java.nio.*;
 
 public class MainActivity extends Activity {
 	
-	public String Input_Path = "/storage/emulated/0/MT2/apks/AndroidManifest.xml";
+	public String Input_Path = "/storage/emulated/0/AndroidManifest.xml";
 	
 	public String outPath = "sdcard/MyDecompiledAXML.xml";
 	
@@ -80,16 +80,21 @@ public class MainActivity extends Activity {
 
 			// initialize the axmlprinter class
 			AXMLPrinter axmlPrinter = new AXMLPrinter();
-			axmlPrinter.setEnableID2Name(false);
-			axmlPrinter.setAttributeIntConversion(false);
+			axmlPrinter.setEnableID2Name(true);
+			axmlPrinter.setAttrValueTranslation(true);
+			axmlPrinter.setExtractPermissionDescription(true);
 
             // Use the XMLDecompiler to decompile to an XML string
-            String xmlString = axmlPrinter.convertXml(byteArray);
+			// Place your resources.arsc file in the same directory of your xml file
+            String xmlString = axmlPrinter.readFromFile(Input_Path);
+			
+			// Direct process without enabling custom resource id2name
+			 // String xmlString = axmlPrinter.convertXml(byteArray);
 
             // Output the XML string
             saveAsFile(xmlString, outPath);
 			text.setText("Processing complete .File saved in " + outPath);
-        } catch (IOException e) {
+        } catch (Exception e) {
 			// Complete extraction of error 
 			StringWriter sw = new StringWriter();
 			PrintWriter pw = new PrintWriter(sw);
