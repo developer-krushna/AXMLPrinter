@@ -12,7 +12,7 @@ There are several changes made to the code, and multiple bugs have been fixed. T
 - [x] Fixed close tag error
 - [x] Fixed indentation/tab error
 - [x] Improved speed in xml decompilation
-- [ ] Id2Name (Reading axml file according to the resource id name)
+- [x] Id2Name (Reading axml file according to the resource id name)
 
 ## Test the library
 I injected my library in **MT Manager Mod** You can download the apk file from my Telegram Channel. [Download Now](https://t.me/Modder_Hub/814) 
