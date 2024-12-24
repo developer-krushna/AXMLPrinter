@@ -16,11 +16,8 @@ There are several changes made to the code, and multiple bugs have been fixed. T
 
 ## Test the library
 I injected my library in **MT Manager Mod** You can download the apk file from my Telegram Channel. [Download Now](https://t.me/Modder_Hub/814) 
-#### Before
-<img src="https://raw.githubusercontent.com/developer-krushna/AXMLPrinter/main/before.jpg" width="240" alt="Screenshot"/>
-
-#### After
-<img src="https://raw.githubusercontent.com/developer-krushna/AXMLPrinter/main/after.jpg" width="240" alt="Screenshot"/>
+#### Sample
+<img src="[https://raw.githubusercontent.com/developer-krushna/AXMLPrinter/main/after.jpg](https://github.com/developer-krushna/AXMLPrinter/blob/main/IMG_20241223_122041_536.jpg)" width="240" alt="Screenshot"/>
 
 ## License
 
