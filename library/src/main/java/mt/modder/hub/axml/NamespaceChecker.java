@@ -40,5 +40,13 @@ public class NamespaceChecker {
             return "android"; // Default namespace for others
         }
     }
+	
+	public boolean isAttributeExist(String str){
+		if(attributes.contains(str)){
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
 
