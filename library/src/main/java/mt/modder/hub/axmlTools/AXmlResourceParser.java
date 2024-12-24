@@ -55,6 +55,12 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     private static final String E_NOT_SUPPORTED = "Method is not supported.";
 	public static final int XML_RESOURCE_MAP = 0x0180;
 	
+	private static final int XML_START_TAG_CHUNK = 1048832; 
+	private static final int XML_TEXT_CHUNK = 1048836; 
+	private static final int XML_NAMESPACE_PUSH_CHUNK = 1048832; 
+	
+	public static final String NS_ANDROID = "http://schemas.android.com/apk/res/android";
+	
 	// vriables for storing attributes and state information
     private int[] mAttributes;
     private int mClassAttribute;
@@ -68,7 +74,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     private int[] mResourceIDs;
     private StringBlock stringBlock;
     private int mStyleAttribute;
-    private OldXMLToken oldXmlToken = null;
+    private PrecededXmlToken precededXmlToken = null;
     private boolean mOperational = false;
 	
 	private String[] resourceMap;
@@ -304,12 +310,12 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     }
 
 	// Class to store information about previous xml token
-    public static final class OldXMLToken {
+    public static final class PrecededXmlToken {
         public String name;
         public String namespace;
         public int type;
 
-        public OldXMLToken(String name, String namespace, int type) {
+        public PrecededXmlToken(String name, String namespace, int type) {
             this.name = name;
             this.namespace = namespace;
             this.type = type;
@@ -356,9 +362,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                     break;
                 }
                 this.mResourceIDs = this.mReader.readIntArray((readInt / 4) - 2);
-				isChunkResourceIDs = true;
 				resourceMap = new String[mResourceIDs.length];
-            } else if (chunkType < 1048832 || chunkType > 1048836) {
+            } else if (chunkType < XML_START_TAG_CHUNK || chunkType > XML_TEXT_CHUNK) {
                 break;
             } else if (chunkType == CHUNK_XML_START_TAG && previousEvent == -1) {
                 this.eventType = XmlPullParser.START_DOCUMENT;
@@ -367,7 +372,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                 this.mReader.skipInt();
                 int lineNumber = this.mReader.readInt();
                 this.mReader.skipInt();
-                if (chunkType != 1048832 && chunkType != CHUNK_XML_END_NAMESPACE) {
+                if (chunkType != XML_START_TAG_CHUNK && chunkType != CHUNK_XML_END_NAMESPACE) {
                     this.mLineNumber = lineNumber;
                     if (chunkType == CHUNK_XML_START_TAG) {
                         this.mNamespaceUri = this.mReader.readInt();
@@ -397,14 +402,14 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                         this.eventType = 3;
                         this.mDecreaseDepth = true;
                         return;
-                    } else if (chunkType == 1048836) {
+                    } else if (chunkType == XML_TEXT_CHUNK) {
                         this.mName = this.mReader.readInt();
                         this.mReader.skipInt();
                         this.mReader.skipInt();
                         this.eventType = 4;
                         return;
                     }
-                } else if (chunkType == 1048832) {
+                } else if (chunkType == XML_NAMESPACE_PUSH_CHUNK) {
                     this.mNamespaces.push(this.mReader.readInt(), this.mReader.readInt());
                 } else { 
                     this.mReader.skipInt();
@@ -576,9 +581,11 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
 		int nameIndex = this.mAttributes[getAttributeOffset(index) + 1];
 		String attrName = stringBlock.getString(nameIndex);
         if(!attrName.isEmpty()){
+			isChunkResourceIDs = false;
 			return attrName;
 		}else{
-			return Attribute.AttrIds.getString(mResourceIDs[nameIndex]);
+			isChunkResourceIDs = true;
+			return Integer.toHexString(mResourceIDs[nameIndex]);
 		}
   
     }
@@ -602,10 +609,16 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
    
 
     @Override
-    public String getAttributePrefix(int index) {
-        int findPrefix = this.mNamespaces.findPrefix(this.mAttributes[getAttributeOffset(index) + 0]);
-        return findPrefix == -1 ? "" : this.stringBlock.getString(findPrefix);
-    }
+	public String getAttributePrefix(int index) {
+		int findPrefix = this.mNamespaces.findPrefix(this.mAttributes[getAttributeOffset(index)]);
+		String prefix = (findPrefix == -1) ? "" : this.stringBlock.getString(findPrefix);
+		switch (prefix) {
+			case "axml_auto_00":
+				return "android";
+			default:
+				return prefix;
+		}
+	}
 
     @Override
     public int getAttributeResourceValue(int index, int defaultValue) {
@@ -754,12 +767,23 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
 
     @Override
     public String getNamespacePrefix(int i) {
-        return this.stringBlock.getString(this.mNamespaces.getPrefix(i));
+		String namespacePrefix = this.stringBlock.getString(this.mNamespaces.getPrefix(i));
+        switch (namespacePrefix) {
+			case "axml_auto_00":
+				return "android";
+			default:
+				return namespacePrefix;
+		}
     }
 
     @Override
     public String getNamespaceUri(int pos) {
-        return this.stringBlock.getString(this.mNamespaces.getUri(pos));
+        String naespaceUri = this.stringBlock.getString(this.mNamespaces.getUri(pos));
+		if(naespaceUri != null){
+			return naespaceUri;
+		} else {
+			return NS_ANDROID;
+		}
     }
 
     @Override
@@ -772,8 +796,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         return this.stringBlock.getString(this.mNamespaces.findPrefix(this.mNamespaceUri));
     }
 
-    public OldXMLToken getPrevious() {
-        return this.oldXmlToken;
+    public PrecededXmlToken getPrevious() {
+        return this.precededXmlToken;
     }
 
     @Override
@@ -850,7 +874,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         if (this.mReader != null) {
             try {
                 if (this.stringBlock != null) {
-                    this.oldXmlToken = new OldXMLToken(getName(), getPrefix(), getEventType());
+                    this.precededXmlToken = new PrecededXmlToken(getName(), getPrefix(), getEventType());
                 }
                 doNext();
                 return this.eventType;
