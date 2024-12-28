@@ -10,11 +10,20 @@ Access coarse (approximate) location
 android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
 Run foreground service with the type "mediaProjection"
 
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+Run foreground service with the type "systemExempted"
+
 android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 Run foreground service with the type "specialUse"
 
 android.permission.ACCESS_SUPERUSER
 Allow application to gain superuser access
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+Run foreground service with the type "mediaPlayback"
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Run foreground service with the type "dataSync"
 
 android.permission.READ_MEDIA_VISUAL_USER_SELECTED
 Read user selected image and video files from shared storage
@@ -42,6 +51,9 @@ Publish system-level services
 
 android.permission.BATTERY_STATS
 Update battery statistics
+
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+Allows a browser to invoke credential manager APIs on behalf of another RP.
 
 android.permission.BLUETOOTH
 Pair with Bluetooth devices
@@ -91,6 +103,12 @@ Enable or prevent location update prompts from the wireless module
 android.permission.DELETE_CACHE_FILES
 Delete cache files
 
+android.permission.DETECT_SCREEN_CAPTURE
+Allows an application to get notified when a screen capture of its windows is attempted.
+
+android.permission.DETECT_SCREEN_RECORDING
+Allows an application to get notified when it is being recorded.
+
 android.permission.DELETE_PACKAGES
 Delete packages
 
@@ -102,6 +120,9 @@ Read and write to diagnostic resources
 
 android.permission.DISABLE_KEYGUARD
 Disable keyguard lock
+
+android.permission.DELIVER_COMPANION_MESSAGES
+Allows an application to deliver companion messages to system
 
 android.permission.DUMP
 Retrieve state dump information from system services
@@ -118,11 +139,17 @@ Access the flashlight
 android.permission.FORCE_BACK
 Force a back operation on top-level activities
 
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Allows the application to synchronize data with other services while its foreground service is running.
+
 android.permission.FOTA_UPDATE
 May be a reserved permission
 
 android.permission.GET_ACCOUNTS
 Find accounts on the device
+
+android.permission.GET_ACCOUNTS_PRIVILEGED
+Allows access to the list of accounts in the Accounts Service
 
 android.permission.GET_PACKAGE_SIZE
 Measure application storage space
@@ -133,8 +160,14 @@ Retrieve information about currently running applications
 android.permission.HARDWARE_TEST
 Access hardware
 
+android.permission.HIDE_OVERLAY_WINDOWS
+Allows an app to prevent non-system-overlay windows from being drawn on top of it
+
 android.permission.INJECT_EVENTS
 Intercept user actions such as keystrokes, touch, trackball events, etc.
+
+android.permission.INSTALL_LOCATION_PROVIDER
+Install location providers
 
 android.permission.INSTALL_PACKAGES
 Install packages
@@ -200,7 +233,7 @@ android.permission.RECEIVE_BOOT_COMPLETED
 Boot startup
 
 android.permission.RECEIVE_MMS
-Receive messages (MMS)
+⚠️ Receive messages (MMS)
 
 android.permission.RECEIVE_SMS
 ⚠️ Receive messages (SMS)
@@ -376,9 +409,6 @@ Use location hardware features, not used by third-party apps
 android.permission.KILL_BACKGROUND_PROCESSES
 Call killBackgroundProcesses(String) to terminate background processes
 
-android.permission.INSTALL_LOCATION_PROVIDER
-Install location providers
-
 android.permission.GLOBAL_SEARCH
 Global search capabilities across the system
 
@@ -521,7 +551,7 @@ android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
 Allows the app to execute tasks in the background without showing a persistent notification.
 
 android.permission.ANSWER_PHONE_CALLS
-This permission allows an app to answer incoming phone calls. User consent is required.
+⚠️ This permission allows an app to answer incoming phone calls. User consent is required.
 
 android.permission.READ_MEDIA_AUDIO
 Allows an application to access audio data from media files. User consent is necessary.
@@ -586,9 +616,6 @@ Allows the application to access the advertising ID.
 com.google.android.c2dm.permission.RECEIVE
 Allow the application to receive messages from Google Cloud Messaging
 
-android.permission.FOREGROUND_SERVICE_DATA_SYNC
-Allows the application to synchronize data with other services while its foreground service is running.
-
 android.permission.WRITE_APP_BADGE
 Allows the application to modify the badge number displayed on its app icon.
 
@@ -597,3 +624,18 @@ Allows the setting of precise alarms.
 
 android.permission.READ_MEDIA_IMAGES
 Allows access to the images stored on the device.
+
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+Allows an instant app to create foreground services
+
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+Allows an application to capture screen content to perform a screenshot using the intent action
+
+android.permission.MANAGE_DEVICE_LOCK_STATE
+Allows financed device kiosk apps to perform actions on the Device Lock service
+
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+Allows an application to manage policy related to accessibility.
+
+android.permission.READ_HOME_APP_SEARCH_DATA
+Allows an application to query over global data in AppSearch that's visible to the HOME role.
