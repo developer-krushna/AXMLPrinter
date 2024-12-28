@@ -103,6 +103,9 @@ public final class AXMLPrinter {
 	
 	public void setAttrValueTranslation(boolean isAttrConvert){
 		isAttrConversion = isAttrConvert;
+		if(isAttrConvert){
+			
+		}
 	}
 	
 	public void setExtractPermissionDescription(boolean isExtract){
@@ -255,11 +258,6 @@ public final class AXMLPrinter {
 																	getAttrNamespacePrefix(xmlParser, i, attributeName), 
 																	attributeName.replaceAll(customAttributeTag, "").replaceAll(systemAttributeTag, ""), 
 																	getAttributeValue(xmlParser, i)));
-									/* xmlContent.append(String.format(attributeFormat,
-									                                   " ", 
-																	   getAttrNamespacePrefix(xmlParser, i, attributeName), 
-																	   attributeName.replaceAll(customAttributeTag, ""), 
-																	   getAttributeValue(xmlParser, i))); */
 								}
 							} else {
 							    xmlContent.append('\n');
@@ -279,12 +277,6 @@ public final class AXMLPrinter {
 																	getAttrNamespacePrefix(xmlParser, i, attributeName), 
 																	attributeName.replaceAll(customAttributeTag, "").replaceAll(systemAttributeTag, ""), 
 																	getAttributeValue(xmlParser, i)));
-																	
-									/* xmlContent.append(String.format(attributeFormat, 
-									                                indentation, 
-																	getAttrNamespacePrefix(xmlParser, i, attributeName), 
-																	attributeName.replaceAll(customAttributeTag, ""), 
-																	getAttributeValue(xmlParser, i))); */
 
 								}
 							}
@@ -372,10 +364,10 @@ public final class AXMLPrinter {
 					if (decodedValue != null && !decodedValue.isEmpty() ) {
 						return decodedValue; // Return the decoded value if found
 					} else {
-						return String.format("0x%08x", attributeValueData);
+						return "0x" + Integer.toHexString(attributeValueData);
 					}
 				} else{
-					return String.format("0x%08x", attributeValueData);
+					return "0x" + Integer.toHexString(attributeValueData);
 				}
 					
 			case TypedValue.TYPE_INT_BOOLEAN /* 18 */:
@@ -384,11 +376,12 @@ public final class AXMLPrinter {
 				
 			case TypedValue.TYPE_DIMENSION /* 5 */:
 				// Dimension value
-				return complexToFloat(attributeValueData) + DIMENSION_UNIT_STRS[attributeValueData & 15];
+				
+				return TypedValue.complexToFloat(attributeValueData) + DIMENSION_UNIT_STRS[attributeValueData & 15];
 				
 			case TypedValue.TYPE_FRACTION /* 6 */:
 				// Fraction value
-				return complexToFloat(attributeValueData) + FRACTION_UNIT_STRS[attributeValueData & 15];
+				return (TypedValue.complexToFloat(attributeValueData) * 100.0f) + FRACTION_UNIT_STRS[attributeValueData & 15];
 				
 			default:
 				// Handle enum or flag values and other cases 
@@ -440,35 +433,14 @@ public final class AXMLPrinter {
 		return namespace + ":";
 	}
 	
-	/*
-	private String getAttrNamespacePrefix(AXmlResourceParser xmlParser, int position, String attributeName) {
-		String namespace = xmlParser.getAttributePrefix(position);
-		String namespacefinal = null;
-		if (xmlParser.isChunkResourceIDs && namespace.isEmpty()) {
-			namespace = namespaceChecker.getNamespace(attributeName);
-		}
-		
-		namespacefinal = namespace != null && !namespace.isEmpty() ? namespace + ":" : namespace;
-        //check if the attribute is extracted from custom resource file which is starting from "Custom"
-		if(attributeName.contains(customAttributeTag)){
-			return "";
-			// check if any unknown attributes are found and it will start from "id"
-		} else if(isUnknownAttrMatched(attributeName)){
-		    return "";
-		} else {
-			return namespacefinal;
-		}
-	}
-	*/
-	
 	// Get attribute name dyanemically
 	public String getAttributeName(AXmlResourceParser xmlParser, int position) {
 		String attributeName = xmlParser.getAttributeName(position);
 
 		//check if the attributes are encrypted with attribute hex id 
-		if (xmlParser.isChunkResourceIDs) {
+		if (xmlParser.isChunkResourceIDs || isUnknownAttrMatched(attributeName)) {
 			try {
-				String extractedName = getAttributeNameFromResources(attributeName);
+				String extractedName = getAttributeNameFromResources(attributeName.replace("id", ""));
 				return extractedName != null ? extractedName.replaceAll("attr/", "") : getFallbackAttributeName(attributeName);
 			} catch (Exception e) {
 				return getFallbackAttributeName(attributeName);
@@ -495,27 +467,16 @@ public final class AXMLPrinter {
 
 		return extractedAttributeName;
 	}
-
-	/*
-	private String getAttributeNameFromResources(String attribute_hexId) throws Exception {
-	    String extractedAttributeName = systemResFile.getNameForHexId("0" + attribute_hexId);
-		
-        // Process custom resource file if exist and also check if the system resource file don't have target hex id
-		if (isCustomResFileExist && extractedAttributeName == null) {
-			extractedAttributeName = customResFile.getNameForHexId(attribute_hexId);
-			if (extractedAttributeName != null) {  //Only add if a name was found
-				extractedAttributeName = customAttributeTag + extractedAttributeName;
-			}
-		}
-
-		return extractedAttributeName;
-	}
-	*/
-	
 	
     //check the without namespace based specific attributes if matched
 	private String getFallbackAttributeName(String attributeName) {
-		return namespaceChecker.isAttributeExist(attributeName) ? attributeName : "id" + attributeName;
+		if (namespaceChecker.isAttributeExist(attributeName)) {
+			return attributeName;
+		} else if (attributeName != null && attributeName.startsWith("id")) {
+			return attributeName;
+		} else {
+			return "id" + attributeName;
+		}
 	}
 	
 	// match unknown attributes starting from "id"
@@ -563,8 +524,8 @@ public final class AXMLPrinter {
      }
 	 
 	// Converts a complex number to a float
-	public float complexToFloat(int complex) {
-		return (complex & (-256)) * RADIX_MULTS[(complex >> 4) & 3];
+	public String complexToFloat(int complex) {
+		return (TypedValue.complexToFloat(complex) * 100.0f) + FRACTION_UNIT_STRS[complex & 15];
 	}
 	
 	 //Load manifest permission description
