@@ -74,8 +74,8 @@ public final class AXMLPrinter {
 	
 	private ResourceIdExtractor systemResFile = new ResourceIdExtractor(); 
 	private ResourceIdExtractor customResFile = new ResourceIdExtractor();
-	public String customAttributeTag = "Custom";
-	public String systemAttributeTag = "System";
+	public String customAttributeTag = "_Custom";
+	public String systemAttributeTag = "_Systumm"; //😂
 	public boolean isCustomResFileExist = false;
 	
 	private NamespaceChecker namespaceChecker = new NamespaceChecker();
@@ -103,9 +103,6 @@ public final class AXMLPrinter {
 	
 	public void setAttrValueTranslation(boolean isAttrConvert){
 		isAttrConversion = isAttrConvert;
-		if(isAttrConvert){
-			
-		}
 	}
 	
 	public void setExtractPermissionDescription(boolean isExtract){
