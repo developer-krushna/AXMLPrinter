@@ -54,7 +54,6 @@ public class ResourceIdExtractor {
 
 		// Variable to track if data is obfuscated
 		String previousExtractedData = null;
-		boolean isObfuscated = true;
 
 		for (Chunk chunk : chunks) {
 			if (chunk instanceof ResourceTableChunk) {
@@ -72,8 +71,8 @@ public class ResourceIdExtractor {
 							String extractedData = extractResourceData(resourceTypeName, keyStringPool, entry, resourceTableChunk);
 
 							// Check if extracted data is same across all hexIds
-							if (previousExtractedData != null && !previousExtractedData.equals(extractedData)) {
-								isObfuscated = false;
+							if (previousExtractedData != null && previousExtractedData.equals(extractedData)) {
+								throw new Exception("The resources.arsc file appears to be obfuscated.");
 							}
 
 							// Update previous extracted data
@@ -85,11 +84,6 @@ public class ResourceIdExtractor {
 					}
 				}
 			}
-		}
-
-		// After processing, check if the data is obfuscated
-		if (isObfuscated) {
-			throw new Exception("The resources.arsc file appears to be obfuscated.");
 		}
 	}
 
