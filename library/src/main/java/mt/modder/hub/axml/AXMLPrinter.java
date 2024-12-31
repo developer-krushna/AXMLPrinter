@@ -80,6 +80,7 @@ public final class AXMLPrinter {
 	
 	private NamespaceChecker namespaceChecker = new NamespaceChecker();
 	public static final String android = "android";
+	public boolean isNotExistAndroidNamespace = false;
 	
 	private Map<String, String> permissionInfoMap;
 	private boolean isPermissionInfoLoaded = false;
@@ -133,6 +134,7 @@ public final class AXMLPrinter {
 					}
 					isCustomResFileExist = true;
 				}catch(Exception e){
+					System.out.println(e);
 					isCustomResFileExist = false;
 				}
 			}
@@ -141,6 +143,29 @@ public final class AXMLPrinter {
 		//decompile xml2Axml
 		return convertXml(byteArray);
 	}
+	// for MT Manager
+	public void readProcessRes(String path) throws Exception {
+		if(!path.endsWith(".xml")){
+			return;
+		}
+		if(isId2Name){
+			File file = new File(path);
+			String resourceFile = file.getParent() + "/resources.arsc";
+			System.out.println(resourceFile);
+			if(new File(resourceFile).exists()){
+				try{
+					try (InputStream arscStream = new FileInputStream(resourceFile)) {
+						customResFile.loadArscData(arscStream);
+					}
+					isCustomResFileExist = true;
+				}catch(Exception e){
+					System.out.println(e);
+					isCustomResFileExist = false;
+				}
+			}
+		}
+	}
+	
 
 	// Main method to decompile an XML byte array
 	public String convertXml(byte[] byteArray) {
@@ -158,7 +183,7 @@ public final class AXMLPrinter {
 			xmlParser.open(new ByteArrayInputStream(byteArray));
 			StringBuilder indentation = new StringBuilder();
 			StringBuilder xmlContent = new StringBuilder();
-			boolean isExistAndroidNamespace = false;
+			boolean addAndroidNameSpaceIfNotExist = false;
 			
 			while (true) {
 				int eventType = xmlParser.next();
@@ -224,15 +249,17 @@ public final class AXMLPrinter {
 							                               (i == namespaceStart) ? " " : indentation, 
 														   xmlParser.getNamespacePrefix(i), 
 														   xmlParser.getNamespaceUri(i)));
-							isExistAndroidNamespace = true; // make it true as it completed the above task							   
+							addAndroidNameSpaceIfNotExist = true; // make it true as it completed the above task
+							isNotExistAndroidNamespace = false;
 						}
 						
 						// If the android header namespace is not exist then add it manually
-						if(!isExistAndroidNamespace && prefix.equals("manifest")){
+						if(!addAndroidNameSpaceIfNotExist && prefix.equals("manifest")){
 							String namespaceFormat = "%sxmlns:%s=\"%s\"";
 							xmlContent.append(String.format(namespaceFormat, " ", android, xmlParser.NS_ANDROID));
 							//xmlContent.append("xmlns:android="+ xmlParser.NS_ANDROID + "\"");
-							isExistAndroidNamespace = true;
+							addAndroidNameSpaceIfNotExist = true;
+							isNotExistAndroidNamespace = true;
 						}
 
 						// Handle attributes
@@ -422,10 +449,14 @@ public final class AXMLPrinter {
 		} else if(attributeName.contains(systemAttributeTag)) {
 			return android + ":";
 		} else if(namespace.isEmpty()) {
-			if(namespaceChecker.isAttributeExist(attributeName)){
-				return "";
+			if(xmlParser.isChunkResourceIDs || isNotExistAndroidNamespace){
+				if(namespaceChecker.isAttributeExist(attributeName)){
+					return "";
+				} else{
+					return android + ":";
+				}
 			}
-			return android + ":";
+			return "";
 		}
 		return namespace + ":";
 	}
