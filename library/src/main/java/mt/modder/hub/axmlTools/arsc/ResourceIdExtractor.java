@@ -38,6 +38,7 @@ package mt.modder.hub.axmlTools.arsc;
 import mt.modder.hub.arsc.*;
 import java.io.*;
 import java.util.*;
+import java.util.regex.*;
 
 /*
 Author @developer-krushna
@@ -51,10 +52,7 @@ public class ResourceIdExtractor {
 	public void loadArscData(InputStream arsc) throws Exception {
 		BinaryResourceFile resourceFile = BinaryResourceFile.fromInputStream(arsc);
 		List<Chunk> chunks = resourceFile.getChunks();
-
-		// Variable to track if data is obfuscated
-		String previousExtractedData = null;
-
+		
 		for (Chunk chunk : chunks) {
 			if (chunk instanceof ResourceTableChunk) {
 				ResourceTableChunk resourceTableChunk = (ResourceTableChunk) chunk;
@@ -70,14 +68,6 @@ public class ResourceIdExtractor {
 							// Extract data for different resource types
 							String extractedData = extractResourceData(resourceTypeName, keyStringPool, entry, resourceTableChunk);
 
-							// Check if extracted data is same across all hexIds
-							if (previousExtractedData != null && previousExtractedData.equals(extractedData)) {
-								throw new Exception("The resources.arsc file appears to be obfuscated.");
-							}
-
-							// Update previous extracted data
-							previousExtractedData = extractedData;
-
 							// Cache the extracted data based on the hex ID
 							idToNameCache.put(hexId, extractedData);
 						}
@@ -85,6 +75,7 @@ public class ResourceIdExtractor {
 				}
 			}
 		}
+
 	}
 
 	private String extractResourceData(String resourceTypeName, StringPoolChunk keyStringPool, Map.Entry<Integer, TypeChunk.Entry> entry, ResourceTableChunk resourceTableChunk) {
@@ -111,4 +102,5 @@ public class ResourceIdExtractor {
     public String getNameForHexId(String hexId) {
 		return idToNameCache.get("0x" + hexId);
     }
+	
 }
