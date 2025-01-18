@@ -23,8 +23,8 @@ I injected my library in **MT Manager Mod** You can download the apk file from m
 #### Sample
 <img src="https://github.com/developer-krushna/AXMLPrinter/blob/main/IMG_20241223_122041_536.jpg" width="240" alt="Screenshot"/>
 <img src="https://github.com/developer-krushna/AXMLPrinter/blob/main/IMG_20241223_122046_767.jpg" width="240" alt="Screenshot"/>
-## License
 
+## License
 + Apache License V2.0 <http://www.apache.org/licenses/LICENSE-2.0>
 
 ## Contributing
