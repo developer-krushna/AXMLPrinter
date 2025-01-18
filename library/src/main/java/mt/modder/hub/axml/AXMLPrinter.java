@@ -68,6 +68,7 @@ public final class AXMLPrinter {
     private static final String[] FRACTION_UNIT_STRS = new String[]{
 		"%", "%p"
     };
+	
 
 	private boolean isId2Name = false;
 	private boolean isAttrConversion = false;
@@ -88,6 +89,9 @@ public final class AXMLPrinter {
 	private boolean isPermissionInfoLoaded = false;
 	private String usesPermission = "uses-permission";
 	private boolean isExtractPermissionDescription = false;
+	
+	public String res_auto = "http://schemas.android.com/apk/res-auto";
+	public String  RandomResAutoPrefix_Name = null;
 	
 
 
@@ -246,10 +250,18 @@ public final class AXMLPrinter {
 
 						for (int i = namespaceStart; i < namespaceEnd; i++) {
 							String namespaceFormat = (i == namespaceStart) ? "%sxmlns:%s=\"%s\"" : "\n%sxmlns:%s=\"%s\"";
+							String nameSpacePrefix = xmlParser.getNamespacePrefix(i);
+							String nameSpaceUri = xmlParser.getNamespaceUri(i);
+							
+							if(nameSpaceUri.equals(res_auto) && !nameSpacePrefix.equals("app")){
+								RandomResAutoPrefix_Name = nameSpacePrefix;
+								nameSpacePrefix = "app";
+							}
+							
 							xmlContent.append(String.format(namespaceFormat, 
 															(i == namespaceStart) ? " " : indentation, 
-															xmlParser.getNamespacePrefix(i), 
-															xmlParser.getNamespaceUri(i)));
+															nameSpacePrefix, 
+															nameSpaceUri));
 							isExistAndroidNamespace = true; // make it true as it completed the above task
 							
 						}
@@ -277,9 +289,9 @@ public final class AXMLPrinter {
 									String attributeName = getAttributeName(xmlParser, i);
 									String attributeValue = getAttributeValue(xmlParser, i);
 									// Final Addition of namespace , attribute along with its corresponding value
-									// Indention is not needed because it has 1 attribute only its main node
 									int valueSize = attributeValue.codePointCount(0, attributeValue.length());
 									if(valueSize <= 14 || prefix.equals(usesPermission)){
+										// Indention is not needed because it has 1 attribute only its main node
 										xmlContent.append(String.format(attributeFormat, 
 																		" ", 
 																		getAttrNamespacePrefix(xmlParser, i, attributeName), 
@@ -377,7 +389,7 @@ public final class AXMLPrinter {
 				if (isId2Name) {
 				    return "?" + extractResourecID(attributeValueData);
 				} else {
-				    return "?" + String.format("%08x", attributeValueData);
+				    return "?" + getAttributeHexFormat(attributeValueData);
 				}
 
 			case TypedValue.TYPE_REFERENCE /* 1 */:
@@ -385,7 +397,7 @@ public final class AXMLPrinter {
 				if (isId2Name) {
 					return "@" + extractResourecID(attributeValueData);
 				} else {
-					return "@" + String.format("%08x", attributeValueData);
+					return "@" + getAttributeHexFormat(attributeValueData);
 				}
 
 			case TypedValue.TYPE_FLOAT /* 4 */:
@@ -426,11 +438,19 @@ public final class AXMLPrinter {
 					}
 				}
 				// For unhandled types or cases
-				return (attributeValueType >= 28 && attributeValueType <= 31) ?
-					String.format("#%08x", attributeValueData) :
-					(attributeValueType >= 16 && attributeValueType <= 31) ?
-					String.valueOf(attributeValueData) :
-					String.format("<0x%X, type 0x%02X>", attributeValueData, attributeValueType);
+				String result;
+				if (attributeValueType >= TypedValue.TYPE_FIRST_COLOR_INT && attributeValueType <= TypedValue.TYPE_LAST_COLOR_INT) {
+					// Condition 1: attributeValueType is a color type (0x1c-0x1f)
+					result = String.format("#%08x", attributeValueData);
+				} else if (attributeValueType >= 0x10 && attributeValueType <= TypedValue.TYPE_LAST_INT) {
+					// Condition 2: attributeValueType is in the general integer range but not the color range(0x10-0x1f, but not 0x1c-0x1f)
+					result = String.valueOf(attributeValueData);
+				} else {
+					// Condition 3: All other cases,
+					result = String.format("<0x%X, type 0x%02X>", attributeValueData, attributeValueType);
+				}
+
+				return result;
 		}
 	}
 
@@ -459,7 +479,7 @@ public final class AXMLPrinter {
 		} else if (attributeName.contains(systemAttributeTag)) {
 			return android + ":";
 		} else if (namespace.isEmpty()) {
-			if (xmlParser.isChunkResourceIDs || isExistAndroidNamespace) {
+			if (xmlParser.isChunkResourceIDs || !isExistAndroidNamespace) {
 				if (namespaceChecker.isAttributeExist(attributeName)) {
 					return "";
 				} else {
@@ -467,6 +487,10 @@ public final class AXMLPrinter {
 				}
 			}
 			return "";
+		}
+		//check if the is res-auto nameSpaceUri's prefix name is random
+		if(RandomResAutoPrefix_Name != null && namespace.equals(RandomResAutoPrefix_Name)){
+			return "app" + ":";
 		}
 		return namespace + ":";
 	}
@@ -532,7 +556,7 @@ public final class AXMLPrinter {
 	// Extract resource id2Name according to hex id
 	// It is only enable if "isId2Name" is true
 	public String extractResourecID(int i) {
-		String resHexId = String.format("%08x", new Object[]{Integer.valueOf(i)});
+		String resHexId = getAttributeHexFormat(i);
 		String systemId2Name = null;
 		String customResId2Name = null;
 		try {
@@ -586,7 +610,7 @@ public final class AXMLPrinter {
 	//Load manifest permission description
 	private Map<String, String> loadPermissionsInfo() throws Exception {
 		Map<String, String> map = new HashMap<>();
-		InputStream is = AXMLPrinter.class.getResourceAsStream("/assets/permissions_info.txt");
+		InputStream is = AXMLPrinter.class.getResourceAsStream("/assets/permissions_info_en.txt");
 		InputStreamReader reader = new InputStreamReader(is);
 		BufferedReader bufferedReader = new BufferedReader(reader);
 		String permission = null;
@@ -623,6 +647,11 @@ public final class AXMLPrinter {
 
 		return map;
 	}
+	
+	// Format attribute values to hex format
+	public String getAttributeHexFormat(int i) {
+        return String.format("%08x", Integer.valueOf(i));
+    }
 	
 	/**
 	 * Formats a dimension value (e.g., pixels, dp, sp).
@@ -712,7 +741,7 @@ public final class AXMLPrinter {
             hexValue++;
 
             // Format the incremented value back to a hex string (8 digits)
-            return String.format("%08x", hexValue);
+            return getAttributeHexFormat((int)hexValue);
         }
         catch(NumberFormatException e){
 			// If there's a NumberFormatException (invalid input), return original value.
