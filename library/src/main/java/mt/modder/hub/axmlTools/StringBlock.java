@@ -39,6 +39,8 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
+import java.nio.*;
+import mt.modder.hub.axmlTools.escaper.*;
 
 public class StringBlock {
 	private static final int CHUNK_TYPE = 0x001C0001; // Type identifier for the chunk
@@ -48,16 +50,16 @@ public class StringBlock {
 	private int[] strings; // Array containing the actual string data
 	private int[] styleOffsets; // Offsets for the start of each style
 	private int[] styles; // Array containing the style data
-	
-	
+
+
 	private StringBlock() {
 	}
-	
+
 	// Retrieves a byte from an int array at a specified index
 	private static int getByte(int[] array, int index) {
 		return (array[index / 4] >>> ((index % 4) * 8)) & 255;
 	}
-	
+
 	// Converts a segment of an int array into a byte array
 	private static byte[] getByteArray(int[] array, int offset, int length) {
 		byte[] bytes = new byte[length];
@@ -66,7 +68,7 @@ public class StringBlock {
 		}
 		return bytes;
 	}
-	
+
 	// Determines the size of the length field based on the encoding
 	private int getLengthFieldSize(int[] array, int offset) {
 		if (!this.isUTF8) {
@@ -75,7 +77,7 @@ public class StringBlock {
 		int size = (getByte(array, offset) & 128) != 0 ? 2 + 1 : 2;
 		return (getByte(array, offset) & 128) != 0 ? size + 1 : size;
 	}
-	
+
 	// Retrieves a short value from an int array at a specified offset
 	private static final int getShort(int[] array, int offset) {
 		int value = array[offset / 4];
@@ -85,7 +87,7 @@ public class StringBlock {
 			return (value >>> 16);
 		}
 	}
-	
+
 	// Retrieves the length of a string from the array
 	private int getStringLength(int[] array, int offset) {
 		if (!this.isUTF8) {
@@ -102,7 +104,7 @@ public class StringBlock {
 		int byte1 = getByte(array, nextOffset);
 		return (byte1 & 128) != 0 ? ((byte1 & 127) << 8) | getByte(array, nextOffset + 1) : byte1;
 	}
-	
+
 	// Retrieves the style array for a given index
 	private int[] getStyle(int index) {
 		if (styleOffsets == null || styles == null || index >= styleOffsets.length) {
@@ -132,7 +134,7 @@ public class StringBlock {
 		}
 		return style;
 	}
-	
+
 	// Reads a StringBlock from the given IntReader
 	public static StringBlock read(IntReader intReader) throws IOException {
 		ChunkUtil.readCheckType(intReader, CHUNK_TYPE); // Check the chunk type
@@ -142,14 +144,14 @@ public class StringBlock {
 		int flags = intReader.readInt(); // Flags (including UTF-8 flag)
 		int stringDataOffset = intReader.readInt(); // Offset to string data
 		int stylesOffset = intReader.readInt(); // Offset to styles data
-		
+
 		StringBlock stringBlock = new StringBlock();
 		stringBlock.isUTF8 = (flags & UTF8_FLAG) != 0; // Determine if strings are UTF-8 encoded
 		stringBlock.stringOffsets = intReader.readIntArray(stringCount); // Read string offsets
 		if (styleCount != 0) {
 			stringBlock.styleOffsets = intReader.readIntArray(styleCount); // Read style offsets
 		}
-		
+
 		int stringDataSize = (stylesOffset == 0 ? chunkSize : stylesOffset) - stringDataOffset;
 		if (stringDataSize % 4 == 0) {
 			stringBlock.strings = intReader.readIntArray(stringDataSize / 4); // Read string data
@@ -164,7 +166,7 @@ public class StringBlock {
 		}
 		throw new IOException("String data size is not multiple of 4 (" + stringDataSize + ").");
 	}
-	
+
 	// Finds the index of a string in the string block
 	public int find(String str) {
 		if (str == null) {
@@ -189,12 +191,12 @@ public class StringBlock {
 		}
 		return -1;
 	}
-	
+
 	// Gets the string at the specified index
 	public CharSequence get(int index) {
 		return getString(index);
 	}
-	
+
 	// Gets the count of strings in the string block
 	public int getCount() {
 		if (stringOffsets != null) {
@@ -202,7 +204,7 @@ public class StringBlock {
 		}
 		return 0;
 	}
-	
+
 	// Gets the HTML representation of the string at the specified index
 	public String getHTML(int index) {
 		String str = getString(index);
@@ -245,39 +247,7 @@ public class StringBlock {
 			style[nextStyleIndex + 1] = -1;
 		}
 	}
-	
-	// Escapes XML special characters in the string
-	private String escapeXmlChars(String input) {
-		if (input == null) {
-			return null;
-		}
-		StringBuilder escapedString = new StringBuilder();
-		for (int i = 0; i < input.length(); i++) {
-			char currentChar = input.charAt(i);
-			switch (currentChar) {
-				case '&':
-				escapedString.append("&amp;");
-				break;
-				case '<':
-				escapedString.append("&lt;");
-				break;
-				case '>':
-				escapedString.append("&gt;");
-				break;
-				case '"':
-				escapedString.append("&quot;");
-				break;
-				case '\'':
-				escapedString.append("&apos;");
-				break;
-				default:
-				escapedString.append(currentChar);
-				break;
-			}
-		}
-		return escapedString.toString();
-	}
-	
+
 	// Retrieves the string at the specified index
 	public String getString(int index) {
 		if (index < 0 || stringOffsets == null || index >= stringOffsets.length) {
@@ -291,8 +261,9 @@ public class StringBlock {
 			length <<= 1;
 		}
 		String originalString = new String(getByteArray(strings, lengthFieldSize, length), 0, length, charset);
-		return escapeXmlChars(originalString);
+		return XmlEscaper.escapeXml10(originalString);
 	}
-	
-	
+
+
 }
+
