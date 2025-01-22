@@ -1561,3 +1561,150 @@ Indicates the app has acknowledged the Google Play Store Terms of Service (TOS).
 
 com.google.android.apps.now.CURRENT_ACCOUNT_ACCESS
 Allows the app to access the currently active Google account on the device, and related account information.
+
+android.permission.READ_SETTINGS
+⚠️ Allows an app to read the user's system settings.
+
+android.permission.ACCESS_BROADCAST_RADIO
+Allows an app to receive broadcast messages sent by the radio interface.
+
+android.permission.INTERACT_ACROSS_PROFILES
+Allows an app to interact with users of different user profiles.
+
+android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS
+Allows an app to query for stored credentials using the Credential Manager API.
+
+android.permission.RUN_USER_INITIATED_JOBS
+Allows an app to initiate user initiated background jobs.
+
+android.permission.CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS
+Allows an app to specify which credential providers the user is allowed to use.
+
+android.permission.HAND_TRACKING
+Allows an app to track the user's hand movements.
+
+com.chrome.permission.DEVICE_EXTRAS
+Allows an app, specific to chrome, to access Chrome related device features.
+
+android.permission.SHUTDOWN
+Allows the app to shut down the device.
+
+android.permission.UPDATE_LOCK
+Allows the app to update the device's lock pattern/PIN/password.
+
+android.permission.STOP_APP_SWITCHES
+Allows the app to stop other apps from being switched to or displayed on the screen.
+
+android.permission.INSTALL_DRM
+Allows the app to install DRM (Digital Rights Management) content.
+
+android.permission.CONTROL_KEYGUARD
+Allows the app to control the device's keyguard (lock screen).
+
+android.permission.SET_KEYBOARD_LAYOUT
+Allows the app to change the keyboard layout.
+
+android.permission.ACCESS_WIMAX_STATE
+Allows access to WiMAX state information.
+
+android.permission.OEM_UNLOCK_STATE
+Allows access to the OEM unlock state, used for bootloader unlocking.
+
+android.permission.MOVE_PACKAGE
+Allows the app to move an installed package.
+
+android.permission.WRITE_DREAM_STATE
+Allows the app to change the daydream (screen saver) settings.
+
+android.permission.INTERACT_ACROSS_USERS_FULL
+Allows full interaction across different users on a multi-user device.
+
+com.android.smspush.WAPPUSH_MANAGER_BIND
+Allows binding to the system's WAP Push manager.
+
+com.android.server.telecom.permission.REGISTER_PROVIDER_OR_SUBSCRIPTION
+Allows registration as a telecom provider or subscription.
+
+android.permission.START_FOREGROUND_SERVICES_FROM_BACKGROUND
+Allows the app to start foreground services even when it's in the background.
+
+android.permission.ACCESS_CONTENT_PROVIDERS_EXTERNALLY
+Allows access to data of content providers that are exported from other apps.
+
+android.permission.GRANT_REVOKE_PERMISSIONS
+Allows granting or revoking permissions to other applications.
+
+com.android.certinstaller.INSTALL_AS_USER
+Allows the app to install certificates for any user on the device.
+
+com.android.launcher.permission.WRITE_SETTINGS
+Allows the app to modify settings of the device's launcher
+
+android.permission.TRUST_LISTENER
+Allows the app to act as a trust listener.
+
+android.permission.READ_SEARCH_INDEXABLES
+Allows reading of searchable index data.
+
+com.android.email.permission.ACCESS_PROVIDER
+Allows access to the email provider.
+
+com.android.email.permission.READ_ATTACHMENT
+Allows reading attachments from emails.
+
+android.permission.MMS_PUSH
+Allows the app to receive MMS push messages.
+
+android.permission.READ_PRECISE_PHONE_STATE
+Allows the app to access precise phone state information.
+
+android.permission.PERFORM_IMS_SINGLE_REGISTRATION
+Allows performing IMS (IP Multimedia Subsystem) single registration.
+
+android.permission.ACCESS_RCS_USER_CAPABILITY_EXCHANGE
+Allows access to RCS user capability exchange.
+
+android.permission.ACCESS_MESSAGES_ON_ICC
+Allows accessing messages stored on the ICC card (SIM).
+
+com.google.android.ims.providers.ACCESS_DATA
+Allows access to IMS provider data.
+
+com.google.android.ims.LOG_ACCESS
+Allows logging of IMS data.
+
+com.google.android.setupwizard.READ_DEVICE_ORIGIN
+Allows reading the device origin information.
+
+com.google.android.setupwizard.READ_DEVICE_ORIGIN_FIRST_PARTY
+Allows reading the device origin for first-party apps.
+
+android.permission.READ_NETWORK_USAGE_HISTORY
+Allows reading network usage history.
+
+android.permission.ACCESS_NOTIFICATIONS
+Allows access to notifications.
+
+android.permission.REMOTE_AUDIO_PLAYBACK
+Allows the app to control remote audio playback.
+
+android.permission.CONFIGURE_WIFI_DISPLAY
+Allows the app to configure Wi-Fi Display settings.
+
+android.permission.MANAGE_MEDIA_PROJECTION
+Allows the app to manage media projection (screen recording/casting).
+
+android.permission.RETRIEVE_WINDOW_TOKEN
+Allows retrieving a window token.
+
+android.permission.MANAGE_NETWORK_POLICY
+Allows the app to manage network policies.
+
+android.permission.BLUETOOTH_STACK
+Allows the app to access the Bluetooth stack directly.
+
+android.permission.FRAME_STATS
+Allows access to frame statistics.
+
+android.permission.COPY_PROTECTED_DATA
+Allows copying protected data.
