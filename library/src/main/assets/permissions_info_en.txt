@@ -1,3 +1,6 @@
+#Collected by @developer-krushna.
+#Join Telegram Channel @Modder_Hub for more updates.
+
 android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
 Allows an application to request to ignore battery optimizations.
 
@@ -1707,4 +1710,112 @@ android.permission.FRAME_STATS
 Allows access to frame statistics.
 
 android.permission.COPY_PROTECTED_DATA
-Allows copying protected data.
+⚠️ Allows copying protected data.
+
+android.permission.ADJUST_RUNTIME_PERMISSIONS_POLICY
+Allows modification of runtime permission policies (e.g., granting or denying permissions).
+
+android.permission.GET_RUNTIME_PERMISSIONS
+Allows retrieval of runtime permissions information.
+
+com.android.permission.INSTALL_EXISTING_PACKAGES
+Allows the app to installing existing packages.
+
+android.permission.INSTALL_TEST_ONLY_PACKAGE
+Allows the app to installing test-only packages.
+
+android.permission.INTERNAL_DELETE_CACHE_FILES
+Allows the app to deleting cache files.
+
+android.permission.KILL_UID
+Allows the app to terminating processes by their user ID.
+
+android.permission.MANAGE_APPOPS
+Allows the app to managing app operation restrictions.
+
+android.permission.MANAGE_NOTIFICATION_LISTENERS
+Allows the app to managing notification listeners.
+
+android.permission.SUSPEND_APPS
+Allows the app to suspending applications.
+
+android.permission.UPDATE_DOMAIN_VERIFICATION_USER_SELECTION
+Allows the app to modifying the user's selection for domain verification.
+
+android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION
+Allows the app to updating packages without user interaction.
+
+android.permission.MANAGE_SENSORS
+Allows the app to control and configure device sensors like accelerometers, gyroscopes, etc. (Potentially for unusual data collection).
+
+android.permission.READ_BASIC_PHONE_STATE
+Allows the app to read basic phone information like the phone number, current cellular network info, and call status. 
+
+android.permission.MANAGE_OWN_CALLS
+💀 Allows the app to make and manage phone calls directly, without going through the default dialer.
+
+android.permission.READ_PHONE_NUMBERS
+👽 Allows the app to read phone numbers stored on the device.
+
+android.permission.ACCESS_WEATHERCLOCK_PROVIDER
+Allows access to a specific weather provider, potentially for displaying weather data on a clock or widget.
+
+android.permission.ACCESS_GPS
+Allows access to precise location data using GPS.
+
+android.permission.ACCESS_ASSISTED_GPS
+Allows access to precise location data using GPS with assistance from cellular or Wi-Fi data.
+
+android.permission.ACCESS_LOCATION
+Allows access to device location data (can be coarse or fine depending on the app's requested level).
+
+android.permission.FOREGROUND_SERVICE_LOCATION
+Allows the app to keep running as a foreground service while using location, even when the user is not actively using it.
+
+android.permission.BROADCAST_PACKAGE_ADDED
+Allows the app to receive broadcasts when a new package (app) is installed.
+
+android.permission.BROADCAST_PACKAGE_CHANGED
+Allows the app to receive broadcasts when a package (app) is changed.
+
+android.permission.BROADCAST_PACKAGE_INSTALL
+Allows the app to receive broadcasts related to app installation.
+
+android.permission.BROADCAST_PACKAGE_REPLACED
+Allows the app to receive broadcasts when an app is replaced (updated).
+
+android.permission.READ_CLIPBOARD
+⚠️ Allows the app to read data copied to the device's clipboard.
+
+android.permission.INSTALL_SHORTCUT
+Allows the app to create shortcuts on the user's home screen.
+
+android.permission.NETWORK_STATE_CHANGED_ACTION
+Allows the app to receive broadcasts about changes to the device's network state (e.g., Wi-Fi/cellular).
+
+android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE
+Allows the app to run as a foreground service while connected to a device, like a bluetooth peripheral.
+
+android.permission.FOREGROUND_SERVICE_CAMERA
+Allows the app to run as a foreground service while using the camera.
+
+com.sec.android.provider.badge.permission.WRITE
+Allows the app to write to the badge counter of Samsung devices. (For notification badges).
+
+com.google.android.apps.now.OPT_IN_WIZARD
+Allows the app to display the Google Now opt-in wizard (likely related to Google app functionality).
+
+com.google.android.googleapps.permission.ACCESS_GOOGLE_PASSWORD
+💀 Allows the app to potentially access a Google password.
+
+com.android.vending.setup.PLAY_SETUP_SERVICE
+Allows the app to communicate with the Play Store setup service, likely for initial app installation.
+
+com.google.android.c2dm.permission.SEND
+Allows the app to send messages through Google's Cloud to Device Messaging (C2DM) service (now FCM - Firebase Cloud Messaging).
+
+com.google.android.launcher.permission.READ_SETTINGS
+Allows the app to read settings related to the Google launcher (home screen).
+
+com.google.android.xmpp.permission.BROADCAST
+Allows an app to use XMPP broadcasts, for instant messaging functionality.
