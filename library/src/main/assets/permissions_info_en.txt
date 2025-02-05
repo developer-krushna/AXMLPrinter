@@ -20,7 +20,7 @@ android.permission.FOREGROUND_SERVICE_SPECIAL_USE
 Run foreground service with the type "specialUse"
 
 android.permission.ACCESS_SUPERUSER
-Allow application to gain superuser access
+Allows application to gain superuser access
 
 android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
 Run foreground service with the type "mediaPlayback"
@@ -143,7 +143,7 @@ android.permission.FORCE_BACK
 Force a back operation on top-level activities
 
 android.permission.FOREGROUND_SERVICE_DATA_SYNC
-Allows the application to synchronize data with other services while its foreground service is running.
+Allows the app to synchronize data with other services while its foreground service is running.
 
 android.permission.FOTA_UPDATE
 May be a reserved permission
@@ -599,10 +599,10 @@ android.permission.USE_WALLPAPER_SERVICE
 Allows an app to use the WallpaperService, which is responsible for managing live wallpapers.
 
 android.permission.SYSTEM_OVERLAY_WINDOW
-Allows the application to display windows on top of other apps.
+Allows the app to display windows on top of other apps.
 
 com.android.vending.BILLING
-Allows the application to conduct sales through Google Play's In-app Billing Service.
+Allows the app to conduct sales through Google Play's In-app Billing Service.
 
 android.permission.RECEIVE_USER_PRESENT
 Allows an app to be notified when the user has unlocked the device and is present to interact with it.
@@ -614,13 +614,13 @@ android.permission.POST_NOTIFICATIONS
 Allows apps to display notifications on an Android device.
 
 com.google.android.gms.permission.AD_ID
-Allows the application to access the advertising ID.
+Allows the app to access the advertising ID.
 
 com.google.android.c2dm.permission.RECEIVE
-Allow the application to receive messages from Google Cloud Messaging
+Allows the app to receive messages from Google Cloud Messaging
 
 android.permission.WRITE_APP_BADGE
-Allows the application to modify the badge number displayed on its app icon.
+Allows the app to modify the badge number displayed on its app icon.
 
 android.permission.SCHEDULE_EXACT_ALARM
 Allows the setting of precise alarms.
@@ -677,7 +677,7 @@ com.google.android.providers.gsf.permission.WRITE_GSERVICES
 Allows writing of Google Service Framework (GSF) settings.
 
 com.google.android.providers.gsf.permission.BROADCAST_ALARM
-Allow the application to broadcast alarms to Google services.
+Allows the app to broadcast alarms to Google services.
 
 com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
 Allows Google Play services to retrieve the signature of installed apps.
@@ -743,7 +743,7 @@ android.permission.GET_INSTALLED_PACKAGES
 Allows app to get list of installed packages.
 
 android.permission.IDENTIFY_PHONE_STATE
-Allow an app to access identify phone state
+Allows an app to access identify phone state
 
 android.permission.INVOKE_CARRIER_SETUP
 Allows an app to invoke carrier setup.
@@ -791,7 +791,7 @@ android.permission.STATUS_BAR_SERVICE
 Allows app to control the status bar
 
 android.permission.SYSTEM_APPLICATION_COMPONENT
-Allow to access system application components.
+Allows to access system application components.
 
 android.permission.USE_ICC_AUTH
 Allows access to ICC Authentication.
@@ -818,7 +818,7 @@ android.permission.BIND_QUICK_SETTINGS_TILE
 Allows an app to create quick settings tiles.
 
 android.permission.CONTROL_DEVICE_POLICY
-Allow control device policy
+Allows control device policy
 
 android.permission.MANAGE_DEVICE_ADMINS
 Allows managing device administrators.
@@ -1824,16 +1824,16 @@ android.permission.FOREGROUND_SERVICE_PHONE_CALL
 ☠️ Allows a foreground service to access phone call related information.
 
 android.permission.UPDATE_APP_BADGE
-Allow an app to modify the notification badge on its icon.
+Allows an app to modify the notification badge on its icon.
 
 android.permission.MMS_SEND_OUTBOX_MSG
-Allow an app to send MMS messages from the outbox.
+Allows an app to send MMS messages from the outbox.
 
 android.permission.READ_DATABASE
-💀 Allow an app to read data from a database.
+💀 Allows an app to read data from a database.
 
 android.permission.WRITE_DATABASE
-💀 Allow an app to write data to a database.
+💀 Allows an app to write data to a database.
 
 android.permission-group.CALL_LOG
 💀 Group permission for accessing call logs.
@@ -1842,163 +1842,163 @@ android.permission-group.CONTACTS
 💀 Group permission for accessing contacts.
 
 Manifest.permission.READ_CONTACTS
-💀 Allow an app to read contact data.
+💀 Allows an app to read contact data.
 
 Manifest.permission.READ_EXTERNAL_STORAGE
-💀 Allow an app to read files from the device's external storage (e.g., SD card).
+💀 Allows an app to read files from the device's external storage (e.g., SD card).
 
 Manifest.permission.SEND_SMS
-Allow an app to send SMS messages.
+Allows an app to send SMS messages.
 
 Manifest.permission.READ_CALENDAR
-💀 Allow an app to read calendar events.
+💀 Allows an app to read calendar events.
 
 android.permission.HIGH_SAMPLING_RATE_SENSORS
-Allow access to sensors at a very high sampling rate.
+Allows access to sensors at a very high sampling rate.
 
 android.permission.MODIFY_QUIET_MODE
-Allow an app to change the device's quiet mode settings (e.g., do not disturb).
+Allows an app to change the device's quiet mode settings (e.g., do not disturb).
 
 android.permission.LOG_COMPAT_CHANGE
-Allow an app to log compatibility changes.
+Allows an app to log compatibility changes.
 
 android.permission.READ_COMPAT_CHANGE_CONFIG
-Allow an app to read compatibility change configurations.
+Allows an app to read compatibility change configurations.
 
 com.google.android.calendar.permission.READ_OOBE
-Allow reading of out-of-box experience data from Google Calendar.
+Allows reading of out-of-box experience data from Google Calendar.
 
 android.permission.REQUEST_PASSWORD_COMPLEXITY
-Allow an app to request a specific password complexity policy.
+Allows an app to request a specific password complexity policy.
 
 android.permission.MANAGE_MEDIA
-Allow an application to manage media on the device.
+Allows an application to manage media on the device.
 
 android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE
-Allow an app to observe the presence of companion devices.
+Allows an app to observe the presence of companion devices.
 
 android.permission.ENTER_CAR_MODE_PRIORITIZED
-Allow an app to enter car mode with higher priority.
+Allows an app to enter car mode with higher priority.
 
 android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY
-Allow adding a display that is always unlocked.
+Allows adding a display that is always unlocked.
 
 android.permission.CREATE_VIRTUAL_DEVICE
-Allow creating a virtual device.
+Allows creating a virtual device.
 
 android.permission.TOGGLE_AUTOMOTIVE_PROJECTION
-Allow toggling automotive projection.
+Allows toggling automotive projection.
 
 android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION
-Allow requesting companion profile for automotive projection.
+Allows requesting companion profile for automotive projection.
 
 android.permission.ADD_TRUSTED_DISPLAY
-Allow adding a trusted display.
+Allows adding a trusted display.
 
 android.permission.ASSOCIATE_COMPANION_DEVICES
-Allow associating companion devices.
+Allows associating companion devices.
 
 android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS
-💀 Allow receiving sensitive notifications.
+💀 Allows receiving sensitive notifications.
 
 android.permission.FOREGROUND_SERVICE_MEDIA_PROCESSING
-Allow running a foreground service for media processing.
+Allows running a foreground service for media processing.
 
 android.permission.OVERRIDE_COMPAT_CHANGE_CONFIG
-Allow an app to override compatibility change configurations.
+Allows an app to override compatibility change configurations.
 
 android.permission.DOWNLOAD_CACHE_NON_PURGEABLE
-Allow an app to create a download cache that cannot be purged.
+Allows an app to create a download cache that cannot be purged.
 
 android.permission.MODIFY_NETWORK_ACCOUNTING
-Allow an app to modify network accounting data.
+Allows an app to modify network accounting data.
 
 android.permission.ACCESS_ALL_DOWNLOADS
-Allow an app to access all downloads on the device.
+Allows an app to access all downloads on the device.
 
 android.permission.INSTALL_SELF_UPDATES
-Allow an app to install its own updates.
+Allows an app to install its own updates.
 
 android.permission.GET_INTENT_SENDER_INTENT
-Allow an app to get an intent sender intent.
+Allows an app to get an intent sender intent.
 
 android.permission.SUPPRESS_CLIPBOARD_ACCESS_NOTIFICATION
-Allow an app to suppress notifications about clipboard access.
+Allows an app to suppress notifications about clipboard access.
 
 android.permission.SET_MEDIA_KEY_LISTENER
-Allow setting a media key listener.
+Allows setting a media key listener.
 
 android.permission.SET_VOLUME_KEY_LONG_PRESS_LISTENER
-Allow setting a volume key long press listener.
+Allows setting a volume key long press listener.
 
 android.permission.SUBSCRIBE_TO_KEYGUARD_LOCKED_STATE
-Allow subscribing to keyguard locked state changes.
+Allows subscribing to keyguard locked state changes.
 
 android.permission.CAPTURE_MEDIA_OUTPUT
-Allow capturing media output.
+Allows capturing media output.
 
 android.permission.EXECUTE_APP_FUNCTIONS
-Allow executing app functions.
+Allows executing app functions.
 
 android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING
-Allow running a foreground service for remote messaging.
+Allows running a foreground service for remote messaging.
 
 android.permission.QUERY_USERS
-Allow querying user information.
+Allows querying user information.
 
 android.permission.MANAGE_CLOUDSEARCH
-Allow managing cloud search.
+Allows managing cloud search.
 
 android.permission.QUERY_ADVANCED_PROTECTION_MODE
-Allow querying advanced protection mode.
+Allows querying advanced protection mode.
 
 android.permission.MANAGE_ROLE_HOLDERS
-Allow managing role holders.
+Allows managing role holders.
 
 android.permission.UNLIMITED_TOASTS
-Allow an app to display an unlimited number of toast notifications.
+Allows an app to display an unlimited number of toast notifications.
 
 com.google.android.gm.permission.READ_GMAIL
-☠️ Allow an app to read Gmail messages.
+☠️ Allows an app to read Gmail messages.
 
 com.google.android.gm.permission.WRITE_GMAIL
-☠️ Allow an app to write Gmail messages.
+☠️ Allows an app to write Gmail messages.
 
 com.google.android.voicesearch.AUDIO_FILE_ACCESS
-Allow access to audio files for voice search.
+Allows access to audio files for voice search.
 
 com.google.android.email.permission.ACCESS_PROVIDER
-Allow access to the email provider.
+Allows access to the email provider.
 
 com.android.email.partnerprovider.PARTNER_PROVIDER
 Permission related to a partner email provider.
 
 com.google.android.apps.dynamite.permission.C2D_MESSAGE
-Allow receiving cloud-to-device messages for Dynamite.
+Allows receiving cloud-to-device messages for Dynamite.
 
 com.google.android.googlequicksearchbox.permission.LENS_SERVICE
-Allow access to the Lens service within Google Quick Search Box.
+Allows access to the Lens service within Google Quick Search Box.
 
 com.google.android.googlequicksearchbox.permission.LENSVIEW_BROADCAST
-Allow broadcasting to LensView.
+Allows broadcasting to LensView.
 
 com.google.android.googlequicksearchbox.permission.LAUNCH_FROM_GMM
-Allow launching from Google Mobile Maps.
+Allows launching from Google Mobile Maps.
 
 com.android.launcher3.permission.READ_SETTINGS
-Allow reading settings for the Launcher3 app.
+Allows reading settings for the Launcher3 app.
 
 com.android.launcher3.permission.WRITE_SETTINGS
-Allow writing settings for the Launcher3 app.
+Allows writing settings for the Launcher3 app.
 
 com.android.browser.permission.READ_HOMEPAGE
-Allow reading the homepage setting of the browser.
+Allows reading the homepage setting of the browser.
 
 com.android.browser.permission.WRITE_HOMEPAGE
-Allow writing the homepage setting of the browser.
+Allows writing the homepage setting of the browser.
 
 com.android.chrome.PRERENDER_URL
-Allow Chrome to prerender URLs.
+Allows Chrome to prerender URLs.
 
 com.google.android.finsky.permission.DSE
 Permission related to the Digital Sales Engine (Play Store).
@@ -2010,7 +2010,7 @@ com.android.vending.BIOAUTH_CONSENT
 Permission related to biometric authentication consent in the Play Store.
 
 com.google.android.settings.setup.dock.RUN_DOCK_SETUP
-Allow running dock setup for Google Settings.
+Allows running dock setup for Google Settings.
 
 com.google.android.finsky.permission.PLAY_BILLING_LIBRARY_BROADCAST
  Permission for Play Billing Library broadcasts.
@@ -2019,25 +2019,31 @@ com.google.android.finsky.permission.INTERNAL_BROADCAST
 Permission for internal Play Store broadcasts.
 
 com.android.launcher3.permission.KILL_BG_APPS
-Allow the launcher to kill background apps.
+Allows the launcher to kill background apps.
 
 com.android.launcher.WRITE_SPEEDUP_WHITE_LIST
-Allow writing to the speed-up whitelist for the launcher.
+Allows writing to the speed-up whitelist for the launcher.
 
 com.android.launcher.READ_SPEEDUP_WHITE_LIST
-Allow reading from the speed-up whitelist for the launcher.
+Allows the app reading from the speed-up whitelist for the launcher.
 
 android.permission.RECORD_VIDEO
-💀 Allow the application to record video using camera.
+💀 Allows the app to record video using camera.
 
 android.permission.READ_ASSISTANT_APP_SEARCH_DATA
-💀 Allow application to read the assistant application search data.
+💀 Allows the app to read the assistant application search data.
 
 android.permission.SOUND_TRIGGER_RUN_IN_BATTERY_SAVER
-Allow sound trigger to run in battery saver mode.
+Allows sound trigger to run in battery saver mode.
 
 android.permission.MANAGE_HOTWORD_DETECTION
-Allow the application to manage hotword detection.
+Allows the app to manage hotword detection.
 
 android.permission.EXECUTE_APP_ACTION
-Allow executing an application action.
+Allows executing an application action.
+
+android.permission.BODY_SENSORS
+Allows an app to access data from body sensors such as heart rate monitors.
+
+android.permission.BODY_SENSORS_BACKGROUND
+Allows an app to access data from body sensors even when the app is running in the background.
