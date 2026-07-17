@@ -145,6 +145,14 @@ public final class AXMLPrinter {
      */
     private void loadSystemResources() throws Exception {
         try (InputStream arscStream = AXMLPrinter.class.getResourceAsStream("/assets/resources.arsc")) {
+            if (arscStream == null) {
+                // Not reachable via classpath on this runtime (e.g. real Android,
+                // where src/main/assets is not on the classpath). Caller already
+                // wraps this in try/catch and falls back to systemResourceFile = null,
+                // so just signal failure instead of letting a NPE escape from
+                // systemResourceFile.loadArscData(null).
+                throw new IOException("resources.arsc not found on classpath at /assets/resources.arsc");
+            }
             systemResourceFile.loadArscData(arscStream);
         }
     }
@@ -157,23 +165,53 @@ public final class AXMLPrinter {
      * @throws Exception if an error occurs while reading the file.
      */
     public String readFromFile(String path) throws Exception {
-        FileInputStream fis = new FileInputStream(path);
-        byte[] byteArray = new byte[fis.available()];
-        fis.read(byteArray);
-        fis.close();
+        File inputFile = new File(path);
+        byte[] byteArray = new byte[(int) inputFile.length()];
+        FileInputStream fis = new FileInputStream(inputFile);
+        try {
+            // fis.read(byteArray) is a SINGLE read() call, which is not
+            // guaranteed to fill the whole array in one go (this depends on
+            // the underlying stream/filesystem - e.g. some SAF/FUSE-backed
+            // paths). Reading in a loop avoids silently truncating the file,
+            // which would otherwise corrupt/break parsing of larger XMLs.
+            int offset = 0;
+            int read;
+            while (offset < byteArray.length
+                    && (read = fis.read(byteArray, offset, byteArray.length - offset)) != -1) {
+                offset += read;
+            }
+        } finally {
+            fis.close();
+        }
 
         if (enableId2Name) {
-            File resourceFile = new File(path).getParentFile().toPath().resolve("resources.arsc").toFile();
-            if (resourceFile.exists()) {
-                try (InputStream arscStream = new FileInputStream(resourceFile)) {
-                    customResourceFile.loadArscData(arscStream);
-                    isCustomResourceFileExist = true;
+            File parentDir = inputFile.getParentFile();
+            if (parentDir != null) {
+                File resourceFile = new File(parentDir, "resources.arsc");
+                if (resourceFile.exists()) {
+                    try (InputStream arscStream = new FileInputStream(resourceFile)) {
+                        customResourceFile.loadArscData(arscStream);
+                        isCustomResourceFileExist = true;
+                    }
                 }
             }
         }
 
         // Convert the binary XML to readable XML
         return convertXml(byteArray);
+    }
+
+    /**
+     * Loads custom (app) resource id -> name mappings from an arbitrary
+     * resources.arsc stream. Useful when the input XML doesn't come from a
+     * plain filesystem path (e.g. it was received as a content:// Uri from
+     * another app such as a file manager), so the automatic sibling-file
+     * lookup in {@link #readFromFile} can't be used. The caller is
+     * responsible for closing the stream.
+     */
+    public void loadCustomResources(InputStream arscStream) throws Exception {
+        customResourceFile.loadArscData(arscStream);
+        isCustomResourceFileExist = true;
     }
 	
 	// for MT Manager
@@ -455,7 +493,8 @@ public final class AXMLPrinter {
 			case TypedValue.TYPE_INT_HEX /* 17 */:
 				// Hex integer value or flag values
 				if (enableAttributeConversion) {
-					String decodedValue = AttributesExtractor.getInstance().decode(attributeName, attributeValueData);
+					AttributesExtractor extractor = AttributesExtractor.getInstance();
+					String decodedValue = extractor != null ? extractor.decode(attributeName, attributeValueData) : null;
 					if (decodedValue != null && !decodedValue.isEmpty()) {
 						return decodedValue; // Return the decoded value if found
 					} else {
@@ -480,7 +519,8 @@ public final class AXMLPrinter {
 			default:
 				// Handle enum or flag values and other cases 
 				if (enableAttributeConversion) {
-					String decodedValue = AttributesExtractor.getInstance().decode(attributeName, attributeValueData);
+					AttributesExtractor extractor = AttributesExtractor.getInstance();
+					String decodedValue = extractor != null ? extractor.decode(attributeName, attributeValueData) : null;
 					if (decodedValue != null) {
 						return decodedValue; // Return the decoded value if found
 					}
@@ -744,39 +784,54 @@ public final class AXMLPrinter {
 	//Load manifest permission description
 	private Map<String, String> loadPermissionsInfo() throws Exception {
 		Map<String, String> map = new HashMap<>();
-		InputStream is = AXMLPrinter.class.getResourceAsStream("/assets/permissions_info_en.txt");
+
+		String lang = Locale.getDefault().getLanguage(); // e.g. "en", "ar", "ru"
+		InputStream is = AXMLPrinter.class.getResourceAsStream("/assets/permissions/permissions_info_" + lang + ".txt");
+		if (is == null) {
+			// No translation for the device's language - fall back to English.
+			is = AXMLPrinter.class.getResourceAsStream("/assets/permissions/permissions_info_en.txt");
+		}
+		if (is == null) {
+			// Not reachable via classpath on this runtime; return an empty map
+			// instead of throwing NPE from InputStreamReader(null).
+			return map;
+		}
 		InputStreamReader reader = new InputStreamReader(is);
 		BufferedReader bufferedReader = new BufferedReader(reader);
-		String permission = null;
-		String description = null;
-		String line;
-		while ((line = bufferedReader.readLine()) != null) {
-			line = line.trim();
-			// If the line is empty, we can skip it
-			if (line.isEmpty()) {
-				continue;
-			}
-			// match the permission and description with regex
-			if (line.matches("^[a-zA-Z0-9._]+$")) {
-				// If there's an existing permission and description, store it in the map
-				if (permission != null && description != null) {
-					map.put(permission, description);
+		try {
+			String permission = null;
+			String description = null;
+			String line;
+			while ((line = bufferedReader.readLine()) != null) {
+				line = line.trim();
+				// If the line is empty, we can skip it
+				if (line.isEmpty()) {
+					continue;
 				}
-				// Now the new permission starts
-				permission = line;
-				description = null;
-			} else {
-				// If the line is a description, append it to the current description
-				if (description != null) {
-					description += " " + line;
+				// match the permission and description with regex
+				if (line.matches("^[a-zA-Z0-9._]+$")) {
+					// If there's an existing permission and description, store it in the map
+					if (permission != null && description != null) {
+						map.put(permission, description);
+					}
+					// Now the new permission starts
+					permission = line;
+					description = null;
 				} else {
-					description = line;
+					// If the line is a description, append it to the current description
+					if (description != null) {
+						description += " " + line;
+					} else {
+						description = line;
+					}
 				}
 			}
-		}
-		// Add the last permission entry to the map
-		if (permission != null && description != null) {
-			map.put(permission, description);
+			// Add the last permission entry to the map
+			if (permission != null && description != null) {
+				map.put(permission, description);
+			}
+		} finally {
+			bufferedReader.close();
 		}
 
 		return map;

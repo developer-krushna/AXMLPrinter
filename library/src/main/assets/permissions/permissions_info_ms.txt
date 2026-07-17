@@ -1,0 +1,821 @@
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+Membenarkan aplikasi meminta untuk mengabaikan pengoptimuman bateri.
+
+android.permission.ACCESS_CHECKIN_PROPERTIES
+Akses baca dan tulis ke jadual "properties" dalam pangkalan data daftar masuk, nilai yang boleh diubah suai untuk muat naik
+
+android.permission.ACCESS_COARSE_LOCATION
+Membenarkan aplikasi mengakses lokasi anggaran (berasaskan rangkaian).
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+Jalankan perkhidmatan latar depan dengan jenis "mediaProjection"
+
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+Jalankan perkhidmatan latar depan dengan jenis "systemExempted"
+
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+Jalankan perkhidmatan latar depan dengan jenis "specialUse"
+
+android.permission.ACCESS_SUPERUSER
+Benarkan aplikasi mendapat akses superuser
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+Jalankan perkhidmatan latar depan dengan jenis "mediaPlayback"
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Jalankan perkhidmatan latar depan dengan jenis "dataSync"
+
+android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+Baca fail imej dan video pilihan pengguna daripada storan kongsi
+
+android.permission.ACCESS_FINE_LOCATION
+Akses lokasi yang tepat
+
+android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+Akses arahan pembekal lokasi tambahan
+
+android.permission.ACCESS_MOCK_LOCATION
+Dapatkan maklumat lokasi palsu
+
+android.permission.ACCESS_NETWORK_STATE
+Lihat sambungan rangkaian
+
+android.permission.ACCESS_SURFACE_FLINGER
+Gunakan ciri peringkat rendah SurfaceFlinger
+
+android.permission.ACCESS_WIFI_STATE
+Akses maklumat keadaan rangkaian Wi-Fi
+
+android.permission.ADD_SYSTEM_SERVICE
+Terbitkan perkhidmatan peringkat sistem
+
+android.permission.BATTERY_STATS
+Kemas kini statistik bateri
+
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+Membenarkan penyemak imbas untuk menggunakan API pengurus kelayakan bagi pihak RP lain.
+
+android.permission.BLUETOOTH
+Sambungkan dengan peranti Bluetooth
+
+android.permission.BLUETOOTH_ADMIN
+Akses tetapan Bluetooth
+
+android.permission.BRICK
+Minta keupayaan untuk melumpuhkan peranti (sangat berbahaya)
+
+android.permission.BROADCAST_PACKAGE_REMOVED
+Siarkan permintaan selepas pakej aplikasi telah dialih keluar
+
+android.permission.BROADCAST_STICKY
+Hantar siaran melekat
+
+android.permission.CALL_PHONE
+⚠️ Buat panggilan telefon
+
+android.permission.CALL_PRIVILEGED
+⚠️ Buat panggilan ke mana-mana nombor, termasuk nombor kecemasan
+
+android.permission.CAMERA
+Ambil gambar atau video
+
+android.permission.CHANGE_COMPONENT_ENABLED_STATE
+Tukar keadaan dayakan komponen
+
+android.permission.CHANGE_CONFIGURATION
+Ubah suai konfigurasi semasa, seperti penyetempatan
+
+android.permission.CHANGE_NETWORK_STATE
+Tukar status sambungan rangkaian
+
+android.permission.CHANGE_WIFI_STATE
+Sambungkan atau putuskan sambungan daripada Wi-Fi
+
+android.permission.CLEAR_APP_CACHE
+Kosongkan cache daripada semua aplikasi yang dipasang pada peranti
+
+android.permission.CLEAR_APP_USER_DATA
+Kosongkan data pengguna
+
+android.permission.CONTROL_LOCATION_UPDATES
+Hidupkan atau matikan kemas kini lokasi daripada modul wayarles
+
+android.permission.DELETE_CACHE_FILES
+Padamkan fail sampah
+
+android.permission.DETECT_SCREEN_CAPTURE
+Membenarkan aplikasi dimaklumkan apabila tangkapan skrin tangkap layar dicuba.
+
+android.permission.DETECT_SCREEN_RECORDING
+Membenarkan permohonan dimaklumkan apabila ia sedang dirakam.
+
+android.permission.DELETE_PACKAGES
+Padamkan pakej
+
+android.permission.DEVICE_POWER
+Akses pengurusan kuasa peringkat rendah
+
+android.permission.DIAGNOSTIC
+Baca dan tulis kepada sumber diagnostik
+
+android.permission.DISABLE_KEYGUARD
+Lumpuhkan kunci pelindung kekunci
+
+android.permission.DELIVER_COMPANION_MESSAGES
+Membolehkan aplikasi menghantar mesej pengiring ke sistem
+
+android.permission.DUMP
+Dapatkan maklumat lambakan keadaan daripada perkhidmatan sistem
+
+android.permission.EXPAND_STATUS_BAR
+Kembangkan atau jatuhkan bar status
+
+android.permission.FACTORY_TEST
+Jalankan sebagai aplikasi ujian kilang, di bawah pengguna root
+
+android.permission.FLASHLIGHT
+Akses lampu suluh
+
+android.permission.FORCE_BACK
+Paksa operasi belakang pada aktiviti peringkat atasan
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Membolehkan aplikasi menyegerakkan data dengan perkhidmatan lain semasa perkhidmatan latar depannya sedang berjalan.
+
+android.permission.FOTA_UPDATE
+Kebenaran mungkin di terpelihara
+
+android.permission.GET_ACCOUNTS
+Cari akaun pada peranti
+
+android.permission.GET_ACCOUNTS_PRIVILEGED
+Membenarkan akses kepada senarai akaun dalam Perkhidmatan Akaun
+
+android.permission.GET_PACKAGE_SIZE
+Ukur ruang storan aplikasi
+
+android.permission.GET_TASKS
+Dapatkan maklumat tentang aplikasi yang sedang berjalan
+
+android.permission.HARDWARE_TEST
+Akses hardware
+
+android.permission.HIDE_OVERLAY_WINDOWS
+Membenarkan apl menghalang tetingkap tindanan bukan sistem daripada dilukis di atasnya
+
+android.permission.INJECT_EVENTS
+Pintas tindakan pengguna seperti ketukan kekunci, sentuhan, acara bola jejak, dsb.
+
+android.permission.INSTALL_LOCATION_PROVIDER
+Pasang pembekal lokasi
+
+android.permission.INSTALL_PACKAGES
+Pasang pakej
+
+android.permission.INTERNAL_SYSTEM_WINDOW
+Buka tetingkap menggunakan UI sistem
+
+android.permission.INTERNET
+Mempunyai akses internet penuh
+
+android.permission.MANAGE_APP_TOKENS
+Urus token aplikasi dalam pengurus tetingkap
+
+android.permission.MASTER_CLEAR
+Mungkin untuk mengosongkan semua data, serupa dengan tetapan semula kilang
+
+android.permission.MODIFY_AUDIO_SETTINGS
+Tukar tetapan audio anda
+
+android.permission.MODIFY_PHONE_STATE
+Ubah suai keadaan telefon, seperti kuasa, antara muka pengguna, dsb.
+
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+Lekapkan dan nyahlekap sistem fail pada storan boleh tanggal
+
+android.permission.PERSISTENT_ACTIVITY
+Jadikan aplikasi sentiasa dijalankan
+
+android.permission.PROCESS_OUTGOING_CALLS
+Halakan semula panggilan keluar
+
+android.permission.READ_CALENDAR
+Baca acara kalendar dan butiran
+
+android.permission.READ_CONTACTS
+Baca data kenalan
+
+android.permission.READ_FRAME_BUFFER
+Tangkap gelombang skrin atau akses yang lebih umum kepada data penimbal bingkai
+
+android.permission.READ_INPUT_STATE
+Kembalikan keadaan utama semasa
+
+android.permission.READ_LOGS
+Baca fail log sistem peringkat rendah
+
+android.permission.READ_OWNER_DATA
+Baca data pemilik
+
+android.permission.READ_SMS
+⚠️ Baca mesej teks
+
+android.permission.READ_SYNC_SETTINGS
+Baca tetapan penyegerakan
+
+android.permission.READ_SYNC_STATS
+Baca statistik penyegerakan
+
+android.permission.REBOOT
+Membenarkan aplikasi but semula/mulakan semula peranti.
+
+android.permission.RECEIVE_BOOT_COMPLETED
+Permulaan boot
+
+android.permission.RECEIVE_MMS
+⚠️ Terima mesej (MMS)
+
+android.permission.RECEIVE_SMS
+⚠️ Terima mesej (SMS)
+
+android.permission.RECEIVE_WAP_PUSH
+Membenarkan aplikasi menerima mesej tolak WAP.
+
+android.permission.RECORD_AUDIO
+Rakam audio
+
+android.permission.REORDER_TASKS
+Susun semula aplikasi yang sedang berjalan
+
+android.permission.RESTART_PACKAGES
+Mulakan semula aplikasi lain
+
+android.permission.SEND_SMS
+⚠️ Hantar mesej teks
+
+android.permission.SET_ACTIVITY_WATCHER
+Memantau atau mengawal aktiviti yang telah dilancarkan dalam sistem
+
+android.permission.SET_ALWAYS_FINISH
+Kawal sama ada aktiviti segera selesai apabila diletakkan di latar belakang
+
+android.permission.SET_ANIMATION_SCALE
+Ubah suai skala animasi global
+
+android.permission.SET_DEBUG_APP
+Konfigurasikan aplikasi untuk penyahpepijatan
+
+android.permission.SET_ORIENTATION
+Akses peringkat rendah untuk menetapkan orientasi skrin dan putaran sebenar
+
+android.permission.SET_PREFERRED_APPLICATIONS
+Ubah suai parameter senarai kaedah PackageManager.addPackageToPreferred() dan PackageManager.removePackageFromPreferred()
+
+android.permission.SET_PROCESS_FOREGROUND
+Paksa aplikasi semasa yang sedang berjalan ke latar depan
+
+android.permission.SET_PROCESS_LIMIT
+Tetapkan bilangan maksimum proses yang sedang berjalan
+
+android.permission.SET_TIME_ZONE
+Tetapkan zon waktu
+
+android.permission.SET_WALLPAPER
+Tetapkan wallpaper 
+
+android.permission.SET_WALLPAPER_HINTS
+Laraskan saiz wallpaper anda
+
+android.permission.SIGNAL_PERSISTENT_PROCESSES
+Minta untuk menghantar isyarat kepada semua proses yang boleh dilihat
+
+android.permission.STATUS_BAR
+Buka, tutup atau nyahdayakan status bar dan ikonnya
+
+android.permission.SUBSCRIBED_FEEDS_READ
+Akses pembekal kandungan RSS Feed yang dilanggan
+
+android.permission.SUBSCRIBED_FEEDS_WRITE
+Tetapan ini dikhaskan oleh sistem untuk kegunaan masa hadapan
+
+android.permission.SYSTEM_ALERT_WINDOW
+Apl ini boleh dipaparkan di atas apl lain
+
+android.permission.VIBRATE
+Kawal getaran
+
+android.permission.WAKE_LOCK
+Cegah telefon daripada tidur
+
+android.permission.WRITE_APN_SETTINGS
+Tulis tetapan APN
+
+android.permission.WRITE_CALENDAR
+Tambah atau ubah suai acara kalendar
+
+android.permission.WRITE_CONTACTS
+Ubah suai kenalan anda
+
+android.permission.WRITE_GSERVICES
+Ubah suai peta perkhidmatan Google
+
+android.permission.WRITE_OWNER_DATA
+Tulis tetapi tidak membaca data pemilik
+
+android.permission.WRITE_SETTINGS
+Ubah suai tetapan sistem
+
+android.permission.WRITE_SMS
+⚠️ Tulis mesej teks
+
+android.permission.WRITE_SYNC_SETTINGS
+Dayakan atau lumpuhkan penyegerakan
+
+android.permission.WRITE_USER_DICTIONARY
+Tambah perkataan baharu pada kamus pengguna
+
+android.permission.WRITE_SOCIAL_STREAM
+Ubah suai aliran sosial
+
+android.permission.WRITE_SECURE_SETTINGS
+Ubah suai tetapan sistem selamat
+
+android.permission.WRITE_PROFILE
+Membolehkan menulis data profil pengguna.
+
+android.permission.WRITE_EXTERNAL_STORAGE
+Ubah suai atau padamkan kandungan ruang storan dikongsi anda
+
+android.permission.WRITE_CALL_LOG
+⚠️ Buat/ubah suai/padamkan entri log panggilan
+
+android.permission.USE_SIP
+Membenarkan aplikasi menggunakan perkhidmatan SIP untuk VoIP.
+
+android.permission.USE_CREDENTIALS
+Minta token pengesahan daripada AccountManager
+
+android.permission.UPDATE_DEVICE_STATS
+Kemas kini statistik peranti
+
+android.permission.TRANSMIT_IR
+Hantar inframerah
+
+android.permission.SET_TIME
+Tetapkan masa sistem
+
+android.permission.SET_POINTER_SPEED
+Tidak boleh diperolehi oleh apl pihak ketiga; kebenaran sistem
+
+android.permission.SEND_RESPOND_VIA_MESSAGE
+Hantar balasan mesej teks segera menggunakan apl anda semasa panggilan masuk
+
+android.permission.READ_USER_DICTIONARY
+Dapatkan data daripada pembekal; Aplikasi memerlukan "kebenaran akses baca" untuk pembekal yang sepadan
+
+android.permission.READ_SOCIAL_STREAM
+Baca aliran sosial pengguna
+
+android.permission.READ_PROFILE
+Akses profil peribadi pengguna
+
+android.permission.READ_PHONE_STATE
+Baca status dan identiti telefon
+
+android.permission.READ_EXTERNAL_STORAGE
+Baca kandungan ruang storan dikongsi anda
+
+android.permission.READ_CALL_LOG
+⚠️ Baca entri log panggilan
+
+android.permission.NFC
+Melaksanakan operasi komunikasi medan berhampiran NFC
+
+android.permission.MOUNT_FORMAT_FILESYSTEMS
+Format sistem fail yang boleh ditanggalkan, seperti memformat kad SD
+
+android.permission.MEDIA_CONTENT_CONTROL
+Akses untuk mengetahui perkara yang dimainkan dan mengawal kandungannya, tidak digunakan oleh app pihak ketiga
+
+android.permission.MANAGE_DOCUMENTS
+Urus akses kepada dokumen
+
+android.permission.MANAGE_ACCOUNTS
+Urus senarai akaun dalam Pengurus Akaun
+
+android.permission.LOCATION_HARDWARE
+Gunakan ciri perkakasan lokasi, tidak digunakan oleh app pihak ketiga
+
+android.permission.KILL_BACKGROUND_PROCESSES
+Panggil killBackgroundProcesses(String) untuk menamatkan proses latar belakang
+
+android.permission.GLOBAL_SEARCH
+Keupayaan carian global merentas sistem
+
+android.permission.GET_TOP_ACTIVITY_INFO
+Dapatkan maklumat peribadi tentang aktiviti teratas semasa, yang tidak digunakan oleh app pihak ketiga
+
+android.permission.CHANGE_WIFI_MULTICAST_STATE
+Terima multicast Wi-Fi
+
+android.permission.CAPTURE_VIDEO_OUTPUT
+Tangkap output video, tidak digunakan oleh app pihak ketiga
+
+android.permission.CAPTURE_SECURE_VIDEO_OUTPUT
+Tangkap output video selamat, tidak digunakan oleh apl pihak ketiga
+
+android.permission.CAPTURE_AUDIO_OUTPUT
+Tangkap output audio, tidak digunakan oleh app pihak ketiga
+
+android.permission.BROADCAST_WAP_PUSH
+Siarkan niat apabila WAP PUSH diterima
+
+android.permission.BROADCAST_SMS
+⚠️ Siarkan niat apabila SMS diterima
+
+android.permission.BLUETOOTH_PRIVILEGED
+Pasangkan dengan peranti Bluetooth tanpa interaksi pengguna
+
+android.permission.BIND_WALLPAPER
+Mesti diminta melalui WallpaperService. Hanya sistem yang boleh menggunakan ini
+
+android.permission.BIND_VPN_SERVICE
+Ikat ke perkhidmatan VPN
+
+android.permission.BIND_TEXT_SERVICE
+Mesti diperlukan oleh TextService (cth., SpellcheckerService) untuk memastikan bahawa hanya sistem yang boleh mengikatnya
+
+android.permission.BIND_REMOTEVIEWS
+Mesti diminta melalui RemoteViewsService. Hanya sistem yang boleh menggunakan ini
+
+android.permission.BIND_PRINT_SERVICE
+Mesti diperlukan oleh PrintService untuk memastikan bahawa hanya sistem yang boleh mengikatnya
+
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+Mesti diperlukan oleh NotificationListenerService untuk memastikan bahawa hanya sistem boleh mengikatnya
+
+android.permission.BIND_NFC_SERVICE
+Mesti dipastikan oleh HostApduService atau OffHostApduService bahawa hanya sistem yang boleh mengikatnya
+
+android.permission.BIND_INPUT_METHOD
+Minta InputMethodService. Hanya sistem yang boleh menggunakan ini
+
+android.permission.BIND_DEVICE_ADMIN
+Minta untuk menjadi pentadbir peranti. Hanya sistem yang boleh menggunakan kebenaran ini.
+
+android.permission.BIND_APPWIDGET
+Membenarkan aplikasi memberitahu perkhidmatan AppWidget untuk mengakses data widget aplikasi. Sangat sedikit apl menggunakan kebenaran ini.
+
+android.permission.BIND_ACCESSIBILITY_SERVICE
+Minta AccessibilityService. Memastikan bahawa hanya sistem yang boleh mengikatnya.
+
+android.permission.AUTHENTICATE_ACCOUNTS
+Membenarkan aplikasi bertindak sebagai AccountAuthenticator untuk AccountManager.
+
+android.permission.ACCOUNT_MANAGER
+Akses kelayakan pengesahan akaun, terutamanya untuk maklumat akaun GMail. Hanya boleh diakses oleh proses peringkat sistem.
+
+com.android.browser.permission.READ_HISTORY_BOOKMARKS
+Baca kegemaran dan sejarah penyemak imbas.
+
+com.android.alarm.permission.SET_ALARM
+Tetapkan peringatan penggera.
+
+com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
+Tulis ke sejarah pelayar atau penanda halaman tetapi tidak membenarkan membaca.
+
+com.android.launcher.permission.INSTALL_SHORTCUT
+Pasang pintasan.
+
+com.android.launcher.permission.UNINSTALL_SHORTCUT
+Keluarkan pintasan.
+
+com.android.voicemail.permission.ADD_VOICEMAIL
+Membolehkan aplikasi menambah mel suara ke dalam sistem.
+
+android.permission.REQUEST_INSTALL_PACKAGES
+Minta pemasangan pakej.
+
+android.permission.REQUEST_DELETE_PACKAGES
+Minta pemadaman pakej.
+
+android.permission.READ_INSTALL_SESSIONS
+Baca sesi pemasangan.
+
+android.permission.READ_CELL_BROADCASTS
+Baca siaran sel.
+
+android.permission.NEARBY_WIFI_DEVICES
+Berinteraksi dengan peranti WLAN berdekatan.
+
+android.permission.USE_FINGERPRINT
+Gunakan perkakasan cap jari.
+
+android.permission.USE_BIOMETRIC
+(ditamatkan) Gunakan pengesahan cap jari.
+
+android.permission.FOREGROUND_SERVICE
+Jalankan perkhidmatan latar depan.
+
+android.permission.QUERY_ALL_PACKAGES
+Membenarkan aplikasi menanyakan semua pakej yang dipasang (Android 11+)
+
+android.permission.ACCESS_BACKGROUND_LOCATION
+Membenarkan aplikasi mengakses lokasi di latar belakang (Android 10+).
+
+android.permission.ACTIVITY_RECOGNITION
+Membenarkan apl mengenali dan mengakses aktiviti fizikal pengguna.
+
+android.permission.ACCESS_MEDIA_LOCATION
+Membenarkan apl mengakses lokasi geografi yang dibenamkan dalam foto dan video kongsi pengguna.
+
+android.permission.UWB_RANGING
+Membenarkan apl menggunakan teknologi Ultra Wideband (UWB) untuk mengukur jarak ke peranti lain.
+
+android.permission.BLUETOOTH_SCAN
+Membenarkan apl mengimbas peranti Bluetooth, memerlukan sama ada keterlihatan lokasi atau kebenaran BLUETOOTH_ADMIN.
+
+android.permission.BLUETOOTH_CONNECT
+Membenarkan aplikasi menyambung ke peranti Bluetooth yang dipasangkan.
+
+android.permission.MANAGE_EXTERNAL_STORAGE
+Membenarkan akses baca dan tulis kepada semua kandungan storan kongsian.
+
+android.permission.BLUETOOTH_ADVERTISE
+Membenarkan aplikasi menyiarkan melalui Bluetooth.
+
+android.permission.REQUIRE_MANAGED_USER_SPLIT
+Keizinan ini menunjukkan bahawa apl memerlukan keupayaan untuk dijalankan dalam profil terurus atau profil kerja.
+
+android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
+Membenarkan apl melaksanakan tugas di latar belakang tanpa menunjukkan pemberitahuan berterusan.
+
+android.permission.ANSWER_PHONE_CALLS
+⚠️ Membenarkan aplikasi menjawab panggilan telefon masuk (Android 8+).
+
+android.permission.READ_MEDIA_AUDIO
+Membenarkan aplikasi mengakses data audio daripada fail media. Persetujuan pengguna diperlukan.
+
+android.permission.READ_MEDIA_VIDEO
+Membenarkan aplikasi mengakses data video daripada fail media. Persetujuan pengguna diperlukan.
+
+android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+Membenarkan aplikasi mengurus pemilik peranti dan profil. Persetujuan pengguna diperlukan.
+
+android.permission.USE_BACKGROUND_EXECUTION_WHEN_CROSS_PROFILE_IS_SETTINGS_PROVIDER
+Membenarkan aplikasi menggunakan pelaksanaan latar belakang apabila pembekal tetapan berada dalam konteks merentas profil.
+
+android.permission.USE_MEDIA_SESSION_IN_BACKGROUND
+Membenarkan aplikasi menggunakan sesi media di latar belakang.
+
+android.permission.MANAGE_MEMORY_POLICY
+Membenarkan apl mengurus dasar memori, yang berpotensi menjejaskan cara apl dan proses dibunuh untuk menuntut semula memori.
+
+android.permission.READ_MEDIA_IMAGE_DATA
+Membenarkan aplikasi membaca data imej daripada fail media.
+
+android.permission.USE_DEVICE_SPECIFIC_CAMERA
+Membenarkan aplikasi mengakses ciri kamera khusus peranti.
+
+android.permission.USE_RESERVED_NETWORK
+Membenarkan aplikasi menggunakan antara muka rangkaian terpelihara, yang mungkin dihadkan untuk tujuan tertentu.
+
+android.permission.USE_RESERVED_FEATURE
+Membenarkan aplikasi menggunakan ciri peranti terpelihara, yang mungkin terhad kepada apl atau fungsi tertentu.
+
+android.permission.USE_COARSE_LOCATION
+Membenarkan aplikasi mengakses lokasi anggaran, biasanya diperoleh daripada sumber lokasi rangkaian.
+
+android.permission.USE_REMOTE_VOICE_INTERACTION
+Membenarkan apl menggunakan interaksi suara jauh tanpa mengaktifkan mikrofon peranti.
+
+android.permission.USE_VR_FEATURE
+Membolehkan aplikasi menggunakan ciri Realiti Maya (VR) tanpa set kepala VR hadir.
+
+android.permission.USE_WALLPAPER_SERVICE
+Membenarkan aplikasi menggunakan WallpaperService, yang bertanggungjawab untuk menguruskan kertas dinding langsung.
+
+android.permission.SYSTEM_OVERLAY_WINDOW
+Membolehkan aplikasi memaparkan tetingkap di atas aplikasi lain.
+
+com.android.vending.BILLING
+Membenarkan aplikasi menjalankan jualan melalui Perkhidmatan Pengebilan Dalam Apl Google Play.
+
+android.permission.RECEIVE_USER_PRESENT
+Membenarkan aplikasi dimaklumkan apabila pengguna telah membuka kunci peranti dan hadir untuk berinteraksi dengannya.
+
+com.android.launcher.permission.READ_SETTINGS
+Membenarkan aplikasi membaca keutamaan dan tetapan konfigurasi pelancar skrin utama pada peranti Android.
+
+android.permission.POST_NOTIFICATIONS
+Membenarkan aplikasi memaparkan pemberitahuan pada peranti Android.
+
+com.google.android.gms.permission.AD_ID
+Membolehkan aplikasi mengakses ID pengiklanan.
+
+com.google.android.c2dm.permission.RECEIVE
+Benarkan aplikasi menerima mesej daripada Pemesejan Awan Google
+
+android.permission.WRITE_APP_BADGE
+Membenarkan aplikasi mengubah suai nombor lencana yang dipaparkan pada ikon aplikasinya.
+
+android.permission.SCHEDULE_EXACT_ALARM
+Membolehkan penetapan penggera yang tepat.
+
+android.permission.READ_MEDIA_IMAGES
+Membenarkan akses kepada imej yang disimpan pada peranti.
+
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+Membenarkan apl segera membuat perkhidmatan latar depan
+
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+Membenarkan aplikasi menangkap kandungan skrin untuk melakukan tangkapan skrin menggunakan tindakan niat
+
+android.permission.MANAGE_DEVICE_LOCK_STATE
+Membenarkan apl kios peranti yang dibiayai untuk melaksanakan tindakan pada perkhidmatan Kunci Peranti
+
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+Membenarkan aplikasi mengurus dasar yang berkaitan dengan kebolehcapaian.
+
+android.permission.READ_HOME_APP_SEARCH_DATA
+Membenarkan aplikasi menanyakan data global dalam AppSearch yang boleh dilihat oleh peranan HOME.
+
+android.permission.READ_APP_BADGE
+Membenarkan apl membaca kiraan lencana semasa yang dipaparkan pada ikon pelancar apl lain.
+
+android.permission.ACCESS_CACHE_FILESYSTEM
+Membenarkan akses kepada sistem fail cache. (Jarang berlaku, peringkat sistem)
+
+android.permission.ACCESS_IMS_CALL
+Membenarkan akses kepada panggilan IMS (panggilan Subsistem Multimedia IP). (Digunakan oleh apl telefoni)
+
+android.permission.ACCESS_MTP
+Akses protokol pemindahan media. (Peringkat sistem)
+
+android.permission.ACCESS_TUNNEL_MODE
+Membenarkan apl membuat antara muka rangkaian TUN. (Biasanya digunakan oleh apl VPN)
+
+android.permission.CAPTURE_AUDIO_HOTWORD
+Membenarkan akses kepada sistem pengesanan hotword
+
+android.permission.MANAGE_USB
+Membenarkan apl mengurus peranti USB.
+
+android.permission.WRITE_MEDIA_STORAGE
+Membenarkan akses tulis kepada storan media.
+
+com.google.android.gms.permission.ACTIVITY_RECOGNITION
+Membenarkan akses kepada pengecaman aktiviti (berjalan, berlari, dll.)
+
+com.google.android.providers.gsf.permission.READ_GSERVICES
+Membenarkan pembacaan tetapan Rangka Kerja Perkhidmatan Google (GSF).
+
+com.google.android.providers.gsf.permission.WRITE_GSERVICES
+Membenarkan penulisan tetapan Rangka Kerja Perkhidmatan Google (GSF).
+
+com.google.android.providers.gsf.permission.BROADCAST_ALARM
+Benarkan aplikasi menyiarkan penggera kepada perkhidmatan Google.
+
+com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
+Membenarkan perkhidmatan Google Play mendapatkan semula tandatangan apl yang dipasang.
+
+android.permission.READ_PRIVILEGED_PHONE_STATE
+Membenarkan akses baca istimewa kepada keadaan telefon.
+
+android.permission.CAPTURE_NETWORK_TRAFFIC
+Membolehkan menangkap trafik rangkaian.
+
+android.permission.ACCESS_WIFI_SCAN
+Membenarkan aplikasi melakukan imbasan WiFi.
+
+android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
+Akses storan kunci selamat.
+
+android.permission.ACCESS_BROADCAST_MANAGER
+Membolehkan untuk mengawal pengurus siaran.
+
+android.permission.ACCESS_CHECKIN
+Membenarkan akses kepada perkhidmatan daftar masuk. (Digunakan oleh perkhidmatan Google).
+
+android.permission.ACCESS_CONTEXT_HUB
+Membolehkan untuk mengakses fungsi Hab Konteks.
+
+android.permission.ACCESS_NOTIFICATION_POLICY
+Membenarkan akses kepada dasar pemberitahuan.
+
+android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+Membenarkan apl berinteraksi dengan perkhidmatan interaksi suara.
+
+android.permission.BACKUP
+Membenarkan aplikasi melakukan operasi sandaran.
+
+android.permission.BIND_CARRIER_MESSAGING_SERVICE
+Membenarkan aplikasi mengikat perkhidmatan pemesejan pembawa.
+
+android.permission.BIND_DIRECTORY_SEARCH
+Membolehkan untuk mengikat perkhidmatan carian direktori.
+
+android.permission.BIND_DREAM_SERVICE
+Membenarkan apl mengikat perkhidmatan impian (perkhidmatan penyelamat skrin).
+
+android.permission.BIND_MIDI_DEVICE_SERVICE
+Membenarkan apl mengikat ke perkhidmatan peranti MIDI.
+
+android.permission.BIND_TELECOM_CONNECTION_SERVICE
+Membolehkan untuk mengikat perkhidmatan sambungan telekomunikasi.
+
+android.permission.BIND_TV_INPUT
+Membolehkan untuk mengikat perkhidmatan input TV.
+
+android.permission.BIND_VOICE_INTERACTION
+Membolehkan untuk mengikat perkhidmatan interaksi suara.
+
+android.permission.CONTROL_VPN
+Membolehkan aplikasi mengawal perkhidmatan VPN.
+
+android.permission.CREATE_USERS
+Membolehkan penciptaan profil pengguna baharu.
+
+android.permission.GET_INSTALLED_PACKAGES
+Membolehkan aplikasi mendapatkan senarai pakej yang dipasang.
+
+android.permission.IDENTIFY_PHONE_STATE
+Benarkan apl mengakses mengenal pasti keadaan telefon
+
+android.permission.INVOKE_CARRIER_SETUP
+Membenarkan apl menggunakan persediaan pembawa.
+
+android.permission.LOADER_USAGE_STATS
+Membenarkan akses kepada statistik penggunaan pemuat.
+
+android.permission.MANAGE_USERS
+Membolehkan menguruskan profil pengguna.
+
+android.permission.MODIFY_NETWORK_CONFIGURATION
+Membenarkan apl mengubah suai konfigurasi rangkaian.
+
+android.permission.MODIFY_TELEPHONY_STATE
+Membolehkan mengubah suai keadaan telefoni.
+
+android.permission.OVERRIDE_WIFI_CONFIG
+Membenarkan untuk mengatasi konfigurasi Wi-Fi.
+
+android.permission.PACKAGE_USAGE_STATS
+Membolehkan mengakses statistik penggunaan pakej terperinci.
+
+android.permission.PEERS_MAC_ADDRESS
+Membenarkan akses kepada alamat peer mac.
+
+android.permission.PERFORM_CDMA_PROVISIONING
+Membenarkan tugas berkaitan pembawa
+
+android.permission.READ_DREAM_STATE
+Membolehkan membaca keadaan lelap.
+
+android.permission.READ_WIFI_CREDENTIALS
+Membenarkan pembacaan bukti kelayakan Wi-Fi.
+
+android.permission.RECOVERY
+Membenarkan apl melakukan tindakan pemulihan
+
+android.permission.REMOVE_TASKS
+Membenarkan apl mengalih keluar tugasan.
+
+android.permission.START_ACTIVITIES_FROM_BACKGROUND
+Membenarkan aplikasi melancarkan aktiviti di latar belakang.
+
+android.permission.STATUS_BAR_SERVICE
+Membolehkan apl mengawal bar status
+
+android.permission.SYSTEM_APPLICATION_COMPONENT
+Benarkan untuk mengakses komponen aplikasi sistem.
+
+android.permission.USE_ICC_AUTH
+Membenarkan akses kepada Pengesahan ICC.
+
+android.permission.USE_RESERVED_DISK
+Membenarkan aplikasi menggunakan ruang cakera yang dikhaskan
+
+com.google.android.providers.gsf.permission.BROADCAST_SMS
+Membenarkan perkhidmatan Google menyiarkan SMS.
+
+com.google.android.gm.permission.READ_CONTENT
+Membenarkan pembacaan kandungan Gmail.
+
+com.google.android.providers.gsf.permission.INSTALL_PACKAGES
+Membenarkan perkhidmatan Google memasang pakej.
+
+com.google.android.setupwizard.SETUP_COMPLETED
+Membenarkan wizard persediaan untuk mendaftarkan bahawa persediaan telah selesai
+
+android.permission.UPDATE_APP_OPS_STATS
+Membolehkan untuk mengemas kini statistik operasi aplikasi.
+
+android.permission.BIND_QUICK_SETTINGS_TILE
+Membenarkan apl mencipta jubin tetapan pantas.
+
+android.permission.CONTROL_DEVICE_POLICY
+Benarkan dasar peranti kawalan
+
+android.permission.MANAGE_DEVICE_ADMINS
+Membolehkan mengurus pentadbir peranti.

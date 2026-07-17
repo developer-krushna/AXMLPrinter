@@ -1,0 +1,821 @@
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+يسمح للتطبيق بطلب تجاهل تحسينات البطارية.
+
+android.permission.ACCESS_CHECKIN_PROPERTIES
+الوصول للقراءة والكتابة إلى جدول "الخصائص" في قاعدة بيانات checkin، والتي يمكن تعديل قيمها للتحميل.
+
+android.permission.ACCESS_COARSE_LOCATION
+يسمح للتطبيق بالوصول إلى الموقع التقريبي (بناءً على الشبكة).
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+تشغيل خدمة أمامية بنوع "mediaProjection".
+
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+تشغيل خدمة أمامية بنوع "systemExempted".
+
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+تشغيل خدمة أمامية بنوع "specialUse".
+
+android.permission.ACCESS_SUPERUSER
+السماح للتطبيق بالحصول على صلاحيات المستخدم المتميز (superuser).
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+تشغيل خدمة أمامية بنوع "mediaPlayback".
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+تشغيل خدمة أمامية بنوع "dataSync".
+
+android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+قراءة ملفات الصور والفيديو المحددة من قبل المستخدم من التخزين المشترك.
+
+android.permission.ACCESS_FINE_LOCATION
+الوصول إلى الموقع الدقيق.
+
+android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+الوصول إلى أوامر إضافية لمزود الموقع.
+
+android.permission.ACCESS_MOCK_LOCATION
+الحصول على معلومات موقع وهمية.
+
+android.permission.ACCESS_NETWORK_STATE
+عرض اتصالات الشبكة.
+
+android.permission.ACCESS_SURFACE_FLINGER
+استخدام ميزات SurfaceFlinger منخفضة المستوى.
+
+android.permission.ACCESS_WIFI_STATE
+الوصول إلى معلومات حالة شبكة Wi-Fi.
+
+android.permission.ADD_SYSTEM_SERVICE
+نشر خدمات على مستوى النظام.
+
+android.permission.BATTERY_STATS
+تحديث إحصائيات البطارية.
+
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+يسمح للمتصفح باستدعاء واجهات برمجة تطبيقات مدير الاعتمادات نيابة عن طرف آخر.
+
+android.permission.BLUETOOTH
+الاقتران مع أجهزة Bluetooth.
+
+android.permission.BLUETOOTH_ADMIN
+الوصول إلى إعدادات Bluetooth.
+
+android.permission.BRICK
+طلب القدرة على تعطيل الجهاز (خطير جدًا).
+
+android.permission.BROADCAST_PACKAGE_REMOVED
+بث نية بعد إزالة حزمة تطبيق.
+
+android.permission.BROADCAST_STICKY
+إرسال بث لاصق.
+
+android.permission.CALL_PHONE
+⚠️ إجراء مكالمات هاتفية.
+
+android.permission.CALL_PRIVILEGED
+⚠️ إجراء مكالمات إلى أي رقم، بما في ذلك أرقام الطوارئ.
+
+android.permission.CAMERA
+التقاط صور أو مقاطع فيديو.
+
+android.permission.CHANGE_COMPONENT_ENABLED_STATE
+تغيير حالة تمكين مكون.
+
+android.permission.CHANGE_CONFIGURATION
+تعديل التكوين الحالي، مثل اللغة.
+
+android.permission.CHANGE_NETWORK_STATE
+تغيير حالة اتصال الشبكة.
+
+android.permission.CHANGE_WIFI_STATE
+الاتصال أو قطع الاتصال بشبكة Wi-Fi.
+
+android.permission.CLEAR_APP_CACHE
+مسح ذاكرة التخزين المؤقت لجميع التطبيقات المثبتة على الجهاز.
+
+android.permission.CLEAR_APP_USER_DATA
+مسح بيانات المستخدم.
+
+android.permission.CONTROL_LOCATION_UPDATES
+تمكين أو منع مطالبات تحديث الموقع من الوحدة اللاسلكية.
+
+android.permission.DELETE_CACHE_FILES
+حذف ملفات ذاكرة التخزين المؤقت.
+
+android.permission.DETECT_SCREEN_CAPTURE
+يسمح للتطبيق بالحصول على إشعار عند محاولة التقاط شاشة لنوافذه.
+
+android.permission.DETECT_SCREEN_RECORDING
+يسمح للتطبيق بالحصول على إشعار عند تسجيله.
+
+android.permission.DELETE_PACKAGES
+حذف الحزم.
+
+android.permission.DEVICE_POWER
+الوصول إلى إدارة الطاقة منخفضة المستوى.
+
+android.permission.DIAGNOSTIC
+القراءة والكتابة إلى موارد التشخيص.
+
+android.permission.DISABLE_KEYGUARD
+تعطيل قفل الشاشة.
+
+android.permission.DELIVER_COMPANION_MESSAGES
+يسمح للتطبيق بتسليم رسائل الرفيق إلى النظام.
+
+android.permission.DUMP
+استرداد معلومات تفريغ الحالة من خدمات النظام.
+
+android.permission.EXPAND_STATUS_BAR
+توسيع أو طي شريط الحالة.
+
+android.permission.FACTORY_TEST
+التشغيل كتطبيق اختبار مصنع، تحت مستخدم الجذر.
+
+android.permission.FLASHLIGHT
+الوصول إلى الفلاش.
+
+android.permission.FORCE_BACK
+إجبار عملية الرجوع على الأنشطة ذات المستوى الأعلى.
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+يسمح للتطبيق بمزامنة البيانات مع خدمات أخرى أثناء تشغيل خدمته الأمامية.
+
+android.permission.FOTA_UPDATE
+قد يكون إذنًا محجوزًا.
+
+android.permission.GET_ACCOUNTS
+العثور على الحسابات على الجهاز.
+
+android.permission.GET_ACCOUNTS_PRIVILEGED
+السماح بالوصول إلى قائمة الحسابات في خدمة الحسابات.
+
+android.permission.GET_PACKAGE_SIZE
+قياس مساحة تخزين التطبيق.
+
+android.permission.GET_TASKS
+استرداد معلومات حول التطبيقات قيد التشغيل حاليًا.
+
+android.permission.HARDWARE_TEST
+الوصول إلى الأجهزة.
+
+android.permission.HIDE_OVERLAY_WINDOWS
+يسمح للتطبيق بمنع النوافذ غير النظامية من الظهور فوقه.
+
+android.permission.INJECT_EVENTS
+اعتراض إجراءات المستخدم مثل ضغطات المفاتيح، اللمس، أحداث trackball، إلخ.
+
+android.permission.INSTALL_LOCATION_PROVIDER
+تثبيت مزودي الموقع.
+
+android.permission.INSTALL_PACKAGES
+تثبيت الحزم.
+
+android.permission.INTERNAL_SYSTEM_WINDOW
+فتح النوافذ باستخدام واجهة المستخدم النظامية.
+
+android.permission.INTERNET
+الوصول الكامل إلى الإنترنت.
+
+android.permission.MANAGE_APP_TOKENS
+إدارة رموز التطبيقات في مدير النوافذ.
+
+android.permission.MASTER_CLEAR
+قد يكون لمسح جميع البيانات، مشابه لإعادة ضبط المصنع.
+
+android.permission.MODIFY_AUDIO_SETTINGS
+تغيير إعدادات الصوت.
+
+android.permission.MODIFY_PHONE_STATE
+تعديل حالة الهاتف، مثل الطاقة، واجهة المستخدم، إلخ.
+
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+تركيب وفك تركيب أنظمة الملفات على التخزين القابل للإزالة.
+
+android.permission.PERSISTENT_ACTIVITY
+جعل التطبيق يعمل دائمًا.
+
+android.permission.PROCESS_OUTGOING_CALLS
+إعادة توجيه المكالمات الصادرة.
+
+android.permission.READ_CALENDAR
+قراءة أحداث التقويم وتفاصيلها.
+
+android.permission.READ_CONTACTS
+قراءة بيانات جهات الاتصال.
+
+android.permission.READ_FRAME_BUFFER
+التقاط موجات الشاشة أو الوصول العام إلى بيانات إطار العرض.
+
+android.permission.READ_INPUT_STATE
+إرجاع حالات المفاتيح الحالية.
+
+android.permission.READ_LOGS
+قراءة ملفات سجل النظام منخفضة المستوى.
+
+android.permission.READ_OWNER_DATA
+قراءة بيانات المالك.
+
+android.permission.READ_SMS
+⚠️ قراءة الرسائل النصية.
+
+android.permission.READ_SYNC_SETTINGS
+قراءة إعدادات المزامنة.
+
+android.permission.READ_SYNC_STATS
+قراءة إحصائيات المزامنة.
+
+android.permission.REBOOT
+يسمح للتطبيق بإعادة تشغيل الجهاز.
+
+android.permission.RECEIVE_BOOT_COMPLETED
+بدء التشغيل.
+
+android.permission.RECEIVE_MMS
+⚠️ استقبال الرسائل (MMS).
+
+android.permission.RECEIVE_SMS
+⚠️ استقبال الرسائل (SMS).
+
+android.permission.RECEIVE_WAP_PUSH
+يسمح للتطبيق باستقبال رسائل WAP push.
+
+android.permission.RECORD_AUDIO
+تسجيل الصوت.
+
+android.permission.REORDER_TASKS
+إعادة ترتيب التطبيقات قيد التشغيل.
+
+android.permission.RESTART_PACKAGES
+إعادة تشغيل التطبيقات الأخرى.
+
+android.permission.SEND_SMS
+⚠️ إرسال الرسائل النصية.
+
+android.permission.SET_ACTIVITY_WATCHER
+مراقبة أو التحكم في الأنشطة التي تم إطلاقها في النظام.
+
+android.permission.SET_ALWAYS_FINISH
+التحكم في ما إذا كانت الأنشطة تنتهي فورًا عند وضعها في الخلفية.
+
+android.permission.SET_ANIMATION_SCALE
+تعديل مقياس الرسوم المتحركة العام.
+
+android.permission.SET_DEBUG_APP
+تكوين تطبيق لتصحيح الأخطاء.
+
+android.permission.SET_ORIENTATION
+الوصول منخفض المستوى لتحديد اتجاه الشاشة والدوران الفعلي.
+
+android.permission.SET_PREFERRED_APPLICATIONS
+تعديل معلمات قائمة PackageManager.addPackageToPreferred() و PackageManager.removePackageFromPreferred().
+
+android.permission.SET_PROCESS_FOREGROUND
+إجبار التطبيق قيد التشغيل حاليًا على الواجهة الأمامية.
+
+android.permission.SET_PROCESS_LIMIT
+تعيين الحد الأقصى لعدد العمليات قيد التشغيل.
+
+android.permission.SET_TIME_ZONE
+تعيين المنطقة الزمنية.
+
+android.permission.SET_WALLPAPER
+تعيين خلفية الشاشة.
+
+android.permission.SET_WALLPAPER_HINTS
+ضبط حجم خلفية الشاشة.
+
+android.permission.SIGNAL_PERSISTENT_PROCESSES
+طلب إرسال إشارات إلى جميع العمليات المرئية.
+
+android.permission.STATUS_BAR
+فتح، إغلاق، أو تعطيل شريط الحالة ورموزه.
+
+android.permission.SUBSCRIBED_FEEDS_READ
+الوصول إلى مزود محتوى RSS المشترك.
+
+android.permission.SUBSCRIBED_FEEDS_WRITE
+هذا الإعداد محجوز للنظام للاستخدام المستقبلي.
+
+android.permission.SYSTEM_ALERT_WINDOW
+يمكن لهذا التطبيق الظهور فوق التطبيقات الأخرى.
+
+android.permission.VIBRATE
+التحكم في الاهتزاز.
+
+android.permission.WAKE_LOCK
+منع الهاتف من الدخول في وضع السكون.
+
+android.permission.WRITE_APN_SETTINGS
+كتابة إعدادات APN.
+
+android.permission.WRITE_CALENDAR
+إضافة أو تعديل أحداث التقويم.
+
+android.permission.WRITE_CONTACTS
+تعديل جهات الاتصال الخاصة بك.
+
+android.permission.WRITE_GSERVICES
+تعديل خريطة خدمات Google.
+
+android.permission.WRITE_OWNER_DATA
+كتابة بيانات المالك ولكن لا يمكن قراءتها.
+
+android.permission.WRITE_SETTINGS
+تعديل إعدادات النظام.
+
+android.permission.WRITE_SMS
+⚠️ كتابة الرسائل النصية.
+
+android.permission.WRITE_SYNC_SETTINGS
+تمكين أو تعطيل المزامنة.
+
+android.permission.WRITE_USER_DICTIONARY
+إضافة كلمات جديدة إلى قاموس المستخدم.
+
+android.permission.WRITE_SOCIAL_STREAM
+تعديل البث الاجتماعي.
+
+android.permission.WRITE_SECURE_SETTINGS
+تعديل إعدادات النظام الآمنة.
+
+android.permission.WRITE_PROFILE
+يسمح بكتابة بيانات ملف تعريف المستخدم.
+
+android.permission.WRITE_EXTERNAL_STORAGE
+تعديل أو حذف محتويات مساحة التخزين المشتركة.
+
+android.permission.WRITE_CALL_LOG
+⚠️ إنشاء/تعديل/حذف إدخالات سجل المكالمات.
+
+android.permission.USE_SIP
+يسمح للتطبيق باستخدام خدمة SIP للاتصالات الصوتية عبر الإنترنت (VoIP).
+
+android.permission.USE_CREDENTIALS
+طلب رموز المصادقة من AccountManager.
+
+android.permission.UPDATE_DEVICE_STATS
+تحديث إحصائيات الجهاز.
+
+android.permission.TRANSMIT_IR
+إرسال الأشعة تحت الحمراء.
+
+android.permission.SET_TIME
+تعيين وقت النظام.
+
+android.permission.SET_POINTER_SPEED
+لا يمكن الحصول عليها من قبل تطبيقات الطرف الثالث؛ إذن نظام.
+
+android.permission.SEND_RESPOND_VIA_MESSAGE
+إرسال رد فوري عبر الرسائل النصية باستخدام تطبيقك أثناء المكالمات الواردة.
+
+android.permission.READ_USER_DICTIONARY
+الحصول على البيانات من مزود؛ تحتاج التطبيقات إلى "إذن قراءة" للوصول إلى المزود المناسب.
+
+android.permission.READ_SOCIAL_STREAM
+قراءة البث الاجتماعي للمستخدم.
+
+android.permission.READ_PROFILE
+الوصول إلى ملف تعريف المستخدم الشخصي.
+
+android.permission.READ_PHONE_STATE
+قراءة حالة الهاتف وهوية المستخدم.
+
+android.permission.READ_EXTERNAL_STORAGE
+قراءة محتويات مساحة التخزين المشتركة.
+
+android.permission.READ_CALL_LOG
+⚠️ قراءة إدخالات سجل المكالمات.
+
+android.permission.NFC
+تنفيذ عمليات الاتصال القريب من خلال تقنية NFC.
+
+android.permission.MOUNT_FORMAT_FILESYSTEMS
+تهيئة أنظمة الملفات القابلة للإزالة، مثل تهيئة بطاقة SD.
+
+android.permission.MEDIA_CONTENT_CONTROL
+الوصول لمعرفة ما يتم تشغيله والتحكم في محتواه، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.MANAGE_DOCUMENTS
+إدارة الوصول إلى المستندات.
+
+android.permission.MANAGE_ACCOUNTS
+إدارة قائمة الحسابات في AccountManager.
+
+android.permission.LOCATION_HARDWARE
+استخدام ميزات أجهزة الموقع، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.KILL_BACKGROUND_PROCESSES
+استدعاء killBackgroundProcesses(String) لإنهاء العمليات الخلفية.
+
+android.permission.GLOBAL_SEARCH
+القدرة على البحث الشامل عبر النظام.
+
+android.permission.GET_TOP_ACTIVITY_INFO
+استرداد معلومات خاصة حول النشاط الحالي الأعلى، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.CHANGE_WIFI_MULTICAST_STATE
+استقبال البث المتعدد عبر Wi-Fi.
+
+android.permission.CAPTURE_VIDEO_OUTPUT
+التقاط إخراج الفيديو، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.CAPTURE_SECURE_VIDEO_OUTPUT
+التقاط إخراج الفيديو الآمن، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.CAPTURE_AUDIO_OUTPUT
+التقاط إخراج الصوت، لا يستخدم من قبل تطبيقات الطرف الثالث.
+
+android.permission.BROADCAST_WAP_PUSH
+بث نية عند استقبال WAP PUSH.
+
+android.permission.BROADCAST_SMS
+⚠️ بث نية عند استقبال رسالة SMS.
+
+android.permission.BLUETOOTH_PRIVILEGED
+الاقتران مع أجهزة Bluetooth دون تفاعل المستخدم.
+
+android.permission.BIND_WALLPAPER
+يجب طلبها من خلال WallpaperService. فقط النظام يمكنه استخدام هذا.
+
+android.permission.BIND_VPN_SERVICE
+ربط بخدمة VPN.
+
+android.permission.BIND_TEXT_SERVICE
+يجب أن تكون مطلوبة من قبل TextService (مثل SpellcheckerService) لضمان أن النظام فقط يمكنه الربط بها.
+
+android.permission.BIND_REMOTEVIEWS
+يجب طلبها من خلال RemoteViewsService. فقط النظام يمكنه استخدام هذا.
+
+android.permission.BIND_PRINT_SERVICE
+يجب أن تكون مطلوبة من قبل PrintService لضمان أن النظام فقط يمكنه الربط بها.
+
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+يجب أن تكون مطلوبة من قبل NotificationListenerService لضمان أن النظام فقط يمكنه الربط بها.
+
+android.permission.BIND_NFC_SERVICE
+يجب أن تكون مطلوبة من قبل HostApduService أو OffHostApduService لضمان أن النظام فقط يمكنه الربط بها.
+
+android.permission.BIND_INPUT_METHOD
+طلب InputMethodService. فقط النظام يمكنه استخدام هذا.
+
+android.permission.BIND_DEVICE_ADMIN
+طلب أن يصبح مسؤول جهاز. فقط النظام يمكنه استخدام هذا الإذن.
+
+android.permission.BIND_APPWIDGET
+يسمح للتطبيق بإخبار خدمة AppWidget بالوصول إلى بيانات ويدجت التطبيق. عدد قليل جدًا من التطبيقات تستخدم هذا الإذن.
+
+android.permission.BIND_ACCESSIBILITY_SERVICE
+طلب AccessibilityService. يضمن أن النظام فقط يمكنه الربط بها.
+
+android.permission.AUTHENTICATE_ACCOUNTS
+يسمح للتطبيق بالعمل كـ AccountAuthenticator لـ AccountManager.
+
+android.permission.ACCOUNT_MANAGER
+الوصول إلى بيانات اعتماد مصادقة الحساب، بشكل أساسي لمعلومات حساب GMail. يمكن الوصول إليها فقط من خلال عمليات النظام.
+
+com.android.browser.permission.READ_HISTORY_BOOKMARKS
+قراءة المفضلة وسجل المتصفح.
+
+com.android.alarm.permission.SET_ALARM
+تعيين تذكيرات التنبيه.
+
+com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
+الكتابة في سجل المتصفح أو المفضلة ولكن لا يسمح بالقراءة.
+
+com.android.launcher.permission.INSTALL_SHORTCUT
+تثبيت اختصار.
+
+com.android.launcher.permission.UNINSTALL_SHORTCUT
+إزالة اختصار.
+
+com.android.voicemail.permission.ADD_VOICEMAIL
+يسمح للتطبيق بإضافة رسائل البريد الصوتي إلى النظام.
+
+android.permission.REQUEST_INSTALL_PACKAGES
+طلب تثبيت الحزم.
+
+android.permission.REQUEST_DELETE_PACKAGES
+طلب حذف الحزم.
+
+android.permission.READ_INSTALL_SESSIONS
+قراءة جلسات التثبيت.
+
+android.permission.READ_CELL_BROADCASTS
+قراءة البث الخلوي.
+
+android.permission.NEARBY_WIFI_DEVICES
+التفاعل مع أجهزة WLAN القريبة.
+
+android.permission.USE_FINGERPRINT
+استخدام جهاز بصمة الإصبع.
+
+android.permission.USE_BIOMETRIC
+(مهمل) استخدام مصادقة بصمة الإصبع.
+
+android.permission.FOREGROUND_SERVICE
+تشغيل خدمة أمامية.
+
+android.permission.QUERY_ALL_PACKAGES
+يسمح للتطبيق بالاستعلام عن جميع الحزم المثبتة (Android 11+).
+
+android.permission.ACCESS_BACKGROUND_LOCATION
+يسمح للتطبيق بالوصول إلى الموقع في الخلفية (Android 10+).
+
+android.permission.ACTIVITY_RECOGNITION
+يسمح للتطبيق بالتعرف على النشاط البدني للمستخدم والوصول إليه.
+
+android.permission.ACCESS_MEDIA_LOCATION
+يسمح للتطبيق بالوصول إلى الموقع الجغرافي المضمن في الصور ومقاطع الفيديو المشتركة للمستخدم.
+
+android.permission.UWB_RANGING
+يسمح للتطبيق باستخدام تقنية Ultra Wideband (UWB) لقياس المسافة إلى الأجهزة الأخرى.
+
+android.permission.BLUETOOTH_SCAN
+يسمح للتطبيق بالبحث عن أجهزة Bluetooth، ويتطلب إما رؤية الموقع أو إذن BLUETOOTH_ADMIN.
+
+android.permission.BLUETOOTH_CONNECT
+يسمح للتطبيق بالاتصال بأجهزة Bluetooth المقترنة.
+
+android.permission.MANAGE_EXTERNAL_STORAGE
+يسمح بالوصول للقراءة والكتابة إلى جميع محتويات التخزين المشترك.
+
+android.permission.BLUETOOTH_ADVERTISE
+يسمح للتطبيق بالبث عبر Bluetooth.
+
+android.permission.REQUIRE_MANAGED_USER_SPLIT
+يشير هذا الإذن إلى أن التطبيق يتطلب القدرة على التشغيل ضمن ملف تعريف مُدار أو ملف تعريف عمل.
+
+android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
+يسمح للتطبيق بتنفيذ المهام في الخلفية دون عرض إشعار دائم.
+
+android.permission.ANSWER_PHONE_CALLS
+⚠️ يسمح للتطبيق بالرد على المكالمات الواردة (Android 8+).
+
+android.permission.READ_MEDIA_AUDIO
+يسمح للتطبيق بالوصول إلى بيانات الصوت من ملفات الوسائط. يلزم موافقة المستخدم.
+
+android.permission.READ_MEDIA_VIDEO
+يسمح للتطبيق بالوصول إلى بيانات الفيديو من ملفات الوسائط. يلزم موافقة المستخدم.
+
+android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+يسمح للتطبيق بإدارة مالكي الجهاز وملف التعريف. يلزم موافقة المستخدم.
+
+android.permission.USE_BACKGROUND_EXECUTION_WHEN_CROSS_PROFILE_IS_SETTINGS_PROVIDER
+يسمح للتطبيق باستخدام التنفيذ في الخلفية عندما يكون موفر الإعدادات في سياق متعدد الملفات الشخصية.
+
+android.permission.USE_MEDIA_SESSION_IN_BACKGROUND
+يسمح للتطبيق باستخدام جلسات الوسائط في الخلفية.
+
+android.permission.MANAGE_MEMORY_POLICY
+يسمح للتطبيق بإدارة سياسات الذاكرة، مما قد يؤثر على كيفية إنهاء التطبيقات والعمليات لاستعادة الذاكرة.
+
+android.permission.READ_MEDIA_IMAGE_DATA
+يسمح للتطبيق بقراءة بيانات الصور من ملفات الوسائط.
+
+android.permission.USE_DEVICE_SPECIFIC_CAMERA
+يسمح للتطبيق بالوصول إلى ميزات الكاميرا الخاصة بالجهاز.
+
+android.permission.USE_RESERVED_NETWORK
+يسمح للتطبيق باستخدام واجهات الشبكة المحجوزة، والتي قد تكون مقيدة لأغراض محددة.
+
+android.permission.USE_RESERVED_FEATURE
+يسمح للتطبيق باستخدام ميزات الجهاز المحجوزة، والتي قد تكون مقيدة لتطبيقات أو وظائف معينة.
+
+android.permission.USE_COARSE_LOCATION
+يسمح للتطبيق بالوصول إلى الموقع التقريبي، عادةً من مصادر موقع الشبكة.
+
+android.permission.USE_REMOTE_VOICE_INTERACTION
+يسمح للتطبيق باستخدام التفاعل الصوتي عن بُعد دون تنشيط ميكروفون الجهاز.
+
+android.permission.USE_VR_FEATURE
+يسمح للتطبيق باستخدام ميزات الواقع الافتراضي (VR) دون وجود سماعة VR.
+
+android.permission.USE_WALLPAPER_SERVICE
+يسمح للتطبيق باستخدام WallpaperService، المسؤول عن إدارة الخلفيات الحية.
+
+android.permission.SYSTEM_OVERLAY_WINDOW
+يسمح للتطبيق بعرض النوافذ فوق التطبيقات الأخرى.
+
+com.android.vending.BILLING
+يسمح للتطبيق بإجراء عمليات البيع من خلال خدمة الدفع داخل التطبيق في Google Play.
+
+android.permission.RECEIVE_USER_PRESENT
+يسمح للتطبيق بالحصول على إشعار عندما يقوم المستخدم بإلغاء قفل الجهاز ويكون حاضرًا للتفاعل معه.
+
+com.android.launcher.permission.READ_SETTINGS
+يسمح للتطبيق بقراءة تفضيلات وإعدادات التكوين لبرنامج تشغيل الشاشة الرئيسية على جهاز Android.
+
+android.permission.POST_NOTIFICATIONS
+يسمح للتطبيقات بعرض الإشعارات على جهاز Android.
+
+com.google.android.gms.permission.AD_ID
+يسمح للتطبيق بالوصول إلى معرف الإعلانات.
+
+com.google.android.c2dm.permission.RECEIVE
+يسمح للتطبيق باستقبال الرسائل من Google Cloud Messaging.
+
+android.permission.WRITE_APP_BADGE
+يسمح للتطبيق بتعديل رقم الشارة المعروض على أيقونة التطبيق.
+
+android.permission.SCHEDULE_EXACT_ALARM
+يسمح بضبط التنبيهات الدقيقة.
+
+android.permission.READ_MEDIA_IMAGES
+يسمح بالوصول إلى الصور المخزنة على الجهاز.
+
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+يسمح للتطبيق الفوري بإنشاء خدمات أمامية.
+
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+يسمح للتطبيق بالتقاط محتوى الشاشة لالتقاط لقطة شاشة باستخدام نية العمل.
+
+android.permission.MANAGE_DEVICE_LOCK_STATE
+يسمح لتطبيقات كشك الأجهزة الممولة بتنفيذ إجراءات على خدمة قفل الجهاز.
+
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+يسمح للتطبيق بإدارة السياسات المتعلقة بإمكانية الوصول.
+
+android.permission.READ_HOME_APP_SEARCH_DATA
+يسمح للتطبيق بالاستعلام عن البيانات العالمية في AppSearch المرئية لدور HOME.
+
+android.permission.READ_APP_BADGE
+يسمح للتطبيق بقراءة عدد الشارات الحالي المعروض على أيقونة تطبيق آخر.
+
+android.permission.ACCESS_CACHE_FILESYSTEM
+يسمح بالوصول إلى نظام ملفات الذاكرة المؤقتة. (نادر، على مستوى النظام)
+
+android.permission.ACCESS_IMS_CALL
+يسمح بالوصول إلى مكالمات IMS (مكالمات نظام الوسائط المتعددة عبر IP). (يستخدمها تطبيقات الاتصالات)
+
+android.permission.ACCESS_MTP
+الوصول إلى بروتوكول نقل الوسائط. (على مستوى النظام)
+
+android.permission.ACCESS_TUNNEL_MODE
+يسمح للتطبيق بإنشاء واجهة شبكة TUN. (عادةً ما تستخدمها تطبيقات VPN)
+
+android.permission.CAPTURE_AUDIO_HOTWORD
+يسمح بالوصول إلى نظام اكتشاف الكلمات الساخنة.
+
+android.permission.MANAGE_USB
+يسمح للتطبيق بإدارة أجهزة USB.
+
+android.permission.WRITE_MEDIA_STORAGE
+يسمح بالوصول للكتابة إلى تخزين الوسائط.
+
+com.google.android.gms.permission.ACTIVITY_RECOGNITION
+يسمح بالوصول إلى التعرف على النشاط (المشي، الجري، إلخ).
+
+com.google.android.providers.gsf.permission.READ_GSERVICES
+يسمح بقراءة إعدادات إطار عمل خدمات Google (GSF).
+
+com.google.android.providers.gsf.permission.WRITE_GSERVICES
+يسمح بكتابة إعدادات إطار عمل خدمات Google (GSF).
+
+com.google.android.providers.gsf.permission.BROADCAST_ALARM
+يسمح للتطبيق ببث التنبيهات إلى خدمات Google.
+
+com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
+يسمح لخدمات Google Play باسترداد توقيع التطبيقات المثبتة.
+
+android.permission.READ_PRIVILEGED_PHONE_STATE
+يسمح بالوصول المميز لقراءة حالة الهاتف.
+
+android.permission.CAPTURE_NETWORK_TRAFFIC
+يسمح بالتقاط حركة المرور على الشبكة.
+
+android.permission.ACCESS_WIFI_SCAN
+يسمح للتطبيق بإجراء مسح لشبكة Wi-Fi.
+
+android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
+الوصول إلى التخزين الآمن للمفاتيح.
+
+android.permission.ACCESS_BROADCAST_MANAGER
+يسمح بالتحكم في مدير البث.
+
+android.permission.ACCESS_CHECKIN
+يسمح بالوصول إلى خدمة تسجيل الوصول. (يستخدمها خدمات Google).
+
+android.permission.ACCESS_CONTEXT_HUB
+يسمح بالوصول إلى وظائف Context Hub.
+
+android.permission.ACCESS_NOTIFICATION_POLICY
+يسمح بالوصول إلى سياسة الإشعارات.
+
+android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+يسمح للتطبيق بالتفاعل مع خدمة التفاعل الصوتي.
+
+android.permission.BACKUP
+يسمح للتطبيق بإجراء عمليات النسخ الاحتياطي.
+
+android.permission.BIND_CARRIER_MESSAGING_SERVICE
+يسمح للتطبيق بربط خدمة مراسلة الناقل.
+
+android.permission.BIND_DIRECTORY_SEARCH
+يسمح بربط خدمة البحث في الدليل.
+
+android.permission.BIND_DREAM_SERVICE
+يسمح للتطبيق بالربط بخدمة الحلم (خدمة شاشة التوقف).
+
+android.permission.BIND_MIDI_DEVICE_SERVICE
+يسمح للتطبيق بالربط بخدمة جهاز MIDI.
+
+android.permission.BIND_TELECOM_CONNECTION_SERVICE
+يسمح بربط خدمة اتصالات الاتصالات.
+
+android.permission.BIND_TV_INPUT
+يسمح بربط خدمة إدخال التلفزيون.
+
+android.permission.BIND_VOICE_INTERACTION
+يسمح بربط خدمة التفاعل الصوتي.
+
+android.permission.CONTROL_VPN
+يسمح للتطبيق بالتحكم في خدمة VPN.
+
+android.permission.CREATE_USERS
+يسمح بإنشاء ملفات تعريف مستخدم جديدة.
+
+android.permission.GET_INSTALLED_PACKAGES
+يسمح للتطبيق بالحصول على قائمة الحزم المثبتة.
+
+android.permission.IDENTIFY_PHONE_STATE
+يسمح للتطبيق بالوصول إلى تحديد حالة الهاتف.
+
+android.permission.INVOKE_CARRIER_SETUP
+يسمح للتطبيق باستدعاء إعداد الناقل.
+
+android.permission.LOADER_USAGE_STATS
+يسمح بالوصول إلى إحصائيات استخدام المحمل.
+
+android.permission.MANAGE_USERS
+يسمح بإدارة ملفات تعريف المستخدم.
+
+android.permission.MODIFY_NETWORK_CONFIGURATION
+يسمح للتطبيق بتعديل تكوينات الشبكة.
+
+android.permission.MODIFY_TELEPHONY_STATE
+يسمح بتعديل حالة الاتصالات.
+
+android.permission.OVERRIDE_WIFI_CONFIG
+يسمح بتجاوز تكوين Wi-Fi.
+
+android.permission.PACKAGE_USAGE_STATS
+يسمح بالوصول إلى إحصائيات استخدام الحزم التفصيلية.
+
+android.permission.PEERS_MAC_ADDRESS
+يسمح بالوصول إلى عنوان MAC للأقران.
+
+android.permission.PERFORM_CDMA_PROVISIONING
+يسمح بالمهام المتعلقة بالناقل.
+
+android.permission.READ_DREAM_STATE
+يسمح بقراءة حالة الحلم.
+
+android.permission.READ_WIFI_CREDENTIALS
+يسمح بقراءة بيانات اعتماد Wi-Fi.
+
+android.permission.RECOVERY
+يسمح للتطبيق بتنفيذ إجراءات الاسترداد.
+
+android.permission.REMOVE_TASKS
+يسمح للتطبيق بإزالة المهام.
+
+android.permission.START_ACTIVITIES_FROM_BACKGROUND
+يسمح للتطبيق بإطلاق الأنشطة من الخلفية.
+
+android.permission.STATUS_BAR_SERVICE
+يسمح للتطبيق بالتحكم في شريط الحالة.
+
+android.permission.SYSTEM_APPLICATION_COMPONENT
+يسمح بالوصول إلى مكونات تطبيق النظام.
+
+android.permission.USE_ICC_AUTH
+يسمح بالوصول إلى مصادقة ICC.
+
+android.permission.USE_RESERVED_DISK
+يسمح للتطبيق باستخدام مساحة القرص المحجوزة.
+
+com.google.android.providers.gsf.permission.BROADCAST_SMS
+يسمح لخدمات Google ببث الرسائل القصيرة (SMS).
+
+com.google.android.gm.permission.READ_CONTENT
+يسمح بقراءة محتوى Gmail.
+
+com.google.android.providers.gsf.permission.INSTALL_PACKAGES
+يسمح لخدمات Google بتثبيت الحزم.
+
+com.google.android.setupwizard.SETUP_COMPLETED
+يسمح لمعالج الإعداد بتسجيل اكتمال الإعداد.
+
+android.permission.UPDATE_APP_OPS_STATS
+يسمح بتحديث إحصائيات عمليات التطبيق.
+
+android.permission.BIND_QUICK_SETTINGS_TILE
+يسمح للتطبيق بإنشاء مربعات الإعدادات السريعة.
+
+android.permission.CONTROL_DEVICE_POLICY
+يسمح بالتحكم في سياسة الجهاز.
+
+android.permission.MANAGE_DEVICE_ADMINS
+يسمح بإدارة مسؤولي الجهاز.

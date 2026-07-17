@@ -24,7 +24,7 @@ package mt.modder.hub.axmlTools.escaper;
 public class EntityArrays {
     /**
      * Mapping to escape the basic XML and HTML character entities.
-     *
+     * <p>
      * Namely: {@code " & < >}
      * @return the mapping table
      */

@@ -1,0 +1,1232 @@
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+Позволяет приложению запросить игнорирование оптимизации батареи.
+
+android.permission.ACCESS_CHECKIN_PROPERTIES
+Предоставляет приложению возможность читать и записывать данные в таблицу "properties" базы данных checkin, которые могут быть изменены для загрузки.
+
+android.permission.ACCESS_COARSE_LOCATION
+Позволяет приложению получать приблизительное местоположение (на основе сети).
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+Запускать передний сервис с типом "mediaProjection".
+
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+Запускать передний сервис с типом "systemExempted".
+
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+Запускать передний сервис с типом "specialUse".
+
+android.permission.ACCESS_SUPERUSER
+Позволяет приложению получать права суперпользователя.
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+Запускать передний сервис с типом "mediaPlayback".
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Запускать передний сервис с типом "dataSync".
+
+android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+Читать выбранные пользователем изображения и видео из общей памяти.
+
+android.permission.ACCESS_FINE_LOCATION
+Получать точное местоположение.
+
+android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+Доступ к дополнительным командам поставщика местоположения.
+
+android.permission.ACCESS_MOCK_LOCATION
+Получение информации о ложном местоположении.
+
+android.permission.ACCESS_NETWORK_STATE
+Просматривать подключения к сети.
+
+android.permission.ACCESS_SURFACE_FLINGER
+Использовать низкоуровневые функции SurfaceFlinger.
+
+android.permission.ACCESS_WIFI_STATE
+Получать информацию о состоянии Wi-Fi-сети.
+
+android.permission.ADD_SYSTEM_SERVICE
+Публиковать системные сервисы.
+
+android.permission.BATTERY_STATS
+Обновлять статистику батареи.
+
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+Позволяет браузеру вызывать API менеджера учетных данных от имени другого RP.
+
+android.permission.BLUETOOTH
+Подключаться к Bluetooth-устройствам.
+
+android.permission.BLUETOOTH_ADMIN
+Доступ к настройкам Bluetooth.
+
+android.permission.BRICK
+Запрос на отключение устройства (очень опасно).
+
+android.permission.BROADCAST_PACKAGE_REMOVED
+Отправлять широковещательные сообщения после удаления пакета приложения.
+
+android.permission.BROADCAST_STICKY
+Отправлять широковещательные сообщения типа sticky.
+
+android.permission.CALL_PHONE
+⚠️ Совершать телефонные звонки.
+
+android.permission.CALL_PRIVILEGED
+⚠️ Звонить на любые номера, включая экстренные.
+
+android.permission.CAMERA
+Снимать фото или видео.
+
+android.permission.CHANGE_COMPONENT_ENABLED_STATE
+Изменять состояние включения компонентов.
+
+android.permission.CHANGE_CONFIGURATION
+Модифицировать текущую конфигурацию, например локализацию.
+
+android.permission.CHANGE_NETWORK_STATE
+Изменять статус подключения к сети.
+
+android.permission.CHANGE_WIFI_STATE
+Подключаться или отключаться от Wi-Fi.
+
+android.permission.CLEAR_APP_CACHE
+Очистить кэш всех установленных приложений на устройстве.
+
+android.permission.CLEAR_APP_USER_DATA
+Удалить данные пользователя.
+
+android.permission.CONTROL_LOCATION_UPDATES
+Включать или отключать запросы обновлений местоположения от модуля беспроводной связи.
+
+android.permission.DELETE_CACHE_FILES
+Удалять файлы кэша.
+
+android.permission.DETECT_SCREEN_CAPTURE
+Получать уведомления о попытках захвата экрана окна приложения.
+
+android.permission.DETECT_SCREEN_RECORDING
+Получать уведомления о записи экрана приложения.
+
+android.permission.DELETE_PACKAGES
+Удалять пакеты приложений.
+
+android.permission.DEVICE_POWER
+Доступ к низкоуровневому управлению питанием.
+
+android.permission.DIAGNOSTIC
+Читать и записывать диагностические ресурсы.
+
+android.permission.DISABLE_KEYGUARD
+Отключать экран блокировки.
+
+android.permission.DELIVER_COMPANION_MESSAGES
+Позволяет приложению доставлять вспомогательные сообщения системе.
+
+android.permission.DUMP
+Получать системные данные от служб.
+
+android.permission.EXPAND_STATUS_BAR
+Разворачивать или сворачивать строку состояния.
+
+android.permission.FACTORY_TEST
+Запускать как тестовое приложение производителя, работая от имени пользователя root.
+
+android.permission.FLASHLIGHT
+Доступ к фонарику.
+
+android.permission.FORCE_BACK
+Принудительное выполнение действия "назад" для активных приложений.
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Позволяет приложению синхронизировать данные с другими сервисами, пока его сервис работает на переднем плане.
+
+android.permission.FOTA_UPDATE
+Может быть зарезервированным разрешением.
+
+android.permission.GET_ACCOUNTS
+Найти учетные записи на устройстве.
+
+android.permission.GET_ACCOUNTS_PRIVILEGED
+Дает доступ к списку учетных записей в сервисе Accounts.
+
+android.permission.GET_PACKAGE_SIZE
+Измерять объем занимаемого приложением места.
+
+android.permission.GET_TASKS
+Получать информацию о текущих запущенных приложениях.
+
+android.permission.HARDWARE_TEST
+Доступ к аппаратным тестам.
+
+android.permission.HIDE_OVERLAY_WINDOWS
+Позволяет приложению предотвращать отображение ненадежных окон поверх него.
+
+android.permission.INJECT_EVENTS
+Перехватывать пользовательские действия, такие как нажатия клавиш или прикосновения.
+
+android.permission.INSTALL_LOCATION_PROVIDER
+Устанавливать поставщиков местоположения.
+
+android.permission.INSTALL_PACKAGES
+Устанавливать пакеты приложений.
+
+android.permission.INTERNAL_SYSTEM_WINDOW
+Открывать окна с использованием системного интерфейса.
+
+android.permission.INTERNET
+Полный доступ в интернет.
+
+android.permission.MANAGE_APP_TOKENS
+Управлять токенами приложений в диспетчере окон.
+
+android.permission.MASTER_CLEAR
+Может быть использовано для полной очистки данных, аналогично сбросу настроек.
+
+android.permission.MODIFY_AUDIO_SETTINGS
+Изменять аудионастройки.
+
+android.permission.MODIFY_PHONE_STATE
+Модифицировать состояние телефона, включая управление питанием и интерфейсом.
+
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+Монтировать и размонтировать файловые системы на съемных носителях.
+
+android.permission.PERSISTENT_ACTIVITY
+Разрешить приложению сохранять свою активность.
+
+android.permission.PROCESS_OUTGOING_CALLS
+Перенаправлять исходящие звонки.
+
+android.permission.READ_CALENDAR
+Читать события и данные календаря.
+
+android.permission.READ_CONTACTS
+Читать данные контактов.
+
+android.permission.READ_FRAME_BUFFER
+Получать доступ к данным буфера кадров.
+
+android.permission.READ_INPUT_STATE
+Возвращать текущее состояние клавиш.
+
+android.permission.READ_LOGS
+Читать системные журналы.
+
+android.permission.READ_OWNER_DATA
+Читать данные владельца.
+
+android.permission.READ_SMS
+⚠️ Читать текстовые сообщения.
+
+android.permission.READ_SYNC_SETTINGS
+Читать настройки синхронизации.
+
+android.permission.READ_SYNC_STATS
+Читать статистику синхронизации.
+
+android.permission.REBOOT
+Перезагружать устройство.
+
+android.permission.RECEIVE_BOOT_COMPLETED
+Получать уведомление о завершении запуска устройства.
+
+android.permission.RECEIVE_MMS
+⚠️ Получать MMS-сообщения.
+
+android.permission.RECEIVE_SMS
+⚠️ Получать SMS-сообщения.
+
+android.permission.RECEIVE_WAP_PUSH
+Получать WAP push-сообщения.
+
+android.permission.RECORD_AUDIO
+Записывать аудио.
+
+android.permission.REORDER_TASKS
+Изменить порядок запущенных приложений.
+
+android.permission.RESTART_PACKAGES
+Перезапускать другие приложения.
+
+android.permission.SEND_SMS
+⚠️ Отправлять SMS-сообщения.
+
+android.permission.SET_ACTIVITY_WATCHER
+Контролировать или управлять действиями, запущенными в системе.
+
+android.permission.SET_ALWAYS_FINISH
+Контролировать завершение приложений при их отправке в фон.
+
+android.permission.SET_ANIMATION_SCALE
+Изменять глобальный масштаб анимации.
+
+android.permission.SET_DEBUG_APP
+Настраивать приложение для отладки.
+
+android.permission.SET_ORIENTATION
+Низкоуровневый доступ для настройки ориентации экрана и фактического вращения.
+
+android.permission.SET_PREFERRED_APPLICATIONS
+Изменять параметры списка предпочтительных приложений.
+
+android.permission.SET_PROCESS_FOREGROUND
+Переводить текущее приложение на передний план.
+
+android.permission.SET_PROCESS_LIMIT
+Устанавливать максимальное количество работающих процессов.
+
+android.permission.SET_TIME_ZONE
+Устанавливать часовой пояс.
+
+android.permission.SET_WALLPAPER
+Устанавливать обои.
+
+android.permission.SET_WALLPAPER_HINTS
+Настраивать размер обоев.
+
+android.permission.SIGNAL_PERSISTENT_PROCESSES
+Отправлять сигналы всем видимым процессам.
+
+android.permission.STATUS_BAR
+Открывать, закрывать или отключать строку состояния и её значки.
+
+android.permission.SUBSCRIBED_FEEDS_READ
+Доступ к контенту подписок RSS Feed.
+
+android.permission.SUBSCRIBED_FEEDS_WRITE
+Настройка зарезервирована системой для будущего использования.
+
+android.permission.SYSTEM_ALERT_WINDOW
+Позволяет приложению отображаться поверх других приложений.
+
+android.permission.VIBRATE
+Управлять вибрацией устройства.
+
+android.permission.WAKE_LOCK
+Предотвращать переход устройства в спящий режим.
+
+android.permission.WRITE_APN_SETTINGS
+Изменять настройки точек доступа (APN).
+
+android.permission.WRITE_CALENDAR
+Добавлять или изменять события календаря.
+
+android.permission.WRITE_CONTACTS
+Изменять контакты.
+
+android.permission.WRITE_GSERVICES
+Изменять карту сервисов Google.
+
+android.permission.WRITE_OWNER_DATA
+Записывать (но не считывать) данные владельца.
+
+android.permission.WRITE_SETTINGS
+Изменять системные настройки.
+
+android.permission.WRITE_SMS
+⚠️ Создавать/изменять текстовые сообщения.
+
+android.permission.WRITE_SYNC_SETTINGS
+Включать или отключать синхронизацию.
+
+android.permission.WRITE_USER_DICTIONARY
+Добавлять новые слова в пользовательский словарь.
+
+android.permission.WRITE_SOCIAL_STREAM
+Записывать (но не считывать) данные социального потока пользователя.
+
+android.permission.WRITE_SECURE_SETTINGS
+Изменять защищённые системные настройки.
+
+android.permission.WRITE_PROFILE
+Записывать данные профиля пользователя.
+
+android.permission.WRITE_EXTERNAL_STORAGE
+Изменять или удалять содержимое общей памяти устройства.
+
+android.permission.WRITE_CALL_LOG
+⚠️ Создавать/изменять/удалять записи журнала вызовов.
+
+android.permission.USE_SIP
+Использовать SIP-сервис для VoIP.
+
+android.permission.USE_CREDENTIALS
+Запрашивать токены аутентификации у AccountManager.
+
+android.permission.UPDATE_DEVICE_STATS
+Обновлять статистику устройства.
+
+android.permission.TRANSMIT_IR
+Передавать инфракрасные сигналы.
+
+android.permission.SET_TIME
+Устанавливать системное время.
+
+android.permission.SET_POINTER_SPEED
+Недоступно сторонним приложениям; разрешение уровня системы.
+
+android.permission.SEND_RESPOND_VIA_MESSAGE
+Отправлять текстовые сообщения как ответ на входящие вызовы.
+
+android.permission.READ_USER_DICTIONARY
+Получать данные из словаря пользователя.
+
+android.permission.READ_SOCIAL_STREAM
+Читать социальные потоки пользователя.
+
+android.permission.READ_PROFILE
+Доступ к личному профилю пользователя.
+
+android.permission.READ_PHONE_STATE
+Читать состояние телефона и его идентификатор.
+
+android.permission.READ_EXTERNAL_STORAGE
+Читать содержимое общей памяти устройства.
+
+android.permission.READ_CALL_LOG
+⚠️ Читать записи журнала вызовов.
+
+android.permission.NFC
+Выполнять операции с модулем бесконтактной связи NFC.
+
+android.permission.MOUNT_FORMAT_FILESYSTEMS
+Форматировать съёмные файловые системы, например SD-карты.
+
+android.permission.MEDIA_CONTENT_CONTROL
+Получать информацию о воспроизводимом контенте и управлять им (не используется сторонними приложениями).
+
+android.permission.MANAGE_DOCUMENTS
+Управлять доступом к документам.
+
+android.permission.MANAGE_ACCOUNTS
+Управлять списком учётных записей в AccountManager.
+
+android.permission.LOCATION_HARDWARE
+Использовать функции аппаратного определения местоположения (не используется сторонними приложениями).
+
+android.permission.KILL_BACKGROUND_PROCESSES
+Завершать фоновые процессы.
+
+android.permission.GLOBAL_SEARCH
+Выполнять глобальный поиск в системе.
+
+android.permission.GET_TOP_ACTIVITY_INFO
+Получать информацию о текущей активной задаче (не используется сторонними приложениями).
+
+android.permission.CHANGE_WIFI_MULTICAST_STATE
+Позволяет приложениям входить в режим многоадресной рассылки Wi-Fi
+
+android.permission.CAPTURE_VIDEO_OUTPUT
+Записывать видеовыход (не используется сторонними приложениями).
+
+android.permission.CAPTURE_SECURE_VIDEO_OUTPUT
+Записывать защищённый видеовыход (не используется сторонними приложениями).
+
+android.permission.CAPTURE_AUDIO_OUTPUT
+Записывать аудиовыход (не используется сторонними приложениями).
+
+android.permission.BROADCAST_WAP_PUSH
+Отправлять широковещательные сообщения при получении WAP PUSH.
+
+android.permission.BROADCAST_SMS
+⚠️ Отправлять широковещательные сообщения при получении SMS.
+
+android.permission.BLUETOOTH_PRIVILEGED
+Подключаться к Bluetooth-устройствам без участия пользователя.
+
+android.permission.BIND_WALLPAPER
+Требуется для использования WallpaperService. Только система может использовать это разрешение.
+
+android.permission.BIND_VPN_SERVICE
+Подключаться к сервису VPN.
+
+android.permission.BIND_TEXT_SERVICE
+Требуется для TextService (например, SpellcheckerService), чтобы только система могла подключаться.
+
+android.permission.BIND_REMOTEVIEWS
+Требуется для RemoteViewsService. Только система может использовать это разрешение.
+
+android.permission.BIND_PRINT_SERVICE
+Требуется для PrintService, чтобы только система могла подключаться.
+
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+Требуется для NotificationListenerService, чтобы только система могла подключаться.
+
+android.permission.BIND_NFC_SERVICE
+Требуется для HostApduService или OffHostApduService, чтобы только система могла подключаться.
+
+android.permission.BIND_INPUT_METHOD
+Запрашивать InputMethodService. Только система может использовать это разрешение.
+
+android.permission.BIND_DEVICE_ADMIN
+Запрашивать статус администратора устройства. Только система может использовать это разрешение.
+
+android.permission.BIND_APPWIDGET
+Позволяет приложению уведомлять сервис AppWidget о доступе к данным виджета. Используется очень редко.
+
+android.permission.BIND_ACCESSIBILITY_SERVICE
+Запрашивать AccessibilityService. Убедитесь, что только система может подключаться.
+
+android.permission.AUTHENTICATE_ACCOUNTS
+Позволяет приложению действовать как AccountAuthenticator для AccountManager.
+
+android.permission.ACCOUNT_MANAGER
+Доступ к учетным данным аутентификации, в основном для учетных записей Gmail. Доступно только системным процессам.
+
+com.android.browser.permission.READ_HISTORY_BOOKMARKS
+Читать (но не записывать) журнал браузера и закладки пользователя.
+
+com.android.alarm.permission.SET_ALARM
+Устанавливать напоминания о будильниках.
+
+com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
+Записывать (но не читать) журнал браузера и закладки пользователя.
+
+com.android.launcher.permission.INSTALL_SHORTCUT
+Устанавливать ярлыки.
+
+com.android.launcher.permission.UNINSTALL_SHORTCUT
+Удалять ярлыки.
+
+com.android.voicemail.permission.ADD_VOICEMAIL
+Позволяет приложению добавлять голосовую почту в систему.
+
+android.permission.REQUEST_INSTALL_PACKAGES
+Запрашивать установку пакетов приложений.
+
+android.permission.REQUEST_DELETE_PACKAGES
+Запрашивать удаление пакетов приложений.
+
+android.permission.READ_INSTALL_SESSIONS
+Читать сессии установки приложений.
+
+android.permission.READ_CELL_BROADCASTS
+Читать историю оповещений о чрезвычайных ситуациях.
+
+android.permission.NEARBY_WIFI_DEVICES
+Взаимодействовать с ближайшими устройствами WLAN.
+
+android.permission.USE_FINGERPRINT
+Использовать аппаратное обеспечение для распознавания отпечатков пальцев.
+
+android.permission.USE_BIOMETRIC
+(deprecated) Использовать аутентификацию по отпечаткам пальцев.
+
+android.permission.FOREGROUND_SERVICE
+Запускать сервис переднего плана.
+
+android.permission.QUERY_ALL_PACKAGES
+Позволяет приложению запрашивать все установленные пакеты приложений (Android 11+).
+
+android.permission.ACCESS_BACKGROUND_LOCATION
+Позволяет приложению получать доступ к местоположению в фоновом режиме (Android 10+).
+
+android.permission.ACTIVITY_RECOGNITION
+Позволяет приложению распознавать и получать доступ к физической активности пользователя.
+
+android.permission.ACCESS_MEDIA_LOCATION
+Позволяет приложению получать доступ к географическому местоположению, встроенному в фотографии и видео пользователя.
+
+android.permission.UWB_RANGING
+Позволяет приложению использовать технологию Ultra Wideband (UWB) для измерения расстояния до других устройств.
+
+android.permission.BLUETOOTH_SCAN
+Позволяет приложению сканировать Bluetooth-устройства, требуя видимости местоположения или разрешения BLUETOOTH_ADMIN.
+
+android.permission.BLUETOOTH_CONNECT
+Позволяет приложению подключаться к сопряжённым Bluetooth-устройствам.
+
+android.permission.MANAGE_EXTERNAL_STORAGE
+Позволяет читать и записывать весь контент общей памяти.
+
+android.permission.BLUETOOTH_ADVERTISE
+Позволяет приложению транслировать сообщения через Bluetooth.
+
+android.permission.REQUIRE_MANAGED_USER_SPLIT
+Указывает, что приложение должно работать в управляемом или рабочем профиле.
+
+android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
+Позволяет приложению выполнять задачи в фоновом режиме без отображения уведомления.
+
+android.permission.ANSWER_PHONE_CALLS
+⚠️ Позволяет приложению отвечать на входящие вызовы (Android 8+).
+
+android.permission.READ_MEDIA_AUDIO
+Предоставляет приложению доступ к аудиоданным из медиафайлов. Необходим согласие пользователя.
+
+android.permission.READ_MEDIA_VIDEO
+Предоставляет приложению доступ к видеоданным из медиафайлов. Необходим согласие пользователя.
+
+android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+Позволяет приложению управлять владельцами устройств и профилей. Необходим согласие пользователя.
+
+android.permission.USE_BACKGROUND_EXECUTION_WHEN_CROSS_PROFILE_IS_SETTINGS_PROVIDER
+Позволяет приложению выполнять задачи в фоновом режиме, когда поставщик настроек находится в контексте перекрёстного профиля.
+
+android.permission.USE_MEDIA_SESSION_IN_BACKGROUND
+Предоставляет приложению возможность использовать медиа-сессии в фоновом режиме.
+
+android.permission.MANAGE_MEMORY_POLICY
+Предоставляет приложению возможность управлять политиками памяти, что может повлиять на то, как приложения и процессы завершаются для высвобождения памяти.
+
+android.permission.READ_MEDIA_IMAGE_DATA
+Предоставляет приложению возможность читать данные изображений из медиафайлов.
+
+android.permission.USE_DEVICE_SPECIFIC_CAMERA
+Позволяет приложению доступ к функциям камеры, специфичным для устройства.
+
+android.permission.USE_RESERVED_NETWORK
+Предоставляет приложению возможность использовать зарезервированные сетевые интерфейсы, которые могут быть ограничены для определённых целей.
+
+android.permission.USE_RESERVED_FEATURE
+Предоставляет приложению возможность использовать зарезервированные функции устройства, которые могут быть ограничены для определённых приложений или функционала.
+
+android.permission.USE_COARSE_LOCATION
+Предоставляет приложению возможность получать доступ к приблизительному местоположению, обычно на основе сетевых источников.
+
+android.permission.USE_REMOTE_VOICE_INTERACTION
+Предоставляет приложению возможность использовать удалённое голосовое взаимодействие без активации микрофона устройства.
+
+android.permission.USE_VR_FEATURE
+Включает использование функций виртуальной реальности (VR) без наличия гарнитуры VR.
+
+android.permission.USE_WALLPAPER_SERVICE
+Предоставляет приложению возможность использовать WallpaperService, ответственный за управление живыми обоями.
+
+android.permission.SYSTEM_OVERLAY_WINDOW
+Позволяет приложению отображать окна поверх других приложений.
+
+com.android.vending.BILLING
+Позволяет приложению проводить продажи через сервис In-app Billing Google Play.
+
+android.permission.RECEIVE_USER_PRESENT
+Позволяет приложению получать уведомления, когда пользователь разблокировал устройство и готов с ним взаимодействовать.
+
+com.android.launcher.permission.READ_SETTINGS
+Позволяет приложению читать настройки и конфигурацию домашнего экрана.
+
+android.permission.POST_NOTIFICATIONS
+Позволяет приложению отображать уведомления на устройстве Android.
+
+com.google.android.gms.permission.AD_ID
+Позволяет приложению получить доступ к рекламному идентификатору.
+
+com.google.android.c2dm.permission.RECEIVE
+Позволяет приложению получать сообщения через Google Cloud Messaging.
+
+android.permission.WRITE_APP_BADGE
+Позволяет приложению изменять количество значков на иконке приложения.
+
+android.permission.SCHEDULE_EXACT_ALARM
+Позволяет настраивать точные будильники.
+
+android.permission.READ_MEDIA_IMAGES
+Предоставляет приложеню доступ к изображениям, хранящимся на устройстве.
+
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+Позволяет мгновенному приложению создавать передние сервисы.
+
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+Позволяет приложению делать снимок экрана для выполнения захвата контента.
+
+android.permission.MANAGE_DEVICE_LOCK_STATE
+Предоставляет приложениям в режиме киоска возможность управлять состоянием блокировки устройства.
+
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+Позволяет приложению управлять политиками, связанными с доступностью.
+
+android.permission.READ_HOME_APP_SEARCH_DATA
+Позволяет приложению выполнять запросы по глобальным данным AppSearch, видимым для роли HOME.
+
+android.permission.READ_APP_BADGE
+Позволяет приложению читать текущий счетчик значков на иконке другого приложения.
+
+android.permission.ACCESS_CACHE_FILESYSTEM
+Доступ к файловой системе кэша (редко используется, уровень системы).
+
+android.permission.ACCESS_IMS_CALL
+Доступ к вызовам IMS (IP Multimedia Subsystem). Используется телекоммуникационными приложениями.
+
+android.permission.ACCESS_MTP
+Доступ к протоколу передачи мультимедиа (MTP). Уровень системы.
+
+android.permission.ACCESS_TUNNEL_MODE
+Позволяет приложению создавать TUN-интерфейсы сети. Обычно используется приложениями VPN.
+
+android.permission.CAPTURE_AUDIO_HOTWORD
+Доступ к системе распознавания ключевых слов (hotword).
+
+android.permission.MANAGE_USB
+Позволяет приложению управлять USB-устройствами.
+
+android.permission.WRITE_MEDIA_STORAGE
+Предоставляет приложению возможность записи данных в медиахранилище.
+
+com.google.android.gms.permission.ACTIVITY_RECOGNITION
+Доступ к распознаванию активности (ходьба, бег и т.д.).
+
+com.google.android.providers.gsf.permission.READ_GSERVICES
+Позволяет чтение настроек Google Service Framework (GSF).
+
+com.google.android.providers.gsf.permission.WRITE_GSERVICES
+Позволяет запись настроек Google Service Framework (GSF).
+
+com.google.android.providers.gsf.permission.BROADCAST_ALARM
+Позволяет приложению отправлять сигналы тревоги Google-сервисам.
+
+com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
+Позволяет сервисам Google Play получать подписи установленных приложений.
+
+android.permission.READ_PRIVILEGED_PHONE_STATE
+Привилегированный доступ к состоянию телефона.
+
+android.permission.CAPTURE_NETWORK_TRAFFIC
+Позволяет приложению перехватывать сетевой трафик.
+
+android.permission.ACCESS_WIFI_SCAN
+Позволяет приложению выполнять сканирование Wi-Fi.
+
+android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
+Доступ к безопасному хранилищу ключей.
+
+android.permission.ACCESS_BROADCAST_MANAGER
+Позволяет приложению управлять диспетчером широковещательных сообщений.
+
+android.permission.ACCESS_CHECKIN
+Доступ к сервису Check-in (используется Google-сервисами).
+
+android.permission.ACCESS_CONTEXT_HUB
+Доступ к функционалу Context Hub.
+
+android.permission.ACCESS_NOTIFICATION_POLICY
+Доступ к политике уведомлений.
+
+android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+Предоставляет приложению возможность взаимодействовать с сервисом голосового управления.
+
+android.permission.BACKUP
+Позволяет приложению выполнять операции резервного копирования.
+
+android.permission.BIND_CARRIER_MESSAGING_SERVICE
+Позволяет приложению подключаться к службе обмена сообщениями оператора.
+
+android.permission.BIND_DIRECTORY_SEARCH
+Позволяет приложению подключаться к службе поиска по каталогам.
+
+android.permission.BIND_DREAM_SERVICE
+Позволяет приложению подключаться к сервису "экранного сна" (screen saver).
+
+android.permission.BIND_MIDI_DEVICE_SERVICE
+Позволяет приложению подключаться к службе MIDI-устройств.
+
+android.permission.BIND_TELECOM_CONNECTION_SERVICE
+Позволяет приложению подключаться к службе подключения Telecom.
+
+android.permission.BIND_TV_INPUT
+Позволяет приложению подключаться к службе ввода ТВ.
+
+android.permission.BIND_VOICE_INTERACTION
+Позволяет приложению подключаться к сервису голосового взаимодействия.
+
+android.permission.CONTROL_VPN
+Позволяет приложению управлять VPN-сервисом.
+
+android.permission.CREATE_USERS
+Создавать новые профили пользователей.
+
+android.permission.GET_INSTALLED_PACKAGES
+Получать список установленных пакетов приложений.
+
+android.permission.IDENTIFY_PHONE_STATE
+Позволяет приложению получать доступ к состоянию телефона.
+
+android.permission.INVOKE_CARRIER_SETUP
+Позволяет приложению вызывать настройки оператора связи.
+
+android.permission.LOADER_USAGE_STATS
+Доступ к статистике использования загрузчика.
+
+android.permission.MANAGE_USERS
+Управлять профилями пользователей.
+
+android.permission.MODIFY_NETWORK_CONFIGURATION
+Позволяет изменять настройки сети.
+
+android.permission.MODIFY_TELEPHONY_STATE
+Изменять состояние телекоммуникаций.
+
+android.permission.OVERRIDE_WIFI_CONFIG
+Позволяет изменять настройки Wi-Fi.
+
+android.permission.PACKAGE_USAGE_STATS
+Доступ к детальной статистике использования пакетов приложений.
+
+android.permission.PEERS_MAC_ADDRESS
+Доступ к MAC-адресу пиров.
+
+android.permission.PERFORM_CDMA_PROVISIONING
+Выполнять задачи, связанные с оператором CDMA.
+
+android.permission.READ_DREAM_STATE
+Читать состояние "экранного сна".
+
+android.permission.READ_WIFI_CREDENTIALS
+Читать учётные данные Wi-Fi.
+
+android.permission.RECOVERY
+Позволяет приложению выполнять действия по восстановлению.
+
+android.permission.REMOVE_TASKS
+Удалять задачи.
+
+android.permission.START_ACTIVITIES_FROM_BACKGROUND
+Позволяет приложению запускать активности в фоновом режиме.
+
+android.permission.STATUS_BAR_SERVICE
+Управлять строкой состояния.
+
+android.permission.SYSTEM_APPLICATION_COMPONENT
+Доступ к компонентам системных приложений.
+
+android.permission.USE_ICC_AUTH
+Доступ к аутентификации ICC.
+
+android.permission.USE_RESERVED_DISK
+Позволяет приложению использовать зарезервированное дисковое пространство.
+
+com.google.android.providers.gsf.permission.BROADCAST_SMS
+Позволяет Google-сервисам отправлять SMS.
+
+com.google.android.gm.permission.READ_CONTENT
+Читать содержимое Gmail.
+
+com.google.android.providers.gsf.permission.INSTALL_PACKAGES
+Позволяет Google-сервисам устанавливать пакеты приложений.
+
+com.google.android.setupwizard.SETUP_COMPLETED
+Позволяет мастеру настройки регистрировать завершение процесса настройки.
+
+android.permission.UPDATE_APP_OPS_STATS
+Обновлять статистику операций приложений.
+
+android.permission.BIND_QUICK_SETTINGS_TILE
+Позволяет приложению создавать плитки быстрых настроек.
+
+android.permission.CONTROL_DEVICE_POLICY
+Управлять политиками устройства.
+
+android.permission.MANAGE_DEVICE_ADMINS
+Управлять администраторами устройства.
+
+android.permission.START_VIEW_PERMISSION_USAGE
+Позволяет приложению запрашивать разрешение на доступ к конфиденциальной информации.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH
+Позволяет приложениям видеть имена пользователей (адреса электронной почты) учетных записей Google, настроенных на устройстве.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adsense
+Позволяет приложениям входить во все сервисы Google, используя учетные записи, сохраненные на устройстве Android.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+Позволяет приложениям входить в неопределенные сервисы Google с использованием учетных записей устройства Android.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ah
+Позволяет приложениям входить в Google App Engine, используя учетные записи устройства Android.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ALL_SERVICES
+Позволяет приложениям входить во все сервисы Google, используя учетные записи устройства Android.
+
+android.permission.ACCESS_ALL_EXTERNAL_STORAGE
+Предоставляет приложениям доступ ко внешнему хранилищу для всех пользователей.
+
+com.google.android.xmpp.permission.SEND_RECEIVE
+Позволяет приложениям Google отправлять и получать XMPP-сообщения с серверов Google.
+
+android.permission.CHANGE_WIMAX_STATE
+Позволяет приложениям подключаться и отключаться от WiMAX-сетей.
+
+android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+Позволяет приложениям загружать файлы через диспетчер загрузок без уведомления пользователя.
+
+android.permission.MANAGE_ACTIVITY_STACKS
+⚠️ Позволяет приложениям добавлять, удалять и изменять стеки задач, в которых работают другие приложения.
+
+android.permission.BIND_CALL_SERVICE
+Позволяет приложениям управлять отображением экрана вызова.
+
+android.permission.ASEC_ACCESS
+Позволяет приложениям получать информацию о внутреннем хранилище.
+
+android.permission.CHANGE_BACKGROUND_DATA_SETTING
+Позволяет приложениям изменять настройку фонового использования данных.
+
+android.permission.GET_DETAILED_TASKS
+⚠️ Позволяет приложениям получать подробную информацию о текущих и недавно запущенных задачах.
+
+android.permission.FORCE_STOP_PACKAGES
+Позволяет приложениям принудительно останавливать другие приложения.
+
+android.permission.START_ANY_ACTIVITY
+Позволяет приложениям запускать любую активность, независимо от состояния разрешений или экспортируемости.
+
+android.permission.ASEC_CREATE
+Позволяет приложениям создавать внутреннее хранилище.
+
+android.permission.ASEC_RENAME
+Позволяет приложениям переименовывать внутреннее хранилище.
+
+android.permission.GET_APP_OPS_STATS
+🚫 Позволяет приложениям получать собранную статистику операций приложений.
+
+android.permission.ASEC_MOUNT_UNMOUNT
+Позволяет приложениям монтировать/размонтировать внутреннее хранилище.
+
+android.permission.SET_SCREEN_COMPATIBILITY
+⚠️ Позволяет приложениям управлять режимом совместимости экрана для других приложений.
+
+android.permission.ASEC_DESTROY
+Позволяет приложениям уничтожать внутреннее хранилище.
+
+android.permission.INTERACT_ACROSS_USERS
+⚠️ Позволяет приложениям выполнять действия для различных пользователей на устройстве.
+
+com.google.android.gtalkservice.permission.GTALK_SERVICE
+⚠️ Используется для обмена сообщениями между сервером и устройством, а также для синхронизации уведомлений в Google Talk.
+
+android.permission.RECEIVE_EMERGENCY_BROADCAST
+🚫 Позволяет приложениям получать и обрабатывать экстренные широковещательные сообщения.
+
+com.google.android.providers.talk.permission.READ_ONLY
+Позволяет приложениям читать данные из контент-провайдера Google Talk.
+
+com.google.android.providers.talk.permission.WRITE_ONLY
+Позволяет приложениям записывать данные в контент-провайдер Google Talk.
+
+com.android.email.permission.READ_ATTACHMENT
+Позволяет приложениям читать вложения в электронной почте.
+
+android.permission.RETRIEVE_WINDOW_CONTENT
+⚠️ Позволяет приложениям получать содержимое активного окна.
+
+com.android.voicemail.permission.READ_WRITE_ALL_VOICEMAIL
+Позволяет приложениям сохранять и извлекать все голосовые сообщения, доступные устройству.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.android
+Позволяет приложениям входить в сервисы Android, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.orkut
+Позволяет приложениям входить в Orkut с использованием учетных записей устройства Android.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.doraemon
+Позволяет приложениям входить в сервис Google Catalogs, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.lh2
+Позволяет приложениям входить в веб-альбомы Picasa, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.wise
+Позволяет приложениям входить в Google Spreadsheets, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.speechpersonalization
+Позволяет приложениям входить в сервис персонализированного распознавания речи Google, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.notebook
+Позволяет приложениям входить в Google Notebook, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierra
+Позволяет приложениям входить в Google Checkout (и, возможно, совершать покупки), используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.groups2
+Позволяет приложениям входить в Google Groups, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.goanna_mobile
+Позволяет приложениям входить в сервис Google Tasks, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.knol
+Позволяет приложениям входить в Knol, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.blogger
+Позволяет приложениям входить в Blogger, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierraqa
+Позволяет приложениям входить в Google Checkout QA, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.speech
+Позволяет приложениям входить в Google Voice Search, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.health
+Позволяет приложениям входить в Google Health, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox
+Позволяет приложениям входить в Google Checkout Sandbox, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.writely
+Позволяет приложениям входить в Google Docs, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.print
+Позволяет приложениям входить в Google Book Search, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.news
+Позволяет приложениям входить в Google News, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.androidsecure
+Позволяет приложениям входить в Android-сервисы, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ig
+Позволяет приложениям входить в iGoogle, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.talk
+Позволяет приложениям входить в Google Talk, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.youtube
+Позволяет приложениям входить в YouTube, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.jotspot
+Позволяет приложениям входить в JotSpot, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.dodgeball
+Позволяет приложениям входить в Dodgeball, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES
+Позволяет приложениям входить в неопределенные сервисы Google, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.reader
+Позволяет приложениям входить в Google Reader, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.geowiki
+Позволяет приложениям входить в сервис Google Map Maker, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.grandcentral
+Позволяет приложениям входить в Google Voice, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+Позволяет приложениям входить в Google AdWords, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser
+Позволяет приложениям видеть имена пользователей YouTube, связанные с учетными записями Google на устройстве.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.mail
+Позволяет приложениям запрашивать токены аутентификации.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sitemaps
+Позволяет приложениям входить в Google Webmaster Tools, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.local
+Позволяет приложениям входить в Google Maps, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.cp
+Позволяет приложениям доступ к контактам и информации профиля учетных записей устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.wifi
+Позволяет приложениям входить в Google Wi-Fi, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.cl
+Позволяет приложениям входить в Google Calendar, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.mobile
+Позволяет приложениям входить в мобильные сервисы Google, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.gbase
+Позволяет приложениям входить в Google Base, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.panoramio
+Позволяет приложениям входить в сервис Panoramio, используя учетные записи устройства.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.finance
+Позволяет приложениям входить в Google Finance, используя учетные записи устройства.
+
+com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+Позволяет приложениям получать информацию о том, как они были установлены на устройстве.
+
+com.google.android.apps.docs.permission.SYNC_STATUS
+Позволяет приложениям управлять состоянием синхронизации документов и данных.
+
+com.google.android.apps.photos.permission.ACCESS_MEDIA
+Позволяет приложениям управлять, просматривать, загружать или синхронизировать ресурсы, связанные с фотографиями.
+
+com.google.android.apps.photos.permission.UPDATE_MEDIA
+Позволяет приложениям изменять данные мультимедиа.
+
+com.google.android.apps.photos.permission.UPLOAD_MEDIA
+Позволяет приложениям загружать медиафайлы в облачные сервисы Google.
+
+com.google.android.apps.photos.permission.SYNC_MEDIA
+Позволяет приложениям управлять синхронизацией фотографий с облачными сервисами.
+
+com.google.android.gms.permission.CAR_FUEL
+Позволяет приложениям получать информацию о топливе автомобиля.
+
+com.google.android.gms.permission.CAR_SPEED
+Позволяет приложениям получать информацию о скорости автомобиля.
+
+com.google.android.gms.permission.CAR_NAVIGATION
+Позволяет приложениям получать данные о навигации автомобиля.
+
+com.google.android.gms.permission.LOCATION
+Позволяет приложениям использовать функции, связанные с определением местоположения.
+
+com.google.android.apps.maps.permission.MAPS_DATA
+Позволяет приложениям управлять ресурсами, связанными с картами.
+
+com.google.android.apps.maps.permission.LOCATION_UPDATE
+Позволяет приложениям получать и обрабатывать обновления местоположения.
+
+com.google.android.apps.docs.permission.C2D_MESSAGE
+Позволяет приложениям получать push-сообщения от серверов Google, что обеспечивает фоновые обновления и уведомления.
+
+android.permission.ACCESS_FPS_COUNTER
+Позволяет приложениям получать доступ к счётчику кадров в секунду (FPS) для мониторинга производительности и отладки.
+
+android.permission.MANAGE_GAME_ACTIVITY
+Позволяет приложениям управлять игровыми активностями, включая настройки или взаимодействие с игровым циклом.
+
+android.permission.MANAGE_GAME_MODE
+Позволяет приложениям управлять режимом игры на устройстве, оптимизируя ресурсы и производительность для игр.
+
+android.permission.MODIFY_ADSERVICES_STATE
+Позволяет приложениям изменять состояние рекламных сервисов Android, что может повлиять на функциональность рекламы.
+
+android.permission.ACCESS_ADSERVICES_STATE
+Позволяет приложениям получать доступ к состоянию рекламных сервисов Android, предоставляя информацию о рекламной среде.
+
+android.permission.MODIFY_ADSERVICES_STATE_COMPAT
+Позволяет приложениям изменять состояние рекламных сервисов Android с использованием совместимых API.
+
+android.permission.ACCESS_ADSERVICES_STATE_COMPAT
+Позволяет приложениям получать состояние рекламных сервисов Android с использованием совместимых API.
+
+android.permission.UPDATE_PRIVILEGED_AD_ID
+Позволяет приложениям обновлять привилегированный рекламный ID устройства, вероятно, для специфических рекламных сценариев.
+
+android.permission.UPDATE_PRIVILEGED_AD_ID_COMPAT
+Позволяет приложениям обновлять привилегированный рекламный ID устройства с использованием совместимых API.
+
+android.permission.READ_DROPBOX_DATA
+Позволяет приложениям читать данные из системного сервиса Dropbox, включая журналы системы или отчёты об ошибках.
+
+com.google.android.gms.trustagent.permission.TRUSTAGENT_STATE
+Позволяет приложениям получать и управлять состоянием доверительных агентов (Trust Agents), которые обрабатывают разблокировку устройства и безопасность.
+
+com.google.android.apps.enterprise.dmagent.permission.AutoSyncPermission
+Позволяет агенту управления устройствами Google Enterprise запускать автоматическую синхронизацию данных.
+
+com.google.android.providers.settings.permission.READ_GSETTINGS
+Позволяет приложениям читать настройки Google, связанные с конфигурацией учетных записей или сервисов.
+
+com.google.android.providers.settings.permission.WRITE_GSETTINGS
+Позволяет приложениям изменять настройки Google, что позволяет настраивать учетные записи или сервисы.
+
+com.google.android.gms.auth.cryptauth.permission.CABLEV2_SERVER_LINK
+Позволяет приложениям устанавливать безопасную связь для аутентификации с использованием протокола Cable v2 CryptAuth.
+
+com.google.android.gms.permission.REQUEST_SCREEN_LOCK_COMPLEXITY
+Позволяет приложениям запрашивать определенный уровень сложности блокировки экрана устройства.
+
+android.permission.SET_BIOMETRIC_DIALOG_ADVANCED
+Позволяет приложениям настраивать и управлять поведением системного диалога биометрической аутентификации.
+
+android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS
+Позволяет приложениям использовать ограниченные сети, что может быть полезно для привилегированного доступа или функциональности.
+
+android.permission.ALLOCATE_AGGRESSIVE
+Позволяет приложениям агрессивно распределять системные ресурсы, что может улучшить производительность, но повысить риск нестабильности.
+
+android.car.permission.CAR_POWER
+Позволяет приложениям управлять состоянием питания автомобильной системы, включая функции, связанные с управлением питанием.
+
+com.google.android.wearable.WRITE_SETTINGS
+Позволяет приложениям изменять настройки устройств Google Wearable.
+
+com.google.android.gms.permission.APPINDEXING
+Позволяет приложениям использовать Google App Indexing для публикации контента в поиске Google и Google Assistant.
+
+android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS
+Позволяет приложениям изменять стандартные аудиоэффекты системы, такие как эквалайзер или реверберация.
+
+android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME
+Позволяет приложениям заменять название приложения в уведомлениях.
+
+android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON
+Позволяет приложениям заменять название и значок приложения, отображающиеся при совместном использовании.
+
+android.permission.MANAGE_VOICE_KEYPHRASES
+Позволяет приложениям управлять голосовыми ключевыми фразами, которые используются Google Assistant и другими функциями.
+
+android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS
+Позволяет сопряженному приложению одобрять Wi-Fi подключения, управляя сетевыми настройками сопряженных устройств.
+
+android.permission.UWB
+Позволяет приложению использовать технологию Ultra-Wideband (UWB) для короткодействующей безопасной связи и определения местоположения.
+
+android.permission.MANAGE_WIFI_INTERFACES
+Позволяет приложению управлять Wi-Fi интерфейсами, включая включение/отключение адаптеров.
+
+android.permission.MANAGE_WIFI_NETWORK_SELECTION
+Позволяет приложению управлять выбором Wi-Fi сетей, включая приоритетные подключения.
+
+android.permission.USE_FULL_SCREEN_INTENT
+Позволяет приложению отображать полноэкранные намерения, включая критические или погружающие уведомления.
+
+com.google.android.gms.permission.ACCESS_NEARBY_SHARE_API
+Позволяет приложению использовать API Nearby Share для обмена файлами и поиска устройств.
+
+com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK
+Позволяет приложению получать уведомления о контактах через API уведомлений о контактах Google.
+
+android.permission.REQUEST_COMPANION_PROFILE_COMPUTER
+Позволяет приложению запрашивать доступ к профилю устройства-сопровождающего типа "компьютер".
+
+android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND
+Позволяет приложению запрашивать разрешение на фоновую работу, если оно является сопряжённым приложением.
+
+android.permission.REQUEST_COMPANION_SELF_MANAGED
+Позволяет приложению быть самоуправляемым сопряжённым приложением с контролем своего жизненного цикла.
+
+android.permission.CONTROL_DISPLAY_SATURATION
+Позволяет приложению управлять насыщенностью цветов дисплея устройства.
+
+android.permission.TETHER_PRIVILEGED
+Позволяет приложению выполнять привилегированные действия, связанные с модемом, такие как настройка и включение.
+
+android.permission.REAL_GET_TASKS
+Позволяет приложению получать список активных задач (процессов и активностей), включая фоновые.
+
+com.google.android.gms.permission.SAFETY_NET
+Позволяет приложению использовать API SafetyNet Google для проверки целостности устройства и безопасности.
+
+android.permission.ACCESS_NETWORK_CONDITIONS
+Позволяет приложению получать информацию о состоянии сети, например уровне сигнала или качестве соединения.
+
+android.permission.SCORE_NETWORKS
+Позволяет приложению оценивать качество сети, влияя на выбор сети устройством.
+
+android.permission.USER_ACTIVITY
+Позволяет приложению отслеживать активность пользователя, такую как движение или использование экрана.
+
+android.permission.MODIFY_AUDIO_ROUTING
+Позволяет приложению изменять маршрутизацию звука, направляя его на динамик, наушники или устройства Bluetooth.
+
+android.permission.MODIFY_DAY_NIGHT_MODE
+Позволяет приложению изменять режим "день/ночь" системы (тёмная/светлая тема), автоматизируя изменения темы.
+
+com.google.android.finsky.permission.GEARHEAD_SERVICE
+Позволяет приложению использовать сервис Gearhead из Google Play Store, связанный с управлением устройством.
+
+com.google.android.permission.ACCESSIBILITY_SCAN_SERVICE
+Позволяет приложению реализовать сервис сканирования доступности, используемый для анализа экрана.
+
+android.permission.START_TASKS_FROM_RECENTS
+Позволяет приложению запускать задачи из списка недавних, создавая ярлыки или функции управления задачами.
+
+android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+Позволяет приложению получать доступ к данным атрибуции, предоставляемым фреймворком AdServices.
+
+android.permission.ACCESS_ADSERVICES_AD_ID
+Позволяет приложению получать доступ к рекламному идентификатору пользователя (AAID).
+
+android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE
+Позволяет приложению получать доступ к данным атрибуции, предоставляемым API AdServices.
+
+android.permission.ACCESS_ADSERVICES_TOPICS
+Позволяет приложению получать доступ к категориям интересов пользователя (также называемым «темами»), определенным API AdServices.

@@ -35,14 +35,14 @@
 
 package mt.modder.hub.axmlTools;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.Reader;
+
 import mt.modder.hub.axmlTools.utils.TypedValue;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import mt.modder.hub.axmlTools.utils.*;
-import java.nio.*;
 
 public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     

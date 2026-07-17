@@ -35,10 +35,18 @@
 
 package mt.modder.hub.axmlTools.arsc;
 
-import mt.modder.hub.arsc.*;
-import java.io.*;
-import java.util.*;
-import java.util.regex.*;
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import mt.modder.hub.arsc.BinaryResourceFile;
+import mt.modder.hub.arsc.BinaryResourceIdentifier;
+import mt.modder.hub.arsc.Chunk;
+import mt.modder.hub.arsc.PackageChunk;
+import mt.modder.hub.arsc.ResourceTableChunk;
+import mt.modder.hub.arsc.StringPoolChunk;
+import mt.modder.hub.arsc.TypeChunk;
 
 /*
 Author @developer-krushna

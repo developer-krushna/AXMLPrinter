@@ -55,13 +55,13 @@ import org.w3c.dom.NodeList;
 
 /*Idea from Jadx(By https://github.com/skylot/jadx)*/
 public class AttributesExtractor {
-	
+
 	private static final String ATTR_XML = "/assets/attrs.xml";
 	private static final String MANIFEST_ATTR_XML = "/assets/attrs_manifest.xml";
 
 	private enum MAttrType {
 		ENUM, FLAG
-		}
+	}
 
 	private static class MAttr {
 		private final MAttrType type;
@@ -96,7 +96,7 @@ public class AttributesExtractor {
 			try {
 				instance = new AttributesExtractor();
 			} catch (Exception e) {
-				
+
 			}
 		}
 		return instance;
@@ -109,13 +109,13 @@ public class AttributesExtractor {
 	private void parseAll() {
 		parse(loadXML(ATTR_XML));
 		parse(loadXML(MANIFEST_ATTR_XML));
-		
+
 	}
 
 	private Document loadXML(String xml) {
 		Document doc;
 		try {
-		InputStream xmlStream = AttributesExtractor.class.getResourceAsStream(xml);
+			InputStream xmlStream = AttributesExtractor.class.getResourceAsStream(xml);
 			if (xmlStream == null) {
 				throw new RuntimeException(xml + " not found in classpath");
 			}
@@ -132,7 +132,7 @@ public class AttributesExtractor {
 		for (int count = 0; count < nodeList.getLength(); count++) {
 			Node node = nodeList.item(count);
 			if (node.getNodeType() == Node.ELEMENT_NODE
-				&& node.hasChildNodes()) {
+					&& node.hasChildNodes()) {
 				parseAttrList(node.getChildNodes());
 			}
 		}
@@ -142,8 +142,8 @@ public class AttributesExtractor {
 		for (int count = 0; count < nodeList.getLength(); count++) {
 			Node tempNode = nodeList.item(count);
 			if (tempNode.getNodeType() == Node.ELEMENT_NODE
-				&& tempNode.hasAttributes()
-				&& tempNode.hasChildNodes()) {
+					&& tempNode.hasAttributes()
+					&& tempNode.hasChildNodes()) {
 				String name = null;
 				NamedNodeMap nodeMap = tempNode.getAttributes();
 				for (int i = 0; i < nodeMap.getLength(); i++) {
@@ -220,11 +220,11 @@ public class AttributesExtractor {
 			List<String> flagList = new ArrayList<>();
 			List<Long> attrKeys = new ArrayList<>(attr.getValues().keySet());
 			Collections.sort(attrKeys, new Comparator<Long>() {
-					@Override
-					public int compare(Long a, Long b) {
-						return Long.compare(b, a); // for descending order
-					}
-				});
+				@Override
+				public int compare(Long a, Long b) {
+					return Long.compare(b, a); // for descending order
+				}
+			});
 			for (Long key : attrKeys) {
 				String attrValue = attr.getValues().get(key);
 				if (value == key) {
@@ -235,7 +235,7 @@ public class AttributesExtractor {
 					value ^= key;
 				}
 			}
-			
+
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < flagList.size(); i++) {
 				if (i > 0) {
