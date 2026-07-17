@@ -1,0 +1,1233 @@
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+Humihingi ng pahintulot para huwag pansinin ang pag-optimize ng baterya.
+ 
+android.permission.ACCESS_CHECKIN_PROPERTIES
+Pahintulot na magbasa at magsulat sa "properties" table ng check-in database, kung saan maaaring baguhin ang mga halaga bago i-upload.
+ 
+android.permission.ACCESS_COARSE_LOCATION
+Pahintulot para ma-access ang tinatayang lokasyon (batay sa network).
+ 
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+Patakbuhin ang serbisyo sa foreground na may uri na "mediaProjection".
+ 
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+Patakbuhin ang serbisyo sa foreground na may uri na "systemExempted".
+ 
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+Patakbuhin ang serbisyo sa foreground na may uri na "specialUse".
+ 
+android.permission.ACCESS_SUPERUSER
+Pahintulot para makakuha ng access sa superuser.
+ 
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+Patakbuhin ang serbisyo sa foreground na may uri na "mediaPlayback".
+ 
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Patakbuhin ang serbisyo sa foreground na may uri na "dataSync".
+ 
+android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+Basahin ang mga napiling larawan at video ng user mula sa shared storage.
+ 
+android.permission.ACCESS_FINE_LOCATION
+Pahintulot para ma-access ang eksaktong lokasyon.
+ 
+android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+Pahintulot para ma-access ang karagdagang mga utos ng location provider.
+ 
+android.permission.ACCESS_MOCK_LOCATION
+Kumuha ng pekeng impormasyon ng lokasyon.
+ 
+android.permission.ACCESS_NETWORK_STATE
+Tingnan ang mga koneksyon sa network.
+ 
+android.permission.ACCESS_SURFACE_FLINGER
+Gamitin ang mga pangunahing tampok ng SurfaceFlinger.
+ 
+android.permission.ACCESS_WIFI_STATE
+Pahintulot para ma-access ang impormasyon ng estado ng Wi-Fi network.
+ 
+android.permission.ADD_SYSTEM_SERVICE
+Mag-publish ng mga serbisyo sa antas ng system.
+ 
+android.permission.BATTERY_STATS
+I-update ang mga istatistika ng baterya.
+ 
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+Pinapayagan ang isang browser na tumawag sa mga API ng credential manager sa ngalan ng ibang RP.
+ 
+android.permission.BLUETOOTH
+Mag-pares sa mga device ng Bluetooth.
+ 
+android.permission.BLUETOOTH_ADMIN
+Pahintulot para ma-access ang mga setting ng Bluetooth.
+ 
+android.permission.BRICK
+Humihingi ng kakayahang huwag paganahin ang device (mapanganib!).
+ 
+android.permission.BROADCAST_PACKAGE_REMOVED
+Mag-broadcast ng isang intent pagkatapos matanggal ang isang package ng application.
+ 
+android.permission.BROADCAST_STICKY
+Magpadala ng mga sticky broadcast.
+ 
+android.permission.CALL_PHONE
+⚠️ Gumawa ng mga tawag sa telepono.
+ 
+android.permission.CALL_PRIVILEGED
+⚠️ Gumawa ng mga tawag sa anumang numero, kabilang ang mga numero ng emerhensiya.
+ 
+android.permission.CAMERA
+Kumuha ng mga larawan o video.
+ 
+android.permission.CHANGE_COMPONENT_ENABLED_STATE
+Baguhin ang estado ng pagpapagana ng isang component.
+ 
+android.permission.CHANGE_CONFIGURATION
+Baguhin ang kasalukuyang configuration, tulad ng localization.
+ 
+android.permission.CHANGE_NETWORK_STATE
+Baguhin ang katayuan ng koneksyon sa network.
+ 
+android.permission.CHANGE_WIFI_STATE
+Kumonekta o mag-disconnect mula sa Wi-Fi.
+ 
+android.permission.CLEAR_APP_CACHE
+I-clear ang cache mula sa lahat ng naka-install na app sa device.
+ 
+android.permission.CLEAR_APP_USER_DATA
+I-clear ang data ng user.
+ 
+android.permission.CONTROL_LOCATION_UPDATES
+Paganahin o pigilan ang mga prompt ng pag-update ng lokasyon mula sa wireless module.
+ 
+android.permission.DELETE_CACHE_FILES
+Tanggalin ang mga file ng cache.
+ 
+android.permission.DETECT_SCREEN_CAPTURE
+Pinapayagan ang isang application na maabisuhan kapag sinusubukan na kumuha ng screenshot ng mga window nito.
+ 
+android.permission.DETECT_SCREEN_RECORDING
+Pinapayagan ang isang application na maabisuhan kapag ito ay ini-record.
+ 
+android.permission.DELETE_PACKAGES
+Tanggalin ang mga package.
+ 
+android.permission.DEVICE_POWER
+Pahintulot para ma-access ang low-level power management.
+ 
+android.permission.DIAGNOSTIC
+Magbasa at magsulat sa mga diagnostic resources.
+ 
+android.permission.DISABLE_KEYGUARD
+Huwag paganahin ang lock ng keyguard.
+ 
+android.permission.DELIVER_COMPANION_MESSAGES
+Pinapayagan ang isang application na maghatid ng mga mensahe ng kasama sa system.
+ 
+android.permission.DUMP
+Kunin ang impormasyon ng state dump mula sa mga serbisyo ng system.
+ 
+android.permission.EXPAND_STATUS_BAR
+Palawakin o i-collapse ang status bar.
+ 
+android.permission.FACTORY_TEST
+Patakbuhin bilang isang application ng factory test, sa ilalim ng root user.
+ 
+android.permission.FLASHLIGHT
+Pahintulot para ma-access ang flashlight.
+ 
+android.permission.FORCE_BACK
+Pilitin ang isang back operation sa mga top-level na aktibidad.
+ 
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+Pinapayagan ang application na i-synchronize ang data sa ibang mga serbisyo habang tumatakbo ang foreground service nito.
+ 
+android.permission.FOTA_UPDATE
+Maaaring isang nakalaan na pahintulot.
+ 
+android.permission.GET_ACCOUNTS
+Hanapin ang mga account sa device.
+ 
+android.permission.GET_ACCOUNTS_PRIVILEGED
+Pinapayagan ang access sa listahan ng mga account sa Accounts Service.
+ 
+android.permission.GET_PACKAGE_SIZE
+Sukatin ang espasyo sa imbakan ng application.
+ 
+android.permission.GET_TASKS
+Kunin ang impormasyon tungkol sa mga kasalukuyang tumatakbong app.
+ 
+android.permission.HARDWARE_TEST
+Pahintulot para ma-access ang hardware.
+ 
+android.permission.HIDE_OVERLAY_WINDOWS
+Pinapayagan ang isang app na pigilan ang mga non-system-overlay window na iguhit sa itaas nito.
+ 
+android.permission.INJECT_EVENTS
+Harangan ang mga aksyon ng user tulad ng mga keystroke, touch, trackball event, atbp.
+ 
+android.permission.INSTALL_LOCATION_PROVIDER
+Mag-install ng mga location provider.
+ 
+android.permission.INSTALL_PACKAGES
+Mag-install ng mga package.
+ 
+android.permission.INTERNAL_SYSTEM_WINDOW
+Buksan ang mga window gamit ang system UI.
+ 
+android.permission.INTERNET
+Magkaroon ng buong access sa internet.
+ 
+android.permission.MANAGE_APP_TOKENS
+Pamahalaan ang mga token ng application sa window manager.
+ 
+android.permission.MASTER_CLEAR
+Maaaring i-clear ang lahat ng data, katulad ng factory reset.
+ 
+android.permission.MODIFY_AUDIO_SETTINGS
+Baguhin ang iyong mga setting ng audio.
+ 
+android.permission.MODIFY_PHONE_STATE
+Baguhin ang estado ng telepono, tulad ng kapangyarihan, user interface, atbp.
+ 
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+I-mount at i-unmount ang mga file system sa naaalis na imbakan.
+ 
+android.permission.PERSISTENT_ACTIVITY
+Palaging patakbuhin ang application.
+ 
+android.permission.PROCESS_OUTGOING_CALLS
+I-reroute ang mga papalabas na tawag.
+ 
+android.permission.READ_CALENDAR
+Basahin ang mga kaganapan sa kalendaryo at mga detalye.
+ 
+android.permission.READ_CONTACTS
+Basahin ang data ng contact.
+ 
+android.permission.READ_FRAME_BUFFER
+Kumuha ng screen wave o mas pangkalahatang access sa frame buffer data.
+ 
+android.permission.READ_INPUT_STATE
+Ibalik ang kasalukuyang mga estado ng key.
+ 
+android.permission.READ_LOGS
+Basahin ang mga low-level system log file.
+ 
+android.permission.READ_OWNER_DATA
+Basahin ang data ng may-ari.
+ 
+android.permission.READ_SMS
+⚠️ Basahin ang mga text message.
+ 
+android.permission.READ_SYNC_SETTINGS
+Basahin ang mga setting ng pag-synchronize.
+ 
+android.permission.READ_SYNC_STATS
+Basahin ang mga istatistika ng pag-synchronize.
+ 
+android.permission.REBOOT
+Pinapayagan ang isang application na i-reboot/i-restart ang device.
+ 
+android.permission.RECEIVE_BOOT_COMPLETED
+Pagsisimula ng boot.
+ 
+android.permission.RECEIVE_MMS
+⚠️ Tumanggap ng mga mensahe (MMS).
+ 
+android.permission.RECEIVE_SMS
+⚠️ Tumanggap ng mga mensahe (SMS).
+ 
+android.permission.RECEIVE_WAP_PUSH
+Pinapayagan ang isang application na tumanggap ng mga mensahe ng WAP push.
+ 
+android.permission.RECORD_AUDIO
+I-record ang audio.
+ 
+android.permission.REORDER_TASKS
+Ayusin muli ang mga tumatakbong app.
+ 
+android.permission.RESTART_PACKAGES
+I-restart ang ibang mga app.
+ 
+android.permission.SEND_SMS
+⚠️ Magpadala ng mga text message.
+ 
+android.permission.SET_ACTIVITY_WATCHER
+Subaybayan o kontrolin ang mga aktibidad na na-launch sa system.
+ 
+android.permission.SET_ALWAYS_FINISH
+Kontrolin kung ang mga aktibidad ay agad na natapos kapag inilagay sa background.
+ 
+android.permission.SET_ANIMATION_SCALE
+Baguhin ang global animation scale.
+ 
+android.permission.SET_DEBUG_APP
+I-configure ang isang application para sa debugging.
+ 
+android.permission.SET_ORIENTATION
+Low-level access sa pagtatakda ng orientation ng screen at aktwal na pag-ikot.
+ 
+android.permission.SET_PREFERRED_apps
+Baguhin ang mga parameter ng listahan ng mga paraan ng PackageManager.addPackageToPreferred() at PackageManager.removePackageFromPreferred().
+ 
+android.permission.SET_PROCESS_FOREGROUND
+Pilitin ang kasalukuyang tumatakbong application sa foreground.
+ 
+android.permission.SET_PROCESS_LIMIT
+Itakda ang maximum na bilang ng mga tumatakbong proseso.
+ 
+android.permission.SET_TIME_ZONE
+Itakda ang time zone.
+ 
+android.permission.SET_WALLPAPER
+Itakda ang wallpaper.
+ 
+android.permission.SET_WALLPAPER_HINTS
+Ayusin ang laki ng iyong wallpaper.
+ 
+android.permission.SIGNAL_PERSISTENT_PROCESSES
+Humiling na magpadala ng mga signal sa lahat ng nakikitang proseso.
+ 
+android.permission.STATUS_BAR
+Buksan, isara, o huwag paganahin ang status bar at ang mga icon nito.
+ 
+android.permission.SUBSCRIBED_FEEDS_READ
+Pahintulot para ma-access ang subscribed RSS Feed content provider.
+ 
+android.permission.SUBSCRIBED_FEEDS_WRITE
+Ang setting na ito ay nakalaan ng system para sa hinaharap na paggamit.
+ 
+android.permission.SYSTEM_ALERT_WINDOW
+Ang app na ito ay maaaring lumitaw sa itaas ng ibang mga app.
+ 
+android.permission.VIBRATE
+Kontrolin ang panginginig ng boses.
+ 
+android.permission.WAKE_LOCK
+Pigilan ang telepono mula sa pagtulog.
+ 
+android.permission.WRITE_APN_SETTINGS
+Magsulat ng mga setting ng APN.
+ 
+android.permission.WRITE_CALENDAR
+Magdagdag o baguhin ang mga kaganapan sa kalendaryo.
+ 
+android.permission.WRITE_CONTACTS
+Baguhin ang iyong mga contact.
+ 
+android.permission.WRITE_GSERVICES
+Baguhin ang Google service map.
+ 
+android.permission.WRITE_OWNER_DATA
+Magsulat ngunit hindi magbasa ng data ng may-ari.
+ 
+android.permission.WRITE_SETTINGS
+Baguhin ang mga setting ng system.
+ 
+android.permission.WRITE_SMS
+⚠️ Magsulat ng mga text message.
+ 
+android.permission.WRITE_SYNC_SETTINGS
+Paganahin o huwag paganahin ang pag-synchronize.
+ 
+android.permission.WRITE_USER_DICTIONARY
+Magdagdag ng mga bagong salita sa user dictionary.
+ 
+android.permission.WRITE_SOCIAL_STREAM
+Baguhin ang social stream.
+ 
+android.permission.WRITE_SECURE_SETTINGS
+Baguhin ang mga secure na setting ng system.
+ 
+android.permission.WRITE_PROFILE
+Pinapayagan ang pagsusulat ng data ng profile ng user.
+ 
+android.permission.WRITE_EXTERNAL_STORAGE
+Baguhin o tanggalin ang mga nilalaman ng iyong shared storage space.
+ 
+android.permission.WRITE_CALL_LOG
+⚠️ Gumawa/baguhin/tanggalin ang mga entry sa call log.
+ 
+android.permission.USE_SIP
+Pinapayagan ang isang application na gumamit ng serbisyo ng SIP para sa VoIP.
+ 
+android.permission.USE_CREDENTIALS
+Humiling ng mga token ng pagpapatotoo mula sa AccountManager.
+ 
+android.permission.UPDATE_DEVICE_STATS
+I-update ang mga istatistika ng device.
+ 
+android.permission.TRANSMIT_IR
+Magpadala ng infrared.
+ 
+android.permission.SET_TIME
+Itakda ang oras ng system.
+ 
+android.permission.SET_POINTER_SPEED
+Hindi maaaring makuha ng mga third-party na app; pahintulot ng system.
+ 
+android.permission.SEND_RESPOND_VIA_MESSAGE
+Magpadala ng instant text message reply gamit ang iyong app sa panahon ng mga papasok na tawag.
+ 
+android.permission.READ_USER_DICTIONARY
+Kumuha ng data mula sa isang provider; ang mga app ay nangangailangan ng "read access permission" para sa kaukulang provider.
+ 
+android.permission.READ_SOCIAL_STREAM
+Basahin ang social stream ng user.
+ 
+android.permission.READ_PROFILE
+Access sa personal na profile ng user.
+ 
+android.permission.READ_PHONE_STATE
+Basahin ang katayuan at pagkakakilanlan ng telepono.
+ 
+android.permission.READ_EXTERNAL_STORAGE
+Basahin ang mga nilalaman ng iyong shared storage space.
+ 
+android.permission.READ_CALL_LOG
+⚠️ Basahin ang mga entry sa call log.
+ 
+android.permission.NFC
+Magsagawa ng mga operasyon ng NFC near field communication.
+ 
+android.permission.MOUNT_FORMAT_FILESYSTEMS
+I-format ang mga naaalis na file system, tulad ng pag-format ng isang SD card.
+ 
+android.permission.MEDIA_CONTENT_CONTROL
+Access upang malaman kung ano ang nagpe-play at kontrolin ang nilalaman nito, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.MANAGE_DOCUMENTS
+Pamahalaan ang access sa mga dokumento.
+ 
+android.permission.MANAGE_ACCOUNTS
+Pamahalaan ang listahan ng mga account sa AccountManager.
+ 
+android.permission.LOCATION_HARDWARE
+Gamitin ang mga tampok ng hardware ng lokasyon, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.KILL_BACKGROUND_PROCESSES
+Tumawag sa killBackgroundProcesses(String) upang wakasan ang mga proseso sa background.
+ 
+android.permission.GLOBAL_SEARCH
+Mga kakayahan sa global search sa buong system.
+ 
+android.permission.GET_TOP_ACTIVITY_INFO
+Kunin ang pribadong impormasyon tungkol sa kasalukuyang top activity, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.CHANGE_WIFI_MULTICAST_STATE
+Tumanggap ng Wi-Fi multicast.
+ 
+android.permission.CAPTURE_VIDEO_OUTPUT
+Kumuha ng video output, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.CAPTURE_SECURE_VIDEO_OUTPUT
+Kumuha ng secure na video output, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.CAPTURE_AUDIO_OUTPUT
+Kumuha ng audio output, hindi ginagamit ng mga third-party na app.
+ 
+android.permission.BROADCAST_WAP_PUSH
+Mag-broadcast ng isang intent kapag nakatanggap ng WAP PUSH.
+ 
+android.permission.BROADCAST_SMS
+⚠️ Mag-broadcast ng isang intent kapag nakatanggap ng SMS.
+ 
+android.permission.BLUETOOTH_PRIVILEGED
+Mag-pares sa mga device ng Bluetooth nang walang pakikipag-ugnayan ng user.
+ 
+android.permission.BIND_WALLPAPER
+Dapat hilingin sa pamamagitan ng WallpaperService. Ang system lamang ang maaaring gumamit nito.
+ 
+android.permission.BIND_VPN_SERVICE
+Mag-ugnay sa isang VPN service.
+ 
+android.permission.BIND_TEXT_SERVICE
+Kinakailangan ito ng TextService (hal., SpellcheckerService) para matiyak na ang system lamang ang makaka-ugnay dito.
+ 
+android.permission.BIND_REMOTEVIEWS
+Dapat hilingin sa pamamagitan ng RemoteViewsService. Ang system lamang ang maaaring gumamit nito.
+ 
+android.permission.BIND_PRINT_SERVICE
+Kinakailangan ito ng PrintService para matiyak na ang system lamang ang makaka-ugnay dito.
+ 
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+Kinakailangan ito ng NotificationListenerService para matiyak na ang system lamang ang makaka-ugnay dito.
+ 
+android.permission.BIND_NFC_SERVICE
+Dapat tiyakin ng HostApduService o OffHostApduService na ang system lamang ang makaka-ugnay dito.
+ 
+android.permission.BIND_INPUT_METHOD
+Humihingi ng InputMethodService. Ang system lamang ang maaaring gumamit nito.
+ 
+android.permission.BIND_DEVICE_ADMIN
+Humihingi na maging isang device administrator. Ang system lamang ang maaaring gumamit ng pahintulot na ito.
+ 
+android.permission.BIND_APPWIDGET
+Pinapayagan ang isang application na sabihin sa AppWidget service na ma-access ang data ng widget ng app. Kakaunti lamang ang mga app na gumagamit ng pahintulot na ito.
+ 
+android.permission.BIND_ACCESSIBILITY_SERVICE
+Humihingi ng AccessibilityService. Tinitiyak nito na ang system lamang ang makaka-ugnay dito.
+ 
+android.permission.AUTHENTICATE_ACCOUNTS
+Pinapayagan ang isang application na kumilos bilang isang AccountAuthenticator para sa AccountManager.
+ 
+android.permission.ACCOUNT_MANAGER
+Ma-access ang mga kredensyal ng pagpapatotoo ng account, pangunahin para sa impormasyon ng account ng Gmail. Maa-access lamang ng mga proseso sa antas ng system.
+ 
+com.android.browser.permission.READ_HISTORY_BOOKMARKS
+Basahin ang mga paborito at kasaysayan ng browser.
+ 
+com.android.alarm.permission.SET_ALARM
+Magtakda ng mga paalala ng alarm.
+ 
+com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
+Sumulat sa kasaysayan o mga bookmark ng browser ngunit hindi pinapayagan ang pagbabasa.
+ 
+com.android.launcher.permission.INSTALL_SHORTCUT
+Mag-install ng shortcut.
+ 
+com.android.launcher.permission.UNINSTALL_SHORTCUT
+Tanggalin ang shortcut.
+ 
+com.android.voicemail.permission.ADD_VOICEMAIL
+Pinapayagan ang isang application na magdagdag ng mga voicemail sa system.
+ 
+android.permission.REQUEST_INSTALL_PACKAGES
+Humihingi ng pahintulot para mag-install ng mga package.
+ 
+android.permission.REQUEST_DELETE_PACKAGES
+Humihingi ng pahintulot para magtanggal ng mga package.
+ 
+android.permission.READ_INSTALL_SESSIONS
+Basahin ang mga sesyon ng pag-install.
+ 
+android.permission.READ_CELL_BROADCASTS
+Basahin ang mga broadcast ng cell.
+ 
+android.permission.NEARBY_WIFI_DEVICES
+Makipag-ugnayan sa mga malapit na device ng WLAN.
+ 
+android.permission.USE_FINGERPRINT
+Gamitin ang fingerprint hardware.
+ 
+android.permission.USE_BIOMETRIC
+(hindi na ginagamit) Gamitin ang fingerprint authentication.
+ 
+android.permission.FOREGROUND_SERVICE
+Patakbuhin ang serbisyo sa foreground.
+ 
+android.permission.QUERY_ALL_PACKAGES
+Pinapayagan ang isang application na magtanong tungkol sa lahat ng naka-install na package (Android 11+).
+ 
+android.permission.ACCESS_BACKGROUND_LOCATION
+Pinapayagan ang isang application na ma-access ang lokasyon sa background (Android 10+).
+ 
+android.permission.ACTIVITY_RECOGNITION
+Pinapayagan ang isang app na makilala at ma-access ang pisikal na aktibidad ng user.
+ 
+android.permission.ACCESS_MEDIA_LOCATION
+Pinapayagan ang isang app na ma-access ang lokasyon ng heograpiya na naka-embed sa mga ibinahaging larawan at video ng user.
+ 
+android.permission.UWB_RANGING
+Pinapayagan ang isang app na gumamit ng Ultra Wideband (UWB) technology para masukat ang distansya sa ibang mga device.
+ 
+android.permission.BLUETOOTH_SCAN
+Pinapayagan ang isang app na mag-scan para sa mga device ng Bluetooth, nangangailangan ng visibility sa lokasyon o pahintulot ng BLUETOOTH_ADMIN.
+ 
+android.permission.BLUETOOTH_CONNECT
+Pinapayagan ang isang application na kumonekta sa mga naka-pares na device ng Bluetooth.
+ 
+android.permission.MANAGE_EXTERNAL_STORAGE
+Pinapayagan ang pagbabasa at pagsusulat ng access sa lahat ng nilalaman ng shared storage.
+ 
+android.permission.BLUETOOTH_ADVERTISE
+Pinapayagan ang isang application na mag-broadcast sa pamamagitan ng Bluetooth.
+ 
+android.permission.REQUIRE_MANAGED_USER_SPLIT
+Ang pahintulot na ito ay nagpapahiwatig na ang mga app ay nangangailangan ng kakayahang tumakbo sa loob ng isang pinamamahalaang profile o work profile.
+ 
+android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
+Pinapayagan ang mga app na magpatakbo ng mga gawain sa background nang hindi nagpapakita ng isang patuloy na notification.
+ 
+android.permission.ANSWER_PHONE_CALLS
+⚠️ Pinapayagan ang isang application na sagutin ang mga papasok na tawag sa telepono (Android 8+).
+ 
+android.permission.READ_MEDIA_AUDIO
+Pinapayagan ang isang application na ma-access ang audio data mula sa mga file ng media. Kinakailangan ang pahintulot ng user.
+ 
+android.permission.READ_MEDIA_VIDEO
+Pinapayagan ang isang application na ma-access ang video data mula sa mga file ng media. Kinakailangan ang pahintulot ng user.
+ 
+android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+Pinapayagan ang isang application na pamahalaan ang mga may-ari ng device at profile. Kinakailangan ang pahintulot ng user.
+ 
+android.permission.USE_BACKGROUND_EXECUTION_WHEN_CROSS_PROFILE_IS_SETTINGS_PROVIDER
+Pinapayagan ang isang application na gumamit ng background execution kapag ang settings provider ay nasa isang cross-profile context.
+ 
+android.permission.USE_MEDIA_SESSION_IN_BACKGROUND
+Pinapayagan ang isang application na gumamit ng mga media session sa background.
+ 
+android.permission.MANAGE_MEMORY_POLICY
+Pinapayagan ang isang app na pamahalaan ang mga patakaran ng memorya, na maaaring makaapekto sa kung paano pinapatay ang mga app at proseso upang mabawi ang memorya.
+ 
+android.permission.READ_MEDIA_IMAGE_DATA
+Pinapayagan ang isang application na magbasa ng image data mula sa mga file ng media.
+ 
+android.permission.USE_DEVICE_SPECIFIC_CAMERA
+Pinapayagan ang isang application na ma-access ang mga tampok ng camera na partikular sa device.
+ 
+android.permission.USE_RESERVED_NETWORK
+Pinapayagan ang isang application na gumamit ng mga nakalaang network interface, na maaaring mahigpit para sa mga partikular na layunin.
+ 
+android.permission.USE_RESERVED_FEATURE
+Pinapayagan ang isang application na gumamit ng mga nakalaang tampok ng device, na maaaring mahigpit sa ilang mga app o pag-andar.
+ 
+android.permission.USE_COARSE_LOCATION
+Pinapayagan ang isang application na ma-access ang tinatayang lokasyon, karaniwang nagmula sa mga pinagkukunan ng lokasyon ng network.
+ 
+android.permission.USE_REMOTE_VOICE_INTERACTION
+Pinapayagan ang isang app na gumamit ng malayuang pakikipag-ugnayan ng boses nang hindi ina-activate ang mikropono ng device.
+ 
+android.permission.USE_VR_FEATURE
+Pinapagana ang isang application na gumamit ng mga tampok ng Virtual Reality (VR) nang hindi naroroon ang isang VR headset.
+ 
+android.permission.USE_WALLPAPER_SERVICE
+Pinapayagan ang isang application na gamitin ang WallpaperService, na responsable sa pamamahala ng mga live na wallpaper.
+ 
+android.permission.SYSTEM_OVERLAY_WINDOW
+Pinapayagan ang application na magpakita ng mga window sa itaas ng ibang mga app.
+ 
+com.android.vending.BILLING
+Pinapayagan ang application na magsagawa ng mga benta sa pamamagitan ng Google Play's In-app Billing Service.
+ 
+android.permission.RECEIVE_USER_PRESENT
+Pinapayagan ang isang application na maabisuhan kapag na-unlock ng user ang device at naroroon upang makipag-ugnayan dito.
+ 
+com.android.launcher.permission.READ_SETTINGS
+Pinapayagan ang isang application na basahin ang mga kagustuhan at mga setting ng configuration ng home screen launcher sa isang Android device.
+ 
+android.permission.POST_NOTIFICATIONS
+Pinapayagan ang mga app na magpakita ng mga notification sa isang Android device.
+ 
+com.google.android.gms.permission.AD_ID
+Pinapayagan ang application na ma-access ang advertising ID.
+ 
+com.google.android.c2dm.permission.RECEIVE
+Pinapayagan ang application na tumanggap ng mga mensahe mula sa Google Cloud Messaging.
+ 
+android.permission.WRITE_APP_BADGE
+Pinapayagan ang application na baguhin ang bilang ng badge na ipinapakita sa icon ng app nito.
+ 
+android.permission.SCHEDULE_EXACT_ALARM
+Pinapayagan ang pagtatakda ng mga tumpak na alarm.
+ 
+android.permission.READ_MEDIA_IMAGES
+Pinapayagan ang access sa mga larawan na naka-imbak sa device.
+ 
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+Pinapayagan ang isang instant app na lumikha ng mga foreground service.
+ 
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+Pinapayagan ang isang application na kumuha ng screen content upang magsagawa ng screenshot gamit ang intent action.
+ 
+android.permission.MANAGE_DEVICE_LOCK_STATE
+Pinapayagan ang mga kiosk app ng financed device na magsagawa ng mga aksyon sa Device Lock service.
+ 
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+Pinapayagan ang isang application na pamahalaan ang patakaran na nauugnay sa accessibility.
+ 
+android.permission.READ_HOME_APP_SEARCH_DATA
+Pinapayagan ang isang application na magtanong sa global data sa AppSearch na nakikita ng HOME role.
+ 
+android.permission.READ_APP_BADGE
+Pinapayagan ang isang app na basahin ang kasalukuyang bilang ng badge na ipinapakita sa icon ng launcher ng ibang app.
+ 
+android.permission.ACCESS_CACHE_FILESYSTEM
+Pinapayagan ang access sa cache filesystem. (Bihira, sa antas ng system)
+ 
+android.permission.ACCESS_IMS_CALL
+Pinapayagan ang access sa mga tawag ng IMS (IP Multimedia Subsystem calls). (Ginagamit ng mga app ng telephony)
+ 
+android.permission.ACCESS_MTP
+Access sa media transfer protocol. (Sa antas ng system)
+ 
+android.permission.ACCESS_TUNNEL_MODE
+Pinapayagan ang isang app na lumikha ng isang TUN network interface. (Karaniwang ginagamit ng mga app ng VPN)
+ 
+android.permission.CAPTURE_AUDIO_HOTWORD
+Pinapayagan ang access sa hotword detection system.
+ 
+android.permission.MANAGE_USB
+Pinapayagan ang isang app na pamahalaan ang mga device ng USB.
+ 
+android.permission.WRITE_MEDIA_STORAGE
+Pinapayagan ang pagsusulat ng access sa media storage.
+ 
+com.google.android.gms.permission.ACTIVITY_RECOGNITION
+Pinapayagan ang access sa activity recognition (paglalakad, pagtakbo, atbp.).
+ 
+com.google.android.providers.gsf.permission.READ_GSERVICES
+Pinapayagan ang pagbabasa ng mga setting ng Google Service Framework (GSF).
+ 
+com.google.android.providers.gsf.permission.WRITE_GSERVICES
+Pinapayagan ang pagsusulat ng mga setting ng Google Service Framework (GSF).
+ 
+com.google.android.providers.gsf.permission.BROADCAST_ALARM
+Pinapayagan ang application na mag-broadcast ng mga alarm sa mga serbisyo ng Google.
+ 
+com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
+Pinapayagan ang mga serbisyo ng Google Play na makuha ang lagda ng mga naka-install na app.
+ 
+android.permission.READ_PRIVILEGED_PHONE_STATE
+Pinapayagan ang pribilehiyong pagbabasa ng access sa estado ng telepono.
+ 
+android.permission.CAPTURE_NETWORK_TRAFFIC
+Pinapayagan ang pagkuha ng network traffic.
+ 
+android.permission.ACCESS_WIFI_SCAN
+Pinapayagan ang app na magsagawa ng WiFi scan.
+ 
+android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
+Access secure key storage.
+ 
+android.permission.ACCESS_BROADCAST_MANAGER
+Pinapayagan na kontrolin ang broadcast manager.
+ 
+android.permission.ACCESS_CHECKIN
+Pinapayagan ang access sa check-in service. (Ginagamit ng mga serbisyo ng Google).
+ 
+android.permission.ACCESS_CONTEXT_HUB
+Pinapayagan na ma-access ang pag-andar ng Context Hub.
+ 
+android.permission.ACCESS_NOTIFICATION_POLICY
+Pinapayagan ang access sa notification policy.
+ 
+android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+Pinapayagan ang isang app na makipag-ugnayan sa voice interaction service.
+ 
+android.permission.BACKUP
+Pinapayagan ang isang application na magsagawa ng mga operasyon sa pag-backup.
+ 
+android.permission.BIND_CARRIER_MESSAGING_SERVICE
+Pinapayagan ang isang application na mag-bind ng isang carrier messaging service.
+ 
+android.permission.BIND_DIRECTORY_SEARCH
+Pinapayagan na mag-bind ng directory search service.
+ 
+android.permission.BIND_DREAM_SERVICE
+Pinapayagan ang isang app na mag-bind sa dream service (screen saver service).
+ 
+android.permission.BIND_MIDI_DEVICE_SERVICE
+Pinapayagan ang isang app na mag-bind sa isang MIDI device service.
+ 
+android.permission.BIND_TELECOM_CONNECTION_SERVICE
+Pinapayagan na mag-bind ng telecom connection service.
+ 
+android.permission.BIND_TV_INPUT
+Pinapayagan na mag-bind ng TV input service.
+ 
+android.permission.BIND_VOICE_INTERACTION
+Pinapayagan na mag-bind ng voice interaction service.
+ 
+android.permission.CONTROL_VPN
+Pinapayagan ang app na kontrolin ang VPN service.
+ 
+android.permission.CREATE_USERS
+Pinapayagan ang paglikha ng mga bagong profile ng user.
+ 
+android.permission.GET_INSTALLED_PACKAGES
+Pinapayagan ang app na makuha ang listahan ng mga naka-install na package.
+ 
+android.permission.IDENTIFY_PHONE_STATE
+Pinapayagan ang isang app na ma-access ang pagkakakilanlan ng estado ng telepono.
+ 
+android.permission.INVOKE_CARRIER_SETUP
+Pinapayagan ang isang app na tumawag sa carrier setup.
+ 
+android.permission.LOADER_USAGE_STATS
+Pinapayagan ang access sa loader usage stats.
+ 
+android.permission.MANAGE_USERS
+Pinapayagan ang pamamahala ng mga profile ng user.
+ 
+android.permission.MODIFY_NETWORK_CONFIGURATION
+Pinapayagan ang isang app na baguhin ang mga configuration ng network.
+ 
+android.permission.MODIFY_TELEPHONY_STATE
+Pinapayagan ang pagbabago ng estado ng telephony.
+ 
+android.permission.OVERRIDE_WIFI_CONFIG
+Pinapayagan na palitan ang configuration ng Wi-Fi.
+ 
+android.permission.PACKAGE_USAGE_STATS
+Pinapayagan ang pag-access sa detalyadong istatistika ng paggamit ng package.
+ 
+android.permission.PEERS_MAC_ADDRESS
+Pinapayagan ang access sa mac address ng peer.
+ 
+android.permission.PERFORM_CDMA_PROVISIONING
+Pinapayagan ang mga gawain na nauugnay sa carrier.
+ 
+android.permission.READ_DREAM_STATE
+Pinapayagan na basahin ang estado ng panaginip.
+ 
+android.permission.READ_WIFI_CREDENTIALS
+Pinapayagan ang pagbabasa ng mga kredensyal ng Wi-Fi.
+ 
+android.permission.RECOVERY
+Pinapayagan ang app na magsagawa ng aksyon sa pagbawi.
+ 
+android.permission.REMOVE_TASKS
+Pinapayagan ang isang app na tanggalin ang mga gawain.
+ 
+android.permission.START_ACTIVITIES_FROM_BACKGROUND
+Pinapayagan ang isang application na maglunsad ng aktibidad sa background.
+ 
+android.permission.STATUS_BAR_SERVICE
+Pinapayagan ang app na kontrolin ang status bar.
+ 
+android.permission.SYSTEM_APPLICATION_COMPONENT
+Pinapayagan na ma-access ang mga component ng system application.
+ 
+android.permission.USE_ICC_AUTH
+Pinapayagan ang access sa ICC Authentication.
+ 
+android.permission.USE_RESERVED_DISK
+Pinapayagan ang app na gamitin ang nakalaang espasyo sa disk.
+ 
+com.google.android.providers.gsf.permission.BROADCAST_SMS
+Pinapayagan ang mga serbisyo ng Google na mag-broadcast ng SMS.
+ 
+com.google.android.gm.permission.READ_CONTENT
+Pinapayagan ang pagbabasa ng nilalaman ng Gmail.
+ 
+com.google.android.providers.gsf.permission.INSTALL_PACKAGES
+Pinapayagan ang mga serbisyo ng Google na mag-install ng mga package.
+ 
+com.google.android.setupwizard.SETUP_COMPLETED
+Pinapayagan ang setup wizard na irehistro na nakumpleto na ang setup.
+ 
+android.permission.UPDATE_APP_OPS_STATS
+Pinapayagan na i-update ang mga istatistika ng app ops.
+ 
+android.permission.BIND_QUICK_SETTINGS_TILE
+Pinapayagan ang isang app na lumikha ng mga quick settings tile.
+ 
+android.permission.CONTROL_DEVICE_POLICY
+Pinapayagan na kontrolin ang patakaran ng device.
+ 
+android.permission.MANAGE_DEVICE_ADMINS
+Pinapayagan ang pamamahala ng mga device administrator.
+ 
+android.permission.START_VIEW_PERMISSION_USAGE
+Pinapayagan ang app na humiling ng pahintulot na ma-access ang sensitibong impormasyon.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH
+Pinapayagan ang mga app na makita ang mga username (email address) ng mga Google account na iyong na-configure.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.adsense
+Pinapayagan ang mga app na mag-sign in sa LAHAT ng mga serbisyo ng Google gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+Pinapayagan ang mga app na mag-sign in sa hindi tinukoy na mga serbisyo ng Google gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.ah
+Pinapayagan ang mga app na mag-sign in sa Google App Engine gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.ALL_SERVICES
+Pinapayagan ang mga app na mag-sign in sa LAHAT ng mga serbisyo ng Google gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+android.permission.ACCESS_ALL_EXTERNAL_STORAGE
+Pinapayagan ang mga app na ma-access ang external storage para sa lahat ng user.
+ 
+com.google.android.xmpp.permission.SEND_RECEIVE
+Pinapayagan ang mga app ng Google na magpadala at tumanggap ng mga mensahe ng XMPP papunta at mula sa mga server ng Google.
+ 
+android.permission.CHANGE_WIMAX_STATE
+Pinapayagan ang mga app na ikonekta ang telepono at idiskonekta ang telepono mula sa mga network ng WiMAX.
+ 
+android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+Pinapayagan ang mga app na mag-download ng mga file sa pamamagitan ng download manager nang walang anumang notification na ipinapakita sa user.
+ 
+android.permission.MANAGE_ACTIVITY_STACKS
+⚠️ Pinapayagan ang mga app na magdagdag, magtanggal, at baguhin ang mga activity stack kung saan tumatakbo ang ibang mga app.
+ 
+android.permission.BIND_CALL_SERVICE
+Pinapayagan ang mga app na kontrolin kung kailan at paano nakikita ng user ang in-call screen.
+ 
+android.permission.ASEC_ACCESS
+Pinapayagan ang mga app na makakuha ng impormasyon sa internal storage.
+ 
+android.permission.CHANGE_BACKGROUND_DATA_SETTING
+Pinapayagan ang mga app na baguhin ang setting ng paggamit ng background data.
+ 
+android.permission.GET_DETAILED_TASKS
+⚠️ Pinapayagan ang mga app na makuha ang detalyadong impormasyon tungkol sa mga kasalukuyan at kamakailang tumatakbong gawain.
+ 
+android.permission.FORCE_STOP_PACKAGES
+Pinapayagan ang mga app na pilitin na ihinto ang ibang mga app.
+ 
+android.permission.START_ANY_ACTIVITY
+Pinapayagan ang mga app na magsimula ng anumang aktibidad, anuman ang proteksyon ng pahintulot o estado na inilalabas.
+ 
+android.permission.ASEC_CREATE
+Pinapayagan ang mga app na lumikha ng internal storage.
+ 
+android.permission.ASEC_RENAME
+Pinapayagan ang mga app na palitan ang pangalan ng internal storage.
+ 
+android.permission.GET_APP_OPS_STATS
+🚫 Pinapayagan ang mga app na makuha ang nakolektang istatistika ng operasyon ng application.
+ 
+android.permission.ASEC_MOUNT_UNMOUNT
+Pinapayagan ang mga app na i-mount/i-unmount ang internal storage.
+ 
+android.permission.SET_SCREEN_COMPATIBILITY
+⚠️ Pinapayagan ang mga app na kontrolin ang screen compatibility mode ng ibang mga app.
+ 
+android.permission.ASEC_DESTROY
+Pinapayagan ang mga app na sirain ang internal storage.
+ 
+android.permission.INTERACT_ACROSS_USERS
+⚠️ Pinapayagan ang mga app na magsagawa ng mga aksyon sa iba't ibang user sa device.
+ 
+com.google.android.gtalkservice.permission.GTALK_SERVICE
+⚠️ Ginagamit para sa mga mensahe ng server cloud sa device at para sa mga notification ng pag-synchronize. Ginagamit ng Google Talk ang serbisyong ito upang makipagpalitan ng mga mensahe at upang i-synchronize ang katayuan ng presensya.
+ 
+android.permission.RECEIVE_EMERGENCY_BROADCAST
+🚫 Pinapayagan ang mga app na tumanggap at magproseso ng mga mensahe ng emergency broadcast.
+ 
+com.google.android.providers.talk.permission.READ_ONLY
+Pinapayagan ang mga app na magbasa ng data mula sa Google Talk content provider.
+ 
+com.google.android.providers.talk.permission.WRITE_ONLY
+Pinapayagan ang mga app na magsulat ng data sa Google Talk content provider.
+ 
+com.android.email.permission.READ_ATTACHMENT
+Pinapayagan ang mga app na basahin ang iyong mga attachment sa email.
+ 
+android.permission.RETRIEVE_WINDOW_CONTENT
+⚠️ Pinapayagan ang mga app na makuha ang nilalaman ng aktibong window.
+ 
+com.android.voicemail.permission.READ_WRITE_ALL_VOICEMAIL
+Pinapayagan ang mga app na mag-imbak at makuha ang lahat ng voicemail na maa-access ng device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.android
+Pinapayagan ang mga app na mag-sign in sa mga serbisyo ng Android gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.orkut
+Pinapayagan ang mga app na mag-sign in sa Orkut gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.doraemon
+Pinapayagan ang mga app na mag-sign in sa Google Catalogs service gamit ang mga account na naka-imbak sa teleponong ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.lh2
+Pinapayagan ang mga app na mag-sign in sa Picasa Web Albums gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.wise
+Pinapayagan ang mga app na mag-sign in sa Google Spreadsheets gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.speechpersonalization
+Pinapayagan ang mga app na mag-sign in sa Personalized Speech Recognition service gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.notebook
+Pinapayagan ang mga app na mag-sign in sa Google Notebook gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierra
+Pinapayagan ang mga app na mag-sign in sa Google Checkout (at posibleng gumawa ng mga pagbili) gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.groups2
+Pinapayagan ang mga app na mag-sign in sa Google Groups gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.goanna_mobile
+Pinapayagan ang mga app na mag-sign in sa Google Tasks service gamit ang mga account na naka-imbak sa teleponong ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.knol
+Pinapayagan ang mga app na mag-sign in sa Knol gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.blogger
+Pinapayagan ang mga app na mag-sign in sa Blogger gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierraqa
+Pinapayagan ang mga app na mag-sign in sa Google Checkout QA gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.speech
+Pinapayagan ang mga app na mag-sign in sa Google Voice Search gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.health
+Pinapayagan ang mga app na mag-sign in sa Google Health gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox
+Pinapayagan ang mga app na mag-sign in sa Google Checkout Sandbox gamit ang mga account na naka-imbak sa Android device na ito.
+
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.writely
+Pinapayagan ang mga app na mag-sign in sa Google Docs gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.print
+Pinapayagan ang mga app na mag-sign in sa Google Book Search gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.news
+Pinapayagan ang mga app na mag-sign in sa Google News gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.androidsecure
+Pinapayagan ang mga app na mag-sign in sa mga serbisyo ng Android gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.ig
+Pinapayagan ang mga app na mag-sign in sa iGoogle gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.talk
+Pinapayagan ang mga app na mag-sign in sa Google Talk gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.youtube
+Pinapayagan ang mga app na mag-sign in sa YouTube gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.jotspot
+Pinapayagan ang mga app na mag-sign in sa JotSpot gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.dodgeball
+Pinapayagan ang mga app na mag-sign in sa Dodgeball gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES
+Pinapayagan ang mga app na mag-sign in sa hindi tinukoy na mga serbisyo ng Google gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.reader
+Pinapayagan ang mga app na mag-sign in sa Google Reader service gamit ang mga account na naka-imbak sa teleponong ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.geowiki
+Pinapayagan ang mga app na mag-sign in sa Google Map maker service gamit ang mga account na naka-imbak sa teleponong ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.grandcentral
+Pinapayagan ang mga app na mag-sign in sa Google Voice gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+Pinapayagan ang mga app na mag-sign in sa Google AdWords gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.YouTubeUser
+Pinapayagan ang mga app na makita ang mga YouTube username na nauugnay sa mga Google account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.mail
+Pinapayagan ang mga app na humiling ng mga token ng pagpapatotoo.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.sitemaps
+Pinapayagan ang mga app na mag-sign in sa Google Webmaster Tools gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.local
+Pinapayagan ang mga app na mag-sign in sa Google Maps gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.cp
+Pinapayagan ang mga app na ma-access ang mga contact at impormasyon ng profile ng mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.wifi
+Pinapayagan ang mga app na mag-sign in sa Google Wi-Fi gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.cl
+Pinapayagan ang mga app na mag-sign in sa Google Calendar gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.mobile
+Pinapayagan ang mga app na mag-sign in sa mga mobile app ng Google gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.gbase
+Pinapayagan ang mga app na mag-sign in sa Google Base gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.panoramio
+Pinapayagan ang mga app na mag-sign in sa Panoramio service gamit ang mga account na naka-imbak sa teleponong ito.
+ 
+com.google.android.googleapps.permission.GOOGLE_AUTH.finance
+Pinapayagan ang mga app na mag-sign in sa Google Finance gamit ang mga account na naka-imbak sa Android device na ito.
+ 
+com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+Pinapayagan ang mga app na ma-access ang impormasyon kung paano sila na-install sa iyong device.
+ 
+com.google.android.apps.docs.permission.SYNC_STATUS
+Pinapayagan ang mga app na ma-access at pamahalaan ang katayuan ng pag-synchronize ng mga dokumento at data.
+ 
+com.google.android.apps.photos.permission.ACCESS_MEDIA
+Pinapayagan ang mga app na pamahalaan, tingnan, i-upload o i-synchronize ang mga mapagkukunan na nauugnay sa larawan.
+ 
+com.google.android.apps.photos.permission.UPDATE_MEDIA
+Pinapayagan ang mga app na baguhin ang data ng media.
+ 
+com.google.android.apps.photos.permission.UPLOAD_MEDIA
+Pinapayagan ang mga app na mag-upload ng mga file ng media sa mga serbisyo ng cloud ng Google.
+ 
+com.google.android.apps.photos.permission.SYNC_MEDIA
+Pinapayagan ang mga app na pamahalaan ang pag-synchronize ng mga larawan sa mga serbisyo ng cloud.
+ 
+com.google.android.gms.permission.CAR_FUEL
+Pinapayagan ang mga app na ma-access ang impormasyon na nauugnay sa gasolina ng sasakyan.
+ 
+com.google.android.gms.permission.CAR_SPEED
+Pinapayagan ang mga app na ma-access ang impormasyon na nauugnay sa bilis ng sasakyan.
+ 
+com.google.android.gms.permission.CAR_NAVIGATION
+Pinapayagan ang mga app na ma-access ang impormasyon na nauugnay sa nabigasyon ng sasakyan.
+ 
+com.google.android.gms.permission.LOCATION
+Pinapayagan ang mga app na ma-access ang mga pag-andar na nauugnay sa lokasyon.
+ 
+com.google.android.apps.maps.permission.MAPS_DATA
+Pinapayagan ang mga app na pamahalaan ang mga mapagkukunan na nauugnay sa mapa.
+ 
+com.google.android.apps.maps.permission.LOCATION_UPDATE
+Pinapayagan ang mga app na tumanggap at hawakan ang mga pag-update ng lokasyon.
+ 
+com.google.android.apps.docs.permission.C2D_MESSAGE
+Pinapayagan ang mga app na tumanggap ng mga push message mula sa mga server ng Google, na nagpapagana ng mga pag-update at notification sa background.
+ 
+android.permission.ACCESS_FPS_COUNTER
+Pinapayagan ang mga app na ma-access ang frames per second (FPS) counter ng system para sa pagsubaybay sa pagganap at debugging.
+ 
+android.permission.MANAGE_GAME_ACTIVITY
+Pinapayagan ang mga app na pamahalaan ang mga aktibidad ng laro, na maaaring kontrolin ang mga setting ng laro o makipag-ugnayan sa lifecycle ng laro.
+ 
+android.permission.MANAGE_GAME_MODE
+Pinapayagan ang mga app na pamahalaan ang mga setting ng game mode ng device, na maaaring mag-optimize ng mga mapagkukunan at pagganap para sa mga laro.
+ 
+android.permission.MODIFY_ADSERVICES_STATE
+Pinapayagan ang mga app na baguhin ang estado ng Android Ad Services, na nakakaapekto sa pag-andar ng advertising.
+ 
+android.permission.ACCESS_ADSERVICES_STATE
+Pinapayagan ang mga app na ma-access ang estado ng Android Ad Services, na nagbibigay ng impormasyon tungkol sa kapaligiran ng advertising.
+ 
+android.permission.MODIFY_ADSERVICES_STATE_COMPAT
+Pinapayagan ang mga app na baguhin ang estado ng Android Ad Services gamit ang mga compatibility API.
+ 
+android.permission.ACCESS_ADSERVICES_STATE_COMPAT
+Pinapayagan ang mga app na ma-access ang estado ng Android Ad Services gamit ang mga compatibility API.
+ 
+android.permission.UPDATE_PRIVILEGED_AD_ID
+Pinapayagan ang mga app na i-update ang privileged advertising ID ng device, malamang para sa mga partikular na sitwasyon sa advertising.
+ 
+android.permission.UPDATE_PRIVILEGED_AD_ID_COMPAT
+Pinapayagan ang mga app na i-update ang privileged advertising ID ng device gamit ang mga compatibility API.
+ 
+android.permission.READ_DROPBOX_DATA
+Pinapayagan ang mga app na magbasa ng data mula sa Dropbox service ng system, na maaaring ma-access ang mga log ng system o mga ulat ng pag-crash.
+ 
+com.google.android.gms.trustagent.permission.TRUSTAGENT_STATE
+Pinapayagan ang mga app na ma-access at pamahalaan ang estado ng Trust Agents, na humahawak sa pag-unlock ng device at seguridad.
+ 
+com.google.android.apps.enterprise.dmagent.permission.AutoSyncPermission
+Pinapayagan ang isang Google Enterprise Device Management Agent na mag-trigger ng awtomatikong pag-synchronize ng data.
+ 
+com.google.android.providers.settings.permission.READ_GSETTINGS
+Pinapayagan ang mga app na magbasa ng mga setting na partikular sa Google, malamang na ginagamit upang ma-access ang mga configuration ng Google account o serbisyo.
+ 
+com.google.android.providers.settings.permission.WRITE_GSETTINGS
+Pinapayagan ang mga app na baguhin ang mga setting na partikular sa Google, na nagpapagana ng mga pagbabago sa mga configuration ng Google account o serbisyo.
+ 
+com.google.android.gms.auth.cryptauth.permission.CABLEV2_SERVER_LINK
+Pinapayagan ang mga app na magtatag ng isang secure na link para sa pagpapatotoo gamit ang Cable v2 protocol ng CryptAuth.
+ 
+com.google.android.gms.permission.REQUEST_SCREEN_LOCK_COMPLEXITY
+Pinapayagan ang mga app na humiling ng isang tiyak na antas ng kumplikado para sa screen lock ng device.
+ 
+android.permission.SET_BIOMETRIC_DIALOG_ADVANCED
+Pinapayagan ang mga app na i-customize at kontrolin ang pag-uugali ng system biometric dialog.
+ 
+android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS
+Pinapayagan ang mga app na gumamit ng mga pinaghihigpitang network, na maaaring para sa pribilehiyong access sa network o pag-andar.
+ 
+android.permission.ALLOCATE_AGGRESSIVE
+Pinapayagan ang mga app na agresibong maglaan ng mga mapagkukunan ng system, na maaaring para sa pinahusay na pagganap ngunit may panganib din ng kawalang-tatag.
+ 
+android.car.permission.CAR_POWER
+Pinapayagan ang mga app na pamahalaan ang estado ng kapangyarihan ng isang sistema ng kotse, na nagpapagana ng mga tampok na nauugnay sa pamamahala ng kapangyarihan ng kotse.
+ 
+com.google.android.wearable.WRITE_SETTINGS
+Pinapayagan ang mga app na baguhin ang mga setting sa mga device ng Google Wearable.
+ 
+com.google.android.gms.permission.APPINDEXING
+Pinapayagan ang mga app na gamitin ang Google App Indexing upang gawing magagamit ang nilalaman sa paghahanap ng Google at Assistant.
+ 
+android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS
+Pinapayagan ang mga app na baguhin ang default na mga epekto ng audio ng system, tulad ng equalizer o reverb.
+ 
+android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME
+Pinapayagan ang mga app na palitan ang pangalan ng app sa mga notification.
+ 
+android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON
+Pinapayagan ang mga app na palitan ang pangalan at icon ng app kapag lumilitaw ito bilang isang target na pagbabahagi.
+ 
+android.permission.MANAGE_VOICE_KEYPHRASES
+Pinapayagan ang mga app na pamahalaan ang mga voice keyphrase, na ginagamit ng Google Assistant at iba pang mga tampok na na-activate ng boses.
+ 
+android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS
+Pinapayagan ang isang companion app na aprubahan ang mga koneksyon sa Wi-Fi, na nagpapagana ng kontrol sa mga koneksyon sa network para sa mga naka-pares na device.
+ 
+android.permission.UWB
+Pinapayagan ang app na gamitin ang Ultra-Wideband (UWB) technology para sa maikling hanay, secure na komunikasyon at lokasyon.
+ 
+android.permission.MANAGE_WIFI_INTERFACES
+Pinapayagan ang app na pamahalaan ang mga interface ng Wi-Fi, na kinokontrol ang mga aspeto tulad ng pagpapagana/pag-disable ng mga adapter ng Wi-Fi.
+ 
+android.permission.MANAGE_WIFI_NETWORK_SELECTION
+Pinapayagan ang app na pamahalaan ang pagpili ng mga network ng Wi-Fi, na maaaring mag-prioritize o pumili ng mga network.
+ 
+android.permission.USE_FULL_SCREEN_INTENT
+Pinapayagan ang app na magpakita ng mga full-screen intent, na nagpapagana ng mga nakaka-engganyong o kritikal na notification.
+ 
+com.google.android.gms.permission.ACCESS_NEARBY_SHARE_API
+Pinapayagan ang app na gamitin ang Nearby Share API ng Google para sa pagbabahagi ng file at pagtuklas ng device.
+ 
+com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK
+Pinapayagan ang app na tumanggap ng mga callback para sa mga notification ng exposure mula sa Exposure Notification API ng Google.
+ 
+android.permission.REQUEST_COMPANION_PROFILE_COMPUTER
+Pinapayagan ang app na humiling ng access sa profile ng isang companion device ng isang uri ng computer.
+ 
+android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND
+Pinapayagan ang app na humiling ng pahintulot na tumakbo sa background kapag ito ay isang companion app.
+ 
+android.permission.REQUEST_COMPANION_SELF_MANAGED
+Pinapayagan ang app na maging isang self-managed companion app, na kinokontrol ang sariling lifecycle nito.
+ 
+android.permission.CONTROL_DISPLAY_SATURATION
+Pinapayagan ang app na kontrolin ang saturation ng kulay ng display ng device.
+ 
+android.permission.TETHER_PRIVILEGED
+Pinapayagan ang app na magsagawa ng mga pribilehiyong aksyon sa tethering, tulad ng pagpapagana o pag-configure ng mga opsyon sa tethering.
+ 
+android.permission.REAL_GET_TASKS
+Pinapayagan ang app na makuha ang listahan ng mga tunay na gawain (mga proseso at aktibidad), kabilang ang mga gawain sa background.
+ 
+com.google.android.gms.permission.SAFETY_NET
+Pinapayagan ang app na gamitin ang SafetyNet API ng Google para sa mga pagsusuri sa integridad ng device at mga pagpapatunay ng seguridad.
+ 
+android.permission.ACCESS_NETWORK_CONDITIONS
+Pinapayagan ang app na ma-access ang impormasyon tungkol sa mga kondisyon ng network, tulad ng lakas ng signal o kalidad ng koneksyon.
+ 
+android.permission.SCORE_NETWORKS
+Pinapayagan ang app na magbigay ng mga marka ng kalidad ng network, na maaaring makaapekto sa pagpili ng network sa device.
+ 
+android.permission.USER_ACTIVITY
+Pinapayagan ang app na subaybayan ang aktibidad ng user, tulad ng paggalaw o paggamit ng screen, para sa iba't ibang layunin, kabilang ang fitness o kamalayan sa konteksto.
+ 
+android.permission.MODIFY_AUDIO_ROUTING
+Pinapayagan ang app na baguhin ang pag-ruta ng audio, na binabago kung saan itinuturo ang audio (hal., sa speaker, headphone, o mga device ng Bluetooth).
+ 
+android.permission.MODIFY_DAY_NIGHT_MODE
+Pinapayagan ang app na baguhin ang day/night mode ng system (dark/light theme), na maaaring mag-automate ng mga pagbabago ng tema.
+ 
+com.google.android.finsky.permission.GEARHEAD_SERVICE
+Pinapayagan ang isang app na gamitin ang Gearhead service ng Google Play Store, na nauugnay sa pamamahala ng device.
+ 
+com.google.android.permission.ACCESSIBILITY_SCAN_SERVICE
+Pinapayagan ang isang app na magpatupad ng isang accessibility scanning service, na ginagamit upang i-scan ang screen para sa iba't ibang gawain.
+ 
+android.permission.START_TASKS_FROM_RECENTS
+Pinapayagan ang app na maglunsad ng mga gawain mula sa listahan ng mga kamakailang gawain, na nagpapagana ng mga shortcut o mga tampok sa pamamahala ng gawain.
+ 
+android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+Pinapayagan ang isang app na ma-access ang data ng attribution na ibinigay ng Android's AdServices framework.
+ 
+android.permission.ACCESS_ADSERVICES_AD_ID
+Pinapayagan ang isang app na ma-access ang advertising ID (AAID) ng user.
+ 
+android.permission.ACCESS_ADSERVICES_CUSTOM_AUDIENCE
+Pinapayagan ang isang app na ma-access ang data ng attribution na ibinigay ng Android's AdServices API.
+ 
+android.permission.ACCESS_ADSERVICES_TOPICS
+Pinapayagan ang isang app na ma-access ang mga kategorya ng interes ng user (tinatawag ding "mga paksa") na natukoy ng Android's AdServices API.

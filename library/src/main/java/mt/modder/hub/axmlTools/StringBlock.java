@@ -38,9 +38,8 @@ package mt.modder.hub.axmlTools;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
-import java.util.*;
-import java.nio.*;
-import mt.modder.hub.axmlTools.escaper.*;
+
+import mt.modder.hub.axmlTools.escaper.XmlEscaper;
 
 public class StringBlock {
 	private static final int CHUNK_TYPE = 0x001C0001; // Type identifier for the chunk

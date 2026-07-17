@@ -1,0 +1,1221 @@
+android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
+به یک برنامه کاربردی اجازه می دهد تا درخواست نادیده گرفتن بهینه سازی باتری را بدهد.
+
+android.permission.ACCESS_CHECKIN_PROPERTIES
+دسترسی خواندن و نوشتن به جدول "ویژگی ها" در پایگاه داده اعلام حضوری، که مقادیر را می توان برای آپلود تغییر داد.
+
+android.permission.ACCESS_COARSE_LOCATION
+به یک برنامه کاربردی اجازه می دهد تا به مکان تقریبی (مبتنی بر شبکه) دسترسی پیدا کند.
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
+اجرای سرویس پیش زمینه با نوع "mediaProjection"
+
+android.permission.FOREGROUND_SERVICE_SYSTEM_EXEMPTED
+اجرای سرویس پیش زمینه با نوع "systemExempted"
+
+android.permission.FOREGROUND_SERVICE_SPECIAL_USE
+اجرای سرویس پیش زمینه با نوع "specialUse"
+
+android.permission.ACCESS_SUPERUSER
+به برنامه اجازه دسترسی ابرکاربر را بدهید
+
+android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
+اجرای سرویس پیش زمینه با نوع "mediaPlayback"
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+اجرای سرویس پیش زمینه با نوع "dataSync"
+
+android.permission.READ_MEDIA_VISUAL_USER_SELECTED
+فایل‌های تصویری و ویدیویی انتخابی کاربر را از فضای ذخیره‌سازی مشترک بخوانید
+
+android.permission.ACCESS_FINE_LOCATION
+دسترسی به مکان دقیق
+
+android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+به دستورات ارائه دهنده مکان اضافی دسترسی داشته باشید
+
+android.permission.ACCESS_MOCK_LOCATION
+اطلاعات مکان ساختگی را به دست آورید
+
+android.permission.ACCESS_NETWORK_STATE
+مشاهده اتصالات شبکه
+
+android.permission.ACCESS_SURFACE_FLINGER
+از ویژگی های سطح پایین SurfaceFlinger استفاده کنید
+
+android.permission.ACCESS_WIFI_STATE
+به اطلاعات وضعیت شبکه وای فای دسترسی پیدا کنید
+
+android.permission.ADD_SYSTEM_SERVICE
+انتشار خدمات سطح سیستم
+
+android.permission.BATTERY_STATS
+به روز رسانی آمار باتری
+
+android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
+به مرورگر اجازه می‌دهد تا APIهای مدیر اعتبار را از طرف یک RP دیگر فراخوانی کند.
+
+android.permission.BLUETOOTH
+با دستگاه های بلوتوث جفت شود
+
+android.permission.BLUETOOTH_ADMIN
+به تنظیمات بلوتوث دسترسی پیدا کنید
+
+android.permission.BRICK
+درخواست قابلیت غیرفعال کردن دستگاه (بسیار خطرناک)
+
+android.permission.BROADCAST_PACKAGE_REMOVED
+پس از حذف بسته برنامه، یک قصد پخش کنید
+
+android.permission.BROADCAST_STICKY
+ارسال پخش های چسبناک
+
+android.permission.CALL_PHONE
+⚠️ تماس تلفنی برقرار کنید
+
+android.permission.CALL_PRIVILEGED
+⚠️ با هر شماره ای از جمله شماره های اضطراری تماس بگیرید
+
+android.permission.CAMERA
+عکس یا فیلم بگیرید
+
+android.permission.CHANGE_COMPONENT_ENABLED_STATE
+حالت فعال کردن یک جزء را تغییر دهید
+
+android.permission.CHANGE_CONFIGURATION
+پیکربندی فعلی مانند محلی سازی را تغییر دهید
+
+android.permission.CHANGE_NETWORK_STATE
+تغییر وضعیت اتصال شبکه
+
+android.permission.CHANGE_WIFI_STATE
+به وای فای متصل شوید یا از آن جدا شوید
+
+android.permission.CLEAR_APP_CACHE
+کش را از تمام برنامه های نصب شده روی دستگاه پاک کنید
+
+android.permission.CLEAR_APP_USER_DATA
+پاک کردن اطلاعات کاربر
+
+android.permission.CONTROL_LOCATION_UPDATES
+درخواست‌های به‌روزرسانی مکان را از ماژول بی‌سیم فعال یا جلوگیری کنید
+
+android.permission.DELETE_CACHE_FILES
+فایل های کش را حذف کنید
+
+android.permission.DETECT_SCREEN_CAPTURE
+به یک برنامه کاربردی اجازه می دهد تا هنگام تلاش برای گرفتن صفحه نمایش از ویندوز خود مطلع شود.
+
+android.permission.DETECT_SCREEN_RECORDING
+به برنامه اجازه می‌دهد هنگام ضبط مطلع شود.
+
+android.permission.DELETE_PACKAGES
+حذف بسته ها
+
+android.permission.DEVICE_POWER
+دسترسی به مدیریت انرژی سطح پایین
+
+android.permission.DIAGNOSTIC
+در منابع تشخیصی بخوانید و بنویسید
+
+android.permission.DISABLE_KEYGUARD
+قفل صفحه کلید را غیرفعال کنید
+
+android.permission.DELIVER_COMPANION_MESSAGES
+به یک برنامه کاربردی اجازه می دهد پیام های همراه را به سیستم تحویل دهد
+
+android.permission.تخلیه
+بازیابی اطلاعات تخلیه ایالت از سرویس های سیستم
+
+android.permission.EXPAND_STATUS_BAR
+نوار وضعیت را بزرگ یا کوچک کنید
+
+android.permission.FACTORY_TEST
+به عنوان یک برنامه آزمایشی کارخانه، تحت کاربر اصلی اجرا شود
+
+android.permission.FLASHLIGHT
+به چراغ قوه دسترسی پیدا کنید
+
+android.permission.FORCE_BACK
+اجبار یک عملیات پشتی در فعالیت های سطح بالا
+
+android.permission.FOREGROUND_SERVICE_DATA_SYNC
+به برنامه اجازه می دهد تا داده ها را با سرویس های دیگر در حالی که سرویس پیش زمینه در حال اجرا است، همگام کند.
+
+android.permission.FOTA_UPDATE
+ممکن است یک مجوز رزرو شده باشد
+
+android.permission.GET_ACCOUNTS
+حساب های موجود در دستگاه را پیدا کنید
+
+android.permission.GET_ACCOUNTS_PRIVILEGED
+دسترسی به لیست حساب ها در سرویس حساب ها را می دهد
+
+android.permission.GET_PACKAGE_SIZE
+اندازه گیری فضای ذخیره سازی برنامه
+
+android.permission.GET_TASKS
+اطلاعات مربوط به برنامه های در حال اجرا را بازیابی کنید
+
+android.permission.HARDWARE_TEST
+دسترسی به سخت افزار
+
+android.permission.HIDE_OVERLAY_WINDOWS
+به یک برنامه اجازه می‌دهد تا از کشیده شدن پنجره‌های بدون پوشش سیستم در بالای آن جلوگیری کند
+
+android.permission.INJECT_EVENTS
+رهگیری اقدامات کاربر مانند ضربه زدن به کلید، لمس، رویدادهای گوی و غیره.
+
+android.permission.INSTALL_LOCATION_PROVIDER
+ارائه دهندگان موقعیت مکانی را نصب کنید
+
+android.permission.INSTALL_PACKAGES
+بسته ها را نصب کنید
+
+android.permission.INTERNAL_SYSTEM_WINDOW
+پنجره ها را با استفاده از رابط کاربری سیستم باز کنید
+
+android.permission.INTERNET
+دسترسی کامل به اینترنت داشته باشید
+
+android.permission.MANAGE_APP_TOKENS
+توکن های برنامه را در مدیر پنجره مدیریت کنید
+
+android.permission.MASTER_CLEAR
+ممکن است برای پاک کردن همه داده ها، شبیه به تنظیم مجدد کارخانه
+
+android.permission.MODIFY_AUDIO_SETTINGS
+تنظیمات صوتی خود را تغییر دهید
+
+android.permission.MODIFY_PHONE_STATE
+تغییر وضعیت تلفن، مانند روشن بودن، رابط کاربری و غیره.
+
+android.permission.MOUNT_UNMOUNT_FILESYSTEMS
+سیستم های فایل را روی حافظه قابل جابجایی نصب و جدا کنید
+
+android.permission.PERSISTENT_ACTIVITY
+برنامه را همیشه اجرا کنید
+
+android.permission.PROCESS_OUTGOING_CALLS
+تغییر مسیر تماس های خروجی
+
+android.permission.READ_CALENDAR
+رویدادها و جزئیات تقویم را بخوانید
+
+android.permission.READ_CONTACTS
+اطلاعات تماس را بخوانید
+
+android.permission.READ_FRAME_BUFFER
+ضبط موج صفحه یا دسترسی عمومی تر به داده های بافر فریم
+
+android.permission.READ_INPUT_STATE
+حالات کلید فعلی را برگردانید
+
+android.permission.READ_LOGS
+فایل های گزارش سیستم سطح پایین را بخوانید
+
+android.permission.READ_OWNER_DATA
+خواندن اطلاعات مالک
+
+android.permission.READ_SMS
+⚠️ پیامک ها را بخوانید
+
+android.permission.READ_SYNC_SETTINGS
+تنظیمات همگام سازی را بخوانید
+
+android.permission.READ_SYNC_STATS
+آمار همگام سازی را بخوانید
+
+android.permission.REBOOT
+به یک برنامه کاربردی اجازه راه اندازی مجدد/راه اندازی مجدد دستگاه را می دهد.
+
+android.permission.RECEIVE_BOOT_COMPLETED
+راه اندازی بوت
+
+android.permission.RECEIVE_MMS
+⚠️ دریافت پیام (MMS)
+
+android.permission.RECEIVE_SMS
+⚠️ دریافت پیام (پیامک)
+
+android.permission.RECEIVE_WAP_PUSH
+به یک برنامه کاربردی اجازه می دهد تا پیام های فشار WAP را دریافت کند.
+
+android.permission.RECORD_AUDIO
+ضبط صدا
+
+android.permission.REORDER_TASKS
+برنامه های در حال اجرا را دوباره ترتیب دهید
+
+android.permission.RESTART_PACKAGES
+سایر برنامه ها را مجددا راه اندازی کنید
+
+android.permission.SEND_SMS
+⚠️ ارسال پیامک
+
+android.permission.SET_ACTIVITY_WATCHER
+نظارت یا کنترل فعالیت هایی که در سیستم راه اندازی شده اند
+
+android.permission.SET_ALWAYS_FINISH
+کنترل کنید که آیا فعالیت‌ها بلافاصله پس از قرار دادن در پس‌زمینه تمام می‌شوند یا خیر
+
+android.permission.SET_ANIMATION_SCALE
+تغییر مقیاس جهانی انیمیشن
+
+android.permission.SET_DEBUG_APP
+یک برنامه را برای اشکال زدایی پیکربندی کنید
+
+android.permission.SET_ORIENTATION
+دسترسی سطح پایین به تنظیم جهت صفحه نمایش و چرخش واقعی
+
+اندرویدمجوز.SET_PREFERRED_APPLICATIONS
+پارامترهای لیست متدهای PackageManager.addPackageToPreferred() و PackageManager.removePackageFromPreferred() را تغییر دهید
+
+android.permission.SET_PROCESS_FOREGROUND
+برنامه در حال اجرا فعلی را به اجبار در پیش زمینه قرار دهید
+
+android.permission.SET_PROCESS_LIMIT
+حداکثر تعداد فرآیندهای در حال اجرا را تنظیم کنید
+
+android.permission.SET_TIME_ZONE
+منطقه زمانی را تنظیم کنید
+
+android.permission.SET_WALLPAPER
+تنظیم کاغذ دیواری
+
+android.permission.SET_WALLPAPER_HINTS
+اندازه کاغذ دیواری خود را تنظیم کنید
+
+android.permission.SIGNAL_PERSISTENT_PROCESSES
+درخواست ارسال سیگنال به تمام فرآیندهای قابل مشاهده
+
+android.permission.STATUS_BAR
+نوار وضعیت و نمادهای آن را باز، بسته یا غیرفعال کنید
+
+android.permission.SUBSCRIBED_FEEDS_READ
+به ارائه دهنده محتوای RSS مشترک شده دسترسی پیدا کنید
+
+android.permission.SUBSCRIBED_FEEDS_WRITE
+این تنظیم توسط سیستم برای استفاده در آینده رزرو شده است
+
+android.permission.SYSTEM_ALERT_WINDOW
+این برنامه می تواند در بالای برنامه های دیگر ظاهر شود
+
+android.permission.VIBRATE
+لرزش را کنترل کنید
+
+android.permission.WAKE_LOCK
+از به خواب رفتن گوشی جلوگیری کنید
+
+android.permission.WRITE_APN_SETTINGS
+تنظیمات APN را بنویسید
+
+android.permission.WRITE_CALENDAR
+رویدادهای تقویم را اضافه یا تغییر دهید
+
+android.permission.WRITE_CONTACTS
+مخاطبین خود را اصلاح کنید
+
+android.permission.WRITE_GSERVICES
+نقشه سرویس گوگل را اصلاح کنید
+
+android.permission.WRITE_OWNER_DATA
+اطلاعات مالک را بنویسید اما نخوانید
+
+android.permission.WRITE_SETTINGS
+تنظیمات سیستم را تغییر دهید
+
+android.permission.WRITE_SMS
+⚠️ پیامک بنویسید
+
+android.permission.WRITE_SYNC_SETTINGS
+همگام سازی را فعال یا غیرفعال کنید
+
+android.permission.WRITE_USER_DICTIONARY
+کلمات جدید را به فرهنگ لغت کاربر اضافه کنید
+
+android.permission.WRITE_SOCIAL_STREAM
+جریان اجتماعی را اصلاح کنید
+
+android.permission.WRITE_SECURE_SETTINGS
+تنظیمات سیستم ایمن را تغییر دهید
+
+android.permission.WRITE_PROFILE
+نوشتن اطلاعات نمایه کاربر را امکان پذیر می کند.
+
+android.permission.WRITE_EXTERNAL_STORAGE
+محتویات فضای ذخیره سازی مشترک خود را تغییر دهید یا حذف کنید
+
+android.permission.WRITE_CALL_LOG
+⚠️ ورودی های گزارش تماس را ایجاد/تغییر/حذف کنید
+
+android.permission.USE_SIP
+به یک برنامه کاربردی اجازه می دهد تا از سرویس SIP برای VoIP استفاده کند.
+
+android.permission.USE_CREDENTIALS
+توکن های احراز هویت را از AccountManager درخواست کنید
+
+android.permission.UPDATE_DEVICE_STATS
+به روز رسانی آمار دستگاه
+
+android.permission.TRANSMIT_IR
+انتقال مادون قرمز
+
+android.permission.SET_TIME
+تنظیم زمان سیستم
+
+android.permission.SET_POINTER_SPEED
+توسط برنامه های شخص ثالث قابل دریافت نیست. مجوز سیستم
+
+android.permission.SEND_RESPOND_VIA_MESSAGE
+با استفاده از برنامه خود در طول تماس‌های دریافتی، یک پاسخ پیام متنی فوری ارسال کنید
+
+android.permission.READ_USER_DICTIONARY
+دریافت داده از یک ارائه دهنده؛ برنامه ها برای ارائه مربوطه به "مجوز دسترسی خواندن" نیاز دارند
+
+android.permission.READ_SOCIAL_STREAM
+جریان اجتماعی کاربر را بخوانید
+
+android.permission.READ_PROFILE
+دسترسی به پروفایل شخصی کاربر
+
+android.permission.READ_PHONE_STATE
+وضعیت و هویت تلفن را بخوانید
+
+android.permission.READ_EXTERNAL_STORAGE
+محتویات فضای ذخیره سازی مشترک خود را بخوانید
+
+android.permission.READ_CALL_LOG
+⚠️ ورودی های ثبت تماس را بخوانید
+
+android.permission.NFC
+عملیات ارتباط میدانی نزدیک NFC را انجام دهید
+
+android.permission.MOUNT_FORMAT_FILESYSTEMS
+سیستم های فایل قابل جابجایی را فرمت کنید، مانند فرمت کردن کارت SD
+
+android.permission.MEDIA_CONTENT_CONTROL
+دسترسی به دانستن آنچه در حال پخش است و کنترل محتوای آن، که توسط برنامه های شخص ثالث استفاده نمی شود
+
+android.permission.MANAGE_DOCUMENTS
+مدیریت دسترسی به اسناد
+
+android.permission.MANAGE_ACCOUNTS
+لیست حساب ها را در AccountManager مدیریت کنید
+
+android.permission.LOCATION_HARDWARE
+از ویژگی‌های سخت‌افزار مکان استفاده کنید، که توسط برنامه‌های شخص ثالث استفاده نمی‌شود
+
+android.permission.KILL_BACKGROUND_PROCESSES
+برای پایان دادن به فرآیندهای پس زمینه، killBackgroundProcesses (String) را فراخوانی کنید
+
+android.permission.GLOBAL_SEARCH
+قابلیت جستجوی جهانی در سراسر سیستم
+
+android.permission.GET_TOP_ACTIVITY_INFO
+اطلاعات خصوصی مربوط به فعالیت برتر فعلی را که توسط برنامه های شخص ثالث استفاده نمی شود، بازیابی کنید
+
+android.permission.CHANGE_WIFI_MULTICAST_STATE
+دریافت چندپخشی Wi Fi
+
+android.permission.CAPTURE_VIDEO_OUTPUT
+خروجی ویدیو ضبط کنید که توسط برنامه های شخص ثالث استفاده نمی شود
+
+android.permission.CAPTURE_SECURE_VIDEO_OUTPUT
+خروجی ویدیویی ایمن بگیرید که توسط برنامه های شخص ثالث استفاده نمی شود
+
+android.permission.CAPTURE_AUDIO_OUTPUT
+خروجی صدا را ضبط کنید که توسط برنامه های شخص ثالث استفاده نمی شود
+
+android.permission.BROADCAST_WAP_PUSH
+هنگامی که یک WAP PUSH دریافت شد، یک هدف را پخش کنید
+
+android.permission.BROADCAST_SMS
+⚠️ هنگام دریافت پیامک، هدف را پخش کنید
+
+android.permission.BLUETOOTH_PRIVILEGED
+بدون تعامل کاربر با دستگاه های بلوتوث جفت شود
+
+android.permission.BIND_WALLPAPER
+باید از طریق WallpaperService درخواست شود. فقط سیستم می تواند از این استفاده کند
+
+android.permission.BIND_VPN_SERVICE
+به یک سرویس VPN متصل شوید
+
+android.permission.BIND_TEXT_SERVICE
+باید توسط یک TextService (به عنوان مثال، SpellcheckerService) مورد نیاز باشد تا اطمینان حاصل شود که فقط سیستم می تواند به آن متصل شود.
+
+android.permission.BIND_REMOTEVIEWS
+باید از طریق RemoteViewsService درخواست شود. فقط سیستم می تواند از این استفاده کند
+
+android.permission.BIND_PRINT_SERVICE
+باید توسط PrintService مورد نیاز باشد تا اطمینان حاصل شود که فقط سیستم می تواند به آن متصل شود
+
+android.permission.BIND_NOTIFICATION_LISTENER_SERVICE
+باید توسط یک NotificationListenerService مورد نیاز باشد تا اطمینان حاصل شود که فقط سیستم می تواند به آن متصل شود
+
+android.permission.BIND_NFC_SERVICE
+باید توسط HostApduService یا OffHostApduService اطمینان حاصل شود که فقط سیستم می تواند به آن متصل شود
+
+android.permission.BIND_INPUT_METHOD
+درخواست InputMethodService. فقط سیستم می تواند از این استفاده کند
+
+android.permission.BIND_DEVICE_ADMIN
+درخواست مدیر دستگاه شوید. فقط سیستم می تواند از این مجوز استفاده کند.
+
+android.permission.BIND_APPWIDGET
+به یک برنامه کاربردی اجازه می دهد تا به سرویس AppWidget بگوید به داده های ویجت برنامه دسترسی پیدا کند. تعداد کمی از برنامه ها از این مجوز استفاده می کنند.
+
+android.permission.BIND_ACCESSIBILITY_SERVICE
+درخواست دسترسی به سرویس. تضمین می کند که فقط سیستم می تواند به آن متصل شود.
+
+android.permission.AUTHENTICATE_ACCOUNTS
+به یک برنامه کاربردی اجازه می دهد تا به عنوان یک AccountAuthenticator برای AccountManager عمل کند.
+
+android.permission.ACCOUNT_MANAGER
+دسترسی به اعتبارنامه های احراز هویت حساب، در درجه اول برای اطلاعات حساب GMail. فقط توسط فرآیندهای سطح سیستم قابل دسترسی است.
+
+com.android.browser.permission.READ_HISTORY_BOOKMARKS
+موارد دلخواه و تاریخچه مرورگر را بخوانید.
+
+com.android.alarm.permission.SET_ALARM
+تنظیم یادآورهای زنگ
+
+com.android.browser.permission.WRITE_HISTORY_BOOKMARKS
+در تاریخچه مرورگر یا نشانک‌ها بنویسید اما اجازه خواندن را نمی‌دهد.
+
+com.android.launcher.permission.INSTALL_SHORTCUT
+میانبر را نصب کنید.
+
+com.android.launcher.permission.UNINSTALL_SHORTCUT
+حذف میانبر
+
+com.android.voicemail.permission.ADD_VOICEMAIL
+به یک برنامه کاربردی اجازه می دهد تا پست صوتی را به سیستم اضافه کند.
+
+android.permission.REQUEST_INSTALL_PACKAGES
+درخواست نصب پکیج ها
+
+android.permission.REQUEST_DELETE_PACKAGES
+درخواست حذف بسته ها
+
+android.permission.READ_INSTALL_SESSIONS
+جلسات نصب را بخوانید.
+
+android.permission.READ_CELL_BROADCASTS
+پخش های سلولی را بخوانید.
+
+android.permission.NEARBY_WIFI_DEVICES
+با دستگاه های WLAN نزدیک تعامل کنید.
+
+android.permission.USE_FINGERPRINT
+از سخت افزار اثر انگشت استفاده کنید.
+
+android.permission.USE_BIOMETRIC
+(منسوخ شده) از احراز هویت اثر انگشت استفاده کنید.
+
+android.permission.FOREGROUND_SERVICE
+سرویس پیش زمینه را اجرا کنید.
+
+android.permission.QUERY_ALL_PACKAGES
+به یک برنامه کاربردی اجازه می دهد تا از همه بسته های نصب شده پرس و جو کند (Android 11+)
+
+android.permission.ACCESS_BACKGROUND_LOCATION
+به یک برنامه اجازه می دهد به مکان در پس زمینه (Android 10 و بالاتر) دسترسی پیدا کند.
+
+android.permission.ACTIVITY_RECOGNITION
+به یک برنامه اجازه می‌دهد فعالیت فیزیکی کاربر را شناسایی کرده و به آن دسترسی داشته باشد.
+
+android.permission.ACCESS_MEDIA_LOCATION
+به برنامه اجازه می دهد به موقعیت جغرافیایی تعبیه شده در عکس ها و ویدیوهای به اشتراک گذاشته شده کاربر دسترسی پیدا کند.
+
+android.permission.UWB_RANGING
+به برنامه اجازه می دهد تا از فناوری باند فوق العاده (UWB) برای اندازه گیری فاصله تا دستگاه های دیگر استفاده کند.
+
+android.permission.BLUETOOTH_SCAN
+به برنامه اجازه می‌دهد دستگاه‌های بلوتوث را اسکن کند، که به قابلیت مشاهده مکان یا مجوز BLUETOOTH_ADMIN نیاز دارد.
+
+android.permission.BLUETOOTH_CONNECT
+به یک برنامه کاربردی اجازه می دهد به دستگاه های بلوتوث جفت شده متصل شود.
+
+android.permission.MANAGE_EXTERNAL_STORAGE
+دسترسی خواندن و نوشتن به تمام محتوای ذخیره سازی مشترک را می دهد.
+
+android.permission.BLUETOOTH_ADVERTISE
+به برنامه اجازه می دهد از طریق بلوتوث پخش شود.
+
+android.permission.REQUIRE_MANAGED_USER_SPLIT
+این مجوز نشان می‌دهد که برنامه به قابلیت اجرا در نمایه مدیریت شده یا نمایه کاری نیاز دارد.
+
+android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
+به برنامه اجازه می‌دهد تا وظایف را در پس‌زمینه بدون نمایش اعلان دائمی انجام دهد.
+
+android.permission.ANSWER_PHONE_CALLS
+⚠️ به یک برنامه کاربردی اجازه می دهد تا به تماس های تلفنی ورودی (Android 8+) پاسخ دهد.
+
+android.permission.READ_MEDIA_AUDIO
+به یک برنامه کاربردی اجازه می دهد تا به داده های صوتی از فایل های رسانه ای دسترسی پیدا کند. رضایت کاربر ضروری است.
+
+android.permission.READ_MEDIA_VIDEO
+به یک برنامه کاربردی برای دسترسی به داده های ویدیویی از فایل های رسانه ای اجازه می دهد. رضایت کاربر ضروری است.
+
+android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
+به یک برنامه کاربردی اجازه می دهد تا صاحبان دستگاه و نمایه را مدیریت کند. رضایت کاربر ضروری است.
+
+android.permission.USE_BACKGROUND_EXECUTION_WHEN_CROSS_PROFILE_IS_SETTINGS_PROVIDER
+به یک برنامه کاربردی اجازه می‌دهد از اجرای پس‌زمینه زمانی که ارائه‌دهنده تنظیمات در یک بافت نمایه متقابل است استفاده کند.
+
+android.permission.USE_MEDIA_SESSION_IN_BACKGROUND
+به یک برنامه کاربردی اجازه می دهد تا از جلسات رسانه در پس زمینه استفاده کند.
+
+android.permission.MANAGE_MEMORY_POLICY
+به برنامه اجازه می‌دهد تا سیاست‌های حافظه را مدیریت کند، که به طور بالقوه بر نحوه حذف برنامه‌ها و فرآیندها برای بازیابی حافظه تأثیر می‌گذارد.
+
+android.permission.READ_MEDIA_IMAGE_DATA
+به یک برنامه کاربردی اجازه می دهد تا داده های تصویر را از فایل های رسانه ای بخواند.
+
+android.permission.USE_DEVICE_SPECIFIC_CAMERA
+به یک برنامه کاربردی اجازه می دهد تا به ویژگی های دوربین خاص دستگاه دسترسی پیدا کند.
+
+android.permission.USE_RESERVED_NETWORK
+به یک برنامه کاربردی اجازه می دهد تا از رابط های شبکه رزرو شده استفاده کند که ممکن است برای اهداف خاصی محدود شده باشند.
+
+android.permission.USE_RESERVED_FEATURE
+به یک برنامه کاربردی اجازه می دهد تا از ویژگی های دستگاه رزرو شده استفاده کند، که ممکن است به برنامه ها یا عملکردهای خاصی محدود شود.
+
+android.permission.USE_COARSE_LOCATION
+به یک برنامه کاربردی اجازه می دهد به مکان تقریبی، که معمولاً از منابع موقعیت شبکه مشتق می شود، دسترسی پیدا کند.
+
+android.permission.USE_REMOTE_VOICE_INTERACTION
+به یک برنامه اجازه می‌دهد از تعامل صوتی از راه دور بدون فعال کردن میکروفون دستگاه استفاده کند.
+
+android.permission.USE_VR_FEATURE
+برنامه را قادر می‌سازد تا از ویژگی‌های واقعیت مجازی (VR) بدون وجود هدست واقعیت مجازی استفاده کند.
+
+android.permission.USE_WALLPAPER_SERVICE
+به یک برنامه کاربردی اجازه می دهد تا از WallpaperService که مسئول مدیریت تصاویر پس زمینه زنده است استفاده کند.
+
+android.permission.SYSTEM_OVERLAY_WINDOW
+به برنامه اجازه می دهد تا پنجره ها را در بالای برنامه های دیگر نمایش دهد.
+
+com.android.vending.BILLING
+به برنامه اجازه می دهد تا فروش را از طریق سرویس صورتحساب در برنامه Google Play انجام دهد.
+
+android.permission.RECEIVE_USER_PRESENT
+به یک برنامه کاربردی اجازه می دهد زمانی که کاربر قفل دستگاه را باز کرده و برای تعامل با آن حضور دارد مطلع شود.
+
+com.android.launcher.permission.READ_SETTINGS
+به یک برنامه اجازه می‌دهد تنظیمات برگزیده و پیکربندی راه‌انداز صفحه اصلی را در دستگاه Android بخواند.
+
+android.permission.POST_NOTIFICATIONS
+به برنامه‌ها اجازه می‌دهد تا اعلان‌ها را در دستگاه Android نمایش دهند.
+
+com.google.android.gms.permission.AD_ID
+به برنامه کاربردی اجازه می دهد تا به شناسه تبلیغاتی دسترسی پیدا کند.
+
+com.google.android.c2dm.permission.RECEIVE
+به برنامه اجازه دهید پیام‌هایی را از Google Cloud Messaging دریافت کند
+
+android.permission.WRITE_APP_BADGE
+به برنامه اجازه می دهد تا شماره نشان نمایش داده شده در نماد برنامه خود را تغییر دهد.
+
+android.permission.SCHEDULE_EXACT_ALARM
+امکان تنظیم آلارم های دقیق را فراهم می کند.
+
+android.permission.READ_MEDIA_IMAGES
+اجازه دسترسی به تصاویر ذخیره شده در دستگاه را می دهد.
+
+android.permission.INSTANT_APP_FOREGROUND_SERVICE
+به یک برنامه فوری اجازه می دهد تا خدمات پیش زمینه ایجاد کند
+
+android.permission.LAUNCH_CAPTURE_CONTENT_ACTIVITY_FOR_NOTE
+به یک برنامه کاربردی اجازه می دهد تا با استفاده از عمل قصد، از محتوای صفحه عکس بگیرد
+
+android.permission.MANAGE_DEVICE_LOCK_STATE
+به برنامه‌های کیوسک دستگاه‌های تأمین‌شده اجازه می‌دهد تا اقداماتی را در سرویس قفل دستگاه انجام دهند
+
+android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
+به یک برنامه کاربردی اجازه می دهد تا خط مشی مربوط به دسترسی را مدیریت کند.
+
+android.permission.READ_HOME_APP_SEARCH_DATA
+به یک برنامه کاربردی اجازه می دهد تا از داده های کلی در AppSearch که برای نقش HOME قابل مشاهده است، پرس و جو کند.
+
+android.permission.READ_APP_BADGE
+به یک برنامه اجازه می‌دهد تا تعداد نشان‌های فعلی نمایش داده شده در نماد راه‌انداز برنامه دیگر را بخواند.
+
+android.permission.ACCESS_CACHE_FILESYSTEM
+اجازه دسترسی به فایل سیستم کش را می دهد. (نادر، سطح سیستم)
+
+android.permission.ACCESS_IMS_CALL
+دسترسی به تماس‌های IMS (تماس‌های زیرسیستم چندرسانه‌ای IP) را می‌دهد. (استفاده شده توسط برنامه های تلفن)
+
+android.permission.ACCESS_MTP
+به پروتکل انتقال رسانه دسترسی پیدا کنید. (سطح سیستم)
+
+android.permission.ACCESS_TUNNEL_MODE
+به برنامه اجازه می دهد تا یک رابط شبکه TUN ایجاد کند. (معمولاً توسط برنامه های VPN استفاده می شود)
+
+android.permission.CAPTURE_AUDIO_HOTWORD
+اجازه دسترسی به سیستم تشخیص کلمه کلیدی را می دهد
+
+android.permission.MANAGE_USB
+به برنامه اجازه می دهد دستگاه های USB را مدیریت کند.
+
+android.permission.WRITE_MEDIA_STORAGE
+دسترسی نوشتن به حافظه رسانه را می دهد.
+
+com.google.android.gms.permission.ACTIVITY_RECOGNITION
+امکان دسترسی به تشخیص فعالیت (پیاده روی، دویدن و غیره)
+
+com.google.android.providers.gsf.permission.READ_GSERVICES
+خواندن تنظیمات Google Service Framework (GSF) را می دهد.
+
+com.google.android.providers.gsf.permission.WRITE_GSERVICES
+نوشتن تنظیمات Google Service Framework (GSF) را می دهد.
+
+com.google.android.providers.gsf.permission.BROADCAST_ALARM
+به برنامه اجازه دهید زنگ هشدار را برای سرویس های Google پخش کند.
+
+com.google.android.gms.permission.GET_INSTALLED_APP_SIGNATURES
+به خدمات Google Play اجازه می دهد تا امضای برنامه های نصب شده را بازیابی کنند.
+
+android.permission.READ_PRIVILEGED_PHONE_STATE
+دسترسی خواندن ممتاز به وضعیت تلفن را اجازه می دهد.
+
+android.permission.CAPTURE_NETWORK_TRAFFIC
+امکان گرفتن ترافیک شبکه را فراهم می کند.
+
+android.permission.ACCESS_WIFI_SCAN
+به برنامه اجازه می دهد تا اسکن WiFi را انجام دهد.
+
+android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
+دسترسی به حافظه کلید امن
+
+android.permission.ACCESS_BROADCAST_MANAGER
+اجازه می دهد تا مدیر پخش را کنترل کند.
+
+android.permission.ACCESS_CHECKIN
+اجازه دسترسی به سرویس ورود را می دهد. (استفاده شده توسط سرویس های گوگل).
+
+android.permission.ACCESS_CONTEXT_HUB
+اجازه دسترسی به عملکرد Context Hub را می دهد.
+
+android.permission.ACCESS_NOTIFICATION_POLICY
+اجازه دسترسی به خط مشی اعلان را می دهد.
+
+android.permission.ACCESS_VOICE_INTERACTION_SERVICE
+به برنامه اجازه می دهد با سرویس تعامل صوتی تعامل داشته باشد.
+
+android.permission.BACKUP
+به یک برنامه کاربردی اجازه می دهد تا عملیات پشتیبان گیری را انجام دهد.
+
+android.permission.BIND_CARRIER_MESSAGING_SERVICE
+به یک برنامه کاربردی اجازه می دهد تا به یک سرویس پیام رسانی شرکت مخابراتی متصل شود.
+
+android.permission.BIND_DIRECTORY_SEARCH
+به سرویس جستجوی دایرکتوری متصل می شود.
+
+android.permission.BIND_DREAM_SERVICE
+به برنامه اجازه می دهد تا به سرویس رویایی (سرویس محافظ صفحه) متصل شود.
+
+android.permission.BIND_MIDI_DEVICE_SERVICE
+به یک برنامه اجازه می دهد به یک سرویس دستگاه MIDI متصل شود.
+
+android.permission.BIND_TELECOM_CONNECTION_SERVICE
+به خدمات اتصال مخابراتی اجازه می دهد.
+
+android.permission.BIND_TV_INPUT
+به سرویس ورودی تلویزیون متصل شود.
+
+android.permission.BIND_VOICE_INTERACTION
+به سرویس تعامل صوتی متصل می شود.
+
+android.permission.CONTROL_VPN
+به برنامه اجازه می دهد تا سرویس VPN را کنترل کند.
+
+android.permission.CREATE_USERS
+اجازه ایجاد پروفایل های کاربری جدید را می دهد.
+
+android.permission.GET_INSTALLED_PACKAGES
+به برنامه اجازه می دهد تا لیست بسته های نصب شده را دریافت کند.
+
+android.permission.IDENTIFY_PHONE_STATE
+به یک برنامه اجازه دسترسی به وضعیت شناسایی تلفن را بدهید
+
+android.permission.INVOKE_CARRIER_SETUP
+به برنامه اجازه می‌دهد تا تنظیمات شرکت مخابراتی را فراخوانی کند.
+
+android.permission.LOADER_USAGE_STATS
+اجازه دسترسی به آمار استفاده از لودر را می دهد.
+
+android.permission.MANAGE_USERS
+اجازه می دهد تا پروفایل های کاربر را مدیریت کنید.
+
+android.permission.MODIFY_NETWORK_CONFIGURATION
+به یک برنامه اجازه می دهد تا تنظیمات شبکه را تغییر دهد.
+
+android.permission.MODIFY_TELEPHONY_STATE
+اجازه می دهد تا وضعیت تلفن را تغییر دهید.
+
+android.permission.OVERRIDE_WIFI_CONFIG
+اجازه می دهد تا پیکربندی Wi Fi را لغو کند.
+
+android.permission.PACKAGE_USAGE_STATS
+دسترسی به آمار دقیق استفاده از بسته را امکان پذیر می کند.
+
+android.permission.PEERS_MAC_ADDRESS
+اجازه دسترسی به آدرس مک همتا را می دهد.
+
+android.permission.PERFORM_CDMA_PROVISIONING
+به وظایف مرتبط با شرکت مخابراتی اجازه می دهد
+
+android.permission.READ_DREAM_STATE
+اجازه خواندن حالت رویا را می دهد.
+
+android.permission.READ_WIFI_CREDENTIALS
+اجازه خواندن اعتبارنامه Wi-Fi را می دهد.
+
+android.permission.RECOVERY
+به برنامه اجازه می دهد تا عملکرد بازیابی را انجام دهد
+
+android.permission.REMOVE_TASKS
+به برنامه اجازه می دهد تا وظایف را حذف کند.
+
+android.permission.START_ACTIVITIES_FROM_BACKGROUND
+به برنامه اجازه می دهد تا فعالیت را در پس زمینه راه اندازی کند.
+
+android.permission.STATUS_BAR_SERVICE
+به برنامه اجازه می دهد نوار وضعیت را کنترل کند
+
+android.permission.SYSTEM_APPLICATION_COMPONENT
+اجازه دسترسی به اجزای برنامه سیستم.
+
+android.permission.USE_ICC_AUTH
+اجازه دسترسی به ICC Authentication را می دهد.
+
+android.permission.USE_RESERVED_DISK
+به برنامه اجازه می دهد تا از فضای دیسک رزرو شده استفاده کند
+
+com.google.android.providers.gsf.permission.BROADCAST_SMS
+به سرویس‌های Google اجازه می‌دهد پیامک پخش کنند.
+
+com.google.android.gm.permission.READ_CONTENT
+امکان خواندن محتوای Gmail را فراهم می کند.
+
+com.google.android.providers.gsf.permission.INSTALL_PACKAGES
+به خدمات Google اجازه می دهد بسته ها را نصب کنند.
+
+com.google.android.setupwizard.SETUP_COMPLETED
+به جادوگر راه‌اندازی اجازه می‌دهد ثبت کند که راه‌اندازی کامل شده است
+
+android.permission.UPDATE_APP_OPS_STATS
+به روز رسانی آمار عملیات برنامه را می دهد.
+
+android.permission.BIND_QUICK_SETTINGS_TILE
+به برنامه اجازه می‌دهد تا کاشی‌های تنظیمات سریع ایجاد کند.
+
+android.permission.CONTROL_DEVICE_POLICY
+خط مشی دستگاه کنترل مجاز است
+
+android.permission.MANAGE_DEVICE_ADMINS
+به مدیران دستگاه اجازه مدیریت می دهد.
+
+android.permission.START_VIEW_PERMISSION_USAGE
+به برنامه اجازه می دهد برای دسترسی به اطلاعات حساس مجوز درخواست کند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH
+به برنامه‌ها اجازه می‌دهد نام‌های کاربری (آدرس ایمیل) حساب(های) Google را که پیکربندی کرده‌اید ببینند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adsense
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به همه سرویس‌های Google وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به سرویس‌های Google نامشخص وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ah
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google App Engine وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ALL_SERVICES
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به همه سرویس‌های Google وارد شوند.
+
+android.permission.ACCESS_ALL_EXTERNAL_STORAGE
+به برنامه اجازه می دهد تا به حافظه خارجی برای همه کاربران دسترسی داشته باشد.
+
+com.google.android.xmpp.permission.SEND_RECEIVE
+به برنامه‌های Google اجازه می‌دهد پیام‌های XMPP را به و از سرورهای Google ارسال و دریافت کنند.
+
+android.permission.CHANGE_WIMAX_STATE
+به برنامه اجازه می‌دهد تلفن را به شبکه‌های وایمکس متصل کرده و آن را از آن جدا کند.
+
+android.permission.DOWNLOAD_WITHOUT_NOTIFICATION
+به برنامه اجازه می‌دهد تا فایل‌ها را از طریق مدیریت دانلود دانلود کند، بدون اینکه هیچ اعلانی به کاربر نشان داده شود.
+
+android.permission.MANAGE_ACTIVITY_STACKS
+⚠️ به برنامه اجازه می‌دهد تا مجموعه‌های فعالیتی را که برنامه‌های دیگر در آن اجرا می‌شوند، اضافه، حذف و تغییر دهد.
+
+android.permission.BIND_CALL_SERVICE
+به برنامه اجازه می‌دهد کنترل کند کاربر چه زمانی و چگونه صفحه تماس را ببیند.
+
+android.permission.ASEC_ACCESS
+به برنامه اجازه می دهد اطلاعات مربوط به حافظه داخلی را دریافت کند.
+
+android.permission.CHANGE_BACKGROUND_DATA_SETTING
+به برنامه اجازه می‌دهد تنظیمات استفاده از داده پس‌زمینه را تغییر دهد.
+
+android.permission.GET_DETAILED_TASKS
+⚠️ به برنامه اجازه می دهد تا اطلاعات دقیق در مورد کارهای در حال اجرا و اخیراً در حال اجرا را بازیابی کند.
+
+android.permission.FORCE_STOP_PACKAGES
+به برنامه اجازه می دهد تا به اجبار سایر برنامه ها را متوقف کند.
+
+android.permission.START_ANY_ACTIVITY
+به برنامه اجازه می‌دهد بدون در نظر گرفتن محافظت از مجوز یا وضعیت صادر شده، هر فعالیتی را شروع کند.
+
+android.permission.ASEC_CREATE
+به برنامه اجازه می دهد تا حافظه داخلی ایجاد کند.
+
+android.permission.ASEC_RENAME
+به برنامه اجازه می دهد نام حافظه داخلی را تغییر دهد.
+
+android.permission.GET_APP_OPS_STATS
+🚫 به برنامه اجازه می دهد تا آمار عملیات برنامه جمع آوری شده را بازیابی کند. 
+
+android.permission.ASEC_MOUNT_UNMOUNT
+به برنامه اجازه می‌دهد تا حافظه داخلی را نصب یا جدا کند.
+
+android.permission.SET_SCREEN_COMPATIBILITY
+⚠️ به برنامه اجازه می دهد تا حالت سازگاری صفحه نمایش سایر برنامه ها را کنترل کند.
+
+android.permission.ASEC_DESTROY
+به برنامه اجازه می دهد تا حافظه داخلی را از بین ببرد.
+
+android.permission.INTERACT_ACROSS_USERS
+⚠️ به برنامه اجازه می دهد تا اقداماتی را در بین کاربران مختلف دستگاه انجام دهد. 
+
+com.google.android.gtalkservice.permission.GTALK_SERVICE
+⚠️ برای پیام های ابری سرور به دستگاه و برای همگام سازی اعلان ها استفاده می شود. Google Talk از این سرویس برای تبادل پیام و همگام سازی وضعیت حضور استفاده می کند.
+
+android.permission.RECEIVE_EMERGENCY_BROADCAST
+🚫 به برنامه اجازه می دهد پیام های پخش اضطراری را دریافت و پردازش کند.
+
+com.google.android.providers.talk.permission.READ_ONLY
+به برنامه‌ها اجازه می‌دهد داده‌های ارائه‌دهنده محتوای Google Talk را بخوانند.
+
+com.google.android.providers.talk.permission.WRITE_ONLY
+به برنامه‌ها اجازه می‌دهد تا داده‌ها را در ارائه‌دهنده محتوای Google Talk بنویسند.
+
+com.android.email.permission.READ_ATTACHMENT
+به برنامه اجازه می‌دهد پیوست‌های ایمیل شما را بخواند.
+
+android.permission.RETRIEVE_WINDOW_CONTENT
+⚠️ به برنامه اجازه می دهد محتوای پنجره فعال را بازیابی کند.
+
+com.android.voicemail.permission.READ_WRITE_ALL_VOICEMAIL
+به برنامه اجازه می‌دهد همه پست‌های صوتی را که این دستگاه می‌تواند به آنها دسترسی داشته باشد، ذخیره و بازیابی کند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.android
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به سرویس‌های Android وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.orkut
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Orkut وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.doraemon
+به برنامه‌های کاربردی اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این تلفن به سرویس Google Catalogs وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.lh2
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Picasa Web Albums وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.wise
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Spreadsheets وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.speechpersonalization
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به سرویس تشخیص گفتار شخصی‌شده وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.notebook
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Notebook وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierra
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Checkout وارد شوند (و احتمالاً خرید کنند).
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.groups2
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Groups وارد شوند
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.goanna_mobile
+به برنامه‌های کاربردی اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این تلفن به سرویس Google Tasks وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.knol
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Knol وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.blogger
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به بلاگر وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierraqa
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Checkout QA وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.speech
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android وارد جستجوی صوتی Google شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.health
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Health وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Checkout Sandbox وارد شوند.
+
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.writely
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Docs وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.print
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android وارد جستجوی کتاب Google شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.news
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google News وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.androidsecure
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به سرویس‌های Android وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.ig
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به iGoogle وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.talk
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Talk وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.youtube
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به YouTube وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.jotspot
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به JotSpot وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.dodgeball
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Dodgeball وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.OTHER_SERVICES
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به سرویس‌های Google نامشخص وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.reader
+به برنامه‌های کاربردی اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این تلفن به سرویس Google Reader وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.geowiki
+به برنامه‌های کاربردی اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این تلفن به سرویس Google Map maker وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.grandcentral
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Voice وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.adwords
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google AdWords وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.یوتیوب کاربر
+به برنامه‌ها اجازه می‌دهد نام کاربری(های) YouTube مرتبط با حساب(های) Google ذخیره شده در این دستگاه Android را ببینند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.mail
+به برنامه اجازه می‌دهد تا توکن‌های احراز هویت را درخواست کند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.sitemaps
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Webmaster Tools وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.local
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Maps وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.cp
+به برنامه‌ها اجازه می‌دهد به مخاطبین و اطلاعات نمایه حساب(های) ذخیره شده در این دستگاه Android دسترسی داشته باشند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.wifi
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Wi-Fi وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.cl
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به تقویم Google وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.mobile
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به برنامه‌های تلفن همراه Google وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.gbase
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Base وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.panoramio
+به برنامه های کاربردی اجازه می دهد تا با استفاده از حساب(های) ذخیره شده در این تلفن به سرویس Panoramio وارد شوند.
+
+com.google.android.googleapps.permission.GOOGLE_AUTH.finance
+به برنامه‌ها اجازه می‌دهد با استفاده از حساب(های) ذخیره شده در این دستگاه Android به Google Finance وارد شوند
+
+com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+به برنامه‌ها اجازه می‌دهد به اطلاعاتی درباره نحوه نصب آن‌ها در دستگاه شما دسترسی داشته باشند.
+
+com.google.android.apps.docs.permission.SYNC_STATUS
+به برنامه‌ها اجازه می‌دهد تا به وضعیت همگام‌سازی اسناد و داده‌ها دسترسی داشته باشند و آن را مدیریت کنند.
+
+com.google.android.apps.photos.permission.ACCESS_MEDIA
+به برنامه‌ها اجازه می‌دهد منابع مرتبط عکس را مدیریت، مشاهده، آپلود یا همگام‌سازی کنند.
+
+com.google.android.apps.photos.permission.UPDATE_MEDIA
+به برنامه‌ها اجازه می‌دهد داده‌های رسانه را تغییر دهند
+
+com.google.android.apps.photos.permission.UPLOAD_MEDIA
+به برنامه‌ها اجازه می‌دهد فایل‌های رسانه‌ای را در سرویس‌های ابری Google آپلود کنند.
+
+com.google.android.apps.photos.permission.SYNC_MEDIA
+به برنامه‌ها اجازه می‌دهد تا همگام‌سازی عکس‌ها را با سرویس‌های ابری مدیریت کنند.
+
+com.google.android.gms.permission.CAR_FUEL
+به برنامه‌ها اجازه می‌دهد به اطلاعات مربوط به سوخت خودرو دسترسی داشته باشند.
+
+com.google.android.gms.permission.CAR_SPEED
+به برنامه‌ها اجازه می‌دهد به اطلاعات مربوط به سرعت خودرو دسترسی داشته باشند.
+
+com.google.android.gms.permission.CAR_NAVIGATION
+به برنامه‌ها اجازه می‌دهد به اطلاعات مربوط به ناوبری خودرو دسترسی داشته باشند.
+
+com.google.android.gms.permission.LOCATION
+به برنامه ها اجازه می دهد تا به عملکردهای مرتبط با موقعیت مکانی دسترسی داشته باشند.
+
+com.google.android.apps.maps.permission.MAPS_DATA
+به برنامه‌ها اجازه می‌دهد منابع مرتبط با نقشه را مدیریت کنند.
+
+com.google.android.apps.maps.permission.LOCATION_UPDATE
+به برنامه‌ها اجازه می‌دهد به‌روزرسانی‌های مکان را دریافت و مدیریت کنند.
+
+com.google.android.apps.docs.permission.C2D_MESSAGE
+به برنامه‌ها اجازه می‌دهد پیام‌های فشاری را از سرورهای Google دریافت کنند و به‌روزرسانی‌ها و اعلان‌های پس‌زمینه را فعال می‌کند.
+
+android.permission.ACCESS_FPS_COUNTER
+به برنامه‌ها اجازه می‌دهد به شمارنده فریم در ثانیه (FPS) سیستم برای نظارت بر عملکرد و اشکال‌زدایی دسترسی داشته باشند.
+
+android.permission.MANAGE_GAME_ACTIVITY
+به برنامه‌ها اجازه می‌دهد تا فعالیت‌های بازی را مدیریت کنند، به طور بالقوه تنظیمات بازی را کنترل کنند یا با چرخه حیات بازی تعامل داشته باشند.
+
+android.permission.MANAGE_GAME_MODE
+به برنامه‌ها اجازه می‌دهد تنظیمات حالت بازی دستگاه را مدیریت کنند و به طور بالقوه منابع و عملکرد بازی‌ها را بهینه کنند.
+
+android.permission.MODIFY_ADSERVICES_STATE
+به برنامه‌ها اجازه می‌دهد تا وضعیت سرویس‌های تبلیغاتی Android را تغییر دهند و بر عملکرد تبلیغات تأثیر بگذارند.
+
+android.permission.ACCESS_ADSERVICES_STATE
+به برنامه‌ها اجازه می‌دهد به وضعیت سرویس‌های تبلیغاتی Android دسترسی داشته باشند و اطلاعاتی درباره محیط تبلیغات ارائه دهند.
+
+android.permission.MODIFY_ADSERVICES_STATE_COMPAT
+به برنامه‌ها اجازه می‌دهد تا وضعیت سرویس‌های تبلیغاتی Android را با استفاده از APIهای سازگاری تغییر دهند.
+
+android.permission.ACCESS_ADSERVICES_STATE_COMPAT
+به برنامه‌ها اجازه می‌دهد با استفاده از APIهای سازگاری به وضعیت سرویس‌های تبلیغاتی Android دسترسی داشته باشند.
+
+android.permission.UPDATE_PRIVILEGED_AD_ID
+به برنامه‌ها اجازه می‌دهد شناسه تبلیغاتی ممتاز دستگاه را، احتمالاً برای سناریوهای تبلیغاتی خاص، به‌روزرسانی کنند.
+
+android.permission.UPDATE_PRIVILEGED_AD_ID_COMPAT
+به برنامه‌ها اجازه می‌دهد شناسه تبلیغاتی ممتاز دستگاه را با استفاده از APIهای سازگاری به‌روزرسانی کنند.
+
+android.permission.READ_DROPBOX_DATA
+به برنامه‌ها اجازه می‌دهد تا داده‌های سرویس Dropbox سیستم را بخوانند، به‌طور بالقوه به گزارش‌های سیستم یا گزارش‌های خرابی دسترسی داشته باشند.
+
+com.google.android.gms.trustagent.permission.TRUSTAGENT_STATE
+به برنامه‌ها اجازه می‌دهد تا به Trust Agents که باز کردن قفل دستگاه و امنیت را مدیریت می‌کنند، دسترسی داشته باشند و آن را مدیریت کنند.
+
+com.google.android.apps.enterprise.dmagent.permission.AutoSyncPermission
+به یک عامل مدیریت دستگاه Google Enterprise اجازه می دهد تا همگام سازی خودکار داده ها را راه اندازی کند.
+
+com.google.android.providers.settings.permission.READ_GSETTINGS
+به برنامه‌ها اجازه می‌دهد تنظیمات خاص Google را بخوانند که احتمالاً برای دسترسی به تنظیمات حساب یا سرویس Google استفاده می‌شوند.
+
+com.google.android.providers.settings.permission.WRITE_GSETTINGS
+به برنامه‌ها اجازه می‌دهد تنظیمات خاص Google را تغییر دهند و تغییرات در حساب Google یا تنظیمات سرویس را فعال کنند.
+
+com.google.android.gms.auth.cryptauth.permission.CABLEV2_SERVER_LINK
+به برنامه‌ها اجازه می‌دهد با استفاده از پروتکل CryptAuth's Cable v2 پیوندی امن برای احراز هویت ایجاد کنند.
+
+com.google.android.gms.permission.REQUEST_SCREEN_LOCK_COMPLEXITY
+به برنامه‌ها اجازه می‌دهد تا سطح معینی از پیچیدگی را برای قفل صفحه دستگاه درخواست کنند.
+
+android.permission.SET_BIOMETRIC_DIALOG_ADVANCED
+به برنامه‌ها اجازه می‌دهد تا رفتار گفتگوی بیومتریک سیستم را سفارشی و کنترل کنند.
+
+android.permission.CONNECTIVITY_USE_RESTRICTED_NETWORKS
+به برنامه‌ها اجازه می‌دهد از شبکه‌های محدود شده، به طور بالقوه برای دسترسی یا عملکرد شبکه ممتاز استفاده کنند.
+
+android.permission.ALLOCATE_AGGRESSIVE
+به برنامه‌ها اجازه می‌دهد تا منابع سیستم را به طور بالقوه برای بهبود عملکرد و همچنین با خطر بی‌ثباتی تخصیص دهند.
+
+android.car.permission.CAR_POWER
+به برنامه‌ها اجازه می‌دهد تا وضعیت انرژی یک سیستم خودرو را مدیریت کنند و ویژگی‌های مربوط به مدیریت انرژی خودرو را فعال می‌کنند.
+
+com.google.android.wearable.WRITE_SETTINGS
+به برنامه‌ها اجازه می‌دهد تنظیمات را در دستگاه‌های پوشیدنی Google تغییر دهند.
+
+com.google.android.gms.permission.APPINDEXING
+به برنامه‌ها اجازه می‌دهد از فهرست‌بندی برنامه Google برای در دسترس قرار دادن محتوا در جستجوی Google و دستیار استفاده کنند.
+
+android.permission.MODIFY_DEFAULT_AUDIO_EFFECTS
+به برنامه‌ها اجازه می‌دهد جلوه‌های صوتی پیش‌فرض سیستم، مانند اکولایزر یا ریورب را تغییر دهند.
+
+android.permission.SUBSTITUTE_NOTIFICATION_APP_NAME
+به برنامه‌ها اجازه می‌دهد نام برنامه را در اعلان‌ها جایگزین کنند.
+
+android.permission.SUBSTITUTE_SHARE_TARGET_APP_NAME_AND_ICON
+به برنامه‌ها اجازه می‌دهد نام و نماد برنامه را زمانی که به‌عنوان هدف اشتراک‌گذاری ظاهر می‌شود جایگزین کنند.
+
+android.permission.MANAGE_VOICE_KEYPHRASES
+به برنامه‌ها اجازه می‌دهد عبارات کلیدی صوتی را که توسط «دستیار Google» و سایر ویژگی‌های فعال‌شده صوتی استفاده می‌شوند، مدیریت کنند.
+
+android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS
+به یک برنامه همراه اجازه می دهد تا اتصالات Wi Fi را تأیید کند و کنترل اتصالات شبکه را برای دستگاه های جفت شده فعال می کند.
+
+android.permission.UWB
+به برنامه اجازه می دهد تا از فناوری باند فوق العاده (UWB) برای برد کوتاه، ارتباطات ایمن و مکان استفاده کند.
+
+android.permission.MANAGE_WIFI_INTERFACES
+به برنامه اجازه می‌دهد تا رابط‌های Wi-Fi را مدیریت کند و جنبه‌هایی مانند فعال / غیرفعال کردن آداپتورهای Wi-Fi را کنترل کند.
+
+android.permission.MANAGE_WIFI_NETWORK_SELECTION
+به برنامه اجازه می‌دهد تا انتخاب شبکه‌های Wi-Fi را مدیریت کند، به‌طور بالقوه اولویت‌بندی یا انتخاب شبکه‌ها.
+
+android.permission.USE_FULL_SCREEN_INTENT
+به برنامه اجازه می‌دهد تا اهداف تمام صفحه را نمایش دهد و اعلان‌های همه‌جانبه یا مهم را فعال می‌کند.
+
+com.google.android.gms.permission.ACCESS_NEARBY_SHARE_API
+به برنامه اجازه می‌دهد از Nearby Share API Google برای اشتراک‌گذاری فایل و کشف دستگاه استفاده کند.
+
+com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK
+به برنامه اجازه می‌دهد از API اعلان تماس‌های Google برای اعلان‌های تماس دریافت کند.
+
+android.permission.REQUEST_COMPANION_PROFILE_COMPUTER
+به برنامه اجازه می‌دهد تا درخواست دسترسی به نمایه دستگاه همراه از نوع رایانه‌ای کند.
+
+android.permission.REQUEST_COMPANION_RUN_IN_BACKGROUND
+به برنامه اجازه می‌دهد وقتی یک برنامه همراه است، برای اجرا در پس‌زمینه مجوز درخواست کند.
+
+android.permission.REQUEST_COMPANION_SELF_MANAGED
+به برنامه اجازه می‌دهد تا یک برنامه همراه خود مدیریت باشد و چرخه عمر خود را کنترل کند.
+
+android.permission.CONTROL_DISPLAY_SATURATION
+به برنامه اجازه می دهد تا اشباع رنگ نمایشگر دستگاه را کنترل کند.
+
+android.permission.TETHER_PRIVILEGED
+به برنامه اجازه می‌دهد تا اقدامات ممتاز اتصال اینترنت مانند فعال کردن یا پیکربندی گزینه‌های اتصال به اینترنت را انجام دهد.
+
+android.permission.REAL_GET_TASKS
+به برنامه اجازه می‌دهد تا فهرستی از وظایف واقعی (فرآیندها و فعالیت‌ها)، از جمله کارهای پس‌زمینه را بازیابی کند.
+
+com.google.android.gms.permission.SAFETY_NET
+به برنامه اجازه می‌دهد از SafetyNet API Google برای بررسی یکپارچگی دستگاه و تأیید امنیتی استفاده کند.
+
+android.permission.ACCESS_NETWORK_CONDITIONS
+به برنامه اجازه می‌دهد به اطلاعاتی درباره شرایط شبکه، مانند قدرت سیگنال یا کیفیت اتصال، دسترسی پیدا کند.
+
+android.permission.SCORE_NETWORKS
+به برنامه اجازه می‌دهد امتیازهای کیفیت شبکه را ارائه دهد، که احتمالاً بر انتخاب شبکه در دستگاه تأثیر می‌گذارد.
+
+android.permission.USER_ACTIVITY
+به برنامه اجازه می‌دهد تا فعالیت کاربر، مانند حرکت یا استفاده از صفحه، را برای اهداف مختلف، از جمله تناسب اندام یا آگاهی از زمینه، ردیابی کند.
+
+android.permission.MODIFY_AUDIO_ROUTING
+به برنامه اجازه می‌دهد مسیریابی صدا را تغییر دهد، جایی که صدا هدایت می‌شود (مثلاً به بلندگو، هدفون یا دستگاه‌های بلوتوث).
+
+android.permission.MODIFY_DAY_NIGHT_MODE
+به برنامه اجازه می‌دهد حالت روز / شب سیستم (طرح زمینه تاریک / روشن) را تغییر دهد، که احتمالاً تغییرات تم را خودکار می‌کند.
+
+com.google.android.finsky.permission.GEARHEAD_SERVICE
+به یک برنامه اجازه می‌دهد از سرویس Google Play Store Gearhead مربوط به مدیریت دستگاه استفاده کند.
+
+com.google.android.permission.ACCESSIBILITY_SCAN_SERVICE
+به یک برنامه اجازه می دهد تا یک سرویس اسکن دسترسی را که برای اسکن صفحه برای کارهای مختلف استفاده می شود، پیاده سازی کند.
+
+android.permission.START_TASKS_FROM_RECENTS
+به برنامه اجازه می‌دهد تا وظایف را از فهرست وظایف اخیر راه‌اندازی کند و میانبرها یا ویژگی‌های مدیریت کار را فعال کند

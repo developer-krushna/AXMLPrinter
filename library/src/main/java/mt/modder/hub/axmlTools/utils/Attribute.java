@@ -58,9 +58,20 @@ public class Attribute {
 	}
 	
 	public static Map<Integer, String> loadSystemAttrIds() {
-		try{
-			BufferedReader reader = toReader("/assets/r_values.ini");
-			Map<Integer, String> map = new HashMap<>();
+		Map<Integer, String> map = new HashMap<>();
+		// IMPORTANT: this backs a `static final` field initializer (AttrIds.ids).
+		// If this throws, the JVM marks the whole AttrIds class as unusable
+		// (ExceptionInInitializerError -> NoClassDefFoundError on every later
+		// access), which silently breaks attribute-name resolution everywhere.
+		// On Android, files under src/main/assets are not reachable through
+		// Class.getResourceAsStream(), so we must tolerate a null/failed read
+		// instead of throwing, and just return an empty (degraded) map.
+		BufferedReader reader = null;
+		try {
+			reader = toReader();
+			if (reader == null) {
+				return map;
+			}
 			String line;
 			while ((line = reader.readLine()) != null) {
 				String[] items = line.trim().split("=");
@@ -71,14 +82,25 @@ public class Attribute {
 				Integer id = Integer.valueOf(items[1].trim());
 				map.put(id, name);
 			}
-			return map;
-		} catch (IOException e) {
-			throw new RuntimeException(e);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (reader != null) {
+				try {
+					reader.close();
+				} catch (IOException ignored) {
+				}
+			}
 		}
+		return map;
 	}
 	
-	private static BufferedReader toReader(String path) {
-		return new BufferedReader(new InputStreamReader(Attribute.class.getResourceAsStream(path)));
+	private static BufferedReader toReader() {
+		InputStream stream = Attribute.class.getResourceAsStream("/assets/r_values.txt");
+		if (stream == null) {
+			return null;
+		}
+		return new BufferedReader(new InputStreamReader(stream));
 	}
 	
 }

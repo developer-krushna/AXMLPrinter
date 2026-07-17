@@ -1,1 +1,3 @@
+rootProject.name = "AXMLPrinter"
 include ':app'
+include ':library'
