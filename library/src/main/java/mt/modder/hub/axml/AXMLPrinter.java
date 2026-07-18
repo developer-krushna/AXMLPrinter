@@ -56,21 +56,21 @@ public final class AXMLPrinter {
 
 	// Constants for conversion factors and unit strings
 	private static final float MANTISSA_MULT =
-	1.0f / (1 << TypedValue.COMPLEX_MANTISSA_SHIFT);
+			1.0f / (1 << TypedValue.COMPLEX_MANTISSA_SHIFT);
 
-    private static final float[] RADIX_MULTS = new float[]{
-		1.0f * MANTISSA_MULT /* 0.00390625f */, 
-		1.0f / (1 << 7) * MANTISSA_MULT /* 3.051758E-5f */,
-		1.0f / (1 << 15) * MANTISSA_MULT /* 1.192093E-7f */, 
-		1.0f / (1 << 23) * MANTISSA_MULT /* 4.656613E-10f */
-    };
-    private static final String[] DIMENSION_UNIT_STRS = new String[]{
-		"px", "dp", "sp", "pt", "in", "mm"
-    };
-    private static final String[] FRACTION_UNIT_STRS = new String[]{
-		"%", "%p"
-    };
-	
+	private static final float[] RADIX_MULTS = new float[]{
+			1.0f * MANTISSA_MULT /* 0.00390625f */,
+			1.0f / (1 << 7) * MANTISSA_MULT /* 3.051758E-5f */,
+			1.0f / (1 << 15) * MANTISSA_MULT /* 1.192093E-7f */,
+			1.0f / (1 << 23) * MANTISSA_MULT /* 4.656613E-10f */
+	};
+	private static final String[] DIMENSION_UNIT_STRS = new String[]{
+			"px", "dp", "sp", "pt", "in", "mm"
+	};
+	private static final String[] FRACTION_UNIT_STRS = new String[]{
+			"%", "%p"
+	};
+
 
 	private boolean enableId2Name = false;// Enable ID to name translation
 	private boolean enableAttributeConversion = false; // Enable attribute value conversion
@@ -96,15 +96,15 @@ public final class AXMLPrinter {
 	private boolean isPermissionInfoLoaded = false;
 	private String PERMISSION_TAG = "uses-permission";
 	private boolean isExtractPermissionDescription = false;
-	
+
 
 
 	/**
-     * Enables or disables ID-to-name conversion.
-     * This allows translating hex IDs in XML to their corresponding resource names.
-     *
-     * @param enable Flag to enable or disable this feature.
-     */
+	 * Enables or disables ID-to-name conversion.
+	 * This allows translating hex IDs in XML to their corresponding resource names.
+	 *
+	 * @param enable Flag to enable or disable this feature.
+	 */
 	public void setEnableID2Name(boolean enable) {
 		enableId2Name = enable;
 		if (enable) {
@@ -120,128 +120,128 @@ public final class AXMLPrinter {
 
 
 	/**
-     * Enables or disables attribute value translation.
-     * This feature interprets attribute values and converts them to human-readable formats.
-     *
-     * @param enable Flag to enable or disable this feature.
-     */
+	 * Enables or disables attribute value translation.
+	 * This feature interprets attribute values and converts them to human-readable formats.
+	 *
+	 * @param enable Flag to enable or disable this feature.
+	 */
 	public void setAttrValueTranslation(boolean enable) {
 		enableAttributeConversion = enable;
 	}
 
 	/**
-     * Enables or disables permission description extraction from XML.
-     *
-     * @param enable Flag to enable or disable this feature.
-     */
+	 * Enables or disables permission description extraction from XML.
+	 *
+	 * @param enable Flag to enable or disable this feature.
+	 */
 	public void setExtractPermissionDescription(boolean isExtract) {
 		isExtractPermissionDescription = isExtract;
 	}
 
 	/**
-     * Loads system resources from the bundled resources.arsc file.
-     *
-     * @throws Exception if the resource file cannot be loaded.
-     */
-    private void loadSystemResources() throws Exception {
-        try (InputStream arscStream = AXMLPrinter.class.getResourceAsStream("/assets/resources.arsc")) {
-            if (arscStream == null) {
-                // Not reachable via classpath on this runtime (e.g. real Android,
-                // where src/main/assets is not on the classpath). Caller already
-                // wraps this in try/catch and falls back to systemResourceFile = null,
-                // so just signal failure instead of letting a NPE escape from
-                // systemResourceFile.loadArscData(null).
-                throw new IOException("resources.arsc not found on classpath at /assets/resources.arsc");
-            }
-            systemResourceFile.loadArscData(arscStream);
-        }
-    }
+	 * Loads system resources from the bundled resources.arsc file.
+	 *
+	 * @throws Exception if the resource file cannot be loaded.
+	 */
+	private void loadSystemResources() throws Exception {
+		try (InputStream arscStream = AXMLPrinter.class.getResourceAsStream("/assets/resources.arsc")) {
+			if (arscStream == null) {
+				// Not reachable via classpath on this runtime (e.g. real Android,
+				// where src/main/assets is not on the classpath). Caller already
+				// wraps this in try/catch and falls back to systemResourceFile = null,
+				// so just signal failure instead of letting a NPE escape from
+				// systemResourceFile.loadArscData(null).
+				throw new IOException("resources.arsc not found on classpath at /assets/resources.arsc");
+			}
+			systemResourceFile.loadArscData(arscStream);
+		}
+	}
 
 	/**
-     * Reads a binary XML file and converts it into a human-readable XML string.
-     *
-     * @param path Path to the binary XML file.
-     * @return The converted XML content as a string.
-     * @throws Exception if an error occurs while reading the file.
-     */
-    public String readFromFile(String path) throws Exception {
-        File inputFile = new File(path);
-        byte[] byteArray = new byte[(int) inputFile.length()];
-        FileInputStream fis = new FileInputStream(inputFile);
-        try {
-            // fis.read(byteArray) is a SINGLE read() call, which is not
-            // guaranteed to fill the whole array in one go (this depends on
-            // the underlying stream/filesystem - e.g. some SAF/FUSE-backed
-            // paths). Reading in a loop avoids silently truncating the file,
-            // which would otherwise corrupt/break parsing of larger XMLs.
-            int offset = 0;
-            int read;
-            while (offset < byteArray.length
-                    && (read = fis.read(byteArray, offset, byteArray.length - offset)) != -1) {
-                offset += read;
-            }
-        } finally {
-            fis.close();
-        }
+	 * Reads a binary XML file and converts it into a human-readable XML string.
+	 *
+	 * @param path Path to the binary XML file.
+	 * @return The converted XML content as a string.
+	 * @throws Exception if an error occurs while reading the file.
+	 */
+	public String readFromFile(String path) throws Exception {
+		File inputFile = new File(path);
+		byte[] byteArray = new byte[(int) inputFile.length()];
+		FileInputStream fis = new FileInputStream(inputFile);
+		try {
+			// fis.read(byteArray) is a SINGLE read() call, which is not
+			// guaranteed to fill the whole array in one go (this depends on
+			// the underlying stream/filesystem - e.g. some SAF/FUSE-backed
+			// paths). Reading in a loop avoids silently truncating the file,
+			// which would otherwise corrupt/break parsing of larger XMLs.
+			int offset = 0;
+			int read;
+			while (offset < byteArray.length
+					&& (read = fis.read(byteArray, offset, byteArray.length - offset)) != -1) {
+				offset += read;
+			}
+		} finally {
+			fis.close();
+		}
 
-        if (enableId2Name) {
-            File parentDir = inputFile.getParentFile();
-            if (parentDir != null) {
-                File resourceFile = new File(parentDir, "resources.arsc");
-                if (resourceFile.exists()) {
-                    try (InputStream arscStream = new FileInputStream(resourceFile)) {
-                        customResourceFile.loadArscData(arscStream);
-                        isCustomResourceFileExist = true;
-                    }
-                }
-            }
-        }
+		if (enableId2Name) {
+			File parentDir = inputFile.getParentFile();
+			if (parentDir != null) {
+				File resourceFile = new File(parentDir, "resources.arsc");
+				if (resourceFile.exists()) {
+					try (InputStream arscStream = new FileInputStream(resourceFile)) {
+						customResourceFile.loadArscData(arscStream);
+						isCustomResourceFileExist = true;
+					}
+				}
+			}
+		}
 
-        // Convert the binary XML to readable XML
-        return convertXml(byteArray);
-    }
+		// Convert the binary XML to readable XML
+		return convertXml(byteArray);
+	}
 
-    /**
-     * Loads custom (app) resource id -> name mappings from an arbitrary
-     * resources.arsc stream. Useful when the input XML doesn't come from a
-     * plain filesystem path (e.g. it was received as a content:// Uri from
-     * another app such as a file manager), so the automatic sibling-file
-     * lookup in {@link #readFromFile} can't be used. The caller is
-     * responsible for closing the stream.
-     */
-    public void loadCustomResources(InputStream arscStream) throws Exception {
-        customResourceFile.loadArscData(arscStream);
-        isCustomResourceFileExist = true;
-    }
-	
+	/**
+	 * Loads custom (app) resource id -> name mappings from an arbitrary
+	 * resources.arsc stream. Useful when the input XML doesn't come from a
+	 * plain filesystem path (e.g. it was received as a content:// Uri from
+	 * another app such as a file manager), so the automatic sibling-file
+	 * lookup in {@link #readFromFile} can't be used. The caller is
+	 * responsible for closing the stream.
+	 */
+	public void loadCustomResources(InputStream arscStream) throws Exception {
+		customResourceFile.loadArscData(arscStream);
+		isCustomResourceFileExist = true;
+	}
+
 	// for MT Manager
 	public void readProcessRes(String path) throws Exception {
 		if (!path.endsWith(".xml")) {
 			return;
 		}
-			File file = new File(path);
-			String resourceFile = file.getParent() + "/resources.arsc";
-			System.out.println(resourceFile);
-			if (new File(resourceFile).exists()) {
-				try {
-					try (InputStream arscStream = new FileInputStream(resourceFile)) {
-						customResourceFile.loadArscData(arscStream);
-					}
-					isCustomResourceFileExist = true;
-				} catch (Exception e) {
-					System.out.println(e);
-					isCustomResourceFileExist = false;
+		File file = new File(path);
+		String resourceFile = file.getParent() + "/resources.arsc";
+		System.out.println(resourceFile);
+		if (new File(resourceFile).exists()) {
+			try {
+				try (InputStream arscStream = new FileInputStream(resourceFile)) {
+					customResourceFile.loadArscData(arscStream);
 				}
+				isCustomResourceFileExist = true;
+			} catch (Exception e) {
+				System.out.println(e);
+				isCustomResourceFileExist = false;
 			}
+		}
 	}
 
 
 	/**
-     * Converts a binary XML byte array into a readable XML string.
-     *
-     * @param byteArray The binary XML byte array.
-     * @return The converted XML content as a string.
-     */
+	 * Converts a binary XML byte array into a readable XML string.
+	 *
+	 * @param byteArray The binary XML byte array.
+	 * @return The converted XML content as a string.
+	 */
 	public String convertXml(byte[] byteArray) {
 		System.out.println(COPYRIGHT);
 		if (!enableId2Name) {
@@ -304,17 +304,17 @@ public final class AXMLPrinter {
 							}
 						}
 
-						xmlContent.append(String.format("%s<%s%s", 
-						                                indentation, 
-														getMainNodeNamespacePrefix(xmlParser.getPrefix()), 
-														prefix));
+						xmlContent.append(String.format("%s<%s%s",
+								indentation,
+								getMainNodeNamespacePrefix(xmlParser.getPrefix()),
+								prefix));
 						indentation.append("    ");
 
 						// Handle namespaces
 						int depth = xmlParser.getDepth();
 						int namespaceStart = xmlParser.getNamespaceCount(depth - 1);
 						int namespaceEnd = xmlParser.getNamespaceCount(depth);
-						
+
 						//xmlContent.append(indentation).append("<!-- ").append(namespaceStart).append(" ").append(namespaceEnd).append(" -->");
 						for (int i = namespaceStart; i < namespaceEnd; i++) {
 							String namespaceFormat = (i == namespaceStart) ? "%sxmlns:%s=\"%s\"" : "\n%sxmlns:%s=\"%s\"";
@@ -327,17 +327,17 @@ public final class AXMLPrinter {
 								RandomResAutoPrefix_Name = nameSpacePrefix;
 								nameSpacePrefix = "app";
 							}
-							
-							xmlContent.append(String.format(namespaceFormat, 
-															(i == namespaceStart) ? " " : indentation, 
-															nameSpacePrefix, 
-															nameSpaceUri));
+
+							xmlContent.append(String.format(namespaceFormat,
+									(i == namespaceStart) ? " " : indentation,
+									nameSpacePrefix,
+									nameSpaceUri));
 							isExistAndroidNamespace = true; // make it true as it completed the above task
-							
+
 						}
 
 						// if NamespaceUri failed to extract then add this manually
-					    if (!isExistAndroidNamespace && !isManuallyAddedAndroidNamespace) {
+						if (!isExistAndroidNamespace && !isManuallyAddedAndroidNamespace) {
 							String namespaceFormat = "%sxmlns:%s=\"%s\"";
 							// Search android namespace if exist then add
 							if(containsSequence(byteArray, ANDROID_NAMESPACE.getBytes(StandardCharsets.UTF_8)) || prefix.equals("manifest")){
@@ -352,7 +352,7 @@ public final class AXMLPrinter {
 							}
 							isExistAndroidNamespace = false; // false because we add this mannualy
 						}
-							
+
 						// Handle attributes
 						if (attributeCount > 0) {
 							if (attributeCount == 1) {
@@ -370,22 +370,22 @@ public final class AXMLPrinter {
 									int valueSize = attributeValue.codePointCount(0, attributeValue.length());
 									if(valueSize <= 14 || prefix.equals(PERMISSION_TAG)){
 										// Indention is not needed because it has 1 attribute only its main node
-										xmlContent.append(String.format(attributeFormat, 
-																		" ", 
-																		getAttrNamespacePrefix(xmlParser, i, attributeName), 
-																		attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""), 
-																		attributeValue));
+										xmlContent.append(String.format(attributeFormat,
+												" ",
+												getAttrNamespacePrefix(xmlParser, i, attributeName),
+												attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""),
+												attributeValue));
 									} else {
 										xmlContent.append('\n');
-										xmlContent.append(String.format(attributeFormat, 
-																		indentation, 
-																		getAttrNamespacePrefix(xmlParser, i, attributeName), 
-																		attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""), 
-																		attributeValue));
+										xmlContent.append(String.format(attributeFormat,
+												indentation,
+												getAttrNamespacePrefix(xmlParser, i, attributeName),
+												attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""),
+												attributeValue));
 									}
 								}
 							} else {
-							    xmlContent.append('\n');
+								xmlContent.append('\n');
 								for (int i = 0; i < attributeCount; i++) {
 									// Skip attributes with a dot (.)
 									if (xmlParser.getAttributeName(i).contains(".")) {
@@ -397,11 +397,11 @@ public final class AXMLPrinter {
 									// Final Addition of namespace , attribute along with its corresponding value
 									// Indention is needed because it 2 or more attributes
 
-									xmlContent.append(String.format(attributeFormat, 
-									                                indentation, 
-																	getAttrNamespacePrefix(xmlParser, i, attributeName), 
-																	attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""), 
-																	getAttributeValue(xmlParser, i)));
+									xmlContent.append(String.format(attributeFormat,
+											indentation,
+											getAttrNamespacePrefix(xmlParser, i, attributeName),
+											attributeName.replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, ""),
+											getAttributeValue(xmlParser, i)));
 
 								}
 							}
@@ -414,10 +414,10 @@ public final class AXMLPrinter {
 						indentation.setLength(indentation.length() - "    ".length());
 						if (!isEndOfPrecededXmlTag(xmlParser, xmlParser.getPrevious())) {
 
-							xmlContent.append(String.format("%s</%s%s>\n", 
-															indentation, 
-															getMainNodeNamespacePrefix(xmlParser.getPrefix()), 
-															xmlParser.getName()));
+							xmlContent.append(String.format("%s</%s%s>\n",
+									indentation,
+									getMainNodeNamespacePrefix(xmlParser.getPrefix()),
+									xmlParser.getName()));
 						} else {
 							xmlContent.append(" />\n");
 						}
@@ -428,9 +428,9 @@ public final class AXMLPrinter {
 						if (xmlParser.getPrevious().type == XmlPullParser.START_TAG) {
 							xmlContent.append(">\n");
 						}
-						xmlContent.append(String.format("%s%s\n", 
-						                                indentation, 
-														xmlParser.getText()));
+						xmlContent.append(String.format("%s%s\n",
+								indentation,
+								xmlParser.getText()));
 						break;
 				}
 			}
@@ -445,14 +445,14 @@ public final class AXMLPrinter {
 	}
 
 	/**
-     * Retrieves the value of an attribute based on its type.
-     * This method processes attribute types like strings, references, dimensions, fractions, etc.,
-     * and returns their human-readable representation.
-     *
-     * @param xmlParser The XML parser instance.
-     * @param index     The index of the attribute to retrieve.
-     * @return A formatted string representing the attribute value.
-     */
+	 * Retrieves the value of an attribute based on its type.
+	 * This method processes attribute types like strings, references, dimensions, fractions, etc.,
+	 * and returns their human-readable representation.
+	 *
+	 * @param xmlParser The XML parser instance.
+	 * @param index     The index of the attribute to retrieve.
+	 * @return A formatted string representing the attribute value.
+	 */
 	private String getAttributeValue(AXmlResourceParser xmlParser, int index) {
 
 		String attributeName = getAttributeName(xmlParser, index).replaceAll(CUSTOM_ATTRIBUTE_TAG, "").replaceAll(SYSTEM_ATTRIBUTE_TAG, "");
@@ -473,9 +473,9 @@ public final class AXMLPrinter {
 			case TypedValue.TYPE_ATTRIBUTE /* 2 */:
 				// Resource ID
 				if (enableId2Name) {
-				    return "?" + extractResourecID(attributeValueData);
+					return "?" + extractResourecID(attributeValueData);
 				} else {
-				    return "?" + formatToHex(attributeValueData);
+					return "?" + formatToHex(attributeValueData);
 				}
 
 			case TypedValue.TYPE_REFERENCE /* 1 */:
@@ -510,14 +510,14 @@ public final class AXMLPrinter {
 
 			case TypedValue.TYPE_DIMENSION /* 5 */:
 				// Dimension value
-			    return formatDimension(attributeValueData);
+				return formatDimension(attributeValueData);
 
 			case TypedValue.TYPE_FRACTION /* 6 */:
 				// Fraction value
 				return formatFraction(attributeValueData);
-				
+
 			default:
-				// Handle enum or flag values and other cases 
+				// Handle enum or flag values and other cases
 				if (enableAttributeConversion) {
 					AttributesExtractor extractor = AttributesExtractor.getInstance();
 					String decodedValue = extractor != null ? extractor.decode(attributeName, attributeValueData) : null;
@@ -541,17 +541,17 @@ public final class AXMLPrinter {
 				return result;
 		}
 	}
-	
-	
-	
+
+
+
 
 	// Checks if the current XML tag is the end of the previous tag
 	private  boolean isEndOfPrecededXmlTag(AXmlResourceParser xmlParser, AXmlResourceParser.PrecededXmlToken precededXmlToken) {
 		return precededXmlToken.type == XmlPullParser.START_TAG &&
-			xmlParser.getEventType() == XmlPullParser.END_TAG &&
-			xmlParser.getName().equals(precededXmlToken.name) &&
-			((precededXmlToken.namespace == null && xmlParser.getPrefix() == null) ||
-			(precededXmlToken.namespace != null && xmlParser.getPrefix() != null && xmlParser.getPrefix().equals(precededXmlToken.namespace)));
+				xmlParser.getEventType() == XmlPullParser.END_TAG &&
+				xmlParser.getName().equals(precededXmlToken.name) &&
+				((precededXmlToken.namespace == null && xmlParser.getPrefix() == null) ||
+						(precededXmlToken.namespace != null && xmlParser.getPrefix() != null && xmlParser.getPrefix().equals(precededXmlToken.namespace)));
 	}
 
 	// Retrieves the main node namespace prefix if it exists
@@ -563,7 +563,7 @@ public final class AXMLPrinter {
 	private String getAttrNamespacePrefix(AXmlResourceParser xmlParser, int position, String attributeName) {
 		String namespace = xmlParser.getAttributePrefix(position);
 		int attributeNameResource = xmlParser.getAttributeNameResource(position);
-		
+
 		if (attributeName.contains(CUSTOM_ATTRIBUTE_TAG)) {
 			// Check if auto namespace exists or not
 			if(isAuto_NameSpaceExists){
@@ -572,7 +572,7 @@ public final class AXMLPrinter {
 			return "";
 			// check if any unknown attributes are found and it will start from "id"
 		} else if (isUnknownAttribute(attributeName)) {
-		    return "";
+			return "";
 		} else if (attributeName.contains(SYSTEM_ATTRIBUTE_TAG)) {
 			return ANDROID_PREFIX + ":";
 		} else if (namespace.isEmpty()) {
@@ -581,8 +581,8 @@ public final class AXMLPrinter {
 					return "";
 				} else {
 					if(attributeNameResource == 0){
-					    return "";
-					} 
+						return "";
+					}
 					if(checkIfCustomAttribute(attributeNameResource)){
 						return APP_PREFIX + ":";
 					} else {
@@ -600,17 +600,17 @@ public final class AXMLPrinter {
 	}
 
 	/**
-     * Extracts the attribute name dynamically based on system or custom resources.
-     *
-     * @param xmlParser The XML parser instance.
-     * @param index     The index of the attribute to retrieve.
-     * @return The attribute name as a string.
-     */
+	 * Extracts the attribute name dynamically based on system or custom resources.
+	 *
+	 * @param xmlParser The XML parser instance.
+	 * @param index     The index of the attribute to retrieve.
+	 * @return The attribute name as a string.
+	 */
 	public String getAttributeName(AXmlResourceParser xmlParser, int index) {
 		String attributeName = xmlParser.getAttributeName(index);
 		int attributeNameResource = xmlParser.getAttributeNameResource(index);
 
-		//check if the attributes are encrypted with attribute hex id 
+		//check if the attributes are encrypted with attribute hex id
 		if (xmlParser.isChunkResourceIDs || isUnknownAttribute(attributeName)) {
 			try {
 				String extractedName = getAttributeNameFromResources(attributeName.replace("id", ""));
@@ -631,8 +631,8 @@ public final class AXMLPrinter {
 			return attributeName;
 		}
 	}
-	
-	
+
+
 	private String getAttributeNameFromCustomRes(String attribute_hexId, String attributeName) throws Exception {
 		String nameForHexId;
 		if (this.isCustomResourceFileExist && (nameForHexId = customResourceFile.getNameForHexId(attribute_hexId)) != null) {
@@ -660,7 +660,7 @@ public final class AXMLPrinter {
 		}
 		return attributeName;
 	}
-	
+
 
 	// Get attribute name from either system resource file or custom resource file
 	private String getAttributeNameFromResources(String attribute_hexId) throws Exception {
@@ -670,7 +670,7 @@ public final class AXMLPrinter {
 		if (systemAttribute != null) {
 			extractedAttributeName = SYSTEM_ATTRIBUTE_TAG + systemAttribute;
 		}
-        // Process custom resource file if exist and also check if the system resource file don't have target hex id
+		// Process custom resource file if exist and also check if the system resource file don't have target hex id
 		if (this.isCustomResourceFileExist && extractedAttributeName == null && (nameForHexId = customResourceFile.getNameForHexId(attribute_hexId)) != null) {
 			//check if res file is obfuscated or not
 			if(!isResObfuscationCheckDone){
@@ -695,13 +695,13 @@ public final class AXMLPrinter {
 				return "id" + attribute_hexId;
 			}
 
-        }
+		}
 
 		return extractedAttributeName;
 	}
-	
 
-    //check the without namespace based specific attributes if matched
+
+	//check the without namespace based specific attributes if matched
 	private String getFallbackAttributeName(String attributeName) {
 		if (namespaceChecker.isAttributeExist(attributeName)) {
 			return attributeName;
@@ -713,22 +713,22 @@ public final class AXMLPrinter {
 	}
 
 	/**
-     * Determines if an attribute name matches an unknown or obfuscated pattern.
-     *
-     * @param attributeName The name of the attribute to check.
-     * @return True if the attribute is unknown or obfuscated, false otherwise.
-     */
+	 * Determines if an attribute name matches an unknown or obfuscated pattern.
+	 *
+	 * @param attributeName The name of the attribute to check.
+	 * @return True if the attribute is unknown or obfuscated, false otherwise.
+	 */
 	public boolean isUnknownAttribute(String attributeName) {
-        return attributeName.matches("^id\\d[a-z0-9]*$");
-    }
+		return attributeName.matches("^id\\d[a-z0-9]*$");
+	}
 
 	/**
-     * Extracts the resource name based on its hexadecimal ID.
-     * If the resource name cannot be found, the hexadecimal ID is returned.
-     *
-     * @param resourceId The resource ID to extract.
-     * @return The resource name or its hexadecimal representation.
-     */
+	 * Extracts the resource name based on its hexadecimal ID.
+	 * If the resource name cannot be found, the hexadecimal ID is returned.
+	 *
+	 * @param resourceId The resource ID to extract.
+	 * @return The resource name or its hexadecimal representation.
+	 */
 	public String extractResourecID(int resourceId) {
 		String resHexId = formatToHex(resourceId);
 		String systemId2Name = null;
@@ -738,7 +738,7 @@ public final class AXMLPrinter {
 				// Load system resource file
 				systemId2Name = systemResourceFile.getNameForHexId(resHexId);
 
-				// If System don't have the id then lets move to custom resource file 
+				// If System don't have the id then lets move to custom resource file
 				if (isCustomResourceFileExist && systemId2Name == null) {
 					customResId2Name = customResourceFile.getNameForHexId(resHexId);
 				}
@@ -763,10 +763,10 @@ public final class AXMLPrinter {
 							return resHexId;
 						}
 					}
-					
+
 					//finally check of res file is obfuscated or not
 					if(!isResObfuscated){
-					  return customResId2Name;
+						return customResId2Name;
 					} else {
 						return resHexId;
 					}
@@ -779,8 +779,8 @@ public final class AXMLPrinter {
 			return resHexId;
 		}
 	}
-	
-	
+
+
 	//Load manifest permission description
 	private Map<String, String> loadPermissionsInfo() throws Exception {
 		Map<String, String> map = new HashMap<>();
@@ -836,17 +836,17 @@ public final class AXMLPrinter {
 
 		return map;
 	}
-	
+
 	/**
-     * Converts an integer to a hexadecimal string format.
-     *
-     * @param value The integer value to convert.
-     * @return The formatted hexadecimal string.
-     */
+	 * Converts an integer to a hexadecimal string format.
+	 *
+	 * @param value The integer value to convert.
+	 * @return The formatted hexadecimal string.
+	 */
 	public String formatToHex(int i) {
-        return String.format("%08x", Integer.valueOf(i));
-    }
-	
+		return String.format("%08x", Integer.valueOf(i));
+	}
+
 	/* This method helped us to search and detect if a specific text is exists or not*/
 	private  boolean containsSequence(byte[] source, byte[] sequence) {
 		if (sequence.length == 0 || source.length == 0 || sequence.length > source.length) {
@@ -866,116 +866,116 @@ public final class AXMLPrinter {
 		}
 		return false;
 	}
-	
-	/* check if any custom attributes are used for xml ui, 
-	  * Generally custom attribute dec ids are 10 digits unlike system which have 8 digits
-	  * And also custom atributes dec ids are started with 2 unlike system which generally 1
-	  * This can help us wheather it should use app: namespace or not
-	*/
+
+	/* check if any custom attributes are used for xml ui,
+	 * Generally custom attribute dec ids are 10 digits unlike system which have 8 digits
+	 * And also custom atributes dec ids are started with 2 unlike system which generally 1
+	 * This can help us wheather it should use app: namespace or not
+	 */
 	public boolean checkIfCustomAttribute(int number) {
-        String numberStr = String.valueOf(number);
-        int digitCount = numberStr.length();
-        char firstDigitChar = numberStr.charAt(0);
-        int firstDigit = Character.getNumericValue(firstDigitChar);
-        if (digitCount == 10 || firstDigit ==  2) {
-            return true;
-        } 
+		String numberStr = String.valueOf(number);
+		int digitCount = numberStr.length();
+		char firstDigitChar = numberStr.charAt(0);
+		int firstDigit = Character.getNumericValue(firstDigitChar);
+		if (digitCount == 10 || firstDigit ==  2) {
+			return true;
+		}
 		return false;
-    }
+	}
 	/**
 	 * Formats a dimension value (e.g., pixels, dp, sp).
 	 *
 	 * @param attributeValueData The raw attribute value data (as an int).
 	 * @return A string representation of the dimension, including the unit.
 	 */
-    private String formatDimension(int attributeValueData) {
-        // Convert the attribute data to a float value.
-        float floatValue = TypedValue.complexToFloat(attributeValueData);
+	private String formatDimension(int attributeValueData) {
+		// Convert the attribute data to a float value.
+		float floatValue = TypedValue.complexToFloat(attributeValueData);
 
-        // Extract the unit from the attribute value data using a bitwise AND to get the unit index (0-15)
-        String unit = DIMENSION_UNIT_STRS[attributeValueData & 15];
+		// Extract the unit from the attribute value data using a bitwise AND to get the unit index (0-15)
+		String unit = DIMENSION_UNIT_STRS[attributeValueData & 15];
 
-        // Format the float value and append the unit to create the final output string.
-        return formatFloat(floatValue) + unit;
-    }
+		// Format the float value and append the unit to create the final output string.
+		return formatFloat(floatValue) + unit;
+	}
 
 
-    /**
-     * Formats a fraction value (e.g., percentage).
-     *
-     * @param attributeValueData The raw attribute value data (as an int).
-     * @return A string representation of the fraction, including the unit.
-     */
-    private String formatFraction(int attributeValueData) {
-        // Convert the attribute data to a float value, and then converts it to percentage value by multiplying with 100
-        float floatValue = TypedValue.complexToFloat(attributeValueData) * 100.0f;
+	/**
+	 * Formats a fraction value (e.g., percentage).
+	 *
+	 * @param attributeValueData The raw attribute value data (as an int).
+	 * @return A string representation of the fraction, including the unit.
+	 */
+	private String formatFraction(int attributeValueData) {
+		// Convert the attribute data to a float value, and then converts it to percentage value by multiplying with 100
+		float floatValue = TypedValue.complexToFloat(attributeValueData) * 100.0f;
 
 		// Extract the unit from the attribute value data using a bitwise AND to get the unit index (0-15).
-        String unit = FRACTION_UNIT_STRS[attributeValueData & 15];
+		String unit = FRACTION_UNIT_STRS[attributeValueData & 15];
 
-        // Format the float value and append the unit to create the final output string
-        return formatFloat(floatValue) + unit;
-    }
+		// Format the float value and append the unit to create the final output string
+		return formatFloat(floatValue) + unit;
+	}
 
-    /**
-     * Formats a float value to a string representation.
-     *
-     * @param floatValue The float value to format.
-     * @return A string representation of the float, either as an integer if possible or with one decimal place.
-     */
-    private String formatFloat(float floatValue) {
+	/**
+	 * Formats a float value to a string representation.
+	 *
+	 * @param floatValue The float value to format.
+	 * @return A string representation of the float, either as an integer if possible or with one decimal place.
+	 */
+	private String formatFloat(float floatValue) {
 		// Check if the float value is equivalent to an integer value
 		if (floatValue == (int) floatValue) {
-            // If it's an integer, return its String value without decimal places
-            return String.valueOf((int) floatValue);
-        } else {
-            // If it has a decimal part, format it to one decimal place
-            return String.format(Locale.US, "%.1f", floatValue);
-        }
-    }
+			// If it's an integer, return its String value without decimal places
+			return String.valueOf((int) floatValue);
+		} else {
+			// If it has a decimal part, format it to one decimal place
+			return String.format(Locale.US, "%.1f", floatValue);
+		}
+	}
 
-    /**
-     * Extracts the text after the last slash in a given string.
-     *
-     * @param text The input string to process.
-     * @return The text after the last slash, or the original text if no slash is found.
-     */
-    private String textAfterSlash(String text) {
-        // Define the regex pattern to match any characters followed by a slash, and capture the text after the last slash
-        Pattern pattern = Pattern.compile(".*/(.*)");
-        // Create a Matcher object to perform the matching operation
-        Matcher matcher = pattern.matcher(text);
-
-        // Check if the regex pattern matches the given input text
-        if (matcher.find()) {
-            // If a match is found, extract the captured text which is the text after the last slash
-            String textAfterSlash = matcher.group(1);
-            return textAfterSlash;
-        }
-		// If no match is found return the original text
-        return text;
-    }
 	/**
-     * Generates the next sequential hexadecimal ID.
-     *
-     * @param inputHex The input hexadecimal string (without "0x" prefix).
-     * @return The next sequential hexadecimal ID as a string. Returns inputHex if parsing fails.
-     */
-    public String generateNextHexId(String inputHexID) {
+	 * Extracts the text after the last slash in a given string.
+	 *
+	 * @param text The input string to process.
+	 * @return The text after the last slash, or the original text if no slash is found.
+	 */
+	private String textAfterSlash(String text) {
+		// Define the regex pattern to match any characters followed by a slash, and capture the text after the last slash
+		Pattern pattern = Pattern.compile(".*/(.*)");
+		// Create a Matcher object to perform the matching operation
+		Matcher matcher = pattern.matcher(text);
+
+		// Check if the regex pattern matches the given input text
+		if (matcher.find()) {
+			// If a match is found, extract the captured text which is the text after the last slash
+			String textAfterSlash = matcher.group(1);
+			return textAfterSlash;
+		}
+		// If no match is found return the original text
+		return text;
+	}
+	/**
+	 * Generates the next sequential hexadecimal ID.
+	 *
+	 * @param inputHex The input hexadecimal string (without "0x" prefix).
+	 * @return The next sequential hexadecimal ID as a string. Returns inputHex if parsing fails.
+	 */
+	public String generateNextHexId(String inputHexID) {
 		try {
 			// Parse the input hex string as a long (base 16)
-            long hexValue = Long.parseLong(inputHexID, 16);
+			long hexValue = Long.parseLong(inputHexID, 16);
 
 			// Increment the long value
-            hexValue++;
+			hexValue++;
 
-            // Format the incremented value back to a hex string (8 digits)
-            return formatToHex((int)hexValue);
-        }
-        catch(NumberFormatException e){
+			// Format the incremented value back to a hex string (8 digits)
+			return formatToHex((int)hexValue);
+		}
+		catch(NumberFormatException e){
 			// If there's a NumberFormatException (invalid input), return original value.
-            return inputHexID;
-        }
-    }
-	
+			return inputHexID;
+		}
+	}
+
 }

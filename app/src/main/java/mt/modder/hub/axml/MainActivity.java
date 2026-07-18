@@ -256,7 +256,11 @@ public class MainActivity extends Activity {
 
 			// initialize the axmlprinter class
 			AXMLPrinter axmlPrinter = new AXMLPrinter();
-			axmlPrinter.setEnableID2Name(true);
+			// ID2Name was written only to resolve resource IDs against MT Manager's
+			// modded resources.arsc format. On normal/valid ARSC files (including
+			// framework resources) it fails to parse, so keep it off by default.
+			// Enable it explicitly only when testing against an MT Manager mod build.
+			axmlPrinter.setEnableID2Name(false);
 			axmlPrinter.setAttrValueTranslation(true);
 			axmlPrinter.setExtractPermissionDescription(true);
 

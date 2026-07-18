@@ -38,4 +38,6 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
+    implementation files('libs/arsc.jar')
+    implementation files('libs/guava.jar')
 }
