@@ -2047,3 +2047,448 @@ Allows an app to access data from body sensors such as heart rate monitors.
 
 android.permission.BODY_SENSORS_BACKGROUND
 Allows an app to access data from body sensors even when the app is running in the background.
+
+android.permission.FOREGROUND_SERVICE_HEALTH
+Allows an app to use foreground services with the type "health".
+
+android.permission.USE_EXACT_ALARM
+Allows an app to use exact alarms without needing to request the SCHEDULE_EXACT_ALARM permission (for specific use cases).
+
+android.permission.REQUEST_COMPANION_PROFILE_WATCH
+Allows an app to request a companion device profile for a watch.
+
+android.permission.REQUEST_COMPANION_PROFILE_GLASSES
+Allows an app to request a companion device profile for glasses.
+
+android.permission.REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING
+Allows an app to request a companion device profile for streaming content to a nearby device.
+
+android.permission.READ_NEARBY_STREAMING_POLICY
+Allows an app to read the nearby streaming policy.
+
+android.permission.USE_REMOTE_AUTH
+Allows an app to use remote authentication.
+
+android.permission.ACCESS_HIDDEN_PROFILES
+💀 Allows access to hidden profiles on the device.
+
+android.permission.MANAGE_ONGOING_CALLS
+☠️ Allows an app to manage ongoing calls on the device.
+
+android.permission.BIND_GMS_SERVICE
+Allows an app to bind to Google Play Services.
+
+com.huawei.android.launcher.permission.CHANGE_BADGE
+Allows a Huawei app to change the badge count on the home screen icon.
+
+com.huawei.android.launcher.permission.READ_SETTINGS
+Allows reading the Huawei launcher settings.
+
+com.huawei.android.launcher.permission.WRITE_SETTINGS
+Allows writing the Huawei launcher settings.
+
+com.oppo.launcher.permission.READ_SETTINGS
+Allows reading the Oppo launcher settings.
+
+com.oppo.launcher.permission.WRITE_SETTINGS
+Allows writing the Oppo launcher settings.
+
+me.everything.badger.permission.BADGE_COUNT_READ
+Allows an app to read badge counts from the ShortcutBadger library.
+
+me.everything.badger.permission.BADGE_COUNT_WRITE
+Allows an app to write badge counts via the ShortcutBadger library.
+
+android.permission.SET_UNPUBLISHED_HOTWORD_STATE
+Allows an app to set the state of an unpublished hotword.
+
+android.permission.MANAGE_APP_HIBERNATION
+👽 Allows an app to manage the hibernation state of other apps.
+
+android.permission.READ_SAFETY_CENTER_STATUS
+Allows an app to read the status of the Safety Center.
+
+android.permission.RECEIVE_SANDBOXED_DETECTION_TRAINING_DATA
+👽 Allows an app to receive sandboxed detection training data.
+
+android.permission.MANAGE_VIRTUAL_DEVICE
+👽 Allows an app to manage virtual devices.
+
+android.permission.MONITOR_INPUT
+💀 Allows an app to monitor all input events (mouse, keyboard, touch) sent to the system. Highly dangerous.
+
+android.permission.ACCESS_DRM_CERTIFICATES
+👽 Allows an app to access DRM certificates.
+
+android.permission.ACCESS_NETWORK_STACK
+👽 Allows an app to use the low-level network stack.
+
+android.permission.BIND_AUTOFILL_SERVICE
+💀 Allows an app to bind to an autofill service. Can intercept user credentials.
+
+android.permission.BIND_SCREENING_SERVICE
+☠️ Allows an app to bind to a call screening service.
+
+android.permission.BIND_IMS_SERVICE
+👽 Allows an app to bind to the IMS service.
+
+android.permission.BIND_EUICC_SERVICE
+👽 Allows an app to bind to the eUICC (eSIM) service.
+
+android.permission.BIND_CONDITION_PROVIDER_SERVICE
+Allows an app to bind to a condition provider service.
+
+android.permission.BIND_CHOOSER_TARGET_SERVICE
+Allows an app to bind to a chooser target service.
+
+android.permission.BIND_KEYGUARD_APPWIDGET
+Allows an app to bind to a keyguard widget.
+
+android.permission.BIND_RESOLVER_RANKER_SERVICE
+Allows an app to bind to a resolver ranker service.
+
+android.permission.BIND_SCREEN_INTERACTION_SERVICE
+💀 Allows an app to interact with the screen.
+
+android.permission.BIND_SOUND_TRIGGER_DETECTION_SERVICE
+Allows an app to bind to a sound trigger detection service.
+
+android.permission.BIND_VR_LISTENER_SERVICE
+Allows an app to bind to a VR listener service.
+
+android.permission.CRYPT_KEEPER
+👽 Internal permission for device encryption management.
+
+android.permission.CONFIRM_FULL_BACKUP
+👽 Allows an app to confirm a full backup/restore operation.
+
+android.permission.INSTALL_DYNAMIC_SYSTEM
+👽 Allows an app to install a dynamic system image.
+
+android.permission.MANAGE_BIOMETRIC
+💀 Allows an app to manage biometric credentials.
+
+android.permission.MANAGE_FINGERPRINT
+💀 Allows an app to manage fingerprint credentials.
+
+android.permission.RESET_FACE_LOCK
+💀 Allows an app to reset face lock credentials.
+
+android.permission.MODIFY_PARENTAL_CONTROLS
+Allows an app to modify parental controls.
+
+android.permission.REGISTER_STATS_PULL_ATOM
+Allows an app to register a pull atom for stats collection.
+
+android.permission.UNLIMITED_SHORTCUTS_API_CALLS
+Allows an app to call shortcut APIs an unlimited number of times.
+
+android.permission.WRITE_BLOCKED_NUMBERS
+💀 Allows an app to write to the blocked numbers list.
+
+android.permission.READ_BLOCKED_NUMBERS
+💀 Allows an app to read the blocked numbers list.
+
+com.miui.securitycenter.permission.SECURITY_CENTER
+👽 Xiaomi Security Center internal permission.
+
+com.xiaomi.permission.ACCESS_SERVICE
+💀 Xiaomi internal access service permission.
+
+com.hihonor.android.launcher.permission.CHANGE_BADGE
+Allows an app to change the badge count on Honor devices.
+
+com.hihonor.android.launcher.permission.READ_SETTINGS
+Allows reading Honor launcher settings.
+
+com.hihonor.android.launcher.permission.WRITE_SETTINGS
+Allows writing Honor launcher settings.
+
+com.vivo.notification.permission.BADGE_WRITE
+Allows an app to write to the badge counter on Vivo devices.
+
+com.htc.launcher.permission.READ_SETTINGS
+Allows reading HTC launcher settings.
+
+com.htc.launcher.permission.WRITE_SETTINGS
+Allows writing HTC launcher settings.
+
+com.htc.launcher.permission.UPDATE_SHORTCUT
+Allows updating HTC launcher shortcuts.
+
+android.permission.BIND_COMPANION_DEVICE_SERVICE
+Allows an app to bind to a companion device service.
+
+android.permission.ACCESS_INPUT_FLINGER
+👽 Internal permission for low-level input management.
+
+android.permission.MANAGE_ACCESSIBILITY
+💀 Allows an app to manage accessibility settings.
+
+android.permission.OBSERVE_SENSOR_PRIVACY
+👽 Allows an app to observe sensor privacy changes.
+
+android.permission.MANAGE_SENSOR_PRIVACY
+👽 Allows an app to manage sensor privacy.
+
+android.permission.BRIGHTNESS_SLIDER_USAGE
+👽 Allows an app to access brightness slider usage stats.
+
+android.permission.ACCESS_AMBIENT_LIGHT_STATS
+👽 Allows an app to access ambient light statistics.
+
+android.permission.CONTROL_DEVICE_LIGHTS
+👽 Allows an app to control the device lights.
+
+android.permission.MANAGE_LOW_POWER_STANDBY
+👽 Allows an app to manage low-power standby.
+
+com.asus.launcher.permission.READ_SETTINGS
+Allows reading ASUS launcher settings.
+
+com.asus.launcher.permission.WRITE_SETTINGS
+Allows writing ASUS launcher settings.
+
+com.lge.launcher.permission.READ_SETTINGS
+Allows reading LG launcher settings.
+
+com.lge.launcher.permission.WRITE_SETTINGS
+Allows writing LG launcher settings.
+
+android.permission.MANAGE_ROLES
+👽 Allows an app to manage system roles.
+
+android.permission.CHANGE_APP_IDLE_STATE
+👽 Allows an app to change the idle state of other apps.
+
+android.permission.MANAGE_TEST_NETWORKS
+👽 Allows an app to manage test networks.
+
+android.permission.REGISTER_NSD_CONF_SETTLER_SERVICE
+👽 Allows an app to register a settler service for NSD.
+
+android.permission.LAUNCH_DEVICE_SETTLER
+👽 Allows an app to launch the device settler.
+
+android.permission.MANAGE_ETHERNET_NETWORKS
+👽 Allows an app to manage Ethernet networks.
+
+android.permission.RENOUNCE_PERMISSIONS
+👽 Allows an app to renounce its own permissions.
+
+android.permission.MANAGE_ONE_HANDED_MODE
+👽 Allows an app to manage one-handed mode settings.
+
+android.permission.MANAGE_SMARTSPACE
+👽 Allows an app to manage the smartspace service.
+
+android.permission.MANAGE_WALLPAPER_EFFECTS_GENERATION
+👽 Allows an app to manage wallpaper effects generation.
+
+android.permission.MANAGE_CACHED_APPS_HIGH_PRIORITY
+👽 Allows an app to manage cached apps with high priority.
+
+android.permission.USE_COLOR_DISPLAY
+👽 Allows an app to manage color display settings.
+
+android.permission.MANAGE_NOTIFICATIONS
+💀 Allows an app to manage notifications.
+
+android.permission.MANAGE_NOTIFICATION_LIST_STATE
+👽 Allows an app to manage the notification list state.
+
+com.samsung.android.launcher.permission.READ_SETTINGS
+Allows reading Samsung launcher settings.
+
+com.samsung.android.launcher.permission.WRITE_SETTINGS
+Allows writing Samsung launcher settings.
+
+com.sonymobile.launcher.permission.WRITE_SETTINGS
+Allows writing Sony launcher settings.
+
+com.oneplus.launcher.permission.READ_SETTINGS
+Allows reading OnePlus launcher settings.
+
+com.oneplus.launcher.permission.WRITE_SETTINGS
+Allows writing OnePlus launcher settings.
+
+android.permission.QUERY_AUDIO_STATE
+Allows an app to query the current audio state.
+
+android.permission.MANAGE_HOTWORD_DETECTION
+Allows an app to manage hotword detection services.
+
+android.permission.SET_SCREEN_LOCK_TIMEOUT
+Allows an app to set the screen lock timeout.
+
+android.permission.ACCESS_SHORTCUTS
+Allows an app to access and manage shortcuts.
+
+android.permission.START_VIEW_APP_FEATURES
+👽 Allows an app to start the view for app features.
+
+android.permission.START_VIEW_PERMISSION_USAGE_FOR_PERIOD
+👽 Allows an app to start the view for permission usage for a period.
+
+android.permission.MANAGE_FACE
+💀 Allows an app to manage face authentication credentials.
+
+android.permission.MANAGE_IRIS
+💀 Allows an app to manage iris authentication credentials.
+
+android.permission.MANAGE_CLOUDSEARCH
+Allows an app to manage cloud search services.
+
+android.permission.ACCESS_VR_STATE
+Allows an app to access VR state information.
+
+android.permission.MANAGE_DEBUGGING
+👽 Allows an app to manage device debugging.
+
+android.permission.ACCESS_MTP
+👽 Allows an app to access MTP (Media Transfer Protocol).
+
+android.permission.MANAGE_USB
+👽 Allows an app to manage USB devices.
+
+android.permission.MANAGE_REMOTE_AUTH
+👽 Allows an app to manage remote authentication.
+
+android.permission.SYSTEM_CAMERA
+💀 Allows an app to access the system cameras. Only available to system apps.
+
+android.permission.CAPTURE_VOICE_COMMUNICATION_OUTPUT
+💀 Allows an app to capture voice communication audio (e.g. VoIP calls).
+
+android.permission.SYSTEM_APPLICATION_OVERLAY
+Allows an app to display a window on top of all other applications.
+
+android.permission.SET_SYSTEM_AUDIO_CAPTION
+👽 Allows an app to set the system audio caption state.
+
+android.permission.REQUEST_NOTIFICATION_ASSISTANT_SERVICE
+Allows an app to request to become the notification assistant.
+
+android.permission.MANAGE_APP_PREDICTIONS
+👽 Allows an app to manage app prediction services.
+
+android.permission.ACCESS_TEXT_CLASSIFIER_BY_TYPE
+Allows an app to access text classification services.
+
+android.permission.MONITOR_DEFAULT_SMS_PACKAGE
+💀 Allows an app to monitor the default SMS application.
+
+android.permission.READ_OEM_UNLOCK_STATE
+👽 Allows an app to read the OEM unlock state (bootloader status).
+
+android.permission.USE_ON_DEVICE_INTELLIGENCE
+Allows an app to use on-device intelligence (AI) services.
+
+android.permission.PERSONAL_CONTEXT_PUBLISH_HINTS
+Allows an app to publish hints about personal context.
+
+android.permission.PERSONAL_CONTEXT_RECEIVE_HINTS
+Allows an app to receive hints about personal context.
+
+android.permission.CAPTURE_KEYBOARD
+💀 Allows an app to capture keyboard input. Potential keylogger behavior.
+
+android.permission.USE_LOOPBACK_INTERFACE
+Allows an app to use the network loopback interface.
+
+com.android.chrome.permission.READ_WRITE_BOOKMARK_FOLDERS
+Allows Chrome to read and write to bookmark folders.
+
+android.permission.REQUEST_COMPANION_PROFILE_APP_STREAMING
+Allows an app to request a companion profile for app streaming.
+
+android.permission.REQUEST_TASK_HANDOFF
+Allows an app to request task handoff between devices.
+
+android.permission.READ_REMOTE_TASKS
+Allows an app to read tasks running on remote devices.
+
+android.permission.READ_HANDOFF_SETTINGS
+Allows an app to read handoff settings.
+
+android.permission.MODIFY_HANDOFF_SETTINGS
+Allows an app to modify handoff settings.
+
+android.permission.POST_BRIDGED_NOTIFICATIONS
+Allows an app to post notifications bridged from another device.
+
+android.permission.BYPASS_CONCURRENT_RECORD_AUDIO_RESTRICTION
+👽 Allows an app to record audio even when another app is recording.
+
+android.permission.READ_WALLPAPER_INTERNAL
+👽 Allows an app to read wallpaper data internally.
+
+android.permission.SET_WALLPAPER_COMPONENT
+Allows an app to set the current wallpaper component.
+
+android.permission.SET_WALLPAPER_DIM_AMOUNT
+Allows an app to set the dim amount of the wallpaper.
+
+android.permission.CONTROL_DISPLAY_COLOR_TRANSFORMS
+👽 Allows an app to control color transforms on the display.
+
+android.permission.LAUNCH_MULTI_PANE_SETTINGS_DEEP_LINK
+Allows launching a multi-pane settings screen via deep link.
+
+android.permission.ACCESS_AMBIENT_CONTEXT_EVENT
+Allows access to events from the ambient context service.
+
+android.permission.START_CROSS_PROFILE_ACTIVITIES
+Allows an app to start activities in a different user profile.
+
+android.permission.INJECT_KEY_EVENTS
+💀 Allows an app to inject key events (simulated typing). Highly sensitive.
+
+android.permission.PERSONAL_CONTEXT_RECEIVE_INSIGHTS
+Allows an app to receive insights based on personal context.
+
+android.permission.PERSONAL_CONTEXT_HOST_INSIGHT_SURFACE
+Allows an app to host surfaces for personal context insights.
+
+com.google.android.apps.nest.DOCK_MANAGER_SERVICE
+Allows access to the Google Nest Dock Manager service.
+
+com.microsoft.appmanager.permission.QS_TILE_PROVIDER
+Allows Microsoft App Manager to provide quick settings tiles.
+
+com.samsung.android.knox.permission.KNOX_ENTERPRISE_DEVICE_ADMIN
+👽 Samsung Knox Enterprise device administrator permission.
+
+com.samsung.android.knox.permission.KNOX_CERTIFICATE
+Samsung Knox certificate management permission.
+
+com.samsung.android.knox.permission.KNOX_SECURITY
+Samsung Knox security management permission.
+
+com.samsung.android.knox.permission.KNOX_CERT_PROVISIONING
+Samsung Knox certificate provisioning permission.
+
+android.permission.sec.ENTERPRISE_DEVICE_ADMIN
+👽 Samsung Enterprise device administrator permission.
+
+android.permission.sec.MDM_SECURITY
+Samsung MDM (Mobile Device Management) security permission.
+
+android.permission.sec.MDM_CERTIFICATE
+Samsung MDM certificate management permission.
+
+com.samsung.android.mdx.permission.GET_INSTANT_HOTSPOT_EVENT
+Allows access to Samsung instant hotspot events.
+
+com.google.android.as.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+Internal Google Android System Intelligence permission.
+
+com.google.android.gm.exchange.BIND
+Allows binding to the Gmail Exchange service.
+
+com.google.android.hangouts.START_HANGOUT
+Allows an app to start a Google Hangouts session.
+
+com.google.android.deskclock.permission.RECEIVE_ALERT_BROADCASTS
+Allows receiving alerts from the Google Desk Clock.
+
