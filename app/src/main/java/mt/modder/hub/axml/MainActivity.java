@@ -1,6 +1,6 @@
 /*
  * AxmlPrinter - An Advanced Axml Printer available with proper xml style/format feature
- * Copyright 2024, developer-krushna
+ * Copyright 2024-2026, developer-krushna
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -57,6 +57,11 @@ import java.io.StringWriter;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/*
+* Author : developer-krushna
+* UI other things implemented by Sarvam ai 
+* Syntex idea from MH-TextEditor
+*/
 
 public class MainActivity extends Activity {
 

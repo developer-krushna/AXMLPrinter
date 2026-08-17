@@ -1,5 +1,6 @@
 # AXMLPrinter
 An Advanced Axml Printer available with proper xml style/format feature
+[![Android CI](https://github.com/developer-krushna/AXMLPrinter/actions/workflows/build-apk.yml/badge.svg)](https://github.com/developer-krushna/AXMLPrinter/actions/workflows/build-apk.yml)
 # What is the use of this tool
 A tool for printing out Android binary XML files (It can be Android Manifest or other resources XML files) into normal raw AXML text. It is inspired by Android4ME's axmlprinter library.
 
