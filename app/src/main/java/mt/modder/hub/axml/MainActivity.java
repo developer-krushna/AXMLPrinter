@@ -35,263 +35,308 @@
 
 package mt.modder.hub.axml;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.Settings;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
+import android.text.Spannable;
+import android.text.SpannableStringBuilder;
+import android.text.style.ForegroundColorSpan;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class MainActivity extends Activity {
 
-	private static final int REQUEST_CODE_STORAGE = 1001;
-	private static final int REQUEST_CODE_MANAGE_STORAGE = 1002;
+    private static final int REQUEST_CODE_PICK_FILE = 1003;
 
-	public String Input_Path = "/storage/emulated/0/AndroidManifest.xml";
+    // High-performance single-pass regex for XML components
+    private static final Pattern PATTERN_XML_TOKEN = Pattern.compile(
+            "(<!--[\\s\\S]*?-->)|" +                             // 1: Comment
+                    "(<\\?)([a-zA-Z0-9._:-]+)|" +                        // 2,3: Decl start
+                    "(\\?>)|" +                                          // 4: Decl end
+                    "(<!\\[CDATA\\[[\\s\\S]*?\\]\\]>|<!DOCTYPE)|" +     // 5: Meta/CDATA
+                    "(</?|/?>|=)|" +                                    // 6: Operator
+                    "\\b([a-zA-Z0-9._-]+:)?([a-zA-Z0-9._-]+)(?=[\\s/>])|" + // 7,8: TagName
+                    "\\b([a-zA-Z0-9._-]+:)?([a-zA-Z0-9._-]+)(?=\\s*=)|" +   // 9,10: AttrName
+                    "(['\"])([^'\"]*?)(\\11)|" +                         // 11,12,13: String
+                    "(&[a-zA-Z0-9#]+;)|" +                              // 14: Entity
+                    "\\b(true|false)\\b|" +                             // 15: Boolean
+                    "(?i)(?<![;&])#(?:[0-9A-F]{3,4}|[0-9A-F]{6}|[0-9A-F]{8})\\b" // 16: Color
+    );
 
-	// Use an absolute path - a bare "sdcard/..." relative path is not
-	// guaranteed to resolve to external storage on every device/API level.
-	public String outPath = "/storage/emulated/0/MyDecompiledAXML.xml";
+    // Colors from colors.json (Day theme)
+    private static final int COLOR_OPERATOR = 0xFF205060;
+    private static final int COLOR_KEYWORD = 0xFF0033B3;
+    private static final int COLOR_STRING = 0xFF067D17;
+    private static final int COLOR_COMMENT = 0xFF8C8C8C;
+    private static final int COLOR_META = 0xFF9E880D;
+    private static final int COLOR_NUMBER = 0xFF1750EB;
+    private static final int COLOR_TAG_NAME = 0xFF0030B3;
+    private static final int COLOR_ATTR_NAME = 0xFF174AD4;
+    private static final int COLOR_NAMESPACE = 0xFF871094;
+    private static final int COLOR_PROP_VAL = 0xFF067D17;
+    private static final int COLOR_STR_ESCAPE = 0xFF0037A6;
 
-	private TextView text;
-	private ScrollView scroll;
+    private TextView tvPath;
+    private TextView tvOutput;
+    private Button btnToggleWrap;
+    private boolean isWrapEnabled = false;
+    private Uri selectedFileUri;
 
-	@SuppressLint("SetTextI18n")
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-		scroll = new ScrollView(this);
-		scroll.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-		scroll.setFillViewport(true);
-		scroll.setPadding(8, 8, 8, 8);
-		text = new TextView(this);
-		text.setTextIsSelectable(true);
-		text.setPadding(8, 8, 8, 8);
-		text.setText("Checking storage permission ...");
+        tvPath = findViewById(R.id.tvPath);
+        tvOutput = findViewById(R.id.tvOutput);
+        Button btnProcess = findViewById(R.id.btnProcess);
+        btnToggleWrap = findViewById(R.id.btnToggleWrap);
+        Button btnShare = findViewById(R.id.btnShare);
+        Button btnSelectFile = findViewById(R.id.btnSelectFile);
 
-		scroll.addView(text);
-		setContentView(scroll);
+        // Initial state: Wrap OFF (Scrolled horizontally)
+        tvOutput.setHorizontallyScrolling(true);
 
-		// Catch absolutely everything (including Errors like
-		// NoClassDefFoundError/ExceptionInInitializerError, which are NOT
-		// subclasses of Exception) so the app can never crash silently.
-		// Whatever goes wrong gets printed on screen instead - this is the
-		// only "log" available when adb/logcat isn't accessible.
-		try {
-			checkPermissionAndRun();
-		} catch (Throwable t) {
-			showError(t);
-		}
-	}
+        btnSelectFile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pickFile();
+            }
+        });
 
-	private void showError(Throwable t) {
-		StringWriter sw = new StringWriter();
-		PrintWriter pw = new PrintWriter(sw);
-		t.printStackTrace(pw);
-		text.setText(sw.toString());
-		t.printStackTrace();
-	}
+        btnProcess.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (selectedFileUri != null) {
+                    processFile(selectedFileUri);
+                } else {
+                    tvOutput.setText("Please select a file first.");
+                }
+            }
+        });
 
-	/**
-	 * Handles the three permission models Android has used over time:
-	 *  - API < 23: permission is granted at install time, nothing to do.
-	 *  - API 23-29: classic runtime permission (READ/WRITE_EXTERNAL_STORAGE).
-	 *  - API 30+: scoped storage - accessing arbitrary paths like
-	 *    /storage/emulated/0/AndroidManifest.xml requires the special
-	 *    "All files access" (MANAGE_EXTERNAL_STORAGE) permission, which is
-	 *    granted through a dedicated system Settings screen, not a normal
-	 *    runtime dialog.
-	 */
-	private void checkPermissionAndRun() {
-		try {
-			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-				if (Environment.isExternalStorageManager()) {
-					runConversion();
-				} else {
-					text.setText("Need \"All files access\" permission.\nOpening system settings...");
-					try {
-						Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-						intent.setData(Uri.parse("package:" + getPackageName()));
-						startActivityForResult(intent, REQUEST_CODE_MANAGE_STORAGE);
-					} catch (Exception e) {
-						Intent intent = new Intent(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-						startActivityForResult(intent, REQUEST_CODE_MANAGE_STORAGE);
-					}
-				}
-			} else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-				boolean readGranted = checkSelfPermission(
-						Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-				boolean writeGranted = checkSelfPermission(
-						Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
-				if (readGranted && writeGranted) {
-					runConversion();
-				} else {
-					requestPermissions(
-							new String[]{Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE},
-							REQUEST_CODE_STORAGE);
-				}
-			} else {
-				runConversion();
-			}
-		} catch (Throwable t) {
-			showError(t);
-		}
-	}
+        btnToggleWrap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isWrapEnabled = !isWrapEnabled;
+                updateWrapMode();
+            }
+        });
 
-	@SuppressLint("SetTextI18n")
-	@Override
-	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-		try {
-			if (requestCode == REQUEST_CODE_STORAGE) {
-				boolean allGranted = grantResults.length > 0;
-				for (int result : grantResults) {
-					if (result != PackageManager.PERMISSION_GRANTED) {
-						allGranted = false;
-						break;
-					}
-				}
-				if (allGranted) {
-					runConversion();
-				} else {
-					text.setText("Storage permission denied. Cannot read " + Input_Path);
-				}
-			}
-		} catch (Throwable t) {
-			showError(t);
-		}
-	}
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                shareOutput();
+            }
+        });
+    }
 
-	@SuppressLint("SetTextI18n")
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		try {
-			if (requestCode == REQUEST_CODE_MANAGE_STORAGE) {
-				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && Environment.isExternalStorageManager()) {
-					runConversion();
-				} else {
-					text.setText("\"All files access\" permission was not granted. Cannot read " + Input_Path);
-				}
-			}
-		} catch (Throwable t) {
-			showError(t);
-		}
-	}
+    private void shareOutput() {
+        CharSequence text = tvOutput.getText();
+        if (text == null || text.length() == 0) {
+            return;
+        }
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_TEXT, text.toString());
+        startActivity(Intent.createChooser(intent, "Share Decompiled XML"));
+    }
 
-	@SuppressLint("SdCardPath")
-	private static final String[] FALLBACK_PATHS = {
-			"/storage/emulated/0/AndroidManifest.xml",
-			"/storage/emulated/0/Download/AndroidManifest.xml",
-			"/storage/emulated/0/Downloads/AndroidManifest.xml",
-			"/sdcard/AndroidManifest.xml",
-			"/sdcard/Download/AndroidManifest.xml",
-	};
+    private void updateWrapMode() {
+        if (isWrapEnabled) {
+            // Wrap ON: Fixed width forces wrapping
+            tvOutput.setHorizontallyScrolling(false);
+            int screenWidth = getResources().getDisplayMetrics().widthPixels;
+            int totalPadding = (int) (48 * getResources().getDisplayMetrics().density);
+            int targetWidth = screenWidth - totalPadding;
 
-	@SuppressLint("SetTextI18n")
-	private void runConversion() {
-		File inputFile = new File(Input_Path);
+            tvOutput.setMaxWidth(targetWidth);
+            tvOutput.setMinWidth(targetWidth);
+        } else {
+            // Wrap OFF: Remove width limits and allow horizontal expansion
+            tvOutput.setHorizontallyScrolling(true);
+            tvOutput.setMaxWidth(Integer.MAX_VALUE);
+            tvOutput.setMinWidth(0);
+            tvOutput.setLayoutParams(new android.widget.FrameLayout.LayoutParams(
+                    android.view.ViewGroup.LayoutParams.WRAP_CONTENT,
+                    android.view.ViewGroup.LayoutParams.WRAP_CONTENT));
+        }
 
-		// If the configured path doesn't exist, try a few common locations
-		// (e.g. the file was saved to the Download folder instead of the
-		// SD card root) before giving up.
-		if (!inputFile.exists()) {
-			for (String candidate : FALLBACK_PATHS) {
-				File candidateFile = new File(candidate);
-				if (candidateFile.exists()) {
-					inputFile = candidateFile;
-					Input_Path = candidate;
-					break;
-				}
-			}
-		}
+        btnToggleWrap.setText(isWrapEnabled ? "Wrap: ON" : "Wrap: OFF");
+        tvOutput.requestLayout();
+    }
 
-		text.setText("Processing " + Input_Path + " ...");
+    private void pickFile() {
+        Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("*/*");
+        startActivityForResult(intent, REQUEST_CODE_PICK_FILE);
+    }
 
-		if (!inputFile.exists()) {
-			StringBuilder sb = new StringBuilder();
-			sb.append("Input file not found. Checked:\n");
-			sb.append(Input_Path).append("\n");
-			for (String candidate : FALLBACK_PATHS) {
-				sb.append(candidate).append("\n");
-			}
-			sb.append("\nPlace a compiled AndroidManifest.xml at one of these paths, "
-					+ "or change Input_Path in MainActivity.java.");
-			text.setText(sb.toString());
-			return;
-		}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_PICK_FILE && resultCode == RESULT_OK && data != null) {
+            selectedFileUri = data.getData();
+            tvPath.setText("Selected: " + selectedFileUri.toString());
+            tvOutput.setText("");
+        }
+    }
 
-		try {
-			// Read the binary XML file into a byte array.
-			// (Not using try-with-resources: java.lang.AutoCloseable only
-			// exists from API 19 onward, and this project targets minSdk 14.)
-			byte[] byteArray = new byte[(int) inputFile.length()];
-			FileInputStream fis = new FileInputStream(inputFile);
-			try {
-				int offset = 0;
-				int read;
-				while (offset < byteArray.length
-						&& (read = fis.read(byteArray, offset, byteArray.length - offset)) != -1) {
-					offset += read;
-				}
-			} finally {
-				fis.close();
-			}
+    private void processFile(Uri uri) {
+        tvOutput.setText("Processing...");
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    File tempFile = copyUriToTempFile(uri);
+                    String fileName = getFileName(uri).toLowerCase();
 
-			// initialize the axmlprinter class
-			AXMLPrinter axmlPrinter = new AXMLPrinter();
-			// ID2Name was written only to resolve resource IDs against MT Manager's
-			// modded resources.arsc format. On normal/valid ARSC files (including
-			// framework resources) it fails to parse, so keep it off by default.
-			// Enable it explicitly only when testing against an MT Manager mod build.
-			axmlPrinter.setEnableID2Name(false);
-			axmlPrinter.setAttrValueTranslation(true);
-			axmlPrinter.setExtractPermissionDescription(true);
+                    AXMLPrinter axmlPrinter = new AXMLPrinter();
+                    axmlPrinter.setEnableID2Name(false);
+                    axmlPrinter.setAttrValueTranslation(true);
+                    axmlPrinter.setExtractPermissionDescription(true);
 
-			// Use the XMLDecompiler to decompile to an XML string.
-			// Place your resources.arsc file in the same directory as the xml file
-			// if you want custom resource id -> name translation.
-			String xmlString = axmlPrinter.readFromFile(Input_Path);
+                    final String result;
+                    if (fileName.endsWith(".apk")) {
+                        result = axmlPrinter.readFromApk(tempFile.getAbsolutePath());
+                    } else {
+                        result = axmlPrinter.readFromFile(tempFile.getAbsolutePath());
+                    }
 
-			// Direct process without enabling custom resource id2name:
-			// String xmlString = axmlPrinter.convertXml(byteArray);
+                    // Apply heavy regex highlighting in background thread to avoid UI lag
+                    final CharSequence highlighted = highlightXml(result);
 
-			// Output the XML string
-			saveAsFile(xmlString, outPath);
-			text.setText("Processing complete. File saved in " + outPath);
-		} catch (Throwable t) {
-			showError(t);
-		}
-	}
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            tvOutput.setText(highlighted);
+                        }
+                    });
+                } catch (final Throwable t) {
+                    runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            showError(t);
+                        }
+                    });
+                }
+            }
+        }).start();
+    }
 
-	public void saveAsFile(String data, String path) throws IOException {
-		File outputFile = new File(path);
-		File parent = outputFile.getParentFile();
-		if (parent != null && !parent.exists()) {
-			parent.mkdirs();
-		}
-		FileWriter fileWriter = new FileWriter(outputFile);
-		try {
-			fileWriter.write(data);
-		} finally {
-			fileWriter.close();
-		}
-	}
+    private CharSequence highlightXml(String xml) {
+        if (xml == null || xml.isEmpty()) return "";
 
+        // For extremely large files, limit highlighting to prevent UI freeze during text layout
+        boolean isMassive = xml.length() > 100000;
+        SpannableStringBuilder spannable = new SpannableStringBuilder(xml);
+
+        // If it's massive, only process a portion to keep it responsive
+        String textToMatch = isMassive ? xml.substring(0, 100000) : xml;
+        Matcher m = PATTERN_XML_TOKEN.matcher(textToMatch);
+
+        while (m.find()) {
+            if (m.group(1) != null) { // Comment
+                spannable.setSpan(new ForegroundColorSpan(COLOR_COMMENT), m.start(1), m.end(1), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(2) != null) { // Decl start (<?)
+                spannable.setSpan(new ForegroundColorSpan(COLOR_OPERATOR), m.start(2), m.end(2), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                spannable.setSpan(new ForegroundColorSpan(COLOR_KEYWORD), m.start(3), m.end(3), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(4) != null) { // Decl end (?>)
+                spannable.setSpan(new ForegroundColorSpan(COLOR_OPERATOR), m.start(4), m.end(4), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(5) != null) { // CDATA/Meta
+                spannable.setSpan(new ForegroundColorSpan(COLOR_META), m.start(5), m.end(5), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(6) != null) { // Operator
+                spannable.setSpan(new ForegroundColorSpan(COLOR_OPERATOR), m.start(6), m.end(6), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(8) != null) { // TagName
+                if (m.group(7) != null) {
+                    spannable.setSpan(new ForegroundColorSpan(COLOR_NAMESPACE), m.start(7), m.end(7), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+                spannable.setSpan(new ForegroundColorSpan(COLOR_TAG_NAME), m.start(8), m.end(8), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(10) != null) { // AttrName
+                if (m.group(9) != null) {
+                    spannable.setSpan(new ForegroundColorSpan(COLOR_NAMESPACE), m.start(9), m.end(9), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                }
+                spannable.setSpan(new ForegroundColorSpan(COLOR_ATTR_NAME), m.start(10), m.end(10), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(12) != null) { // String/Value
+                spannable.setSpan(new ForegroundColorSpan(COLOR_STRING), m.start(11), m.start(11) + 1, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                spannable.setSpan(new ForegroundColorSpan(COLOR_PROP_VAL), m.start(12), m.end(12), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                spannable.setSpan(new ForegroundColorSpan(COLOR_STRING), m.end(13) - 1, m.end(13), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(14) != null) { // Entity
+                spannable.setSpan(new ForegroundColorSpan(COLOR_STR_ESCAPE), m.start(14), m.end(14), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(15) != null) { // Boolean
+                spannable.setSpan(new ForegroundColorSpan(COLOR_NUMBER), m.start(15), m.end(15), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            } else if (m.group(16) != null) { // Color
+                spannable.setSpan(new ForegroundColorSpan(COLOR_NUMBER), m.start(16), m.end(16), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+            }
+        }
+
+        return spannable;
+    }
+
+    private File copyUriToTempFile(Uri uri) throws IOException {
+        File tempFile = new File(getCacheDir(), "temp_input");
+        InputStream is = getContentResolver().openInputStream(uri);
+        if (is == null) throw new IOException("Failed to open input stream");
+        try {
+            OutputStream os = new FileOutputStream(tempFile);
+            try {
+                byte[] buffer = new byte[8192];
+                int read;
+                while ((read = is.read(buffer)) != -1) {
+                    os.write(buffer, 0, read);
+                }
+                os.flush();
+            } finally {
+                os.close();
+            }
+        } finally {
+            is.close();
+        }
+        return tempFile;
+    }
+
+    @SuppressLint("Range")
+    private String getFileName(Uri uri) {
+        String result = null;
+        if (uri.getScheme().equals("content")) {
+            android.database.Cursor cursor = getContentResolver().query(uri, null, null, null, null);
+            try {
+                if (cursor != null && cursor.moveToFirst()) {
+                    result = cursor.getString(cursor.getColumnIndex(android.provider.OpenableColumns.DISPLAY_NAME));
+                }
+            } finally {
+                if (cursor != null) cursor.close();
+            }
+        }
+        if (result == null) {
+            result = uri.getPath();
+            int cut = result.lastIndexOf('/');
+            if (cut != -1) {
+                result = result.substring(cut + 1);
+            }
+        }
+        return result;
+    }
+
+    private void showError(Throwable t) {
+        StringWriter sw = new StringWriter();
+        PrintWriter pw = new PrintWriter(sw);
+        t.printStackTrace(pw);
+        tvOutput.setText("Error occurred:\n" + sw.toString());
+    }
 }

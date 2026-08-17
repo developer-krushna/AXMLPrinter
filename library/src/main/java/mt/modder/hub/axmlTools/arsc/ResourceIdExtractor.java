@@ -57,58 +57,58 @@ public class ResourceIdExtractor {
     private Map<String, String> idToNameCache = new HashMap<>();
 
     // Method to load and parse the ARSC file
-	public void loadArscData(InputStream arsc) throws Exception {
-		BinaryResourceFile resourceFile = BinaryResourceFile.fromInputStream(arsc);
-		List<Chunk> chunks = resourceFile.getChunks();
-		
-		for (Chunk chunk : chunks) {
-			if (chunk instanceof ResourceTableChunk) {
-				ResourceTableChunk resourceTableChunk = (ResourceTableChunk) chunk;
-				for (PackageChunk packageChunk : resourceTableChunk.getPackages()) {
-					StringPoolChunk keyStringPool = packageChunk.getKeyStringPool();
-					for (TypeChunk typeChunk : packageChunk.getTypeChunks()) {
-						for (Map.Entry<Integer, TypeChunk.Entry> entry : typeChunk.getEntries().entrySet()) {
-							BinaryResourceIdentifier binaryResourceIdentifier = BinaryResourceIdentifier.create(packageChunk.getId(), typeChunk.getId(), (int) entry.getKey());
+    public void loadArscData(InputStream arsc) throws Exception {
+        BinaryResourceFile resourceFile = BinaryResourceFile.fromInputStream(arsc);
+        List<Chunk> chunks = resourceFile.getChunks();
 
-							String hexId = binaryResourceIdentifier.toString();
-							String resourceTypeName = typeChunk.getTypeName(); // Get resource type name directly
+        for (Chunk chunk : chunks) {
+            if (chunk instanceof ResourceTableChunk) {
+                ResourceTableChunk resourceTableChunk = (ResourceTableChunk) chunk;
+                for (PackageChunk packageChunk : resourceTableChunk.getPackages()) {
+                    StringPoolChunk keyStringPool = packageChunk.getKeyStringPool();
+                    for (TypeChunk typeChunk : packageChunk.getTypeChunks()) {
+                        for (Map.Entry<Integer, TypeChunk.Entry> entry : typeChunk.getEntries().entrySet()) {
+                            BinaryResourceIdentifier binaryResourceIdentifier = BinaryResourceIdentifier.create(packageChunk.getId(), typeChunk.getId(), (int) entry.getKey());
 
-							// Extract data for different resource types
-							String extractedData = extractResourceData(resourceTypeName, keyStringPool, entry, resourceTableChunk);
+                            String hexId = binaryResourceIdentifier.toString();
+                            String resourceTypeName = typeChunk.getTypeName(); // Get resource type name directly
 
-							// Cache the extracted data based on the hex ID
-							idToNameCache.put(hexId, extractedData);
-						}
-					}
-				}
-			}
-		}
+                            // Extract data for different resource types
+                            String extractedData = extractResourceData(resourceTypeName, keyStringPool, entry, resourceTableChunk);
 
-	}
+                            // Cache the extracted data based on the hex ID
+                            idToNameCache.put(hexId, extractedData);
+                        }
+                    }
+                }
+            }
+        }
 
-	private String extractResourceData(String resourceTypeName, StringPoolChunk keyStringPool, Map.Entry<Integer, TypeChunk.Entry> entry, ResourceTableChunk resourceTableChunk) {
-		String extractedData = null;
+    }
 
-		if (resourceTypeName.equals("attr") || resourceTypeName.equals("style") || resourceTypeName.equals("color")) {
-			// Handle @attr or @style
-			String key = keyStringPool.getString(entry.getValue().keyIndex());
-			extractedData = resourceTypeName + "/" + key;
-		} else {
-			// Handle other resource types
-			if (entry.getValue().value() == null || entry.getValue().value().data() > resourceTableChunk.getStringPool().getStringCount() || entry.getValue().value().data() < 0) {
-				extractedData = null; // Handle invalid data
-			} else {
-				String key = keyStringPool.getString(entry.getValue().keyIndex());
-				extractedData = resourceTypeName + "/" + key;
-			}
-		}
+    private String extractResourceData(String resourceTypeName, StringPoolChunk keyStringPool, Map.Entry<Integer, TypeChunk.Entry> entry, ResourceTableChunk resourceTableChunk) {
+        String extractedData = null;
 
-		return extractedData;
-	}
+        if (resourceTypeName.equals("attr") || resourceTypeName.equals("style") || resourceTypeName.equals("color")) {
+            // Handle @attr or @style
+            String key = keyStringPool.getString(entry.getValue().keyIndex());
+            extractedData = resourceTypeName + "/" + key;
+        } else {
+            // Handle other resource types
+            if (entry.getValue().value() == null || entry.getValue().value().data() > resourceTableChunk.getStringPool().getStringCount() || entry.getValue().value().data() < 0) {
+                extractedData = null; // Handle invalid data
+            } else {
+                String key = keyStringPool.getString(entry.getValue().keyIndex());
+                extractedData = resourceTypeName + "/" + key;
+            }
+        }
+
+        return extractedData;
+    }
 
     // Method to retrieve the name for a given hex ID
     public String getNameForHexId(String hexId) {
-		return idToNameCache.get("0x" + hexId);
+        return idToNameCache.get("0x" + hexId);
     }
-	
+
 }

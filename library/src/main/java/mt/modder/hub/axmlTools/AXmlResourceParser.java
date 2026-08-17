@@ -1,6 +1,6 @@
 /*
  * AxmlPrinter - An Advanced Axml Printer available with proper xml style/format feature
- * Copyright 2024, developer-krushna
+ * Copyright 2024_2026, developer-krushna
  *
  * Redistribution and use in source and binary forms, with or without
  * modification, are permitted provided that the following conditions are
@@ -45,23 +45,23 @@ import java.io.Reader;
 import mt.modder.hub.axmlTools.utils.TypedValue;
 
 public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
-    
-	// constant values representing different xml chunk types
+
+    // constant values representing different xml chunk types
     private static final int CHUNK_AXML_FILE = 0x80003;
     private static final int CHUNK_RESOURCEIDS = 0x80180;
     private static final int CHUNK_XML_END_NAMESPACE = 0x100101;
     private static final int CHUNK_XML_END_TAG = 0x100103;
     private static final int CHUNK_XML_START_TAG = 0x100102;
     private static final String E_NOT_SUPPORTED = "Method is not supported.";
-	public static final int XML_RESOURCE_MAP = 0x0180;
-	
-	private static final int XML_START_TAG_CHUNK = 1048832; 
-	private static final int XML_TEXT_CHUNK = 1048836; 
-	private static final int XML_NAMESPACE_PUSH_CHUNK = 1048832; 
-	
-	public static final String NS_ANDROID = "http://schemas.android.com/apk/res/android";
-	
-	// vriables for storing attributes and state information
+    public static final int XML_RESOURCE_MAP = 0x0180;
+
+    private static final int XML_START_TAG_CHUNK = 1048832;
+    private static final int XML_TEXT_CHUNK = 1048836;
+    private static final int XML_NAMESPACE_PUSH_CHUNK = 1048832;
+
+    public static final String NS_ANDROID = "http://schemas.android.com/apk/res/android";
+
+    // vriables for storing attributes and state information
     private int[] mAttributes;
     private int mClassAttribute;
     private boolean mDecreaseDepth;
@@ -76,11 +76,11 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     private int mStyleAttribute;
     private PrecededXmlToken precededXmlToken = null;
     private boolean mOperational = false;
-	
-	private String[] resourceMap;
-	public static boolean isChunkResourceIDs = false;
-	
-	
+
+    private String[] resourceMap;
+    public static boolean isChunkResourceIDs = false;
+
+
     private NamespaceStack mNamespaces = new NamespaceStack();
 
     // class to handle the namespace stack
@@ -90,8 +90,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         private int mDataLength;
         private int mDepth;
 
-		
-		// ensures the internal data array has enough capacity
+
+        // ensures the internal data array has enough capacity
         private void ensureDataCapacity(int capacity) {
             int available = (mData.length - mDataLength);
             if (available > capacity) {
@@ -102,7 +102,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             System.arraycopy(mData, 0, newData, 0, mDataLength);
             mData = newData;
         }
-		
+
         // finds a prefix or URI in the stack
         private final int find(int prefixOrUri, boolean prefix) {
             if (mDataLength == 0) {
@@ -127,8 +127,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             }
             return -1;
         }
-		
-		//retrive a prefix or URI at a specific index
+
+        //retrive a prefix or URI at a specific index
 
         private final int get(int index, boolean prefix) {
             if (mDataLength == 0 || index < 0) {
@@ -150,8 +150,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             }
             return -1;
         }
-		
-		// decreases the depth of the namespace stack
+
+        // decreases the depth of the namespace stack
         public final void decreaseDepth() {
             if (mDataLength == 0) {
                 return;
@@ -165,18 +165,18 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             mCount -= count;
             mDepth -= 1;
         }
-		
-		//finds a prefix in the stack
+
+        //finds a prefix in the stack
         public int findPrefix(int prefix) {
             return find(prefix, false);
         }
-		
-		// finds a URI in a stack
+
+        // finds a URI in a stack
         public int findUri(int uri) {
             return find(uri, true);
         }
-		
-		// gets the accumulated count of namespace at a given depth
+
+        // gets the accumulated count of namespace at a given depth
         public final int getAccumulatedCount(int depth) {
             if (mDataLength == 0 || depth < 0) {
                 return 0;
@@ -193,8 +193,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             }
             return accumulatedCount;
         }
-		
-		// gets the current count of namespaces
+
+        // gets the current count of namespaces
         public final int getCurrentCount() {
             if (mDataLength == 0) {
                 return 0;
@@ -202,28 +202,28 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             int offset = mDataLength - 1;
             return mData[offset];
         }
-		
-		// gets the current depth of the stack
+
+        // gets the current depth of the stack
         public int getDepth() {
             return this.mDepth;
         }
 
-		// gets the prefix at a specific index
+        // gets the prefix at a specific index
         public int getPrefix(int index) {
             return get(index, true);
         }
-		
-		// gets the total counts of namespace
+
+        // gets the total counts of namespace
         public final int getTotalCount() {
             return this.mCount;
         }
-		
-		// gets the URI at a specfic index
+
+        // gets the URI at a specfic index
         public int getUri(int index) {
             return get(index, false);
         }
-		
-		// increases the depth of the namespace stack
+
+        // increases the depth of the namespace stack
         public final void increaseDepth() {
             ensureDataCapacity(2);
             int offset = mDataLength;
@@ -233,7 +233,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             mDepth += 1;
         }
 
-		// Pops the namespace entry from the stack
+        // Pops the namespace entry from the stack
         public final boolean pop() {
             if (mDataLength == 0) {
                 return false;
@@ -252,8 +252,8 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             mCount -= 1;
             return true;
         }
-		
-		// Pops the specific prefix and URI from the stack
+
+        // Pops the specific prefix and URI from the stack
         public final boolean pop(int prefix, int uri) {
             if (mDataLength == 0) {
                 return false;
@@ -274,9 +274,9 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                     offset -= (1 + 2 + count * 2);
                     mData[offset] = count;
                     System.arraycopy(
-						mData, o + 2,
-						mData, o,
-						mDataLength - o);
+                            mData, o + 2,
+                            mData, o,
+                            mDataLength - o);
                 }
                 mDataLength -= 2;
                 mCount -= 1;
@@ -285,7 +285,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             return false;
         }
 
-		// pushes a prefix and URI onto the stack
+        // pushes a prefix and URI onto the stack
         public final void push(int prefix, int uri) {
             if (mDepth == 0) {
                 increaseDepth();
@@ -301,7 +301,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
             mCount += 1;
         }
 
-		// resets the nemespace stack
+        // resets the nemespace stack
         public final void reset() {
             this.mDataLength = 0;
             this.mCount = 0;
@@ -309,7 +309,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         }
     }
 
-	// Class to store information about previous xml token
+    // Class to store information about previous xml token
     public static final class PrecededXmlToken {
         public String name;
         public String namespace;
@@ -322,16 +322,14 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         }
     }
 
-	// Constructor to intialize the parser
+    // Constructor to intialize the parser
     public AXmlResourceParser() {
         resetEventInfo();
-		
+
     }
-	
-	
-	
-	
-	// reads the next xml token and updatea the parser state
+
+
+    // reads the next xml token and updatea the parser state
     private void doNext() throws IOException {
         int readInt = 0;
         if (this.stringBlock == null) {
@@ -362,7 +360,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                     break;
                 }
                 this.mResourceIDs = this.mReader.readIntArray((readInt / 4) - 2);
-				resourceMap = new String[mResourceIDs.length];
+                resourceMap = new String[mResourceIDs.length];
             } else if (chunkType < XML_START_TAG_CHUNK || chunkType > XML_TEXT_CHUNK) {
                 break;
             } else if (chunkType == CHUNK_XML_START_TAG && previousEvent == -1) {
@@ -411,7 +409,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
                     }
                 } else if (chunkType == XML_NAMESPACE_PUSH_CHUNK) {
                     this.mNamespaces.push(this.mReader.readInt(), this.mReader.readInt());
-                } else { 
+                } else {
                     this.mReader.skipInt();
                     this.mReader.skipInt();
                     this.mNamespaces.pop();
@@ -421,54 +419,53 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         throw new IOException("Invalid resource ids size (" + readInt + ").");
     }
 
-	/**
+    /**
      * Finds the attribute index for a given namespace and attribute name.
      */
-	
+
     private final int findAttribute(String namespace, String attributeName) {
-		if (stringBlock == null || attributeName == null) {
-			return -1;
-		}
+        if (stringBlock == null || attributeName == null) {
+            return -1;
+        }
 
-		int attributeIndex = stringBlock.find(attributeName);
-		if (attributeIndex == -1) {
-			return -1;
-		}
+        int attributeIndex = stringBlock.find(attributeName);
+        if (attributeIndex == -1) {
+            return -1;
+        }
 
-		int namespaceIndex = namespace != null ? stringBlock.find(namespace) : -1;
+        int namespaceIndex = namespace != null ? stringBlock.find(namespace) : -1;
 
-		for (int i = 0; i < mAttributes.length; i += 5) {
-			if (attributeIndex == mAttributes[i + 1] &&
-				(namespaceIndex == -1 || namespaceIndex == mAttributes[i])) {
-				return i / 5;
-			}
-		}
+        for (int i = 0; i < mAttributes.length; i += 5) {
+            if (attributeIndex == mAttributes[i + 1] &&
+                    (namespaceIndex == -1 || namespaceIndex == mAttributes[i])) {
+                return i / 5;
+            }
+        }
 
-		return -1;
-	}
-	
-	
+        return -1;
+    }
+
 
     /**
      * Gets the attribute offset for a given index.
      */
-	
-    private int getAttributeOffset(int index) {
-		if (this.eventType == XmlPullParser.START_TAG) {
-			int offset = index * 5;
-			if (offset < this.mAttributes.length) {
-				return offset;
-			}
-			throw new IndexOutOfBoundsException("Invalid attribute index (" + index + ").");
-		}
-		throw new IndexOutOfBoundsException("Current event is not START_TAG.");
-	}
-	
 
-	/**
+    private int getAttributeOffset(int index) {
+        if (this.eventType == XmlPullParser.START_TAG) {
+            int offset = index * 5;
+            if (offset < this.mAttributes.length) {
+                return offset;
+            }
+            throw new IndexOutOfBoundsException("Invalid attribute index (" + index + ").");
+        }
+        throw new IndexOutOfBoundsException("Current event is not START_TAG.");
+    }
+
+
+    /**
      * Resets the event information.
      */
-	
+
     private final void resetEventInfo() {
         this.eventType = -1;
         this.mLineNumber = -1;
@@ -493,7 +490,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         }
     }
 
-	@Override
+    @Override
     public void defineEntityReplacementText(String entityName, String replacementText) throws XmlPullParserException {
         throw new XmlPullParserException("Entity replacement text not supported.");
     }
@@ -516,9 +513,9 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         }
         return this.mAttributes.length / 5;
     }
-	
 
-	@Override
+
+    @Override
     public float getAttributeFloatValue(int index, float defaultValue) {
         int attributeOffset = getAttributeOffset(index);
         int[] attributeArray = this.mAttributes;
@@ -531,7 +528,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         return attributeIndex == -1 ? defaultValue : getAttributeFloatValue(attributeIndex, defaultValue);
     }
 
-	@Override
+    @Override
     public int getAttributeIntValue(int index, int defaultValue) {
         int attributeOffset = getAttributeOffset(index);
         int[] attributeArray = this.mAttributes;
@@ -546,48 +543,48 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
     }
 
     @Override
-	public int getAttributeListValue(int index, String[] options, int defaultValue) {
-		int attributeOffset = getAttributeOffset(index);
-		int[] attributeArray = this.mAttributes;
-		int type = attributeArray[attributeOffset + 3];
-		int value = attributeArray[attributeOffset + 4];
+    public int getAttributeListValue(int index, String[] options, int defaultValue) {
+        int attributeOffset = getAttributeOffset(index);
+        int[] attributeArray = this.mAttributes;
+        int type = attributeArray[attributeOffset + 3];
+        int value = attributeArray[attributeOffset + 4];
 
-		if (type != TypedValue.TYPE_STRING) {
-			return defaultValue;
-		}
+        if (type != TypedValue.TYPE_STRING) {
+            return defaultValue;
+        }
 
-		String attributeValue = this.stringBlock.getString(value);
-		if (options != null) {
-			for (int i = 0; i < options.length; i++) {
-				if (options[i].equals(attributeValue)) {
-					return i;
-				}
-			}
-		}
-		return defaultValue;
-	}
-	
-    ///////////////////////////////////
+        String attributeValue = this.stringBlock.getString(value);
+        if (options != null) {
+            for (int i = 0; i < options.length; i++) {
+                if (options[i].equals(attributeValue)) {
+                    return i;
+                }
+            }
+        }
+        return defaultValue;
+    }
+
+    /// ////////////////////////////////
 
     @Override
-	public int getAttributeListValue(String namespace, String attribute, String[] options, int defaultValue) {
-		int attributeIndex = findAttribute(namespace, attribute);
-		return attributeIndex == -1 ? defaultValue : getAttributeListValue(attributeIndex, options, defaultValue);
-	}
-	
+    public int getAttributeListValue(String namespace, String attribute, String[] options, int defaultValue) {
+        int attributeIndex = findAttribute(namespace, attribute);
+        return attributeIndex == -1 ? defaultValue : getAttributeListValue(attributeIndex, options, defaultValue);
+    }
+
 
     @Override
     public String getAttributeName(int index) {
-		int nameIndex = this.mAttributes[getAttributeOffset(index) + 1];
-		String attrName = stringBlock.getString(nameIndex);
-        if(!attrName.isEmpty()){
-			isChunkResourceIDs = false;
-			return attrName;
-		}else{
-			isChunkResourceIDs = true;
-			return Integer.toHexString(mResourceIDs[nameIndex]);
-		}
-  
+        int nameIndex = this.mAttributes[getAttributeOffset(index) + 1];
+        String attrName = stringBlock.getString(nameIndex);
+        if (!attrName.isEmpty()) {
+            isChunkResourceIDs = false;
+            return attrName;
+        } else {
+            isChunkResourceIDs = true;
+            return Integer.toHexString(mResourceIDs[nameIndex]);
+        }
+
     }
 
     @Override
@@ -606,19 +603,18 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         return resourceArray[resourceNameIndex];
     }
 
-   
 
     @Override
-	public String getAttributePrefix(int index) {
-		int findPrefix = this.mNamespaces.findPrefix(this.mAttributes[getAttributeOffset(index)]);
-		String prefix = (findPrefix == -1) ? "" : this.stringBlock.getString(findPrefix);
-		switch (prefix) {
-			case "axml_auto_00":
-				return "android";
-			default:
-				return prefix;
-		}
-	}
+    public String getAttributePrefix(int index) {
+        int findPrefix = this.mNamespaces.findPrefix(this.mAttributes[getAttributeOffset(index)]);
+        String prefix = (findPrefix == -1) ? "" : this.stringBlock.getString(findPrefix);
+        switch (prefix) {
+            case "axml_auto_00":
+                return "android";
+            default:
+                return prefix;
+        }
+    }
 
     @Override
     public int getAttributeResourceValue(int index, int defaultValue) {
@@ -767,23 +763,23 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
 
     @Override
     public String getNamespacePrefix(int i) {
-		String namespacePrefix = this.stringBlock.getString(this.mNamespaces.getPrefix(i));
+        String namespacePrefix = this.stringBlock.getString(this.mNamespaces.getPrefix(i));
         switch (namespacePrefix) {
-			case "axml_auto_00":
-				return "android";
-			default:
-				return namespacePrefix;
-		}
+            case "axml_auto_00":
+                return "android";
+            default:
+                return namespacePrefix;
+        }
     }
 
     @Override
     public String getNamespaceUri(int pos) {
-        String naespaceUri = this.stringBlock.getString(this.mNamespaces.getUri(pos));
-		if(naespaceUri != null){
-			return naespaceUri;
-		} else {
-			return NS_ANDROID;
-		}
+        String namespaceUri = this.stringBlock.getString(this.mNamespaces.getUri(pos));
+        if (namespaceUri != null) {
+            return namespaceUri;
+        } else {
+            return NS_ANDROID;
+        }
     }
 
     @Override
@@ -826,7 +822,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         return null;
     }
 
-	@Override
+    @Override
     public char[] getTextCharacters(int[] holderForStartAndLength) {
         String text = getText();
         if (text == null) {
@@ -843,7 +839,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
 
     @Override
     public boolean isAttributeDefault(int index) {
-		// No default attributes, returning false
+        // No default attributes, returning false
         return false;
     }
 
@@ -852,7 +848,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         return false;
     }
 
-	@Override
+    @Override
     public boolean isWhitespace() throws XmlPullParserException {
         if (this.eventType != XmlPullParser.TEXT) {
             throw new XmlPullParserException("Current event is not TEXT");
@@ -886,7 +882,7 @@ public class AXmlResourceParser implements XmlResourceParser, AutoCloseable {
         throw new XmlPullParserException("Parser is not opened.", this, null);
     }
 
-	@Override
+    @Override
     public int nextTag() throws XmlPullParserException, IOException {
         int eventType = next();
         if (eventType == XmlPullParser.TEXT && isWhitespace()) {

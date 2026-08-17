@@ -3,35 +3,30 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    //noinspection GradleDependency
+    compileSdk 35
     namespace "mt.modder.hub.axml"
 
     defaultConfig {
         applicationId "mt.modder.hub.axml"
-        minSdkVersion 21
+        minSdk 21
         //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 30
+        targetSdk 28
         versionCode 1
         versionName "1.0"
     }
     signingConfigs {
-        release {
-            storeFile file('HunMod.jks')
-            storePassword 'HunMod'
-            keyAlias 'HunMod'
-            keyPassword 'HunMod'
-        }
+
     }
     buildTypes {
-        release {
-            signingConfig signingConfigs.release
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 }
 

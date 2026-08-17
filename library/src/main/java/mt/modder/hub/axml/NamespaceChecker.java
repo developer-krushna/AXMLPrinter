@@ -17,12 +17,6 @@ public class NamespaceChecker {
     }
 
     private void loadAttributesFromFile() {
-        // On real Android devices files under src/main/assets are NOT reachable
-        // via Class.getResourceAsStream() (they are not on the classpath, only
-        // accessible through android.content.res.AssetManager). Guard against
-        // a null stream so a missing/unreachable resource degrades gracefully
-        // instead of throwing a NullPointerException out of this constructor
-        // (which would otherwise abort AXMLPrinter construction entirely).
         InputStream inputStream = null;
         try {
             inputStream = NamespaceChecker.class.getResourceAsStream("/assets/no_nameSpace_attrs.txt");
