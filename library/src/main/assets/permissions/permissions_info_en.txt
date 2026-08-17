@@ -1,5 +1,5 @@
 #Collected by @developer-krushna.
-#Join Telegram Channel @Modder_Hub for more updates.
+#Join Telegram Channel @Modder_Hub for more updates
 
 android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
 Allows an app to request to ignore battery optimizations.
