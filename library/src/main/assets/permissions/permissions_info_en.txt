@@ -1,14 +1,15 @@
 #Collected by @developer-krushna.
 #Join Telegram Channel @Modder_Hub for more updates..
+#List covers Android permissions from API 1 to API 37 (Android 17). Last update: 18 Aug 2026
 
 android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS
 Allows an app to request to ignore battery optimizations.
 
 android.permission.ACCESS_CHECKIN_PROPERTIES
-Read and write access to the "properties" table in the checkin database, which values can be modified for upload
+Read and write access to the "properties" table in the checkin database, which values can be modified for upload (Android 1.0).
 
 android.permission.ACCESS_COARSE_LOCATION
-Allows an app to access approximate location (network-based).
+Allows an app to access approximate location (network-based) (Android 1.0).
 
 android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION
 Run foreground service with the type "mediaProjection"
@@ -25,35 +26,32 @@ Allows application to gain superuser access
 android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK
 Run foreground service with the type "mediaPlayback"
 
-android.permission.FOREGROUND_SERVICE_DATA_SYNC
-Run foreground service with the type "dataSync"
-
 android.permission.READ_MEDIA_VISUAL_USER_SELECTED
 Read user selected image and video files from shared storage
 
 android.permission.ACCESS_FINE_LOCATION
-Access precise location
+Access precise location (Android 1.0).
 
 android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
-Access extra location provider commands
+Access extra location provider commands (Android 1.0).
 
 android.permission.ACCESS_MOCK_LOCATION
 Acquire mock location information
 
 android.permission.ACCESS_NETWORK_STATE
-View network connections
+View network connections (Android 1.0).
 
 android.permission.ACCESS_SURFACE_FLINGER
 Utilize SurfaceFlinger's low-level features
 
 android.permission.ACCESS_WIFI_STATE
-Access Wi-Fi network state information
+Access Wi-Fi network state information (Android 1.0).
 
 android.permission.ADD_SYSTEM_SERVICE
 Publish system-level services
 
 android.permission.BATTERY_STATS
-Update battery statistics
+Update battery statistics (Android 1.0).
 
 android.permission.CREDENTIAL_MANAGER_SET_ORIGIN
 Allows a browser to invoke credential manager APIs on behalf of another RP.
@@ -175,6 +173,9 @@ Install location providers
 android.permission.INSTALL_PACKAGES
 Install packages
 
+android.permission.INSTALL_PACKAGES_AS_REGISTERED_APP_STORE
+Permission to allow installing and updating apps as a registered app store.
+
 android.permission.INTERNAL_SYSTEM_WINDOW
 Open windows using the system UI
 
@@ -201,6 +202,12 @@ Make application always run
 
 android.permission.PROCESS_OUTGOING_CALLS
 💀 Reroute outgoing calls
+
+android.permission.PROVIDE_OWN_AUTOFILL_SUGGESTIONS
+Allows an application to display its suggestions using the autofill framework.
+
+android.permission.PROVIDE_PRIVATE_COMPUTE_SERVICES
+Allows an application to act as Private Compute Services, which allows the application to communicate with Private Compute Core components (Android 17).
 
 android.permission.READ_CALENDAR
 Read calendar events and details
@@ -229,6 +236,12 @@ Read synchronization settings
 android.permission.READ_SYNC_STATS
 Read synchronization stats
 
+android.permission.READ_SYSTEM_PREFERENCES
+Allows an application to access the Settings Preference services to read settings exposed by the system Settings app and system apps that contribute settings surfaced by the Settings app (Android 16).
+
+com.android.voicemail.permission.READ_VOICEMAIL
+Allows an application to read voicemails in the system.
+
 android.permission.REBOOT
 Allows an app to reboot/re-start the device.
 
@@ -249,6 +262,9 @@ Record audio
 
 android.permission.REORDER_TASKS
 Reorder running apps
+
+android.permission.REPOSITION_SELF_WINDOWS
+Allows an application to programmatically move and resize its tasks when the system is in a state that allows such operations, e.g. in a desktop-like environment. It is only extended to the default browser and OEM specific signature apps (Android 17).
 
 android.permission.RESTART_PACKAGES
 Restart other apps
@@ -289,8 +305,17 @@ Set wallpaper
 android.permission.SET_WALLPAPER_HINTS
 Adjust your wallpaper size
 
+android.permission.SHOW_POWER_MENU
+Permission needed to request to show the Power Menu (Android 17).
+
+android.permission.SHOW_POWER_MENU_PRIVILEGED
+Permission needed to request to show the Power Menu (Android 17).
+
 android.permission.SIGNAL_PERSISTENT_PROCESSES
 Request to send signals to all visible processes
+
+android.permission.SMS_FINANCIAL_TRANSACTIONS
+Allows financial apps to read filtered sms messages. Protection level: signature|appop Android 10 - Android 12.
 
 android.permission.STATUS_BAR
 Open, close, or disable the status bar and its icons
@@ -333,6 +358,9 @@ android.permission.WRITE_SMS
 
 android.permission.WRITE_SYNC_SETTINGS
 Enable or disable synchronization
+
+android.permission.WRITE_SYSTEM_PREFERENCES
+Allows an application to access the Settings Preference services to write settings values exposed by the system Settings app and system apps that contribute settings surfaced in the Settings app (Android 16).
 
 android.permission.WRITE_USER_DICTIONARY
 Add new words to the user dictionary
@@ -391,8 +419,20 @@ Read the contents of your shared storage space
 android.permission.READ_CALL_LOG
 ☠️ Read call log entries
 
+android.permission.READ_COLOR_ZONES
+Allows an application to read the aggregated color zones on the screen for use cases like TV ambient backlight usages (Android 16).
+
 android.permission.NFC
 Perform NFC near field communication operations
+
+android.permission.NFC_PREFERRED_PAYMENT_INFO
+Allows applications to receive NFC preferred payment service information.
+
+android.permission.NFC_TRANSACTION_EVENT
+Allows applications to receive NFC transaction events.
+
+android.permission.OVERRIDE_MEDIA_SESSION_OWNER
+Allows an application to override the owner of a MediaSession (Android 17).
 
 android.permission.MOUNT_FORMAT_FILESYSTEMS
 Format removable file systems, such as formatting a SD card
@@ -400,14 +440,26 @@ Format removable file systems, such as formatting a SD card
 android.permission.MEDIA_CONTENT_CONTROL
 Access to know what is playing and control its content, not used by third-party apps
 
+android.permission.MEDIA_ROUTING_CONTROL
+Allows an application to control the routing of media apps (Android 15).
+
 android.permission.MANAGE_DOCUMENTS
-Manage access to documents
+Manage access to documents Android 4.4 (KitKat).
 
 android.permission.MANAGE_ACCOUNTS
 Manage the list of accounts in the AccountManager
 
 android.permission.LOCATION_HARDWARE
 Use location hardware features, not used by third-party apps
+
+android.permission.LOCK_APPS
+Permission granted to apps holding the RoleManager.ROLE_HOME role that allows them to enable app lock. This is also granted to the recents component, which is typically the system launcher, to ensure a consistent user experience. App Lock is a feature that allows users to require authentication before opening apps.
+
+android.permission.MANAGE_ASSISTANT_AUDIO
+Allows control of audio behavior related to Assistant experiences, including routing, mode change and volume control of the Assistant audio stream.
+
+android.permission.MANAGE_CONTACTS
+Allows an application to manage user's contacts. Intended to be used by a limited number of apps that need full management capabilities.
 
 android.permission.KILL_BACKGROUND_PROCESSES
 Call killBackgroundProcesses(String) to terminate background processes
@@ -461,22 +513,22 @@ android.permission.BIND_NFC_SERVICE
 Must be ensured by HostApduService or OffHostApduService that only the system can bind to it
 
 android.permission.BIND_INPUT_METHOD
-☠️ Request an InputMethodService
+☠️ Request an InputMethodService Android 1.5 (Cupcake).
 
 android.permission.BIND_DEVICE_ADMIN
-☠️ Request to become a device administrator.
+☠️ Request to become a device administrator Android 2.2 (Froyo).
 
 android.permission.BIND_APPWIDGET
-Allows an app to tell the AppWidget service to access apps's widget data.
+Allows an app to tell the AppWidget service to access apps's widget data (Android 1.5 (Cupcake).
 
 android.permission.BIND_ACCESSIBILITY_SERVICE
-Request an AccessibilityService.
+Request an AccessibilityService (Android 4.1 (Jelly Bean).
 
 android.permission.AUTHENTICATE_ACCOUNTS
 Allows an app to act as an AccountAuthenticator for the AccountManager.
 
 android.permission.ACCOUNT_MANAGER
-Access account authentication credentials, primarily for GMail account information. Only accessible by system-level processes.
+Access account authentication credentials, primarily for GMail account information. Only accessible by system-level processes (Android 2.0 Eclair).
 
 com.android.browser.permission.READ_HISTORY_BOOKMARKS
 Read browser's favorites and history.
@@ -494,7 +546,7 @@ com.android.launcher.permission.UNINSTALL_SHORTCUT
 Remove shortcut.
 
 com.android.voicemail.permission.ADD_VOICEMAIL
-Allows an app to add voicemails into the system.
+Allows an app to add voicemails into the system (Android 4.0–4.0.2 (Ice Cream Sandwich).
 
 android.permission.REQUEST_INSTALL_PACKAGES
 Request installation of packages.
@@ -518,34 +570,40 @@ android.permission.USE_BIOMETRIC
 (deprecated) Use fingerprint authentication.
 
 android.permission.FOREGROUND_SERVICE
-Run foreground service.
+Run foreground service (Android 9).
 
 android.permission.QUERY_ALL_PACKAGES
 Allows an app to query all installed packages (Android 11+)
+
+android.permission.QUERY_APP_USAGE
+Allows the holder to query app usage stats.
+
+android.permission.RANGING
+Required to be able to range to devices using generic ranging module (Android 16).
 
 android.permission.ACCESS_BACKGROUND_LOCATION
 Allows an app to access location in the background (Android 10+).
 
 android.permission.ACTIVITY_RECOGNITION
-Allows an app to recognize and access the user's physical activity.
+Allows an app to recognize and access the user's physical activity (Android 10).
 
 android.permission.ACCESS_MEDIA_LOCATION
-Allows an app to access geographic location embedded in the user's shared photos and videos.
+Allows an app to access geographic location embedded in the user's shared photos and videos (Android 10).
 
 android.permission.UWB_RANGING
 Allows an app to use Ultra Wideband (UWB) technology to measure the distance to other devices.
 
 android.permission.BLUETOOTH_SCAN
-Allows an app to scan for Bluetooth devices, requiring either location visibility or BLUETOOTH_ADMIN permission.
+Allows an app to scan for Bluetooth devices, requiring either location visibility or BLUETOOTH_ADMIN permission (Android 12).
 
 android.permission.BLUETOOTH_CONNECT
-Allows an app to connect to paired Bluetooth devices.
+Allows an app to connect to paired Bluetooth devices (Android 12).
 
 android.permission.MANAGE_EXTERNAL_STORAGE
-Allows read and write access to all shared storage content.
+Allows read and write access to all shared storage content (Android 11).
 
 android.permission.BLUETOOTH_ADVERTISE
-Allows an app to broadcast via Bluetooth.
+Allows an app to broadcast via Bluetooth (Android 12).
 
 android.permission.REQUIRE_MANAGED_USER_SPLIT
 This permission indicates that apps requires the ability to run within a managed profile or work profile.
@@ -554,13 +612,13 @@ android.permission.USE_BACKGROUND_EXECUTION_WITHOUT_FOREGROUND
 Allows apps to execute tasks in the background without showing a persistent notification.
 
 android.permission.ANSWER_PHONE_CALLS
-☠️ Allows an app to answer incoming phone calls (Android 8+).
+☠️ Allows an app to answer incoming phone calls (Android 8.0 (Oreo)).
 
 android.permission.READ_MEDIA_AUDIO
-Allows an app to access audio data from media files.
+Allows an app to access audio data from media files Android 13.
 
 android.permission.READ_MEDIA_VIDEO
-Allows an app to access video data from media files.
+Allows an app to access video data from media files Android 13.
 
 android.permission.MANAGE_PROFILE_AND_DEVICE_OWNERS
 👽 Allows an app to manage device and profile owners.
@@ -611,7 +669,10 @@ com.android.launcher.permission.READ_SETTINGS
 Allows an app to read the preferences and configuration settings of the home screen launcher on an Android device.
 
 android.permission.POST_NOTIFICATIONS
-Allows apps to display notifications on an Android device.
+Allows apps to display notifications on an Android device (Android 13).
+
+android.permission.POST_PROMOTED_NOTIFICATIONS
+Required for apps to post promoted notifications (Android 16.1).
 
 com.google.android.gms.permission.AD_ID
 Allows the app to access the advertising ID.
@@ -626,7 +687,7 @@ android.permission.SCHEDULE_EXACT_ALARM
 Allows the setting of precise alarms.
 
 android.permission.READ_MEDIA_IMAGES
-Allows access to the images stored on the device.
+Allows access to the images stored on the device (Android 13).
 
 android.permission.INSTANT_APP_FOREGROUND_SERVICE
 Allows an instant app to create foreground services
@@ -639,6 +700,255 @@ Allows financed device kiosk apps to perform actions on the Device Lock service
 
 android.permission.MANAGE_DEVICE_POLICY_ACCESSIBILITY
 Allows an app to manage policy related to accessibility.
+
+android.permission.MANAGE_DEVICE_POLICY_ACCOUNT_MANAGEMENT
+Allows an application to set policy related to account management.
+
+android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS
+Allows an application to set device policies outside the current user that are required for securing device ownership without accessing user data.
+
+android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS_FULL
+Allows an application to set device policies outside the current user.
+
+android.permission.MANAGE_DEVICE_POLICY_ACROSS_USERS_SECURITY_CRITICAL
+Allows an application to set device policies outside the current user that are critical for securing data within the current user.
+
+android.permission.MANAGE_DEVICE_POLICY_AIRPLANE_MODE
+Allows an application to set policy related to airplane mode.
+
+android.permission.MANAGE_DEVICE_POLICY_APPS_CONTROL
+Allows an application to manage policy regarding modifying applications.
+
+android.permission.MANAGE_DEVICE_POLICY_APP_FUNCTIONS
+Allows an application to manage policy related to AppFunctions.
+
+android.permission.MANAGE_DEVICE_POLICY_APP_RESTRICTIONS
+Allows an application to manage application restrictions.
+
+android.permission.MANAGE_DEVICE_POLICY_APP_USER_DATA
+Allows an application to manage policy related to application user data.
+
+android.permission.MANAGE_DEVICE_POLICY_ASSIST_CONTENT
+Allows an application to set policy related to sending assist content to a privileged app such as the Assistant app.
+
+android.permission.MANAGE_DEVICE_POLICY_AUDIO_OUTPUT
+Allows an application to set policy related to audio output.
+
+android.permission.MANAGE_DEVICE_POLICY_AUTOFILL
+Allows an application to set policy related to autofill.
+
+android.permission.MANAGE_DEVICE_POLICY_BACKUP_SERVICE
+Allows an application to manage backup service policy.
+
+android.permission.MANAGE_DEVICE_POLICY_BLOCK_UNINSTALL
+Allows an application to manage policy related to block package uninstallation.
+
+android.permission.MANAGE_DEVICE_POLICY_BLUETOOTH
+Allows an application to set policy related to bluetooth.
+
+android.permission.MANAGE_DEVICE_POLICY_BUGREPORT
+Allows an application to request bugreports with user consent.
+
+android.permission.MANAGE_DEVICE_POLICY_CALLS
+Allows an application to manage calling policy.
+
+android.permission.MANAGE_DEVICE_POLICY_CAMERA
+Allows an application to set policy related to restricting a user's ability to use or enable and disable the camera.
+
+android.permission.MANAGE_DEVICE_POLICY_CAMERA_TOGGLE
+Allows an application to manage policy related to camera toggle.
+
+android.permission.MANAGE_DEVICE_POLICY_CERTIFICATES
+Allows an application to set policy related to certificates.
+
+android.permission.MANAGE_DEVICE_POLICY_COMMON_CRITERIA_MODE
+Allows an application to manage policy related to common criteria mode.
+
+android.permission.MANAGE_DEVICE_POLICY_CONTENT_PROTECTION
+Allows an application to manage policy related to content protection.
+
+android.permission.MANAGE_DEVICE_POLICY_DEBUGGING_FEATURES
+Allows an application to manage debugging features policy.
+
+android.permission.MANAGE_DEVICE_POLICY_DEFAULT_SMS
+Allows an application to set policy related to the default sms application.
+
+android.permission.MANAGE_DEVICE_POLICY_DEVICE_IDENTIFIERS
+Allows an application to manage policy related to device identifiers.
+
+android.permission.MANAGE_DEVICE_POLICY_DISPLAY
+Allows an application to set policy related to the display.
+
+android.permission.MANAGE_DEVICE_POLICY_FACTORY_RESET
+Allows an application to set policy related to factory reset.
+
+android.permission.MANAGE_DEVICE_POLICY_FUN
+Allows an application to set policy related to fun.
+
+android.permission.MANAGE_DEVICE_POLICY_INPUT_METHODS
+Allows an application to set policy related to input methods.
+
+android.permission.MANAGE_DEVICE_POLICY_INSTALL_UNKNOWN_SOURCES
+Allows an application to manage installing from unknown sources policy.
+
+android.permission.MANAGE_DEVICE_POLICY_KEEP_UNINSTALLED_PACKAGES
+Allows an application to set policy related to keeping uninstalled packages.
+
+android.permission.MANAGE_DEVICE_POLICY_KEYGUARD
+Allows an application to manage policy related to keyguard features. Like whether the camera, notifications are allowed on the secure keyguard screens.
+
+android.permission.MANAGE_DEVICE_POLICY_LOCALE
+Allows an application to set policy related to locale.
+
+android.permission.MANAGE_DEVICE_POLICY_LOCATION
+Allows an application to set policy related to location.
+
+android.permission.MANAGE_DEVICE_POLICY_LOCK
+Allows an application to lock a profile or the device with the appropriate cross-user permission.
+
+android.permission.MANAGE_DEVICE_POLICY_LOCK_CREDENTIALS
+Allows an application to set policy related to lock credentials.
+
+android.permission.MANAGE_DEVICE_POLICY_LOCK_TASK
+Allows an application to manage lock task policy.
+
+android.permission.MANAGE_DEVICE_POLICY_MANAGED_SUBSCRIPTIONS
+Allows an application to set policy related to subscriptions downloaded by an admin.
+
+android.permission.MANAGE_DEVICE_POLICY_METERED_DATA
+Allows an application to manage policy related to metered data.
+
+android.permission.MANAGE_DEVICE_POLICY_MICROPHONE
+Allows an application to set policy related to restricting a user's ability to use or enable and disable the microphone.
+
+android.permission.MANAGE_DEVICE_POLICY_MICROPHONE_TOGGLE
+Allows an application to manage policy related to microphone toggle.
+
+android.permission.MANAGE_DEVICE_POLICY_MOBILE_NETWORK
+Allows an application to set policy related to mobile networks.
+
+android.permission.MANAGE_DEVICE_POLICY_MODIFY_USERS
+Allows an application to manage policy preventing users from modifying users.
+
+android.permission.MANAGE_DEVICE_POLICY_MTE
+Allows an application to manage policy related to the Memory Tagging Extension (MTE).
+
+android.permission.MANAGE_DEVICE_POLICY_NEARBY_COMMUNICATION
+Allows an application to set policy related to nearby communications (e.g. Beam and nearby streaming).
+
+android.permission.MANAGE_DEVICE_POLICY_NETWORK_LOGGING
+Allows an application to set policy related to network logging.
+
+android.permission.MANAGE_DEVICE_POLICY_ORGANIZATION_IDENTITY
+Allows an application to manage the identity of the managing organization.
+
+android.permission.MANAGE_DEVICE_POLICY_OVERRIDE_APN
+Allows an application to set policy related to override APNs.
+
+android.permission.MANAGE_DEVICE_POLICY_PACKAGE_STATE
+Allows an application to set policy related to hiding and suspending packages.
+
+android.permission.MANAGE_DEVICE_POLICY_PHYSICAL_MEDIA
+Allows an application to set policy related to physical media.
+
+android.permission.MANAGE_DEVICE_POLICY_PRINTING
+Allows an application to set policy related to printing.
+
+android.permission.MANAGE_DEVICE_POLICY_PRIVATE_DNS
+Allows an application to set policy related to private DNS.
+
+android.permission.MANAGE_DEVICE_POLICY_PROFILES
+Allows an application to set policy related to profiles.
+
+android.permission.MANAGE_DEVICE_POLICY_PROFILE_INTERACTION
+Allows an application to set policy related to interacting with profiles (e.g. Disallowing cross-profile copy and paste).
+
+android.permission.MANAGE_DEVICE_POLICY_PROXY
+Allows an application to set a network-independent global HTTP proxy.
+
+android.permission.MANAGE_DEVICE_POLICY_QUERY_SYSTEM_UPDATES
+Allows an application query system updates.
+
+android.permission.MANAGE_DEVICE_POLICY_RESET_PASSWORD
+Allows an application to force set a new device unlock password or a managed profile challenge on current user.
+
+android.permission.MANAGE_DEVICE_POLICY_RESTRICT_PRIVATE_DNS
+Allows an application to set policy related to restricting the user from configuring private DNS.
+
+android.permission.MANAGE_DEVICE_POLICY_RUNTIME_PERMISSIONS
+Allows an application to set the grant state of runtime permissions on packages.
+
+android.permission.MANAGE_DEVICE_POLICY_RUN_IN_BACKGROUND
+Allows an application to set policy related to users running in the background.
+
+android.permission.MANAGE_DEVICE_POLICY_SAFE_BOOT
+Allows an application to manage safe boot policy.
+
+android.permission.MANAGE_DEVICE_POLICY_SCREEN_CAPTURE
+Allows an application to set policy related to screen capture.
+
+android.permission.MANAGE_DEVICE_POLICY_SCREEN_CONTENT
+Allows an application to set policy related to the usage of the contents of the screen.
+
+android.permission.MANAGE_DEVICE_POLICY_SECURITY_LOGGING
+Allows an application to set policy related to security logging.
+
+android.permission.MANAGE_DEVICE_POLICY_SETTINGS
+Allows an application to set policy related to settings.
+
+android.permission.MANAGE_DEVICE_POLICY_SMS
+Allows an application to set policy related to sms.
+
+android.permission.MANAGE_DEVICE_POLICY_STATUS_BAR
+Allows an application to set policy related to the status bar.
+
+android.permission.MANAGE_DEVICE_POLICY_SUPPORT_MESSAGE
+Allows an application to set support messages for when a user action is affected by an active policy.
+
+android.permission.MANAGE_DEVICE_POLICY_SUSPEND_PERSONAL_APPS
+Allows an application to set policy related to suspending personal apps.
+
+android.permission.MANAGE_DEVICE_POLICY_SYSTEM_APPS
+Allows an application to manage policy related to system apps.
+
+android.permission.MANAGE_DEVICE_POLICY_SYSTEM_DIALOGS
+Allows an application to set policy related to system dialogs.
+
+android.permission.MANAGE_DEVICE_POLICY_SYSTEM_UPDATES
+Allows an application to set policy related to system updates.
+
+android.permission.MANAGE_DEVICE_POLICY_THREAD_NETWORK
+Allows an application to set policy related to Thread network.
+
+android.permission.MANAGE_DEVICE_POLICY_TIME
+Allows an application to manage device policy relating to time.
+
+android.permission.MANAGE_DEVICE_POLICY_UNIVERSAL_CLIPBOARD
+Allows an application to manage policy related to Universal Clipboard feature.
+
+android.permission.MANAGE_DEVICE_POLICY_USB_DATA_SIGNALLING
+Allows an application to set policy related to usb data signalling.
+
+android.permission.MANAGE_DEVICE_POLICY_USB_FILE_TRANSFER
+Allows an application to set policy related to usb file transfers.
+
+android.permission.MANAGE_DEVICE_POLICY_USERS
+Allows an application to set policy related to users.
+
+android.permission.MANAGE_DEVICE_POLICY_VPN
+Allows an application to set policy related to VPNs.
+
+android.permission.MANAGE_DEVICE_POLICY_WALLPAPER
+Allows an application to set policy related to the wallpaper.
+
+android.permission.MANAGE_DEVICE_POLICY_WIFI
+Allows an application to set policy related to Wifi.
+
+android.permission.MANAGE_DEVICE_POLICY_WINDOWS
+Allows an application to set policy related to windows.
+
+android.permission.MANAGE_DEVICE_POLICY_WIPE_DATA
+Allows an application to manage policy related to wiping data.
 
 android.permission.READ_HOME_APP_SEARCH_DATA
 Allows an app to query over global data in AppSearch that's visible to the HOME role.
@@ -704,7 +1014,7 @@ android.permission.ACCESS_CONTEXT_HUB
 Allows to access Context Hub functionality.
 
 android.permission.ACCESS_NOTIFICATION_POLICY
-Allows access to notification policy.
+Allows access to notification policy (Android 6.0).
 
 android.permission.ACCESS_VOICE_INTERACTION_SERVICE
 Allows an app to interact with the voice interaction service.
@@ -713,22 +1023,31 @@ android.permission.BACKUP
 Allows an app to perform backup operations.
 
 android.permission.BIND_CARRIER_MESSAGING_SERVICE
-Allows an app to bind a carrier messaging service.
+Allows an app to bind to carrier messaging services. Deprecated in API level 23; use BIND_CARRIER_SERVICES instead.
+
+android.permission.BIND_CARRIER_SERVICES
+The system process that is allowed to bind to services in carrier apps will have this permission. Carrier apps should use this permission to protect their services that only the system is allowed to bind to (Android 6.0).
 
 android.permission.BIND_DIRECTORY_SEARCH
 Allows to bind directory search service.
 
 android.permission.BIND_DREAM_SERVICE
-Allows an app to bind to the dream service (screen saver service).
+Allows an app to bind to the dream service (screen saver service) Android 5.0.
 
 android.permission.BIND_MIDI_DEVICE_SERVICE
-Allows an app to bind to a MIDI device service.
+Allows an app to bind to a MIDI device service (Android 6.0).
 
 android.permission.BIND_TELECOM_CONNECTION_SERVICE
 Allows to bind telecom connection service.
 
 android.permission.BIND_TV_INPUT
 Allows to bind TV input service.
+
+android.permission.BIND_TV_INTERACTIVE_APP
+Must be required by a TvInteractiveAppService to ensure that only the system can bind to it.
+
+android.permission.BIND_VISUAL_VOICEMAIL_SERVICE
+Must be required by a link VisualVoicemailService to ensure that only the system can bind to it.
 
 android.permission.BIND_VOICE_INTERACTION
 Allows to bind voice interaction service.
@@ -964,7 +1283,6 @@ Allows apps to sign in to Google Health using the account(s) stored on this Andr
 com.google.android.googleapps.permission.GOOGLE_AUTH.sierrasandbox
 Allows apps to sign in to Google Checkout Sandbox using the account(s) stored on this Android device.
 
-
 com.google.android.googleapps.permission.GOOGLE_AUTH.writely
 Allows apps to sign in to Google Docs using the account(s) stored on this Android device.
 
@@ -1164,13 +1482,22 @@ android.permission.UWB
 Allows the app to use Ultra-Wideband (UWB) technology for short-range, secure communication and location.
 
 android.permission.MANAGE_WIFI_INTERFACES
-Allows the app to manage Wi-Fi interfaces, controlling aspects like enabling/disabling Wi-Fi adapters.
+Allows the app to manage Wi-Fi interfaces, controlling aspects like enabling/disabling Wi-Fi adapters (Android 13).
 
 android.permission.MANAGE_WIFI_NETWORK_SELECTION
-Allows the app to manage the selection of Wi-Fi networks, potentially prioritizing or choosing networks.
+Allows the app to manage the selection of Wi-Fi networks, potentially prioritizing or choosing networks (Android 13).
 
 android.permission.USE_FULL_SCREEN_INTENT
 Allows the app to display full-screen intents, enabling immersive or critical notifications.
+
+android.permission.USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER
+Allows to read device identifiers and use ICC based authentication like EAP-AKA. Often required in authentication to access the carrier's server and manage services of the subscriber (Android 13).
+
+android.permission.USE_LOCATION_BUTTON
+Allows an app use location button, which grants temporary location permission when a user clicks the button (Android 17).
+
+android.permission.USE_PINNED_WINDOWING_LAYER
+Allows an application to use (Android 17).
 
 com.google.android.gms.permission.ACCESS_NEARBY_SHARE_API
 Allows the app to use Google's Nearby Share API for file sharing and device discovery.
@@ -1186,6 +1513,12 @@ Allows the app to request permission to run in the background when it's a compan
 
 android.permission.REQUEST_COMPANION_SELF_MANAGED
 Allows the app to be a self-managed companion app, controlling its own lifecycle.
+
+android.permission.REQUEST_COMPANION_START_FOREGROUND_SERVICES_FROM_BACKGROUND
+Allows a companion app to start a foreground service from the background.
+
+android.permission.REQUEST_COMPANION_USE_DATA_IN_BACKGROUND
+Allows a companion app to use data in the background.
 
 android.permission.CONTROL_DISPLAY_SATURATION
 Allows the app to control the color saturation of the device's display.
@@ -1257,7 +1590,7 @@ android.permission.PROVIDE_DEFAULT_ENABLED_CREDENTIAL_SERVICE
 Acts as default credential provider.
 
 android.permission.PROVIDE_REMOTE_CREDENTIALS
-💀 Accesses remote credentials.
+💀 Accesses remote credentials Android 14.
 
 com.android.vending.APP_ERRORS_SERVICE
 Accesses Play Store error reports.
@@ -1411,6 +1744,9 @@ android.permission.LOCATION_BYPASS
 
 android.permission.TURN_SCREEN_ON
 Turns screen on.
+
+android.permission.TV_IMPLICIT_ENTER_PIP
+Allows an app to enter Picture-in-Picture mode when the user is not explicitly requesting it.
 
 android.permission.BROADCAST_CLOSE_SYSTEM_DIALOGS
 Closes system dialogs.
@@ -1575,13 +1911,13 @@ android.permission.INTERACT_ACROSS_PROFILES
 Allows an app to interact with users of different user profiles.
 
 android.permission.CREDENTIAL_MANAGER_QUERY_CANDIDATE_CREDENTIALS
-Allows an app to query for stored credentials using the Credential Manager API.
+Allows an app to query for stored credentials using the Credential Manager API (Android 14).
 
 android.permission.RUN_USER_INITIATED_JOBS
 Allows an app to initiate user initiated background jobs.
 
 android.permission.CREDENTIAL_MANAGER_SET_ALLOWED_PROVIDERS
-Allows an app to specify which credential providers the user is allowed to use.
+Allows an app to specify which credential providers the user is allowed to use (Android 14).
 
 android.permission.HAND_TRACKING
 Allows an app to track the user's hand movements.
@@ -1692,7 +2028,7 @@ android.permission.REMOTE_AUDIO_PLAYBACK
 Allows the app to control remote audio playback.
 
 android.permission.CONFIGURE_WIFI_DISPLAY
-Allows the app to configure Wi-Fi Display settings.
+Allows the app to configure Wi-Fi Display settings (Android 14).
 
 android.permission.MANAGE_MEDIA_PROJECTION
 Allows the app to manage media projection (screen recording/casting).
@@ -1872,10 +2208,13 @@ android.permission.REQUEST_PASSWORD_COMPLEXITY
 Allows an app to request a specific password complexity policy.
 
 android.permission.MANAGE_MEDIA
-Allows an application to manage media on the device.
+Allows an application to manage media on the device (Android 12).
 
 android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE
 Allows an app to observe the presence of companion devices.
+
+android.permission.REQUEST_OBSERVE_DEVICE_UUID_PRESENCE
+Allows an application to subscribe to notifications about the nearby devices' presence status change base on the UUIDs (Android 16).
 
 android.permission.ENTER_CAR_MODE_PRIORITIZED
 Allows an app to enter car mode with higher priority.
@@ -1950,7 +2289,7 @@ android.permission.MANAGE_CLOUDSEARCH
 Allows managing cloud search.
 
 android.permission.QUERY_ADVANCED_PROTECTION_MODE
-Allows querying advanced protection mode.
+Allows querying advanced protection mode Android 16.
 
 android.permission.MANAGE_ROLE_HOLDERS
 Allows managing role holders.
@@ -2033,6 +2372,9 @@ android.permission.RECORD_VIDEO
 android.permission.READ_ASSISTANT_APP_SEARCH_DATA
 💀 Allows the app to read the assistant application search data.
 
+android.permission.READ_ASSIST_STRUCTURE_SCREEN_CONTENT
+Allows an assistant application to read screen content in the AssistStructure (Android 17).
+
 android.permission.SOUND_TRIGGER_RUN_IN_BATTERY_SAVER
 Allows sound trigger to run in battery saver mode.
 
@@ -2046,7 +2388,7 @@ android.permission.BODY_SENSORS
 Allows an app to access data from body sensors such as heart rate monitors.
 
 android.permission.BODY_SENSORS_BACKGROUND
-Allows an app to access data from body sensors even when the app is running in the background.
+Allows an app to access data from body sensors even when the app is running in the background (Android 13).
 
 android.permission.FOREGROUND_SERVICE_HEALTH
 Allows an app to use foreground services with the type "health".
@@ -2060,6 +2402,9 @@ Allows an app to request a companion device profile for a watch.
 android.permission.REQUEST_COMPANION_PROFILE_GLASSES
 Allows an app to request a companion device profile for glasses.
 
+android.permission.REQUEST_COMPANION_PROFILE_MEDICAL
+Allows application to request to associate with a AssociationRequest.DEVICE_PROFILE_MEDICAL device via CompanionDeviceManager (Android 17).
+
 android.permission.REQUEST_COMPANION_PROFILE_NEARBY_DEVICE_STREAMING
 Allows an app to request a companion device profile for streaming content to a nearby device.
 
@@ -2070,10 +2415,16 @@ android.permission.USE_REMOTE_AUTH
 Allows an app to use remote authentication.
 
 android.permission.ACCESS_HIDDEN_PROFILES
-💀 Allows access to hidden profiles on the device.
+💀 Allows access to hidden profiles on the device (Android 15).
+
+android.permission.ACCESS_HID
+Required by apps wanting to query for and/or access Human Interface Device (HID) nodes using HidManager (Android 17.1).
+
+android.permission.ACCESS_LAUNCHER_DATA
+This permission protects a content provider within home/launcher applications, enabling management of home screen metadata such as shortcut placement, launch intents, and labels (Android 16.1).
 
 android.permission.MANAGE_ONGOING_CALLS
-☠️ Allows an app to manage ongoing calls on the device.
+☠️ Allows an app to manage ongoing calls on the device (Android 12).
 
 android.permission.BIND_GMS_SERVICE
 Allows an app to bind to Google Play Services.
@@ -2124,7 +2475,7 @@ android.permission.ACCESS_NETWORK_STACK
 👽 Allows an app to use the low-level network stack.
 
 android.permission.BIND_AUTOFILL_SERVICE
-💀 Allows an app to bind to an autofill service. Can intercept user credentials.
+💀 Allows an app to bind to an autofill service. Can intercept user credentials Android 8.0 (Oreo).
 
 android.permission.BIND_SCREENING_SERVICE
 ☠️ Allows an app to bind to a call screening service.
@@ -2136,10 +2487,10 @@ android.permission.BIND_EUICC_SERVICE
 👽 Allows an app to bind to the eUICC (eSIM) service.
 
 android.permission.BIND_CONDITION_PROVIDER_SERVICE
-Allows an app to bind to a condition provider service.
+Allows an app to bind to a condition provider service (Android 7.0).
 
 android.permission.BIND_CHOOSER_TARGET_SERVICE
-Allows an app to bind to a chooser target service.
+Allows an app to bind to a chooser target service (Android 6.0 - Android 11).
 
 android.permission.BIND_KEYGUARD_APPWIDGET
 Allows an app to bind to a keyguard widget.
@@ -2217,7 +2568,7 @@ com.htc.launcher.permission.UPDATE_SHORTCUT
 Allows updating HTC launcher shortcuts.
 
 android.permission.BIND_COMPANION_DEVICE_SERVICE
-Allows an app to bind to a companion device service.
+Allows an app to bind to a companion device service (Android 12).
 
 android.permission.ACCESS_INPUT_FLINGER
 👽 Internal permission for low-level input management.
@@ -2391,7 +2742,7 @@ android.permission.PERSONAL_CONTEXT_RECEIVE_HINTS
 Allows an app to receive hints about personal context.
 
 android.permission.CAPTURE_KEYBOARD
-💀 Allows an app to capture keyboard input. Potential keylogger behavior.
+💀 Allows an app to capture keyboard input. Potential keylogger behavior (Android 16.1).
 
 android.permission.USE_LOOPBACK_INTERFACE
 Allows an app to use the network loopback interface.
@@ -2492,3 +2843,101 @@ Allows an app to start a Google Hangouts session.
 com.google.android.deskclock.permission.RECEIVE_ALERT_BROADCASTS
 Allows receiving alerts from the Google Desk Clock.
 
+android.permission.ACCESS_LOCAL_NETWORK
+A local network refers to an IP network that utilizes a broadcast-capable network interface, such as Wi-Fi or Ethernet, but excludes cellular (WWAN) or VPN connections (Android 17).
+
+android.permission.ACCEPT_HANDOVER
+Allows a calling app to continue a call which was started in another app (Android 9).
+
+android.permission.ACCESS_BIOMETRIC_SENSOR_STRENGTHS
+Allows an application to retrieve the sensor security strengths of the biometric sensors (Android 17).
+
+android.permission.ACCESS_BLOBS_ACROSS_USERS
+Allows an application to access data blobs across users (Android 12).
+
+android.permission.APPLY_PICTURE_PROFILE
+Allows an app to apply a PictureProfile to a layer via MediaCodec and, additionally, system apps via SurfaceControl.Transaction (Android 16).
+
+android.permission.BIND_ALTERNATIVE_MESSAGE_TRANSPORT_SERVICE
+Permission needed to ensure that only the system process can bind with the AlternativeMessageTransportService (Android 17).
+
+android.permission.BIND_APP_FUNCTION_SERVICE
+Must be required by an AppFunctionService, to ensure that only the system can bind to it (Android 16).
+
+android.permission.BIND_CALL_REDIRECTION_SERVICE
+Must be required by a CallRedirectionService, to ensure that only the system can bind to it (Android 10).
+
+android.permission.BIND_CARRIER_MESSAGING_CLIENT_SERVICE
+A subclass of CarrierMessagingClientService must be protected with this permission (Android 10).
+
+android.permission.BIND_CONTENT_RESTRICTION_SERVICE
+Permission required to bind content restriction service.
+
+android.permission.BIND_CONTENT_SAFETY_SERVICE
+Ensures only the platform can bind to the content safety service.
+
+android.permission.BIND_CONTROLS
+Allows SystemUI to request third party controls (Android 11).
+
+android.permission.BIND_CREDENTIAL_PROVIDER_SERVICE
+Must be required by a CredentialProviderService to ensure that only the system can bind to it (Android 14).
+
+android.permission.BIND_DATA_MIGRATION_FOR_PRIVATECOMPUTE
+Allows the system to bind to an application's data migration service for Private Compute (Android 17).
+
+android.permission.BIND_INCALL_SERVICE
+Must be required by a InCallService, to ensure that only the system can bind to it (Android 6.0).
+
+android.permission.BIND_PCC_EGRESS_SERVICE
+Allows a system application to bind to the Private Compute Core egress service.
+
+android.permission.BIND_QUICK_ACCESS_WALLET_SERVICE
+Must be required by a QuickAccessWalletService to ensure that only the system can bind to it (Android 11).
+
+android.permission.BIND_TV_AD_SERVICE
+Must be required by a android.media.tv.ad.TvAdService to ensure that only the system can bind to it (Android 16).
+
+android.permission.CALL_COMPANION_APP
+Allows an app which implements the InCallService API to be eligible to be enabled as a calling companion app. This means that the Telecom framework will bind to the app's InCallService implementation when there are calls active. The app can use the InCallService API to view information about calls on the system and control these calls (Android 10).
+
+android.permission.MANAGE_PERIPHERAL_CUSTOMIZATION
+Allows an application to manage peripheral customization (Android 17.1).
+
+com.android.voicemail.permission.WRITE_VOICEMAIL
+Allows an application to modify and remove existing voicemails in the system (Android 5.0).
+
+android.permission-group.ACTIVITY_RECOGNITION
+Used for permissions that are associated with activity recognition (Android 10).
+
+android.permission-group.CALENDAR
+Used for runtime permissions related to user's calendar Android 4.2 (Jelly Bean).
+
+android.permission-group.CAMERA
+Used for permissions that are associated with accessing camera or capturing images/video from the device Android 4.2 (Jelly Bean).
+
+android.permission-group.MICROPHONE
+Used for permissions that are associated with accessing microphone audio from the device. Note that phone calls also capture audio but are in a separate (more visible) permission group Android 4.2 (Jelly Bean).
+
+android.permission-group.NEARBY_DEVICES
+Required to be able to discover and connect to nearby Bluetooth devices (Android 12).
+
+android.permission-group.NOTIFICATIONS
+Used for permissions that are associated with posting notifications (Android 13).
+
+android.permission-group.PHONE
+Used for permissions that are associated telephony features (Android 6.0).
+
+android.permission-group.READ_MEDIA_AURAL
+Required to be able to read audio files from shared storage (Android 13).
+
+android.permission-group.READ_MEDIA_VISUAL
+Required to be able to read image and video files from shared storage (Android 13).
+
+android.permission-group.SENSORS
+Used for permissions that are associated with accessing body or environmental sensors (Android 6.0).
+
+android.permission-group.SMS
+Used for runtime permissions related to user's SMS messages (Android 6.0).
+
+android.permission-group.STORAGE
+Used for runtime permissions related to the shared external storage Android 1.6 (Donut).
