@@ -1497,7 +1497,7 @@ android.permission.USE_LOCATION_BUTTON
 Allows an app use location button, which grants temporary location permission when a user clicks the button (Android 17).
 
 android.permission.USE_PINNED_WINDOWING_LAYER
-Allows an application to use (Android 17).
+Grants apps the ability to use a pinned windowing layer (Android 17).
 
 com.google.android.gms.permission.ACCESS_NEARBY_SHARE_API
 Allows the app to use Google's Nearby Share API for file sharing and device discovery.
