@@ -66,17 +66,7 @@ import mt.modder.hub.axmlTools.utils.TypedValue;
 public final class AXMLPrinter {
 
     private static final String COPYRIGHT = "AXMLPrinter\nCopyright (C) developer-krushna [https://github.com/developer-krushna/](krushnachandramaharna57@gmail.com)\nThis project is distributed under the Apache License v2.0 license";
-
-    // Constants for conversion factors and unit strings
-    private static final float MANTISSA_MULT =
-            1.0f / (1 << TypedValue.COMPLEX_MANTISSA_SHIFT);
-
-    private static final float[] RADIX_MULTS = new float[]{
-            MANTISSA_MULT /* 0.00390625f */,
-            1.0f / (1 << 7) * MANTISSA_MULT /* 3.051758E-5f */,
-            1.0f / (1 << 15) * MANTISSA_MULT /* 1.192093E-7f */,
-            1.0f / (1 << 23) * MANTISSA_MULT /* 4.656613E-10f */
-    };
+    
     private static final String[] DIMENSION_UNIT_STRS = new String[]{
             "px", "dp", "sp", "pt", "in", "mm"
     };
@@ -944,26 +934,7 @@ public final class AXMLPrinter {
         }
     }
 
-    /**
-     * Extracts the text after the last slash in a given string.
-     *
-     * @param text The input string to process.
-     * @return The text after the last slash, or the original text if no slash is found.
-     */
-    private String textAfterSlash(String text) {
-        // Define the regex pattern to match any characters followed by a slash, and capture the text after the last slash
-        Pattern pattern = Pattern.compile(".*/(.*)");
-        // Create a Matcher object to perform the matching operation
-        Matcher matcher = pattern.matcher(text);
-
-        // Check if the regex pattern matches the given input text
-        if (matcher.find()) {
-            // If a match is found, extract the captured text which is the text after the last slash
-            return matcher.group(1);
-        }
-        // If no match is found return the original text
-        return text;
-    }
+ 
 
     /**
      * Generates the next sequential hexadecimal ID.
